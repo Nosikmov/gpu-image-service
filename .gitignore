@@ -22,10 +22,10 @@ htmlcov/
 .DS_Store
 
 # Runtime / local data (never commit models or generated art)
-data/
-models/
-generated/
-comfyui_data/
+/data/
+/models/
+/generated/
+/comfyui_data/
 *.ckpt
 *.safetensors
 *.pt
