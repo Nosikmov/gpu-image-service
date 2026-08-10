@@ -1,0 +1,131 @@
+name: gpu-image-service
+
+services:
+  redis:
+    image: redis:7-alpine
+    restart: unless-stopped
+    command: ["redis-server", "--appendonly", "yes"]
+    volumes:
+      - redis_data:/data
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 5s
+      timeout: 3s
+      retries: 10
+    networks:
+      - gis
+
+  comfyui:
+    build:
+      context: .
+      dockerfile: docker/comfyui.Dockerfile
+    restart: unless-stopped
+    environment:
+      NVIDIA_VISIBLE_DEVICES: all
+      NVIDIA_DRIVER_CAPABILITIES: compute,utility
+    volumes:
+      - "${MODELS_PATH:-./data/models}:/opt/ComfyUI/models"
+      - comfyui_data:/opt/ComfyUI/output
+    ports:
+      - "${COMFYUI_PORT:-8188}:8188"
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: 1
+              capabilities: [gpu]
+    healthcheck:
+      test: ["CMD", "curl", "-fsS", "http://127.0.0.1:8188/system_stats"]
+      interval: 15s
+      timeout: 5s
+      retries: 20
+      start_period: 60s
+    networks:
+      - gis
+
+  api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    restart: unless-stopped
+    env_file:
+      - .env
+    environment:
+      REDIS_URL: redis://redis:6379/0
+      COMFYUI_URL: http://comfyui:8188
+      MODELS_PATH: /data/models
+      GENERATED_PATH: /data/generated
+      WORKFLOWS_PATH: /app/workflows
+    volumes:
+      - "${MODELS_PATH:-./data/models}:/data/models:ro"
+      - "${GENERATED_PATH:-./data/generated}:/data/generated"
+    ports:
+      - "${API_PORT:-8080}:8080"
+    depends_on:
+      redis:
+        condition: service_healthy
+    healthcheck:
+      test: ["CMD", "curl", "-fsS", "http://127.0.0.1:8080/health"]
+      interval: 10s
+      timeout: 3s
+      retries: 10
+      start_period: 15s
+    networks:
+      - gis
+
+  worker:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    restart: unless-stopped
+    command: ["python", "-m", "app.workers.runner"]
+    env_file:
+      - .env
+    environment:
+      REDIS_URL: redis://redis:6379/0
+      COMFYUI_URL: http://comfyui:8188
+      MODELS_PATH: /data/models
+      GENERATED_PATH: /data/generated
+      WORKFLOWS_PATH: /app/workflows
+      NVIDIA_VISIBLE_DEVICES: all
+      NVIDIA_DRIVER_CAPABILITIES: compute,utility
+    volumes:
+      - "${MODELS_PATH:-./data/models}:/data/models:ro"
+      - "${GENERATED_PATH:-./data/generated}:/data/generated"
+    depends_on:
+      redis:
+        condition: service_healthy
+      comfyui:
+        condition: service_healthy
+      api:
+        condition: service_started
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: 1
+              capabilities: [gpu]
+    healthcheck:
+      test:
+        [
+          "CMD",
+          "python",
+          "-c",
+          "from app.config.settings import get_settings; from app.services import queue; raise SystemExit(0 if queue.worker_is_alive(get_settings()) else 1)",
+        ]
+      interval: 15s
+      timeout: 5s
+      retries: 5
+      start_period: 45s
+    networks:
+      - gis
+
+volumes:
+  redis_data:
+  comfyui_data:
+
+networks:
+  gis:
+    driver: bridge

@@ -1,0 +1,41 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+.eggs/
+dist/
+build/
+.venv/
+venv/
+.env
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+.DS_Store
+
+# Runtime / local data (never commit models or generated art)
+data/
+models/
+generated/
+comfyui_data/
+*.ckpt
+*.safetensors
+*.pt
+*.pth
+*.bin
+*.onnx
+
+# Logs
+*.log
+logs/
+
+# Docker overrides
+docker-compose.override.yml
