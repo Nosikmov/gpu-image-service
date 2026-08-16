@@ -63,6 +63,33 @@ def normalize_generate_request(body: GenerateRequest, settings: Settings) -> dic
         )
 
     seed = int(body.seed)
+
+    lora = (body.lora or "").strip()
+    lora_strength = float(
+        body.lora_strength if body.lora_strength is not None else settings.default_lora_strength
+    )
+    if workflow == "sdxl_icon":
+        if not lora:
+            lora = settings.default_lora
+        if not lora or "/" in lora or ".." in lora or lora.startswith("."):
+            raise ValidationError("invalid lora name")
+        if settings.allowed_loras_list and lora not in settings.allowed_loras_list:
+            raise ValidationError(
+                f"lora '{lora}' is not allowed; choose one of: {', '.join(settings.allowed_loras_list)}"
+            )
+        lora_path = Path(settings.models_path) / "loras" / lora
+        if not lora_path.is_file():
+            raise ValidationError(
+                f"lora '{lora}' not found under {settings.models_path}/loras — "
+                "place the LoRA file on the GPU host volume"
+            )
+        if lora_strength < 0 or lora_strength > 1.5:
+            raise ValidationError("lora_strength must be between 0 and 1.5")
+    else:
+        # Scenes / plain SDXL: ignore client LoRA to keep landscapes clean.
+        lora = ""
+        lora_strength = 0.0
+
     return {
         "prompt": body.prompt,
         "negative_prompt": body.negative_prompt,
@@ -74,6 +101,8 @@ def normalize_generate_request(body: GenerateRequest, settings: Settings) -> dic
         "model": model,
         "workflow": workflow,
         "batch_size": batch,
+        "lora": lora,
+        "lora_strength": lora_strength,
         "output_format": settings.default_format,
         "quality": settings.image_quality,
     }

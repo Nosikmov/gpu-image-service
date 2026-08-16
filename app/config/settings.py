@@ -59,9 +59,12 @@ class Settings(BaseSettings):
     max_batch_size: int = 1
     max_prompt_length: int = 4000
 
-    allowed_workflows: str = "sdxl"
+    allowed_workflows: str = "sdxl,sdxl_icon"
     default_workflow: str = "sdxl"
     default_model: str = "sd_xl_base_1.0.safetensors"
+    default_lora: str = "rpg_item_icons_sdxl.safetensors"
+    default_lora_strength: float = 0.85
+    allowed_loras: str = "rpg_item_icons_sdxl.safetensors"
 
     worker_id: str = "worker-1"
     metrics_key: str = "gis:metrics"
@@ -76,6 +79,10 @@ class Settings(BaseSettings):
     @property
     def allowed_workflows_list(self) -> list[str]:
         return [x.strip() for x in self.allowed_workflows.split(",") if x.strip()]
+
+    @property
+    def allowed_loras_list(self) -> list[str]:
+        return [x.strip() for x in self.allowed_loras.split(",") if x.strip()]
 
     @field_validator("api_key")
     @classmethod

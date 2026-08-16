@@ -46,6 +46,8 @@ def build_prompt_graph(settings: Settings, params: dict[str, Any]) -> dict[str, 
         "{{SEED}}": str(seed),
         "{{MODEL}}": params["model"],
         "{{BATCH_SIZE}}": str(int(params.get("batch_size") or 1)),
+        "{{LORA}}": str(params.get("lora") or settings.default_lora or ""),
+        "{{LORA_STRENGTH}}": str(float(params.get("lora_strength", settings.default_lora_strength))),
     }
 
     def fill(obj: Any) -> Any:
@@ -60,7 +62,7 @@ def build_prompt_graph(settings: Settings, params: dict[str, Any]) -> dict[str, 
             # coerce numeric strings when original placeholder was alone
             if obj in {"{{WIDTH}}", "{{HEIGHT}}", "{{STEPS}}", "{{SEED}}", "{{BATCH_SIZE}}"}:
                 return int(out)
-            if obj == "{{CFG}}":
+            if obj in {"{{CFG}}", "{{LORA_STRENGTH}}"}:
                 return float(out)
             return out
         return obj

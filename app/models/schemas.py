@@ -26,6 +26,8 @@ class GenerateRequest(BaseModel):
     model: str | None = None
     workflow: str | None = None
     batch_size: int = 1
+    lora: str | None = None
+    lora_strength: float | None = None
 
     @field_validator("prompt", "negative_prompt", mode="before")
     @classmethod
