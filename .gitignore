@@ -39,3 +39,11 @@ logs/
 
 # Docker overrides
 docker-compose.override.yml
+
+# LoRA curation runtime (prompts.json is tracked)
+lora-curation/images/
+lora-curation/ratings.json
+lora-curation/manifest.json
+lora-curation/export/
+lora-curation/*.log
+

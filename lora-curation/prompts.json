@@ -1,0 +1,743 @@
+{
+  "version": 1,
+  "count": 105,
+  "style_suffix": "dark medieval fantasy hand-painted illustration, classic RPG bestiary art, visible brushstrokes, muted earthy palette, semi-realistic, same look as fantasy NPC portrait, dark medieval fantasy RPG art, stylized hand-painted 2D, painterly textures, muted earthy palette, warm highlights, soft cinematic lighting, subtle shadows, refined shapes, not photoreal, cohesive game art style, one single creature, full body, centered, three quarter view, single creature only, plain neutral gray background, no scenery, no text, no sheet",
+  "trigger_word_suggestion": "gf_bestiary",
+  "entries": [
+    {
+      "id": "cat_mob_main_1",
+      "prompt": "lime-green jelly slime blob, two small dark eyes, no limbs, dark medieval fantasy hand-painted illustration, classic RPG bestiary art, visible brushstrokes, muted earthy palette, semi-realistic, same look as fantasy NPC portrait, dark medieval fantasy RPG art, stylized hand-painted 2D, painterly textures, muted earthy palette, warm highlights, soft cinematic lighting, subtle shadows, refined shapes, not photoreal, cohesive game art style, one single creature, full body, centered, three quarter view, single creature only, plain neutral gray background, no scenery, no text, no sheet",
+      "category": "catalog",
+      "monster_id": "mob_main_1",
+      "variant": "base"
+    },
+    {
+      "id": "cat_mob_main_2",
+      "prompt": "insect beetle bug, six legs, brown chitin carapace, mandibles, NOT humanoid, dark medieval fantasy hand-painted illustration, classic RPG bestiary art, visible brushstrokes, muted earthy palette, semi-realistic, same look as fantasy NPC portrait, dark medieval fantasy RPG art, stylized hand-painted 2D, painterly textures, muted earthy palette, warm highlights, soft cinematic lighting, subtle shadows, refined shapes, not photoreal, cohesive game art style, one single creature, full body, centered, three quarter view, single creature only, plain neutral gray background, no scenery, no text, no sheet",
+      "category": "catalog",
+      "monster_id": "mob_main_2",
+      "variant": "base"
+    },
+    {
+      "id": "cat_mob_main_3",
+      "prompt": "gray feral rat beast, red eyes, long pink tail, on all fours, dark medieval fantasy hand-painted illustration, classic RPG bestiary art, visible brushstrokes, muted earthy palette, semi-realistic, same look as fantasy NPC portrait, dark medieval fantasy RPG art, stylized hand-painted 2D, painterly textures, muted earthy palette, warm highlights, soft cinematic lighting, subtle shadows, refined shapes, not photoreal, cohesive game art style, one single creature, full body, centered, three quarter view, single creature only, plain neutral gray background, no scenery, no text, no sheet",
+      "category": "catalog",
+      "monster_id": "mob_main_3",
+      "variant": "base"
+    },
+    {
+      "id": "cat_mob_main_4",
+      "prompt": "green warty toad beast, bumpy skin, golden eyes, squat body, dark medieval fantasy hand-painted illustration, classic RPG bestiary art, visible brushstrokes, muted earthy palette, semi-realistic, same look as fantasy NPC portrait, dark medieval fantasy RPG art, stylized hand-painted 2D, painterly textures, muted earthy palette, warm highlights, soft cinematic lighting, subtle shadows, refined shapes, not photoreal, cohesive game art style, one single creature, full body, centered, three quarter view, single creature only, plain neutral gray background, no scenery, no text, no sheet",
+      "category": "catalog",
+      "monster_id": "mob_main_4",
+      "variant": "base"
+    },
+    {
+      "id": "cat_wm_named_slime",
+      "prompt": "purple jelly slime blob, two eyes, small gold crown on top, dark medieval fantasy hand-painted illustration, classic RPG bestiary art, visible brushstrokes, muted earthy palette, semi-realistic, same look as fantasy NPC portrait, dark medieval fantasy RPG art, stylized hand-painted 2D, painterly textures, muted earthy palette, warm highlights, soft cinematic lighting, subtle shadows, refined shapes, not photoreal, cohesive game art style, one single creature, full body, centered, three quarter view, single creature only, plain neutral gray background, no scenery, no text, no sheet",
+      "category": "catalog",
+      "monster_id": "wm_named_slime",
+      "variant": "base"
+    },
+    {
+      "id": "cat_mob_mist_wraith",
+      "prompt": "pale gray swamp wraith, tattered hooded robes, dark medieval fantasy hand-painted illustration, classic RPG bestiary art, visible brushstrokes, muted earthy palette, semi-realistic, same look as fantasy NPC portrait, dark medieval fantasy RPG art, stylized hand-painted 2D, painterly textures, muted earthy palette, warm highlights, soft cinematic lighting, subtle shadows, refined shapes, not photoreal, cohesive game art style, one single creature, full body, centered, three quarter view, single creature only, plain neutral gray background, no scenery, no text, no sheet",
+      "category": "catalog",
+      "monster_id": "mob_mist_wraith",
+      "variant": "base"
+    },
+    {
+      "id": "cat_mob_mist_mosquito",
+      "prompt": "giant gray-red blood mosquito, long proboscis, dark medieval fantasy hand-painted illustration, classic RPG bestiary art, visible brushstrokes, muted earthy palette, semi-realistic, same look as fantasy NPC portrait, dark medieval fantasy RPG art, stylized hand-painted 2D, painterly textures, muted earthy palette, warm highlights, soft cinematic lighting, subtle shadows, refined shapes, not photoreal, cohesive game art style, one single creature, full body, centered, three quarter view, single creature only, plain neutral gray background, no scenery, no text, no sheet",
+      "category": "catalog",
+      "monster_id": "mob_mist_mosquito",
+      "variant": "base"
+    },
+    {
+      "id": "cat_mob_mist_bogling",
+      "prompt": "brown mud bogling, squat muddy humanoid, dark medieval fantasy hand-painted illustration, classic RPG bestiary art, visible brushstrokes, muted earthy palette, semi-realistic, same look as fantasy NPC portrait, dark medieval fantasy RPG art, stylized hand-painted 2D, painterly textures, muted earthy palette, warm highlights, soft cinematic lighting, subtle shadows, refined shapes, not photoreal, cohesive game art style, one single creature, full body, centered, three quarter view, single creature only, plain neutral gray background, no scenery, no text, no sheet",
+      "category": "catalog",
+      "monster_id": "mob_mist_bogling",
+      "variant": "base"
+    },
+    {
+      "id": "cat_mob_mist_hydra",
+      "prompt": "green swamp hydra hatchling, two snake heads, dark medieval fantasy hand-painted illustration, classic RPG bestiary art, visible brushstrokes, muted earthy palette, semi-realistic, same look as fantasy NPC portrait, dark medieval fantasy RPG art, stylized hand-painted 2D, painterly textures, muted earthy palette, warm highlights, soft cinematic lighting, subtle shadows, refined shapes, not photoreal, cohesive game art style, one single creature, full body, centered, three quarter view, single creature only, plain neutral gray background, no scenery, no text, no sheet",
+      "category": "catalog",
+      "monster_id": "mob_mist_hydra",
+      "variant": "base"
+    },
+    {
+      "id": "cat_wm_mist_mother",
+      "prompt": "pale fog spirit woman, veiled gray mist dress, dark medieval fantasy hand-painted illustration, classic RPG bestiary art, visible brushstrokes, muted earthy palette, semi-realistic, same look as fantasy NPC portrait, dark medieval fantasy RPG art, stylized hand-painted 2D, painterly textures, muted earthy palette, warm highlights, soft cinematic lighting, subtle shadows, refined shapes, not photoreal, cohesive game art style, one single creature, full body, centered, three quarter view, single creature only, plain neutral gray background, no scenery, no text, no sheet",
+      "category": "catalog",
+      "monster_id": "wm_mist_mother",
+      "variant": "base"
+    },
+    {
+      "id": "cat_wm_boss_titan",
+      "prompt": "stone-and-ember lava golem titan, cracked basalt body, magma veins, dark medieval fantasy hand-painted illustration, classic RPG bestiary art, visible brushstrokes, muted earthy palette, semi-realistic, same look as fantasy NPC portrait, dark medieval fantasy RPG art, stylized hand-painted 2D, painterly textures, muted earthy palette, warm highlights, soft cinematic lighting, subtle shadows, refined shapes, not photoreal, cohesive game art style, one single creature, full body, centered, three quarter view, single creature only, plain neutral gray background, no scenery, no text, no sheet",
+      "category": "catalog",
+      "monster_id": "wm_boss_titan",
+      "variant": "base"
+    },
+    {
+      "id": "cat_mob_locb_cave_slime",
+      "prompt": "green mountain goblin, crude scrap armor, dark medieval fantasy hand-painted illustration, classic RPG bestiary art, visible brushstrokes, muted earthy palette, semi-realistic, same look as fantasy NPC portrait, dark medieval fantasy RPG art, stylized hand-painted 2D, painterly textures, muted earthy palette, warm highlights, soft cinematic lighting, subtle shadows, refined shapes, not photoreal, cohesive game art style, one single creature, full body, centered, three quarter view, single creature only, plain neutral gray background, no scenery, no text, no sheet",
+      "category": "catalog",
+      "monster_id": "mob_locb_cave_slime",
+      "variant": "base"
+    },
+    {
+      "id": "cat_mob_locb_amber_slime",
+      "prompt": "gray stone monitor lizard, rocky scales, dark medieval fantasy hand-painted illustration, classic RPG bestiary art, visible brushstrokes, muted earthy palette, semi-realistic, same look as fantasy NPC portrait, dark medieval fantasy RPG art, stylized hand-painted 2D, painterly textures, muted earthy palette, warm highlights, soft cinematic lighting, subtle shadows, refined shapes, not photoreal, cohesive game art style, one single creature, full body, centered, three quarter view, single creature only, plain neutral gray background, no scenery, no text, no sheet",
+      "category": "catalog",
+      "monster_id": "mob_locb_amber_slime",
+      "variant": "base"
+    },
+    {
+      "id": "cat_mob_locb_ash_hound",
+      "prompt": "gray granite guardian hound statue, dark medieval fantasy hand-painted illustration, classic RPG bestiary art, visible brushstrokes, muted earthy palette, semi-realistic, same look as fantasy NPC portrait, dark medieval fantasy RPG art, stylized hand-painted 2D, painterly textures, muted earthy palette, warm highlights, soft cinematic lighting, subtle shadows, refined shapes, not photoreal, cohesive game art style, one single creature, full body, centered, three quarter view, single creature only, plain neutral gray background, no scenery, no text, no sheet",
+      "category": "catalog",
+      "monster_id": "mob_locb_ash_hound",
+      "variant": "base"
+    },
+    {
+      "id": "cat_mob_stone_harpy",
+      "prompt": "brown-feathered mountain harpy, wings, talons, dark medieval fantasy hand-painted illustration, classic RPG bestiary art, visible brushstrokes, muted earthy palette, semi-realistic, same look as fantasy NPC portrait, dark medieval fantasy RPG art, stylized hand-painted 2D, painterly textures, muted earthy palette, warm highlights, soft cinematic lighting, subtle shadows, refined shapes, not photoreal, cohesive game art style, one single creature, full body, centered, three quarter view, single creature only, plain neutral gray background, no scenery, no text, no sheet",
+      "category": "catalog",
+      "monster_id": "mob_stone_harpy",
+      "variant": "base"
+    },
+    {
+      "id": "cat_wm_bone_warden",
+      "prompt": "white skeleton knight, horned skull helm, dark medieval fantasy hand-painted illustration, classic RPG bestiary art, visible brushstrokes, muted earthy palette, semi-realistic, same look as fantasy NPC portrait, dark medieval fantasy RPG art, stylized hand-painted 2D, painterly textures, muted earthy palette, warm highlights, soft cinematic lighting, subtle shadows, refined shapes, not photoreal, cohesive game art style, one single creature, full body, centered, three quarter view, single creature only, plain neutral gray background, no scenery, no text, no sheet",
+      "category": "catalog",
+      "monster_id": "wm_bone_warden",
+      "variant": "base"
+    },
+    {
+      "id": "cat_mob_ash_slag",
+      "prompt": "orange molten slag slime blob, ash cinders, dark medieval fantasy hand-painted illustration, classic RPG bestiary art, visible brushstrokes, muted earthy palette, semi-realistic, same look as fantasy NPC portrait, dark medieval fantasy RPG art, stylized hand-painted 2D, painterly textures, muted earthy palette, warm highlights, soft cinematic lighting, subtle shadows, refined shapes, not photoreal, cohesive game art style, one single creature, full body, centered, three quarter view, single creature only, plain neutral gray background, no scenery, no text, no sheet",
+      "category": "catalog",
+      "monster_id": "mob_ash_slag",
+      "variant": "base"
+    },
+    {
+      "id": "cat_mob_ash_burner",
+      "prompt": "smoldering charcoal ember humanoid, dark medieval fantasy hand-painted illustration, classic RPG bestiary art, visible brushstrokes, muted earthy palette, semi-realistic, same look as fantasy NPC portrait, dark medieval fantasy RPG art, stylized hand-painted 2D, painterly textures, muted earthy palette, warm highlights, soft cinematic lighting, subtle shadows, refined shapes, not photoreal, cohesive game art style, one single creature, full body, centered, three quarter view, single creature only, plain neutral gray background, no scenery, no text, no sheet",
+      "category": "catalog",
+      "monster_id": "mob_ash_burner",
+      "variant": "base"
+    },
+    {
+      "id": "cat_mob_ash_golem",
+      "prompt": "bulky volcanic ash golem, dark rock, dark medieval fantasy hand-painted illustration, classic RPG bestiary art, visible brushstrokes, muted earthy palette, semi-realistic, same look as fantasy NPC portrait, dark medieval fantasy RPG art, stylized hand-painted 2D, painterly textures, muted earthy palette, warm highlights, soft cinematic lighting, subtle shadows, refined shapes, not photoreal, cohesive game art style, one single creature, full body, centered, three quarter view, single creature only, plain neutral gray background, no scenery, no text, no sheet",
+      "category": "catalog",
+      "monster_id": "mob_ash_golem",
+      "variant": "base"
+    },
+    {
+      "id": "cat_mob_ash_salamander",
+      "prompt": "orange fire salamander, glowing scales, dark medieval fantasy hand-painted illustration, classic RPG bestiary art, visible brushstrokes, muted earthy palette, semi-realistic, same look as fantasy NPC portrait, dark medieval fantasy RPG art, stylized hand-painted 2D, painterly textures, muted earthy palette, warm highlights, soft cinematic lighting, subtle shadows, refined shapes, not photoreal, cohesive game art style, one single creature, full body, centered, three quarter view, single creature only, plain neutral gray background, no scenery, no text, no sheet",
+      "category": "catalog",
+      "monster_id": "mob_ash_salamander",
+      "variant": "base"
+    },
+    {
+      "id": "cat_wm_heat_overseer",
+      "prompt": "red-black demon foreman, dark iron armor, dark medieval fantasy hand-painted illustration, classic RPG bestiary art, visible brushstrokes, muted earthy palette, semi-realistic, same look as fantasy NPC portrait, dark medieval fantasy RPG art, stylized hand-painted 2D, painterly textures, muted earthy palette, warm highlights, soft cinematic lighting, subtle shadows, refined shapes, not photoreal, cohesive game art style, one single creature, full body, centered, three quarter view, single creature only, plain neutral gray background, no scenery, no text, no sheet",
+      "category": "catalog",
+      "monster_id": "wm_heat_overseer",
+      "variant": "base"
+    },
+    {
+      "id": "cat_mob_fang_scarab",
+      "prompt": "large void-black shadow scarab beetle monster, insect six spiny legs, segmented chitin carapace with glowing purple void runes, oversized curved horned mandibles, faint shadow smoke wisps, small glowing void eyes, eldritch corrupted fantasy beetle, standing on ground, side three-quarter view showing body depth, NOT top-down, NOT bird eye view, NOT flat icon, NOT humanoid, NOT realistic photo, dark medieval fantasy hand-painted illustration, classic RPG bestiary art, visible brushstrokes, muted earthy palette, semi-realistic, same look as fantasy NPC portrait, dark medieval fantasy RPG art, stylized hand-painted 2D, painterly textures, muted earthy palette, warm highlights, soft cinematic lighting, subtle shadows, refined shapes, not photoreal, cohesive game art style, one single creature, full body, centered, three quarter view, single creature only, plain neutral gray background, no scenery, no text, no sheet",
+      "category": "catalog",
+      "monster_id": "mob_fang_scarab",
+      "variant": "base"
+    },
+    {
+      "id": "cat_mob_fang_blade",
+      "prompt": "dark void wraith fused with living sword, dark medieval fantasy hand-painted illustration, classic RPG bestiary art, visible brushstrokes, muted earthy palette, semi-realistic, same look as fantasy NPC portrait, dark medieval fantasy RPG art, stylized hand-painted 2D, painterly textures, muted earthy palette, warm highlights, soft cinematic lighting, subtle shadows, refined shapes, not photoreal, cohesive game art style, one single creature, full body, centered, three quarter view, single creature only, plain neutral gray background, no scenery, no text, no sheet",
+      "category": "catalog",
+      "monster_id": "mob_fang_blade",
+      "variant": "base"
+    },
+    {
+      "id": "cat_mob_fang_knight",
+      "prompt": "Rift Knight blackened plate armor, dark medieval fantasy hand-painted illustration, classic RPG bestiary art, visible brushstrokes, muted earthy palette, semi-realistic, same look as fantasy NPC portrait, dark medieval fantasy RPG art, stylized hand-painted 2D, painterly textures, muted earthy palette, warm highlights, soft cinematic lighting, subtle shadows, refined shapes, not photoreal, cohesive game art style, one single creature, full body, centered, three quarter view, single creature only, plain neutral gray background, no scenery, no text, no sheet",
+      "category": "catalog",
+      "monster_id": "mob_fang_knight",
+      "variant": "base"
+    },
+    {
+      "id": "cat_mob_fang_herald",
+      "prompt": "mage purple robes with void staff, dark medieval fantasy hand-painted illustration, classic RPG bestiary art, visible brushstrokes, muted earthy palette, semi-realistic, same look as fantasy NPC portrait, dark medieval fantasy RPG art, stylized hand-painted 2D, painterly textures, muted earthy palette, warm highlights, soft cinematic lighting, subtle shadows, refined shapes, not photoreal, cohesive game art style, one single creature, full body, centered, three quarter view, single creature only, plain neutral gray background, no scenery, no text, no sheet",
+      "category": "catalog",
+      "monster_id": "mob_fang_herald",
+      "variant": "base"
+    },
+    {
+      "id": "cat_wm_boss_varkan",
+      "prompt": "dragonoid boss violet abyss armor wings, dark medieval fantasy hand-painted illustration, classic RPG bestiary art, visible brushstrokes, muted earthy palette, semi-realistic, same look as fantasy NPC portrait, dark medieval fantasy RPG art, stylized hand-painted 2D, painterly textures, muted earthy palette, warm highlights, soft cinematic lighting, subtle shadows, refined shapes, not photoreal, cohesive game art style, one single creature, full body, centered, three quarter view, single creature only, plain neutral gray background, no scenery, no text, no sheet",
+      "category": "catalog",
+      "monster_id": "wm_boss_varkan",
+      "variant": "base"
+    },
+    {
+      "id": "cat_wm_event_wolf",
+      "prompt": "huge dark-fur alpha wolf, scarred muzzle, dark medieval fantasy hand-painted illustration, classic RPG bestiary art, visible brushstrokes, muted earthy palette, semi-realistic, same look as fantasy NPC portrait, dark medieval fantasy RPG art, stylized hand-painted 2D, painterly textures, muted earthy palette, warm highlights, soft cinematic lighting, subtle shadows, refined shapes, not photoreal, cohesive game art style, one single creature, full body, centered, three quarter view, single creature only, plain neutral gray background, no scenery, no text, no sheet",
+      "category": "catalog",
+      "monster_id": "wm_event_wolf",
+      "variant": "base"
+    },
+    {
+      "id": "var_mob_main_1",
+      "prompt": "lime-green jelly slime blob, two small dark eyes, no limbs, soft warm torchlight, dark medieval fantasy hand-painted illustration, classic RPG bestiary art, visible brushstrokes, muted earthy palette, semi-realistic, same look as fantasy NPC portrait, dark medieval fantasy RPG art, stylized hand-painted 2D, painterly textures, muted earthy palette, warm highlights, soft cinematic lighting, subtle shadows, refined shapes, not photoreal, cohesive game art style, one single creature, full body, centered, three quarter view, single creature only, plain neutral gray background, no scenery, no text, no sheet",
+      "category": "catalog_variant",
+      "monster_id": "mob_main_1",
+      "variant": "soft warm torchlight"
+    },
+    {
+      "id": "var_mob_main_2",
+      "prompt": "insect beetle bug, six legs, brown chitin carapace, mandibles, NOT humanoid, cool moonlit highlights, dark medieval fantasy hand-painted illustration, classic RPG bestiary art, visible brushstrokes, muted earthy palette, semi-realistic, same look as fantasy NPC portrait, dark medieval fantasy RPG art, stylized hand-painted 2D, painterly textures, muted earthy palette, warm highlights, soft cinematic lighting, subtle shadows, refined shapes, not photoreal, cohesive game art style, one single creature, full body, centered, three quarter view, single creature only, plain neutral gray background, no scenery, no text, no sheet",
+      "category": "catalog_variant",
+      "monster_id": "mob_main_2",
+      "variant": "cool moonlit highlights"
+    },
+    {
+      "id": "var_mob_main_3",
+      "prompt": "gray feral rat beast, red eyes, long pink tail, on all fours, muted overcast daylight, dark medieval fantasy hand-painted illustration, classic RPG bestiary art, visible brushstrokes, muted earthy palette, semi-realistic, same look as fantasy NPC portrait, dark medieval fantasy RPG art, stylized hand-painted 2D, painterly textures, muted earthy palette, warm highlights, soft cinematic lighting, subtle shadows, refined shapes, not photoreal, cohesive game art style, one single creature, full body, centered, three quarter view, single creature only, plain neutral gray background, no scenery, no text, no sheet",
+      "category": "catalog_variant",
+      "monster_id": "mob_main_3",
+      "variant": "muted overcast daylight"
+    },
+    {
+      "id": "var_mob_main_4",
+      "prompt": "green warty toad beast, bumpy skin, golden eyes, squat body, soft warm torchlight, dark medieval fantasy hand-painted illustration, classic RPG bestiary art, visible brushstrokes, muted earthy palette, semi-realistic, same look as fantasy NPC portrait, dark medieval fantasy RPG art, stylized hand-painted 2D, painterly textures, muted earthy palette, warm highlights, soft cinematic lighting, subtle shadows, refined shapes, not photoreal, cohesive game art style, one single creature, full body, centered, three quarter view, single creature only, plain neutral gray background, no scenery, no text, no sheet",
+      "category": "catalog_variant",
+      "monster_id": "mob_main_4",
+      "variant": "soft warm torchlight"
+    },
+    {
+      "id": "var_wm_named_slime",
+      "prompt": "purple jelly slime blob, two eyes, small gold crown on top, cool moonlit highlights, dark medieval fantasy hand-painted illustration, classic RPG bestiary art, visible brushstrokes, muted earthy palette, semi-realistic, same look as fantasy NPC portrait, dark medieval fantasy RPG art, stylized hand-painted 2D, painterly textures, muted earthy palette, warm highlights, soft cinematic lighting, subtle shadows, refined shapes, not photoreal, cohesive game art style, one single creature, full body, centered, three quarter view, single creature only, plain neutral gray background, no scenery, no text, no sheet",
+      "category": "catalog_variant",
+      "monster_id": "wm_named_slime",
+      "variant": "cool moonlit highlights"
+    },
+    {
+      "id": "var_mob_mist_wraith",
+      "prompt": "pale gray swamp wraith, tattered hooded robes, muted overcast daylight, dark medieval fantasy hand-painted illustration, classic RPG bestiary art, visible brushstrokes, muted earthy palette, semi-realistic, same look as fantasy NPC portrait, dark medieval fantasy RPG art, stylized hand-painted 2D, painterly textures, muted earthy palette, warm highlights, soft cinematic lighting, subtle shadows, refined shapes, not photoreal, cohesive game art style, one single creature, full body, centered, three quarter view, single creature only, plain neutral gray background, no scenery, no text, no sheet",
+      "category": "catalog_variant",
+      "monster_id": "mob_mist_wraith",
+      "variant": "muted overcast daylight"
+    },
+    {
+      "id": "var_mob_mist_mosquito",
+      "prompt": "giant gray-red blood mosquito, long proboscis, soft warm torchlight, dark medieval fantasy hand-painted illustration, classic RPG bestiary art, visible brushstrokes, muted earthy palette, semi-realistic, same look as fantasy NPC portrait, dark medieval fantasy RPG art, stylized hand-painted 2D, painterly textures, muted earthy palette, warm highlights, soft cinematic lighting, subtle shadows, refined shapes, not photoreal, cohesive game art style, one single creature, full body, centered, three quarter view, single creature only, plain neutral gray background, no scenery, no text, no sheet",
+      "category": "catalog_variant",
+      "monster_id": "mob_mist_mosquito",
+      "variant": "soft warm torchlight"
+    },
+    {
+      "id": "var_mob_mist_bogling",
+      "prompt": "brown mud bogling, squat muddy humanoid, cool moonlit highlights, dark medieval fantasy hand-painted illustration, classic RPG bestiary art, visible brushstrokes, muted earthy palette, semi-realistic, same look as fantasy NPC portrait, dark medieval fantasy RPG art, stylized hand-painted 2D, painterly textures, muted earthy palette, warm highlights, soft cinematic lighting, subtle shadows, refined shapes, not photoreal, cohesive game art style, one single creature, full body, centered, three quarter view, single creature only, plain neutral gray background, no scenery, no text, no sheet",
+      "category": "catalog_variant",
+      "monster_id": "mob_mist_bogling",
+      "variant": "cool moonlit highlights"
+    },
+    {
+      "id": "var_mob_mist_hydra",
+      "prompt": "green swamp hydra hatchling, two snake heads, muted overcast daylight, dark medieval fantasy hand-painted illustration, classic RPG bestiary art, visible brushstrokes, muted earthy palette, semi-realistic, same look as fantasy NPC portrait, dark medieval fantasy RPG art, stylized hand-painted 2D, painterly textures, muted earthy palette, warm highlights, soft cinematic lighting, subtle shadows, refined shapes, not photoreal, cohesive game art style, one single creature, full body, centered, three quarter view, single creature only, plain neutral gray background, no scenery, no text, no sheet",
+      "category": "catalog_variant",
+      "monster_id": "mob_mist_hydra",
+      "variant": "muted overcast daylight"
+    },
+    {
+      "id": "var_wm_mist_mother",
+      "prompt": "pale fog spirit woman, veiled gray mist dress, soft warm torchlight, dark medieval fantasy hand-painted illustration, classic RPG bestiary art, visible brushstrokes, muted earthy palette, semi-realistic, same look as fantasy NPC portrait, dark medieval fantasy RPG art, stylized hand-painted 2D, painterly textures, muted earthy palette, warm highlights, soft cinematic lighting, subtle shadows, refined shapes, not photoreal, cohesive game art style, one single creature, full body, centered, three quarter view, single creature only, plain neutral gray background, no scenery, no text, no sheet",
+      "category": "catalog_variant",
+      "monster_id": "wm_mist_mother",
+      "variant": "soft warm torchlight"
+    },
+    {
+      "id": "var_wm_boss_titan",
+      "prompt": "stone-and-ember lava golem titan, cracked basalt body, magma veins, cool moonlit highlights, dark medieval fantasy hand-painted illustration, classic RPG bestiary art, visible brushstrokes, muted earthy palette, semi-realistic, same look as fantasy NPC portrait, dark medieval fantasy RPG art, stylized hand-painted 2D, painterly textures, muted earthy palette, warm highlights, soft cinematic lighting, subtle shadows, refined shapes, not photoreal, cohesive game art style, one single creature, full body, centered, three quarter view, single creature only, plain neutral gray background, no scenery, no text, no sheet",
+      "category": "catalog_variant",
+      "monster_id": "wm_boss_titan",
+      "variant": "cool moonlit highlights"
+    },
+    {
+      "id": "var_mob_locb_cave_slime",
+      "prompt": "green mountain goblin, crude scrap armor, muted overcast daylight, dark medieval fantasy hand-painted illustration, classic RPG bestiary art, visible brushstrokes, muted earthy palette, semi-realistic, same look as fantasy NPC portrait, dark medieval fantasy RPG art, stylized hand-painted 2D, painterly textures, muted earthy palette, warm highlights, soft cinematic lighting, subtle shadows, refined shapes, not photoreal, cohesive game art style, one single creature, full body, centered, three quarter view, single creature only, plain neutral gray background, no scenery, no text, no sheet",
+      "category": "catalog_variant",
+      "monster_id": "mob_locb_cave_slime",
+      "variant": "muted overcast daylight"
+    },
+    {
+      "id": "var_mob_locb_amber_slime",
+      "prompt": "gray stone monitor lizard, rocky scales, soft warm torchlight, dark medieval fantasy hand-painted illustration, classic RPG bestiary art, visible brushstrokes, muted earthy palette, semi-realistic, same look as fantasy NPC portrait, dark medieval fantasy RPG art, stylized hand-painted 2D, painterly textures, muted earthy palette, warm highlights, soft cinematic lighting, subtle shadows, refined shapes, not photoreal, cohesive game art style, one single creature, full body, centered, three quarter view, single creature only, plain neutral gray background, no scenery, no text, no sheet",
+      "category": "catalog_variant",
+      "monster_id": "mob_locb_amber_slime",
+      "variant": "soft warm torchlight"
+    },
+    {
+      "id": "var_mob_locb_ash_hound",
+      "prompt": "gray granite guardian hound statue, cool moonlit highlights, dark medieval fantasy hand-painted illustration, classic RPG bestiary art, visible brushstrokes, muted earthy palette, semi-realistic, same look as fantasy NPC portrait, dark medieval fantasy RPG art, stylized hand-painted 2D, painterly textures, muted earthy palette, warm highlights, soft cinematic lighting, subtle shadows, refined shapes, not photoreal, cohesive game art style, one single creature, full body, centered, three quarter view, single creature only, plain neutral gray background, no scenery, no text, no sheet",
+      "category": "catalog_variant",
+      "monster_id": "mob_locb_ash_hound",
+      "variant": "cool moonlit highlights"
+    },
+    {
+      "id": "var_mob_stone_harpy",
+      "prompt": "brown-feathered mountain harpy, wings, talons, muted overcast daylight, dark medieval fantasy hand-painted illustration, classic RPG bestiary art, visible brushstrokes, muted earthy palette, semi-realistic, same look as fantasy NPC portrait, dark medieval fantasy RPG art, stylized hand-painted 2D, painterly textures, muted earthy palette, warm highlights, soft cinematic lighting, subtle shadows, refined shapes, not photoreal, cohesive game art style, one single creature, full body, centered, three quarter view, single creature only, plain neutral gray background, no scenery, no text, no sheet",
+      "category": "catalog_variant",
+      "monster_id": "mob_stone_harpy",
+      "variant": "muted overcast daylight"
+    },
+    {
+      "id": "var_wm_bone_warden",
+      "prompt": "white skeleton knight, horned skull helm, soft warm torchlight, dark medieval fantasy hand-painted illustration, classic RPG bestiary art, visible brushstrokes, muted earthy palette, semi-realistic, same look as fantasy NPC portrait, dark medieval fantasy RPG art, stylized hand-painted 2D, painterly textures, muted earthy palette, warm highlights, soft cinematic lighting, subtle shadows, refined shapes, not photoreal, cohesive game art style, one single creature, full body, centered, three quarter view, single creature only, plain neutral gray background, no scenery, no text, no sheet",
+      "category": "catalog_variant",
+      "monster_id": "wm_bone_warden",
+      "variant": "soft warm torchlight"
+    },
+    {
+      "id": "var_mob_ash_slag",
+      "prompt": "orange molten slag slime blob, ash cinders, cool moonlit highlights, dark medieval fantasy hand-painted illustration, classic RPG bestiary art, visible brushstrokes, muted earthy palette, semi-realistic, same look as fantasy NPC portrait, dark medieval fantasy RPG art, stylized hand-painted 2D, painterly textures, muted earthy palette, warm highlights, soft cinematic lighting, subtle shadows, refined shapes, not photoreal, cohesive game art style, one single creature, full body, centered, three quarter view, single creature only, plain neutral gray background, no scenery, no text, no sheet",
+      "category": "catalog_variant",
+      "monster_id": "mob_ash_slag",
+      "variant": "cool moonlit highlights"
+    },
+    {
+      "id": "var_mob_ash_burner",
+      "prompt": "smoldering charcoal ember humanoid, muted overcast daylight, dark medieval fantasy hand-painted illustration, classic RPG bestiary art, visible brushstrokes, muted earthy palette, semi-realistic, same look as fantasy NPC portrait, dark medieval fantasy RPG art, stylized hand-painted 2D, painterly textures, muted earthy palette, warm highlights, soft cinematic lighting, subtle shadows, refined shapes, not photoreal, cohesive game art style, one single creature, full body, centered, three quarter view, single creature only, plain neutral gray background, no scenery, no text, no sheet",
+      "category": "catalog_variant",
+      "monster_id": "mob_ash_burner",
+      "variant": "muted overcast daylight"
+    },
+    {
+      "id": "var_mob_ash_golem",
+      "prompt": "bulky volcanic ash golem, dark rock, soft warm torchlight, dark medieval fantasy hand-painted illustration, classic RPG bestiary art, visible brushstrokes, muted earthy palette, semi-realistic, same look as fantasy NPC portrait, dark medieval fantasy RPG art, stylized hand-painted 2D, painterly textures, muted earthy palette, warm highlights, soft cinematic lighting, subtle shadows, refined shapes, not photoreal, cohesive game art style, one single creature, full body, centered, three quarter view, single creature only, plain neutral gray background, no scenery, no text, no sheet",
+      "category": "catalog_variant",
+      "monster_id": "mob_ash_golem",
+      "variant": "soft warm torchlight"
+    },
+    {
+      "id": "var_mob_ash_salamander",
+      "prompt": "orange fire salamander, glowing scales, cool moonlit highlights, dark medieval fantasy hand-painted illustration, classic RPG bestiary art, visible brushstrokes, muted earthy palette, semi-realistic, same look as fantasy NPC portrait, dark medieval fantasy RPG art, stylized hand-painted 2D, painterly textures, muted earthy palette, warm highlights, soft cinematic lighting, subtle shadows, refined shapes, not photoreal, cohesive game art style, one single creature, full body, centered, three quarter view, single creature only, plain neutral gray background, no scenery, no text, no sheet",
+      "category": "catalog_variant",
+      "monster_id": "mob_ash_salamander",
+      "variant": "cool moonlit highlights"
+    },
+    {
+      "id": "var_wm_heat_overseer",
+      "prompt": "red-black demon foreman, dark iron armor, muted overcast daylight, dark medieval fantasy hand-painted illustration, classic RPG bestiary art, visible brushstrokes, muted earthy palette, semi-realistic, same look as fantasy NPC portrait, dark medieval fantasy RPG art, stylized hand-painted 2D, painterly textures, muted earthy palette, warm highlights, soft cinematic lighting, subtle shadows, refined shapes, not photoreal, cohesive game art style, one single creature, full body, centered, three quarter view, single creature only, plain neutral gray background, no scenery, no text, no sheet",
+      "category": "catalog_variant",
+      "monster_id": "wm_heat_overseer",
+      "variant": "muted overcast daylight"
+    },
+    {
+      "id": "var_mob_fang_scarab",
+      "prompt": "large void-black shadow scarab beetle monster, insect six spiny legs, segmented chitin carapace with glowing purple void runes, oversized curved horned mandibles, faint shadow smoke wisps, small glowing void eyes, eldritch corrupted fantasy beetle, standing on ground, side three-quarter view showing body depth, NOT top-down, NOT bird eye view, NOT flat icon, NOT humanoid, NOT realistic photo, soft warm torchlight, dark medieval fantasy hand-painted illustration, classic RPG bestiary art, visible brushstrokes, muted earthy palette, semi-realistic, same look as fantasy NPC portrait, dark medieval fantasy RPG art, stylized hand-painted 2D, painterly textures, muted earthy palette, warm highlights, soft cinematic lighting, subtle shadows, refined shapes, not photoreal, cohesive game art style, one single creature, full body, centered, three quarter view, single creature only, plain neutral gray background, no scenery, no text, no sheet",
+      "category": "catalog_variant",
+      "monster_id": "mob_fang_scarab",
+      "variant": "soft warm torchlight"
+    },
+    {
+      "id": "var_mob_fang_blade",
+      "prompt": "dark void wraith fused with living sword, cool moonlit highlights, dark medieval fantasy hand-painted illustration, classic RPG bestiary art, visible brushstrokes, muted earthy palette, semi-realistic, same look as fantasy NPC portrait, dark medieval fantasy RPG art, stylized hand-painted 2D, painterly textures, muted earthy palette, warm highlights, soft cinematic lighting, subtle shadows, refined shapes, not photoreal, cohesive game art style, one single creature, full body, centered, three quarter view, single creature only, plain neutral gray background, no scenery, no text, no sheet",
+      "category": "catalog_variant",
+      "monster_id": "mob_fang_blade",
+      "variant": "cool moonlit highlights"
+    },
+    {
+      "id": "var_mob_fang_knight",
+      "prompt": "Rift Knight blackened plate armor, muted overcast daylight, dark medieval fantasy hand-painted illustration, classic RPG bestiary art, visible brushstrokes, muted earthy palette, semi-realistic, same look as fantasy NPC portrait, dark medieval fantasy RPG art, stylized hand-painted 2D, painterly textures, muted earthy palette, warm highlights, soft cinematic lighting, subtle shadows, refined shapes, not photoreal, cohesive game art style, one single creature, full body, centered, three quarter view, single creature only, plain neutral gray background, no scenery, no text, no sheet",
+      "category": "catalog_variant",
+      "monster_id": "mob_fang_knight",
+      "variant": "muted overcast daylight"
+    },
+    {
+      "id": "var_mob_fang_herald",
+      "prompt": "mage purple robes with void staff, soft warm torchlight, dark medieval fantasy hand-painted illustration, classic RPG bestiary art, visible brushstrokes, muted earthy palette, semi-realistic, same look as fantasy NPC portrait, dark medieval fantasy RPG art, stylized hand-painted 2D, painterly textures, muted earthy palette, warm highlights, soft cinematic lighting, subtle shadows, refined shapes, not photoreal, cohesive game art style, one single creature, full body, centered, three quarter view, single creature only, plain neutral gray background, no scenery, no text, no sheet",
+      "category": "catalog_variant",
+      "monster_id": "mob_fang_herald",
+      "variant": "soft warm torchlight"
+    },
+    {
+      "id": "var_wm_boss_varkan",
+      "prompt": "dragonoid boss violet abyss armor wings, cool moonlit highlights, dark medieval fantasy hand-painted illustration, classic RPG bestiary art, visible brushstrokes, muted earthy palette, semi-realistic, same look as fantasy NPC portrait, dark medieval fantasy RPG art, stylized hand-painted 2D, painterly textures, muted earthy palette, warm highlights, soft cinematic lighting, subtle shadows, refined shapes, not photoreal, cohesive game art style, one single creature, full body, centered, three quarter view, single creature only, plain neutral gray background, no scenery, no text, no sheet",
+      "category": "catalog_variant",
+      "monster_id": "wm_boss_varkan",
+      "variant": "cool moonlit highlights"
+    },
+    {
+      "id": "var_wm_event_wolf",
+      "prompt": "huge dark-fur alpha wolf, scarred muzzle, muted overcast daylight, dark medieval fantasy hand-painted illustration, classic RPG bestiary art, visible brushstrokes, muted earthy palette, semi-realistic, same look as fantasy NPC portrait, dark medieval fantasy RPG art, stylized hand-painted 2D, painterly textures, muted earthy palette, warm highlights, soft cinematic lighting, subtle shadows, refined shapes, not photoreal, cohesive game art style, one single creature, full body, centered, three quarter view, single creature only, plain neutral gray background, no scenery, no text, no sheet",
+      "category": "catalog_variant",
+      "monster_id": "wm_event_wolf",
+      "variant": "muted overcast daylight"
+    },
+    {
+      "id": "gen_dire_bear",
+      "prompt": "massive brown dire bear beast, scarred hide, roaring, dark medieval fantasy hand-painted illustration, classic RPG bestiary art, visible brushstrokes, muted earthy palette, semi-realistic, same look as fantasy NPC portrait, dark medieval fantasy RPG art, stylized hand-painted 2D, painterly textures, muted earthy palette, warm highlights, soft cinematic lighting, subtle shadows, refined shapes, not photoreal, cohesive game art style, one single creature, full body, centered, three quarter view, single creature only, plain neutral gray background, no scenery, no text, no sheet",
+      "category": "generic",
+      "monster_id": null,
+      "variant": "base"
+    },
+    {
+      "id": "gen_cave_bat",
+      "prompt": "giant cave bat, leathery wings spread, fanged, dark medieval fantasy hand-painted illustration, classic RPG bestiary art, visible brushstrokes, muted earthy palette, semi-realistic, same look as fantasy NPC portrait, dark medieval fantasy RPG art, stylized hand-painted 2D, painterly textures, muted earthy palette, warm highlights, soft cinematic lighting, subtle shadows, refined shapes, not photoreal, cohesive game art style, one single creature, full body, centered, three quarter view, single creature only, plain neutral gray background, no scenery, no text, no sheet",
+      "category": "generic",
+      "monster_id": null,
+      "variant": "base"
+    },
+    {
+      "id": "gen_iron_crab",
+      "prompt": "iron-plated dungeon crab, rusted pincers, dark medieval fantasy hand-painted illustration, classic RPG bestiary art, visible brushstrokes, muted earthy palette, semi-realistic, same look as fantasy NPC portrait, dark medieval fantasy RPG art, stylized hand-painted 2D, painterly textures, muted earthy palette, warm highlights, soft cinematic lighting, subtle shadows, refined shapes, not photoreal, cohesive game art style, one single creature, full body, centered, three quarter view, single creature only, plain neutral gray background, no scenery, no text, no sheet",
+      "category": "generic",
+      "monster_id": null,
+      "variant": "base"
+    },
+    {
+      "id": "gen_moss_treant",
+      "prompt": "small moss treant sapling, root feet, glowing eyes, dark medieval fantasy hand-painted illustration, classic RPG bestiary art, visible brushstrokes, muted earthy palette, semi-realistic, same look as fantasy NPC portrait, dark medieval fantasy RPG art, stylized hand-painted 2D, painterly textures, muted earthy palette, warm highlights, soft cinematic lighting, subtle shadows, refined shapes, not photoreal, cohesive game art style, one single creature, full body, centered, three quarter view, single creature only, plain neutral gray background, no scenery, no text, no sheet",
+      "category": "generic",
+      "monster_id": null,
+      "variant": "base"
+    },
+    {
+      "id": "gen_ice_wisp",
+      "prompt": "pale blue ice wisp spirit, floating orb core, dark medieval fantasy hand-painted illustration, classic RPG bestiary art, visible brushstrokes, muted earthy palette, semi-realistic, same look as fantasy NPC portrait, dark medieval fantasy RPG art, stylized hand-painted 2D, painterly textures, muted earthy palette, warm highlights, soft cinematic lighting, subtle shadows, refined shapes, not photoreal, cohesive game art style, one single creature, full body, centered, three quarter view, single creature only, plain neutral gray background, no scenery, no text, no sheet",
+      "category": "generic",
+      "monster_id": null,
+      "variant": "base"
+    },
+    {
+      "id": "gen_flame_imp",
+      "prompt": "small red flame imp demon, pointed tail, mischievous grin, dark medieval fantasy hand-painted illustration, classic RPG bestiary art, visible brushstrokes, muted earthy palette, semi-realistic, same look as fantasy NPC portrait, dark medieval fantasy RPG art, stylized hand-painted 2D, painterly textures, muted earthy palette, warm highlights, soft cinematic lighting, subtle shadows, refined shapes, not photoreal, cohesive game art style, one single creature, full body, centered, three quarter view, single creature only, plain neutral gray background, no scenery, no text, no sheet",
+      "category": "generic",
+      "monster_id": null,
+      "variant": "base"
+    },
+    {
+      "id": "gen_bone_hound",
+      "prompt": "skeletal hound beast, ribcage visible, glowing eye sockets, dark medieval fantasy hand-painted illustration, classic RPG bestiary art, visible brushstrokes, muted earthy palette, semi-realistic, same look as fantasy NPC portrait, dark medieval fantasy RPG art, stylized hand-painted 2D, painterly textures, muted earthy palette, warm highlights, soft cinematic lighting, subtle shadows, refined shapes, not photoreal, cohesive game art style, one single creature, full body, centered, three quarter view, single creature only, plain neutral gray background, no scenery, no text, no sheet",
+      "category": "generic",
+      "monster_id": null,
+      "variant": "base"
+    },
+    {
+      "id": "gen_swamp_leech",
+      "prompt": "giant black swamp leech, segmented body, suckers, dark medieval fantasy hand-painted illustration, classic RPG bestiary art, visible brushstrokes, muted earthy palette, semi-realistic, same look as fantasy NPC portrait, dark medieval fantasy RPG art, stylized hand-painted 2D, painterly textures, muted earthy palette, warm highlights, soft cinematic lighting, subtle shadows, refined shapes, not photoreal, cohesive game art style, one single creature, full body, centered, three quarter view, single creature only, plain neutral gray background, no scenery, no text, no sheet",
+      "category": "generic",
+      "monster_id": null,
+      "variant": "base"
+    },
+    {
+      "id": "gen_crystal_golem",
+      "prompt": "small crystal golem, amethyst shards, chunky limbs, dark medieval fantasy hand-painted illustration, classic RPG bestiary art, visible brushstrokes, muted earthy palette, semi-realistic, same look as fantasy NPC portrait, dark medieval fantasy RPG art, stylized hand-painted 2D, painterly textures, muted earthy palette, warm highlights, soft cinematic lighting, subtle shadows, refined shapes, not photoreal, cohesive game art style, one single creature, full body, centered, three quarter view, single creature only, plain neutral gray background, no scenery, no text, no sheet",
+      "category": "generic",
+      "monster_id": null,
+      "variant": "base"
+    },
+    {
+      "id": "gen_poison_spider",
+      "prompt": "large toxic green spider, dripping fangs, hairy legs, dark medieval fantasy hand-painted illustration, classic RPG bestiary art, visible brushstrokes, muted earthy palette, semi-realistic, same look as fantasy NPC portrait, dark medieval fantasy RPG art, stylized hand-painted 2D, painterly textures, muted earthy palette, warm highlights, soft cinematic lighting, subtle shadows, refined shapes, not photoreal, cohesive game art style, one single creature, full body, centered, three quarter view, single creature only, plain neutral gray background, no scenery, no text, no sheet",
+      "category": "generic",
+      "monster_id": null,
+      "variant": "base"
+    },
+    {
+      "id": "gen_storm_eel",
+      "prompt": "electric storm eel serpent, crackling scales, dark medieval fantasy hand-painted illustration, classic RPG bestiary art, visible brushstrokes, muted earthy palette, semi-realistic, same look as fantasy NPC portrait, dark medieval fantasy RPG art, stylized hand-painted 2D, painterly textures, muted earthy palette, warm highlights, soft cinematic lighting, subtle shadows, refined shapes, not photoreal, cohesive game art style, one single creature, full body, centered, three quarter view, single creature only, plain neutral gray background, no scenery, no text, no sheet",
+      "category": "generic",
+      "monster_id": null,
+      "variant": "base"
+    },
+    {
+      "id": "gen_grave_gargoyle",
+      "prompt": "stone gargoyle beast, crouched wings, weathered, dark medieval fantasy hand-painted illustration, classic RPG bestiary art, visible brushstrokes, muted earthy palette, semi-realistic, same look as fantasy NPC portrait, dark medieval fantasy RPG art, stylized hand-painted 2D, painterly textures, muted earthy palette, warm highlights, soft cinematic lighting, subtle shadows, refined shapes, not photoreal, cohesive game art style, one single creature, full body, centered, three quarter view, single creature only, plain neutral gray background, no scenery, no text, no sheet",
+      "category": "generic",
+      "monster_id": null,
+      "variant": "base"
+    },
+    {
+      "id": "gen_fungal_shambler",
+      "prompt": "fungal shambler humanoid, mushroom cap head, spores, dark medieval fantasy hand-painted illustration, classic RPG bestiary art, visible brushstrokes, muted earthy palette, semi-realistic, same look as fantasy NPC portrait, dark medieval fantasy RPG art, stylized hand-painted 2D, painterly textures, muted earthy palette, warm highlights, soft cinematic lighting, subtle shadows, refined shapes, not photoreal, cohesive game art style, one single creature, full body, centered, three quarter view, single creature only, plain neutral gray background, no scenery, no text, no sheet",
+      "category": "generic",
+      "monster_id": null,
+      "variant": "base"
+    },
+    {
+      "id": "gen_sand_scorpion",
+      "prompt": "giant sand scorpion, chitin armor, raised tail, dark medieval fantasy hand-painted illustration, classic RPG bestiary art, visible brushstrokes, muted earthy palette, semi-realistic, same look as fantasy NPC portrait, dark medieval fantasy RPG art, stylized hand-painted 2D, painterly textures, muted earthy palette, warm highlights, soft cinematic lighting, subtle shadows, refined shapes, not photoreal, cohesive game art style, one single creature, full body, centered, three quarter view, single creature only, plain neutral gray background, no scenery, no text, no sheet",
+      "category": "generic",
+      "monster_id": null,
+      "variant": "base"
+    },
+    {
+      "id": "gen_frost_wolf",
+      "prompt": "white frost wolf, icy breath, thick fur, dark medieval fantasy hand-painted illustration, classic RPG bestiary art, visible brushstrokes, muted earthy palette, semi-realistic, same look as fantasy NPC portrait, dark medieval fantasy RPG art, stylized hand-painted 2D, painterly textures, muted earthy palette, warm highlights, soft cinematic lighting, subtle shadows, refined shapes, not photoreal, cohesive game art style, one single creature, full body, centered, three quarter view, single creature only, plain neutral gray background, no scenery, no text, no sheet",
+      "category": "generic",
+      "monster_id": null,
+      "variant": "base"
+    },
+    {
+      "id": "gen_magma_snail",
+      "prompt": "magma snail beast, shell of cooled rock, lava trail, dark medieval fantasy hand-painted illustration, classic RPG bestiary art, visible brushstrokes, muted earthy palette, semi-realistic, same look as fantasy NPC portrait, dark medieval fantasy RPG art, stylized hand-painted 2D, painterly textures, muted earthy palette, warm highlights, soft cinematic lighting, subtle shadows, refined shapes, not photoreal, cohesive game art style, one single creature, full body, centered, three quarter view, single creature only, plain neutral gray background, no scenery, no text, no sheet",
+      "category": "generic",
+      "monster_id": null,
+      "variant": "base"
+    },
+    {
+      "id": "gen_void_moth",
+      "prompt": "void purple giant moth, dust wings, alien antennae, dark medieval fantasy hand-painted illustration, classic RPG bestiary art, visible brushstrokes, muted earthy palette, semi-realistic, same look as fantasy NPC portrait, dark medieval fantasy RPG art, stylized hand-painted 2D, painterly textures, muted earthy palette, warm highlights, soft cinematic lighting, subtle shadows, refined shapes, not photoreal, cohesive game art style, one single creature, full body, centered, three quarter view, single creature only, plain neutral gray background, no scenery, no text, no sheet",
+      "category": "generic",
+      "monster_id": null,
+      "variant": "base"
+    },
+    {
+      "id": "gen_rust_automaton",
+      "prompt": "rusty clockwork automaton scout, gears exposed, dark medieval fantasy hand-painted illustration, classic RPG bestiary art, visible brushstrokes, muted earthy palette, semi-realistic, same look as fantasy NPC portrait, dark medieval fantasy RPG art, stylized hand-painted 2D, painterly textures, muted earthy palette, warm highlights, soft cinematic lighting, subtle shadows, refined shapes, not photoreal, cohesive game art style, one single creature, full body, centered, three quarter view, single creature only, plain neutral gray background, no scenery, no text, no sheet",
+      "category": "generic",
+      "monster_id": null,
+      "variant": "base"
+    },
+    {
+      "id": "gen_amber_wasp",
+      "prompt": "giant amber wasp, translucent wings, stinger, dark medieval fantasy hand-painted illustration, classic RPG bestiary art, visible brushstrokes, muted earthy palette, semi-realistic, same look as fantasy NPC portrait, dark medieval fantasy RPG art, stylized hand-painted 2D, painterly textures, muted earthy palette, warm highlights, soft cinematic lighting, subtle shadows, refined shapes, not photoreal, cohesive game art style, one single creature, full body, centered, three quarter view, single creature only, plain neutral gray background, no scenery, no text, no sheet",
+      "category": "generic",
+      "monster_id": null,
+      "variant": "base"
+    },
+    {
+      "id": "gen_bog_turtle",
+      "prompt": "armored bog turtle beast, moss shell, snapping jaw, dark medieval fantasy hand-painted illustration, classic RPG bestiary art, visible brushstrokes, muted earthy palette, semi-realistic, same look as fantasy NPC portrait, dark medieval fantasy RPG art, stylized hand-painted 2D, painterly textures, muted earthy palette, warm highlights, soft cinematic lighting, subtle shadows, refined shapes, not photoreal, cohesive game art style, one single creature, full body, centered, three quarter view, single creature only, plain neutral gray background, no scenery, no text, no sheet",
+      "category": "generic",
+      "monster_id": null,
+      "variant": "base"
+    },
+    {
+      "id": "gen_shadow_stag",
+      "prompt": "shadow black stag beast, antlers of smoke, dark medieval fantasy hand-painted illustration, classic RPG bestiary art, visible brushstrokes, muted earthy palette, semi-realistic, same look as fantasy NPC portrait, dark medieval fantasy RPG art, stylized hand-painted 2D, painterly textures, muted earthy palette, warm highlights, soft cinematic lighting, subtle shadows, refined shapes, not photoreal, cohesive game art style, one single creature, full body, centered, three quarter view, single creature only, plain neutral gray background, no scenery, no text, no sheet",
+      "category": "generic",
+      "monster_id": null,
+      "variant": "base"
+    },
+    {
+      "id": "gen_coal_elemental",
+      "prompt": "coal elemental humanoid, ember cracks, hunched, dark medieval fantasy hand-painted illustration, classic RPG bestiary art, visible brushstrokes, muted earthy palette, semi-realistic, same look as fantasy NPC portrait, dark medieval fantasy RPG art, stylized hand-painted 2D, painterly textures, muted earthy palette, warm highlights, soft cinematic lighting, subtle shadows, refined shapes, not photoreal, cohesive game art style, one single creature, full body, centered, three quarter view, single creature only, plain neutral gray background, no scenery, no text, no sheet",
+      "category": "generic",
+      "monster_id": null,
+      "variant": "base"
+    },
+    {
+      "id": "gen_plague_rat_king",
+      "prompt": "plague rat king beast, crown of bone, swollen, dark medieval fantasy hand-painted illustration, classic RPG bestiary art, visible brushstrokes, muted earthy palette, semi-realistic, same look as fantasy NPC portrait, dark medieval fantasy RPG art, stylized hand-painted 2D, painterly textures, muted earthy palette, warm highlights, soft cinematic lighting, subtle shadows, refined shapes, not photoreal, cohesive game art style, one single creature, full body, centered, three quarter view, single creature only, plain neutral gray background, no scenery, no text, no sheet",
+      "category": "generic",
+      "monster_id": null,
+      "variant": "base"
+    },
+    {
+      "id": "gen_thorn_lizard",
+      "prompt": "thorn-covered lizard beast, spiked back, dark medieval fantasy hand-painted illustration, classic RPG bestiary art, visible brushstrokes, muted earthy palette, semi-realistic, same look as fantasy NPC portrait, dark medieval fantasy RPG art, stylized hand-painted 2D, painterly textures, muted earthy palette, warm highlights, soft cinematic lighting, subtle shadows, refined shapes, not photoreal, cohesive game art style, one single creature, full body, centered, three quarter view, single creature only, plain neutral gray background, no scenery, no text, no sheet",
+      "category": "generic",
+      "monster_id": null,
+      "variant": "base"
+    },
+    {
+      "id": "gen_abyss_fish",
+      "prompt": "abyssal deep fish monster, bioluminescent lure, dark medieval fantasy hand-painted illustration, classic RPG bestiary art, visible brushstrokes, muted earthy palette, semi-realistic, same look as fantasy NPC portrait, dark medieval fantasy RPG art, stylized hand-painted 2D, painterly textures, muted earthy palette, warm highlights, soft cinematic lighting, subtle shadows, refined shapes, not photoreal, cohesive game art style, one single creature, full body, centered, three quarter view, single creature only, plain neutral gray background, no scenery, no text, no sheet",
+      "category": "generic",
+      "monster_id": null,
+      "variant": "base"
+    },
+    {
+      "id": "gen_cinder_bat",
+      "prompt": "cinder ash bat, ember wing membranes, dark medieval fantasy hand-painted illustration, classic RPG bestiary art, visible brushstrokes, muted earthy palette, semi-realistic, same look as fantasy NPC portrait, dark medieval fantasy RPG art, stylized hand-painted 2D, painterly textures, muted earthy palette, warm highlights, soft cinematic lighting, subtle shadows, refined shapes, not photoreal, cohesive game art style, one single creature, full body, centered, three quarter view, single creature only, plain neutral gray background, no scenery, no text, no sheet",
+      "category": "generic",
+      "monster_id": null,
+      "variant": "base"
+    },
+    {
+      "id": "gen_mire_ooze",
+      "prompt": "dark mire ooze puddle beast, bubbles, single eye, dark medieval fantasy hand-painted illustration, classic RPG bestiary art, visible brushstrokes, muted earthy palette, semi-realistic, same look as fantasy NPC portrait, dark medieval fantasy RPG art, stylized hand-painted 2D, painterly textures, muted earthy palette, warm highlights, soft cinematic lighting, subtle shadows, refined shapes, not photoreal, cohesive game art style, one single creature, full body, centered, three quarter view, single creature only, plain neutral gray background, no scenery, no text, no sheet",
+      "category": "generic",
+      "monster_id": null,
+      "variant": "base"
+    },
+    {
+      "id": "gen_rune_golem",
+      "prompt": "rune-carved stone golem fragment, glowing sigils, dark medieval fantasy hand-painted illustration, classic RPG bestiary art, visible brushstrokes, muted earthy palette, semi-realistic, same look as fantasy NPC portrait, dark medieval fantasy RPG art, stylized hand-painted 2D, painterly textures, muted earthy palette, warm highlights, soft cinematic lighting, subtle shadows, refined shapes, not photoreal, cohesive game art style, one single creature, full body, centered, three quarter view, single creature only, plain neutral gray background, no scenery, no text, no sheet",
+      "category": "generic",
+      "monster_id": null,
+      "variant": "base"
+    },
+    {
+      "id": "gen_hollow_knight",
+      "prompt": "hollow black knight specter, tattered cape, no face, dark medieval fantasy hand-painted illustration, classic RPG bestiary art, visible brushstrokes, muted earthy palette, semi-realistic, same look as fantasy NPC portrait, dark medieval fantasy RPG art, stylized hand-painted 2D, painterly textures, muted earthy palette, warm highlights, soft cinematic lighting, subtle shadows, refined shapes, not photoreal, cohesive game art style, one single creature, full body, centered, three quarter view, single creature only, plain neutral gray background, no scenery, no text, no sheet",
+      "category": "generic",
+      "monster_id": null,
+      "variant": "base"
+    },
+    {
+      "id": "gen_vine_serpent",
+      "prompt": "vine serpent beast, thorny coils, yellow eyes, dark medieval fantasy hand-painted illustration, classic RPG bestiary art, visible brushstrokes, muted earthy palette, semi-realistic, same look as fantasy NPC portrait, dark medieval fantasy RPG art, stylized hand-painted 2D, painterly textures, muted earthy palette, warm highlights, soft cinematic lighting, subtle shadows, refined shapes, not photoreal, cohesive game art style, one single creature, full body, centered, three quarter view, single creature only, plain neutral gray background, no scenery, no text, no sheet",
+      "category": "generic",
+      "monster_id": null,
+      "variant": "base"
+    },
+    {
+      "id": "gen_slate_gryphon",
+      "prompt": "slate gray gryphon hatchling, small wings, dark medieval fantasy hand-painted illustration, classic RPG bestiary art, visible brushstrokes, muted earthy palette, semi-realistic, same look as fantasy NPC portrait, dark medieval fantasy RPG art, stylized hand-painted 2D, painterly textures, muted earthy palette, warm highlights, soft cinematic lighting, subtle shadows, refined shapes, not photoreal, cohesive game art style, one single creature, full body, centered, three quarter view, single creature only, plain neutral gray background, no scenery, no text, no sheet",
+      "category": "generic",
+      "monster_id": null,
+      "variant": "base"
+    },
+    {
+      "id": "gen_blood_fly",
+      "prompt": "oversized blood-red horsefly beast, compound eyes, dark medieval fantasy hand-painted illustration, classic RPG bestiary art, visible brushstrokes, muted earthy palette, semi-realistic, same look as fantasy NPC portrait, dark medieval fantasy RPG art, stylized hand-painted 2D, painterly textures, muted earthy palette, warm highlights, soft cinematic lighting, subtle shadows, refined shapes, not photoreal, cohesive game art style, one single creature, full body, centered, three quarter view, single creature only, plain neutral gray background, no scenery, no text, no sheet",
+      "category": "generic",
+      "monster_id": null,
+      "variant": "base"
+    },
+    {
+      "id": "gen_quartz_beetle",
+      "prompt": "quartz crystal beetle, faceted shell, dark medieval fantasy hand-painted illustration, classic RPG bestiary art, visible brushstrokes, muted earthy palette, semi-realistic, same look as fantasy NPC portrait, dark medieval fantasy RPG art, stylized hand-painted 2D, painterly textures, muted earthy palette, warm highlights, soft cinematic lighting, subtle shadows, refined shapes, not photoreal, cohesive game art style, one single creature, full body, centered, three quarter view, single creature only, plain neutral gray background, no scenery, no text, no sheet",
+      "category": "generic",
+      "monster_id": null,
+      "variant": "base"
+    },
+    {
+      "id": "gen_peat_worm",
+      "prompt": "giant peat worm, segmented pink-gray body, dark medieval fantasy hand-painted illustration, classic RPG bestiary art, visible brushstrokes, muted earthy palette, semi-realistic, same look as fantasy NPC portrait, dark medieval fantasy RPG art, stylized hand-painted 2D, painterly textures, muted earthy palette, warm highlights, soft cinematic lighting, subtle shadows, refined shapes, not photoreal, cohesive game art style, one single creature, full body, centered, three quarter view, single creature only, plain neutral gray background, no scenery, no text, no sheet",
+      "category": "generic",
+      "monster_id": null,
+      "variant": "base"
+    },
+    {
+      "id": "gen_ember_fox",
+      "prompt": "ember orange fox spirit beast, flame tail tips, dark medieval fantasy hand-painted illustration, classic RPG bestiary art, visible brushstrokes, muted earthy palette, semi-realistic, same look as fantasy NPC portrait, dark medieval fantasy RPG art, stylized hand-painted 2D, painterly textures, muted earthy palette, warm highlights, soft cinematic lighting, subtle shadows, refined shapes, not photoreal, cohesive game art style, one single creature, full body, centered, three quarter view, single creature only, plain neutral gray background, no scenery, no text, no sheet",
+      "category": "generic",
+      "monster_id": null,
+      "variant": "base"
+    },
+    {
+      "id": "gen_slate_crab",
+      "prompt": "slate rock crab guardian, barnacle patches, dark medieval fantasy hand-painted illustration, classic RPG bestiary art, visible brushstrokes, muted earthy palette, semi-realistic, same look as fantasy NPC portrait, dark medieval fantasy RPG art, stylized hand-painted 2D, painterly textures, muted earthy palette, warm highlights, soft cinematic lighting, subtle shadows, refined shapes, not photoreal, cohesive game art style, one single creature, full body, centered, three quarter view, single creature only, plain neutral gray background, no scenery, no text, no sheet",
+      "category": "generic",
+      "monster_id": null,
+      "variant": "base"
+    },
+    {
+      "id": "gen_mist_serpent",
+      "prompt": "mist gray sea serpent head, fog trailing, dark medieval fantasy hand-painted illustration, classic RPG bestiary art, visible brushstrokes, muted earthy palette, semi-realistic, same look as fantasy NPC portrait, dark medieval fantasy RPG art, stylized hand-painted 2D, painterly textures, muted earthy palette, warm highlights, soft cinematic lighting, subtle shadows, refined shapes, not photoreal, cohesive game art style, one single creature, full body, centered, three quarter view, single creature only, plain neutral gray background, no scenery, no text, no sheet",
+      "category": "generic",
+      "monster_id": null,
+      "variant": "base"
+    },
+    {
+      "id": "gen_iron_boar",
+      "prompt": "iron-tusked war boar, bristled hide, dark medieval fantasy hand-painted illustration, classic RPG bestiary art, visible brushstrokes, muted earthy palette, semi-realistic, same look as fantasy NPC portrait, dark medieval fantasy RPG art, stylized hand-painted 2D, painterly textures, muted earthy palette, warm highlights, soft cinematic lighting, subtle shadows, refined shapes, not photoreal, cohesive game art style, one single creature, full body, centered, three quarter view, single creature only, plain neutral gray background, no scenery, no text, no sheet",
+      "category": "generic",
+      "monster_id": null,
+      "variant": "base"
+    },
+    {
+      "id": "gen_obsidian_raven",
+      "prompt": "obsidian feather raven beast, glowing red eyes, dark medieval fantasy hand-painted illustration, classic RPG bestiary art, visible brushstrokes, muted earthy palette, semi-realistic, same look as fantasy NPC portrait, dark medieval fantasy RPG art, stylized hand-painted 2D, painterly textures, muted earthy palette, warm highlights, soft cinematic lighting, subtle shadows, refined shapes, not photoreal, cohesive game art style, one single creature, full body, centered, three quarter view, single creature only, plain neutral gray background, no scenery, no text, no sheet",
+      "category": "generic",
+      "monster_id": null,
+      "variant": "base"
+    },
+    {
+      "id": "gen_sulfur_slime",
+      "prompt": "yellow sulfur slime blob, toxic fumes, no limbs, dark medieval fantasy hand-painted illustration, classic RPG bestiary art, visible brushstrokes, muted earthy palette, semi-realistic, same look as fantasy NPC portrait, dark medieval fantasy RPG art, stylized hand-painted 2D, painterly textures, muted earthy palette, warm highlights, soft cinematic lighting, subtle shadows, refined shapes, not photoreal, cohesive game art style, one single creature, full body, centered, three quarter view, single creature only, plain neutral gray background, no scenery, no text, no sheet",
+      "category": "generic",
+      "monster_id": null,
+      "variant": "base"
+    },
+    {
+      "id": "gen_grave_rose",
+      "prompt": "walking grave rose plant monster, thorny stem legs, dark medieval fantasy hand-painted illustration, classic RPG bestiary art, visible brushstrokes, muted earthy palette, semi-realistic, same look as fantasy NPC portrait, dark medieval fantasy RPG art, stylized hand-painted 2D, painterly textures, muted earthy palette, warm highlights, soft cinematic lighting, subtle shadows, refined shapes, not photoreal, cohesive game art style, one single creature, full body, centered, three quarter view, single creature only, plain neutral gray background, no scenery, no text, no sheet",
+      "category": "generic",
+      "monster_id": null,
+      "variant": "base"
+    },
+    {
+      "id": "gen_dust_wraith",
+      "prompt": "dust brown wraith silhouette, tattered strips, dark medieval fantasy hand-painted illustration, classic RPG bestiary art, visible brushstrokes, muted earthy palette, semi-realistic, same look as fantasy NPC portrait, dark medieval fantasy RPG art, stylized hand-painted 2D, painterly textures, muted earthy palette, warm highlights, soft cinematic lighting, subtle shadows, refined shapes, not photoreal, cohesive game art style, one single creature, full body, centered, three quarter view, single creature only, plain neutral gray background, no scenery, no text, no sheet",
+      "category": "generic",
+      "monster_id": null,
+      "variant": "base"
+    },
+    {
+      "id": "gen_copper_wyrmling",
+      "prompt": "copper wyrmling dragon, small wings, fierce, dark medieval fantasy hand-painted illustration, classic RPG bestiary art, visible brushstrokes, muted earthy palette, semi-realistic, same look as fantasy NPC portrait, dark medieval fantasy RPG art, stylized hand-painted 2D, painterly textures, muted earthy palette, warm highlights, soft cinematic lighting, subtle shadows, refined shapes, not photoreal, cohesive game art style, one single creature, full body, centered, three quarter view, single creature only, plain neutral gray background, no scenery, no text, no sheet",
+      "category": "generic",
+      "monster_id": null,
+      "variant": "base"
+    },
+    {
+      "id": "gen_lichen_troll",
+      "prompt": "small lichen-covered cave troll, hunched, dark medieval fantasy hand-painted illustration, classic RPG bestiary art, visible brushstrokes, muted earthy palette, semi-realistic, same look as fantasy NPC portrait, dark medieval fantasy RPG art, stylized hand-painted 2D, painterly textures, muted earthy palette, warm highlights, soft cinematic lighting, subtle shadows, refined shapes, not photoreal, cohesive game art style, one single creature, full body, centered, three quarter view, single creature only, plain neutral gray background, no scenery, no text, no sheet",
+      "category": "generic",
+      "monster_id": null,
+      "variant": "base"
+    },
+    {
+      "id": "gen_night_mantis",
+      "prompt": "night black praying mantis beast, blade arms, dark medieval fantasy hand-painted illustration, classic RPG bestiary art, visible brushstrokes, muted earthy palette, semi-realistic, same look as fantasy NPC portrait, dark medieval fantasy RPG art, stylized hand-painted 2D, painterly textures, muted earthy palette, warm highlights, soft cinematic lighting, subtle shadows, refined shapes, not photoreal, cohesive game art style, one single creature, full body, centered, three quarter view, single creature only, plain neutral gray background, no scenery, no text, no sheet",
+      "category": "generic",
+      "monster_id": null,
+      "variant": "base"
+    },
+    {
+      "id": "gen_ash_vulture",
+      "prompt": "ash gray vulture beast, ragged wings, hunched, dark medieval fantasy hand-painted illustration, classic RPG bestiary art, visible brushstrokes, muted earthy palette, semi-realistic, same look as fantasy NPC portrait, dark medieval fantasy RPG art, stylized hand-painted 2D, painterly textures, muted earthy palette, warm highlights, soft cinematic lighting, subtle shadows, refined shapes, not photoreal, cohesive game art style, one single creature, full body, centered, three quarter view, single creature only, plain neutral gray background, no scenery, no text, no sheet",
+      "category": "generic",
+      "monster_id": null,
+      "variant": "base"
+    },
+    {
+      "id": "sphere_health_qualities_sheet",
+      "prompt": "OPTION A v2: four health (crimson) combat spheres left-to-right common→legendary. ONE sphere per icon (not twin). Quality = ornament/glow tier.",
+      "category": "items_spheres",
+      "monster_id": "sphere_health",
+      "variant": "qualities_sheet_v2_single"
+    },
+    {
+      "id": "item_sphere_health_common",
+      "prompt": "health combat sphere common: single crimson orbs, no metal rim, single sphere crop from quality strip v2",
+      "category": "items_spheres",
+      "monster_id": "sphere_health",
+      "variant": "common"
+    },
+    {
+      "id": "item_sphere_health_rare",
+      "prompt": "health combat sphere rare: single crimson orbs, thin silver rim, single sphere crop from quality strip v2",
+      "category": "items_spheres",
+      "monster_id": "sphere_health",
+      "variant": "rare"
+    },
+    {
+      "id": "item_sphere_health_epic",
+      "prompt": "health combat sphere epic: faceted ruby with ornate gold spiked frame, single sphere crop from quality strip v2",
+      "category": "items_spheres",
+      "monster_id": "sphere_health",
+      "variant": "epic"
+    },
+    {
+      "id": "item_sphere_health_legendary",
+      "prompt": "health combat sphere legendary: single gold-framed orbs, bright core, single sphere crop from quality strip v2",
+      "category": "items_spheres",
+      "monster_id": "sphere_health",
+      "variant": "legendary"
+    }
+  ]
+}

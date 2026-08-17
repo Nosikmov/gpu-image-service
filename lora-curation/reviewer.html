@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>LoRA Curation — Reign of Devorio</title>
+  <style>
+    :root {
+      color-scheme: dark;
+      --bg: #12141a;
+      --panel: #1b1f28;
+      --border: #2c3340;
+      --text: #e8ecf2;
+      --muted: #9aa3b2;
+      --approve: #3ecf8e;
+      --reject: #ff6b6b;
+      --maybe: #f0b429;
+      --accent: #7aa2ff;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, Segoe UI, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      min-height: 100vh;
+    }
+    header {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      align-items: center;
+      justify-content: space-between;
+      padding: 14px 18px;
+      border-bottom: 1px solid var(--border);
+      background: var(--panel);
+      position: sticky;
+      top: 0;
+      z-index: 2;
+    }
+    h1 { margin: 0; font-size: 1.05rem; font-weight: 600; }
+    .stats { display: flex; gap: 10px; flex-wrap: wrap; font-size: 0.85rem; color: var(--muted); }
+    .stats span b { color: var(--text); }
+    .filters { display: flex; gap: 8px; flex-wrap: wrap; align-items: center; }
+    select, button, textarea {
+      background: #0f1218;
+      color: var(--text);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 8px 10px;
+      font: inherit;
+    }
+    button { cursor: pointer; }
+    button.primary { background: #24304a; border-color: #3d4f73; }
+    button.approve { border-color: #2f8f62; color: var(--approve); }
+    button.reject { border-color: #a34a4a; color: var(--reject); }
+    button.maybe { border-color: #9a7a1f; color: var(--maybe); }
+    main {
+      display: grid;
+      grid-template-columns: minmax(280px, 360px) 1fr;
+      gap: 16px;
+      padding: 16px;
+      max-width: 1400px;
+      margin: 0 auto;
+    }
+    @media (max-width: 960px) {
+      main { grid-template-columns: 1fr; }
+    }
+    .card {
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 14px;
+    }
+    .queue-list {
+      max-height: calc(100vh - 120px);
+      overflow: auto;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+    .queue-item {
+      text-align: left;
+      width: 100%;
+      border-radius: 8px;
+      border: 1px solid transparent;
+      background: #141821;
+      color: var(--text);
+      padding: 8px 10px;
+      cursor: pointer;
+    }
+    .queue-item.active { border-color: var(--accent); background: #1a2233; }
+    .queue-item .id { font-size: 0.78rem; color: var(--muted); }
+    .queue-item .badge {
+      display: inline-block;
+      font-size: 0.72rem;
+      padding: 2px 6px;
+      border-radius: 999px;
+      margin-left: 6px;
+      border: 1px solid var(--border);
+    }
+    .badge.approve { color: var(--approve); border-color: #2f8f62; }
+    .badge.reject { color: var(--reject); border-color: #a34a4a; }
+    .badge.maybe { color: var(--maybe); border-color: #9a7a1f; }
+    .preview-wrap {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 420px;
+      background: repeating-conic-gradient(#222 0% 25%, #1a1a1a 0% 50%) 50% / 24px 24px;
+      border-radius: 10px;
+      border: 1px solid var(--border);
+      margin-bottom: 12px;
+    }
+    .preview-wrap img {
+      max-width: 100%;
+      max-height: 520px;
+      object-fit: contain;
+      filter: drop-shadow(0 8px 24px rgba(0,0,0,.45));
+    }
+    .placeholder {
+      color: var(--muted);
+      text-align: center;
+      padding: 40px;
+    }
+    .prompt {
+      white-space: pre-wrap;
+      line-height: 1.45;
+      font-size: 0.92rem;
+      color: #d5dbe6;
+      max-height: 180px;
+      overflow: auto;
+    }
+    .actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 12px;
+    }
+    .meta { color: var(--muted); font-size: 0.82rem; margin-top: 8px; }
+    textarea { width: 100%; min-height: 72px; margin-top: 10px; resize: vertical; }
+    .progress {
+      height: 8px;
+      background: #0f1218;
+      border-radius: 999px;
+      overflow: hidden;
+      margin-top: 8px;
+    }
+    .progress > div {
+      height: 100%;
+      background: linear-gradient(90deg, var(--approve), var(--accent));
+      width: 0%;
+      transition: width .2s ease;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div>
+      <h1>LoRA Style Curation</h1>
+      <div class="stats" id="stats"></div>
+      <div class="progress"><div id="progressBar"></div></div>
+    </div>
+    <div class="filters">
+      <label>
+        Фильтр
+        <select id="filterRating">
+          <option value="">все</option>
+          <option value="unset" selected>не оценено</option>
+          <option value="approve">approve</option>
+          <option value="maybe">maybe</option>
+          <option value="reject">reject</option>
+        </select>
+      </label>
+      <label>
+        <input type="checkbox" id="onlyWithImage" checked /> только с картинкой
+      </label>
+      <button class="primary" id="reloadBtn">Обновить</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="card">
+      <strong>Очередь</strong>
+      <div class="queue-list" id="queueList"></div>
+    </section>
+
+    <section class="card">
+      <div class="preview-wrap" id="previewWrap">
+        <div class="placeholder">Выберите элемент или дождитесь генерации</div>
+      </div>
+      <div class="meta" id="meta"></div>
+      <div class="prompt" id="prompt"></div>
+      <textarea id="note" placeholder="Заметка (опционально): фон грязный, не тот силуэт…"></textarea>
+      <div class="actions">
+        <button class="approve" data-rate="approve">✓ Approve (A)</button>
+        <button class="maybe" data-rate="maybe">? Maybe (M)</button>
+        <button class="reject" data-rate="reject">✕ Reject (R)</button>
+        <button data-rate="unset">Сброс</button>
+        <button class="primary" id="prevBtn">← Prev</button>
+        <button class="primary" id="nextBtn">Next →</button>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    let items = [];
+    let index = 0;
+
+    const els = {
+      stats: document.getElementById("stats"),
+      progressBar: document.getElementById("progressBar"),
+      queueList: document.getElementById("queueList"),
+      previewWrap: document.getElementById("previewWrap"),
+      prompt: document.getElementById("prompt"),
+      meta: document.getElementById("meta"),
+      note: document.getElementById("note"),
+      filterRating: document.getElementById("filterRating"),
+      onlyWithImage: document.getElementById("onlyWithImage"),
+      reloadBtn: document.getElementById("reloadBtn"),
+      prevBtn: document.getElementById("prevBtn"),
+      nextBtn: document.getElementById("nextBtn"),
+    };
+
+    function current() {
+      return items[index] || null;
+    }
+
+    function renderStats(stats, count) {
+      els.stats.innerHTML = [
+        `<span><b>${count}</b> в очереди</span>`,
+        `<span>✓ <b>${stats.approve || 0}</b></span>`,
+        `<span>? <b>${stats.maybe || 0}</b></span>`,
+        `<span>✕ <b>${stats.reject || 0}</b></span>`,
+        `<span>○ <b>${stats.unset || 0}</b></span>`,
+      ].join("");
+      const rated = (stats.approve || 0) + (stats.maybe || 0) + (stats.reject || 0);
+      const total = count || 1;
+      els.progressBar.style.width = `${Math.min(100, (rated / total) * 100)}%`;
+    }
+
+    function renderQueue() {
+      els.queueList.innerHTML = "";
+      items.forEach((item, i) => {
+        const btn = document.createElement("button");
+        btn.type = "button";
+        btn.className = "queue-item" + (i === index ? " active" : "");
+        const badge = item.rating && item.rating !== "unset"
+          ? `<span class="badge ${item.rating}">${item.rating}</span>`
+          : "";
+        btn.innerHTML = `<div>${item.id}${badge}</div><div class="id">${item.category || ""}${item.image_exists ? "" : " · нет PNG"}</div>`;
+        btn.addEventListener("click", () => {
+          index = i;
+          renderCurrent();
+          renderQueue();
+        });
+        els.queueList.appendChild(btn);
+      });
+    }
+
+    function renderCurrent() {
+      const item = current();
+      if (!item) {
+        els.previewWrap.innerHTML = `<div class="placeholder">Нет элементов по фильтру</div>`;
+        els.prompt.textContent = "";
+        els.meta.textContent = "";
+        els.note.value = "";
+        return;
+      }
+      if (item.image_exists && item.image) {
+        els.previewWrap.innerHTML = `<img src="/${item.image}?t=${Date.now()}" alt="${item.id}" />`;
+      } else {
+        els.previewWrap.innerHTML = `<div class="placeholder">Картинка ещё не сгенерирована<br><code>${item.id}</code></div>`;
+      }
+      els.prompt.textContent = item.prompt || "";
+      els.meta.textContent = [
+        item.id,
+        item.monster_id ? `monster: ${item.monster_id}` : "",
+        item.variant ? `variant: ${item.variant}` : "",
+        item.rating ? `rating: ${item.rating}` : "rating: unset",
+      ].filter(Boolean).join(" · ");
+      els.note.value = item.note || "";
+    }
+
+    async function loadItems() {
+      const params = new URLSearchParams();
+      const rating = els.filterRating.value;
+      if (rating) params.set("rating", rating);
+      if (els.onlyWithImage.checked) params.set("only_with_image", "1");
+      const res = await fetch(`/api/items?${params}`);
+      const data = await res.json();
+      items = data.items || [];
+      if (index >= items.length) index = Math.max(0, items.length - 1);
+      renderStats(data.stats || {}, data.count || 0);
+      renderQueue();
+      renderCurrent();
+    }
+
+    async function rate(rating) {
+      const item = current();
+      if (!item) return;
+      const res = await fetch("/api/rate", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ id: item.id, rating, note: els.note.value.trim() }),
+      });
+      if (!res.ok) {
+        alert("Ошибка сохранения");
+        return;
+      }
+      const data = await res.json();
+      item.rating = rating === "unset" ? "unset" : rating;
+      item.note = els.note.value.trim();
+      renderStats(data.stats || {}, items.length);
+      renderQueue();
+      if (rating !== "unset" && index < items.length - 1) {
+        index += 1;
+        renderCurrent();
+        renderQueue();
+      }
+    }
+
+    document.querySelectorAll("[data-rate]").forEach((btn) => {
+      btn.addEventListener("click", () => rate(btn.dataset.rate));
+    });
+
+    els.reloadBtn.addEventListener("click", loadItems);
+    els.filterRating.addEventListener("change", () => { index = 0; loadItems(); });
+    els.onlyWithImage.addEventListener("change", () => { index = 0; loadItems(); });
+    els.prevBtn.addEventListener("click", () => { if (index > 0) { index -= 1; renderCurrent(); renderQueue(); } });
+    els.nextBtn.addEventListener("click", () => { if (index < items.length - 1) { index += 1; renderCurrent(); renderQueue(); } });
+
+    window.addEventListener("keydown", (e) => {
+      if (e.target === els.note) return;
+      if (e.key === "a" || e.key === "A") rate("approve");
+      if (e.key === "r" || e.key === "R") rate("reject");
+      if (e.key === "m" || e.key === "M") rate("maybe");
+      if (e.key === "ArrowLeft") els.prevBtn.click();
+      if (e.key === "ArrowRight") els.nextBtn.click();
+    });
+
+    loadItems();
+  </script>
+</body>
+</html>

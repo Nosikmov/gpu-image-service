@@ -245,6 +245,7 @@ docker compose config
 gpu-image-service/
   app/                 # FastAPI + worker + services
   workflows/           # allowlisted ComfyUI API graphs
+  lora-curation/       # style LoRA dataset: prompts, GPU batch, reviewer
   docker/              # ComfyUI Dockerfile
   scripts/             # install/start/stop/deploy
   tests/
