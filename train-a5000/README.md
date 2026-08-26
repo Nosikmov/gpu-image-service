@@ -19,24 +19,40 @@ sudo apt-get update && sudo apt-get install -y libgl1 libglib2.0-0 libsm6 libxex
 SKIP_INSTALL=1 ./bootstrap.sh
 ```
 
-## One command
+## One command (leave the PC — use tmux + auto-upload)
 
 ```bash
-git clone <THIS_REPO_URL> gpu-image-service
-cd gpu-image-service/train-a5000
-export HF_TOKEN=hf_xxxxxxxxxxxxxxxx
-chmod +x bootstrap.sh
-./bootstrap.sh
+sudo apt-get update && sudo apt-get install -y tmux libgl1 libglib2.0-0 libsm6 libxext6 libxrender1
+cd ~/gpu-image-service && git pull
+cd train-a5000
+tmux new -s train
 ```
 
-That will:
+Inside tmux (use a **new** HF token, never paste tokens into chat/git):
 
-1. Clone Ostris AI-Toolkit into `train-a5000/.ai-toolkit`
-2. Install torch/CUDA + deps via toolkit manager
-3. Login to Hugging Face
-4. Train LoRA → `train-a5000/output/gf_lowpoly/`
+```bash
+export HF_TOKEN='hf_...'
+# your HF username / new private model repo name:
+export HF_REPO_ID='YourHFName/gf-lowpoly'
+export HF_PRIVATE=true
+chmod +x bootstrap.sh
+./bootstrap.sh
+# detach: Ctrl+B then D  — disconnect SSH, training keeps running
+```
 
-Resume after crash / SSH drop: run the same `./bootstrap.sh` again (picks last checkpoint).  
+When training finishes, bootstrap **uploads** `.safetensors` (+ sample png) to that Hugging Face repo.  
+Later from phone/home: open `https://huggingface.co/YourHFName/gf-lowpoly` → Download → Forge `models/Lora/`.  
+Server can be deleted after that.
+
+Already trained, only upload:
+
+```bash
+export HF_TOKEN='hf_...'
+export HF_REPO_ID='YourHFName/gf-lowpoly'
+SKIP_INSTALL=1 UPLOAD_ONLY=1 ./bootstrap.sh
+```
+
+Resume after crash / SSH drop (without tmux loss): same `./bootstrap.sh` again (picks last checkpoint).  
 Skip reinstall: `SKIP_INSTALL=1 ./bootstrap.sh`
 
 Optional knobs:
@@ -47,12 +63,13 @@ STEPS=2000 BATCH=1 ./bootstrap.sh
 
 ## After training → home Forge
 
+If you did **not** set `HF_REPO_ID`, copy manually:
+
 ```bash
-# on server
 ls -lh output/gf_lowpoly/*.safetensors
 ```
 
-Copy the best checkpoint to your PC:
+Into:
 
 `F:\fluxGenerationForLora\stable-diffusion-webui-forge\models\Lora\`
 

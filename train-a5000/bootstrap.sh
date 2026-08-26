@@ -185,9 +185,71 @@ EOF
 
 info "Starting training (resume from last checkpoint if present)..."
 cd "${TOOLKIT_DIR}"
-"${VENV_PY}" run.py "${CONFIG_OUT}"
+if [[ "${UPLOAD_ONLY:-0}" != "1" ]]; then
+  "${VENV_PY}" run.py "${CONFIG_OUT}"
+else
+  info "UPLOAD_ONLY=1 — skip training, upload existing checkpoints"
+fi
 
-green "Done."
+green "Done training stage."
 green "LoRA checkpoints: ${OUTPUT_ABS}/gf_lowpoly/"
-green "Copy the best *.safetensors to Forge models/Lora/ on your home PC."
 ls -lah "${OUTPUT_ABS}/gf_lowpoly/"/*.safetensors 2>/dev/null || true
+
+# --- Deliver weights off the server (so you can leave / kill the box) ---
+# Set HF_REPO_ID=YourName/gf-lowpoly  (private by default)
+upload_to_hf() {
+  local out_dir="${OUTPUT_ABS}/gf_lowpoly"
+  if [[ -z "${HF_REPO_ID:-}" ]]; then
+    info "No HF_REPO_ID set — skipping Hub upload."
+    info "Re-run with: HF_REPO_ID=YourName/gf-lowpoly SKIP_INSTALL=1 UPLOAD_ONLY=1 ./bootstrap.sh"
+    return 0
+  fi
+  if [[ ! -d "${out_dir}" ]]; then
+    red "No output dir: ${out_dir}"
+    return 1
+  fi
+  local private="${HF_PRIVATE:-true}"
+  info "Uploading LoRA to Hugging Face: ${HF_REPO_ID} (private=${private})"
+  HF_PRIVATE_FLAG="${private}" OUT_DIR="${out_dir}" REPO_ID="${HF_REPO_ID}" "${VENV_PY}" - <<'PY'
+import os
+from pathlib import Path
+from huggingface_hub import HfApi, login
+
+token = os.environ["HF_TOKEN"]
+login(token=token, add_to_git_credential=False)
+api = HfApi(token=token)
+repo_id = os.environ["REPO_ID"]
+private = os.environ.get("HF_PRIVATE_FLAG", "true").lower() in ("1", "true", "yes")
+out = Path(os.environ["OUT_DIR"])
+api.create_repo(repo_id=repo_id, repo_type="model", private=private, exist_ok=True)
+
+files = sorted(out.glob("*.safetensors"))
+if not files:
+    raise SystemExit(f"No .safetensors in {out}")
+# Prefer final name without step suffix last; upload all checkpoints (small LoRAs)
+for f in files:
+    print(f"upload {f.name} ...")
+    api.upload_file(
+        path_or_fileobj=str(f),
+        path_in_repo=f.name,
+        repo_id=repo_id,
+        repo_type="model",
+    )
+# sample images if any
+for img in sorted(out.glob("*.png"))[:30]:
+    print(f"upload {img.name} ...")
+    api.upload_file(
+        path_or_fileobj=str(img),
+        path_in_repo=f"samples/{img.name}",
+        repo_id=repo_id,
+        repo_type="model",
+    )
+url = f"https://huggingface.co/{repo_id}"
+print("UPLOADED_OK", url)
+Path(os.environ["OUT_DIR"]).joinpath("UPLOADED_TO_HF.txt").write_text(url + "\n", encoding="utf-8")
+PY
+  green "Download later from: https://huggingface.co/${HF_REPO_ID}"
+  green "Then put .safetensors into Forge models/Lora/ — you can power off the server."
+}
+
+upload_to_hf
