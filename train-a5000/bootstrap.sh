@@ -185,15 +185,25 @@ EOF
 
 info "Starting training (resume from last checkpoint if present)..."
 cd "${TOOLKIT_DIR}"
+TRAIN_STATUS=0
 if [[ "${UPLOAD_ONLY:-0}" != "1" ]]; then
+  set +e
   "${VENV_PY}" run.py "${CONFIG_OUT}"
+  TRAIN_STATUS=$?
+  set -e
 else
   info "UPLOAD_ONLY=1 — skip training, upload existing checkpoints"
 fi
 
-green "Done training stage."
-green "LoRA checkpoints: ${OUTPUT_ABS}/gf_lowpoly/"
-ls -lah "${OUTPUT_ABS}/gf_lowpoly/"/*.safetensors 2>/dev/null || true
+if [[ "${TRAIN_STATUS}" -ne 0 ]]; then
+  red "Training exited with code ${TRAIN_STATUS}"
+fi
+
+if [[ "${TRAIN_STATUS}" -eq 0 ]]; then
+  green "Done training stage."
+  green "LoRA checkpoints: ${OUTPUT_ABS}/gf_lowpoly/"
+  ls -lah "${OUTPUT_ABS}/gf_lowpoly/"/*.safetensors 2>/dev/null || true
+fi
 
 # --- Deliver weights off the server (so you can leave / kill the box) ---
 # Set HF_REPO_ID=YourName/gf-lowpoly  (private by default)
@@ -226,7 +236,6 @@ api.create_repo(repo_id=repo_id, repo_type="model", private=private, exist_ok=Tr
 files = sorted(out.glob("*.safetensors"))
 if not files:
     raise SystemExit(f"No .safetensors in {out}")
-# Prefer final name without step suffix last; upload all checkpoints (small LoRAs)
 for f in files:
     print(f"upload {f.name} ...")
     api.upload_file(
@@ -235,7 +244,6 @@ for f in files:
         repo_id=repo_id,
         repo_type="model",
     )
-# sample images if any
 for img in sorted(out.glob("*.png"))[:30]:
     print(f"upload {img.name} ...")
     api.upload_file(
@@ -252,4 +260,49 @@ PY
   green "Then put .safetensors into Forge models/Lora/ — you can power off the server."
 }
 
-upload_to_hf
+if [[ "${TRAIN_STATUS}" -eq 0 ]]; then
+  upload_to_hf
+fi
+
+# --- Phone push via ntfy.sh (no Telegram / Discord) ---
+# 1) Install app: https://ntfy.sh (Android/iOS) or open https://ntfy.sh/YOUR_TOPIC in browser
+# 2) Subscribe to a long secret topic name
+# 3) export NTFY_TOPIC='gf-ready-pickALongSecretWord123'
+notify_ntfy() {
+  local status="${1:-ok}"
+  if [[ -z "${NTFY_TOPIC:-}" ]]; then
+    info "No NTFY_TOPIC — skip phone notify. Set it next time to get a push when done."
+    return 0
+  fi
+  need_cmd curl
+  local title body ntfy_base tags
+  ntfy_base="${NTFY_URL:-https://ntfy.sh}"
+  if [[ "${status}" == "ok" ]]; then
+    title="gf_lowpoly DONE"
+    tags="white_check_mark"
+    body="LoRA ready: ${OUTPUT_ABS}/gf_lowpoly/"
+    if [[ -n "${HF_REPO_ID:-}" ]]; then
+      body="${body}"$'\n'"https://huggingface.co/${HF_REPO_ID}"
+    fi
+  else
+    title="gf_lowpoly FAILED"
+    tags="x"
+    body="Training failed (exit ${TRAIN_STATUS}). Check tmux on the GPU server."
+  fi
+  info "ntfy → ${ntfy_base}/${NTFY_TOPIC}"
+  curl -fsS \
+    -H "Title: ${title}" \
+    -H "Priority: high" \
+    -H "Tags: ${tags}" \
+    -d "${body}" \
+    "${ntfy_base}/${NTFY_TOPIC}" >/dev/null \
+    && green "Phone notify sent (ntfy)" \
+    || red "ntfy send failed — check server outbound HTTPS"
+}
+
+if [[ "${TRAIN_STATUS}" -eq 0 ]]; then
+  notify_ntfy ok
+else
+  notify_ntfy fail
+  exit "${TRAIN_STATUS}"
+fi

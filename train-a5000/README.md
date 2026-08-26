@@ -32,17 +32,22 @@ Inside tmux (use a **new** HF token, never paste tokens into chat/git):
 
 ```bash
 export HF_TOKEN='hf_...'
-# your HF username / new private model repo name:
 export HF_REPO_ID='YourHFName/gf-lowpoly'
 export HF_PRIVATE=true
+# phone push when done (no Telegram/Discord):
+export NTFY_TOPIC='gf-ready-CHANGE_ME_long_secret_123'
 chmod +x bootstrap.sh
 ./bootstrap.sh
-# detach: Ctrl+B then D  — disconnect SSH, training keeps running
+# detach: Ctrl+B then D
 ```
 
-When training finishes, bootstrap **uploads** `.safetensors` (+ sample png) to that Hugging Face repo.  
-Later from phone/home: open `https://huggingface.co/YourHFName/gf-lowpoly` → Download → Forge `models/Lora/`.  
-Server can be deleted after that.
+**Notify setup (ntfy):**
+1. App: [ntfy.sh](https://ntfy.sh) (Android/iOS) или в браузере `https://ntfy.sh/ТВОЙ_ТОПИК`
+2. Подпишись на тот же секретный `NTFY_TOPIC`
+3. По окончании обучения придёт пуш «gf_lowpoly DONE» (+ ссылка на HF, если задан `HF_REPO_ID`)
+
+When training finishes, bootstrap **uploads** `.safetensors` to Hugging Face (если задан `HF_REPO_ID`) и шлёт ntfy.  
+Server can be deleted after you downloaded the LoRA.
 
 Already trained, only upload:
 
