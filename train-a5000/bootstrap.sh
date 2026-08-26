@@ -72,6 +72,10 @@ export HF_HOME="${HF_CACHE}"
 export HF_HUB_CACHE="${HF_CACHE}/hub"
 export TRANSFORMERS_CACHE="${HF_CACHE}/transformers"
 export TORCH_HOME="${ROOT}/.torch-cache"
+# Rented VPS: XET / hf_transfer often hang at "Downloading bytes: 0.00B"
+export HF_HUB_DISABLE_XET="${HF_HUB_DISABLE_XET:-1}"
+export HF_HUB_ENABLE_HF_TRANSFER="${HF_HUB_ENABLE_HF_TRANSFER:-0}"
+export HF_XET_HIGH_PERFORMANCE="${HF_XET_HIGH_PERFORMANCE:-0}"
 mkdir -p "${HF_HUB_CACHE}" "${TRANSFORMERS_CACHE}" "${TORCH_HOME}" "${OUTPUT_DIR}" "${ROOT}/runtime"
 
 nvidia-smi --query-gpu=name,memory.total --format=csv,noheader || true
