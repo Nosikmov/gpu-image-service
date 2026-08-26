@@ -7,9 +7,17 @@ Home PC (4070) is only for **inference** after you download the `.safetensors`.
 
 - Ubuntu 22.04+
 - NVIDIA driver (`nvidia-smi` works)
+- `sudo` (bootstrap installs `libgl1` etc. for OpenCV on headless hosts)
 - ~1× **A5000 24GB** (or similar), **64GB RAM**
 - ~80GB free disk (FLUX download + caches + output)
 - Hugging Face account with access to [`FLUX.1-dev`](https://huggingface.co/black-forest-labs/FLUX.1-dev)
+
+If you already hit `libGL.so.1` / cv2 error:
+
+```bash
+sudo apt-get update && sudo apt-get install -y libgl1 libglib2.0-0 libsm6 libxext6 libxrender1
+SKIP_INSTALL=1 ./bootstrap.sh
+```
 
 ## One command
 

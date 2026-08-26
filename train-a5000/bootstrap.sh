@@ -37,6 +37,19 @@ need_cmd git
 need_cmd nvidia-smi
 need_cmd "${PY_BIN}"
 
+# OpenCV (cv2) needs libGL on headless Ubuntu — otherwise: ImportError: libGL.so.1
+if ! ldconfig -p 2>/dev/null | grep -q 'libGL.so.1'; then
+  info "Installing libGL for OpenCV (sudo)..."
+  if command -v apt-get >/dev/null 2>&1; then
+    sudo apt-get update -qq
+    sudo DEBIAN_FRONTEND=noninteractive apt-get install -y -qq \
+      libgl1 libglib2.0-0 libsm6 libxext6 libxrender1
+  else
+    red "libGL.so.1 missing. Install OpenGL libs for your distro, then re-run."
+    exit 1
+  fi
+fi
+
 if [[ ! -d "${DATASET}" ]] || [[ -z "$(find "${DATASET}" -maxdepth 1 -name '*.png' | head -1)" ]]; then
   red "No PNG dataset in ${DATASET}"
   red "On Windows run: train-a5000\\sync_dataset.bat"
