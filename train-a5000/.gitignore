@@ -1,0 +1,11 @@
+# Created on the training server — do not commit
+.ai-toolkit/
+.hf-cache/
+.torch-cache/
+output/
+runtime/
+dataset/_latent_cache/
+dataset/_t_e_cache/
+*.log
+__pycache__/
+.venv/

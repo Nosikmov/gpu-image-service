@@ -246,12 +246,23 @@ gpu-image-service/
   app/                 # FastAPI + worker + services
   workflows/           # allowlisted ComfyUI API graphs
   lora-curation/       # style LoRA dataset: prompts, GPU batch, reviewer
+  train-a5000/         # one-command Flux LoRA train (Ubuntu + A5000)
   docker/              # ComfyUI Dockerfile
   scripts/             # install/start/stop/deploy
   tests/
   docker-compose.yml
   Dockerfile
   .env.example
+```
+
+## Train style LoRA on a rented A5000 (Ubuntu)
+
+See [`train-a5000/README.md`](train-a5000/README.md). Short version:
+
+```bash
+cd train-a5000
+export HF_TOKEN=hf_...
+chmod +x bootstrap.sh && ./bootstrap.sh
 ```
 
 ## Extensibility (not implemented yet)

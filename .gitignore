@@ -44,6 +44,14 @@ docker-compose.override.yml
 lora-curation/images/
 lora-curation/ratings.json
 lora-curation/manifest.json
+lora-curation/auto_status.json
 lora-curation/export/
 lora-curation/*.log
+
+# Local Ostris / Windows train helpers (server package is train-a5000/)
+train-a5000/.ai-toolkit/
+train-a5000/.hf-cache/
+train-a5000/.torch-cache/
+train-a5000/output/
+train-a5000/runtime/
 
