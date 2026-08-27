@@ -17,6 +17,7 @@ _ROOT = Path(__file__).resolve().parent
 if str(_ROOT) not in sys.path:
     sys.path.insert(0, str(_ROOT))
 
+from parse_prompts_txt import append_prompt_to_txt  # noqa: E402
 from paths import (  # noqa: E402
     IMAGES_DIR,
     find_image_rel,
@@ -27,6 +28,8 @@ from paths import (  # noqa: E402
 )
 
 REVIEW_HTML = _ROOT / "reviewer.html"
+PROMPTS_TXT = _ROOT / "promts-for-generate.txt"
+STATUS_PATH = _ROOT / "auto_status.json"
 VALID_RATINGS = {"approve", "reject", "maybe", "unset"}
 
 
@@ -34,7 +37,7 @@ def _utc_now() -> str:
     return datetime.now(timezone.utc).replace(microsecond=0).isoformat()
 
 
-def _stats(ratings: dict[str, Any]) -> dict[str, int]:
+def _stats(ratings: dict[str, Any], total_prompts: int | None = None) -> dict[str, int]:
     entries = ratings.get("entries") or {}
     counts = {"approve": 0, "reject": 0, "maybe": 0, "unset": 0}
     for row in entries.values():
@@ -42,6 +45,9 @@ def _stats(ratings: dict[str, Any]) -> dict[str, int]:
         if key not in counts:
             key = "unset"
         counts[key] += 1
+    if total_prompts is not None:
+        rated = counts["approve"] + counts["reject"] + counts["maybe"]
+        counts["unset"] = max(0, total_prompts - rated)
     return counts
 
 
@@ -69,6 +75,7 @@ def _merged_items() -> list[dict[str, Any]]:
             {
                 "id": entry_id,
                 "prompt": row.get("prompt"),
+                "title": row.get("title"),
                 "category": row.get("category"),
                 "monster_id": row.get("monster_id"),
                 "variant": row.get("variant"),
@@ -82,8 +89,17 @@ def _merged_items() -> list[dict[str, Any]]:
     return items
 
 
+def _load_auto_status() -> dict[str, Any]:
+    if not STATUS_PATH.is_file():
+        return {"state": "manual", "message": "Авто-цикл не запущен (serve_reviewer отдельно)"}
+    try:
+        return json.loads(STATUS_PATH.read_text(encoding="utf-8"))
+    except json.JSONDecodeError:
+        return {"state": "unknown", "message": "bad auto_status.json"}
+
+
 class ReviewHandler(BaseHTTPRequestHandler):
-    server_version = "LoRAReview/1.0"
+    server_version = "LoRAReview/1.1"
 
     def log_message(self, fmt: str, *args: Any) -> None:
         print(f"[review] {self.address_string()} - {fmt % args}")
@@ -117,6 +133,19 @@ class ReviewHandler(BaseHTTPRequestHandler):
             self.wfile.write(body)
             return
 
+        if path == "/api/status":
+            pack = load_prompts()
+            ratings = load_ratings()
+            total = int(pack.get("count") or len(pack.get("entries") or []))
+            self._send_json(
+                {
+                    "auto": _load_auto_status(),
+                    "stats": _stats(ratings, total_prompts=total),
+                    "total_prompts": total,
+                }
+            )
+            return
+
         if path == "/api/items":
             qs = parse_qs(parsed.query)
             rating_filter = (qs.get("rating") or [None])[0]
@@ -126,20 +155,31 @@ class ReviewHandler(BaseHTTPRequestHandler):
                 items = [i for i in items if i["image_exists"]]
             if rating_filter in VALID_RATINGS:
                 items = [i for i in items if i["rating"] == rating_filter]
+            pack = load_prompts()
+            total = int(pack.get("count") or len(pack.get("entries") or []))
             ratings = load_ratings()
             self._send_json(
                 {
                     "count": len(items),
-                    "stats": _stats(ratings),
-                    "trigger_word": load_prompts().get("trigger_word_suggestion"),
+                    "stats": _stats(ratings, total_prompts=total),
+                    "trigger_word": pack.get("trigger_word_suggestion"),
+                    "auto": _load_auto_status(),
                     "items": items,
                 }
             )
             return
 
         if path == "/api/stats":
+            pack = load_prompts()
+            total = int(pack.get("count") or len(pack.get("entries") or []))
             ratings = load_ratings()
-            self._send_json({"stats": _stats(ratings), "total_prompts": load_prompts().get("count")})
+            self._send_json(
+                {
+                    "stats": _stats(ratings, total_prompts=total),
+                    "total_prompts": total,
+                    "auto": _load_auto_status(),
+                }
+            )
             return
 
         if path.startswith("/images/"):
@@ -161,6 +201,25 @@ class ReviewHandler(BaseHTTPRequestHandler):
 
     def do_POST(self) -> None:  # noqa: N802
         parsed = urlparse(self.path)
+
+        if parsed.path == "/api/prompts/add":
+            payload = self._read_json()
+            title = str(payload.get("title") or "").strip()
+            prompt = str(payload.get("prompt") or "").strip()
+            try:
+                meta = append_prompt_to_txt(PROMPTS_TXT, title=title, prompt_body=prompt)
+            except ValueError as exc:
+                self._send_json({"error": str(exc)}, status=400)
+                return
+            self._send_json(
+                {
+                    "ok": True,
+                    "message": "Промпт добавлен в promts-for-generate.txt — авто-цикл подхватит",
+                    **meta,
+                }
+            )
+            return
+
         if parsed.path != "/api/rate":
             self.send_error(404)
             return
@@ -177,7 +236,8 @@ class ReviewHandler(BaseHTTPRequestHandler):
             self._send_json({"error": f"rating must be one of {sorted(VALID_RATINGS)}"}, status=400)
             return
 
-        pack_ids = {str(r["id"]) for r in load_prompts()["entries"]}
+        pack = load_prompts()
+        pack_ids = {str(r["id"]) for r in pack["entries"]}
         if entry_id not in pack_ids:
             self._send_json({"error": "unknown id"}, status=404)
             return
@@ -196,7 +256,16 @@ class ReviewHandler(BaseHTTPRequestHandler):
             }
         ratings["updated_at"] = _utc_now()
         save_ratings(ratings)
-        self._send_json({"ok": True, "id": entry_id, "rating": rating, "stats": _stats(ratings)})
+        total = int(pack.get("count") or len(pack["entries"]))
+        self._send_json(
+            {
+                "ok": True,
+                "id": entry_id,
+                "rating": rating,
+                "stats": _stats(ratings, total_prompts=total),
+                "auto": _load_auto_status(),
+            }
+        )
 
 
 def main() -> int:
@@ -209,7 +278,7 @@ def main() -> int:
     httpd = ThreadingHTTPServer((args.host, args.port), ReviewHandler)
     url = f"http://{args.host}:{args.port}/"
     print(f"LoRA review UI: {url}")
-    print("Keys: A approve | R reject | M maybe | ←/→ navigate | N note")
+    print("Keys: A approve | R reject | M maybe | Left/Right navigate")
     try:
         httpd.serve_forever()
     except KeyboardInterrupt:

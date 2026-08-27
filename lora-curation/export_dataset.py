@@ -5,6 +5,7 @@ from __future__ import annotations
 
 import argparse
 import json
+import re
 import shutil
 import sys
 from pathlib import Path
@@ -14,19 +15,44 @@ if str(_ROOT) not in sys.path:
     sys.path.insert(0, str(_ROOT))
 
 from paths import EXPORT_DIR, load_prompts, load_ratings  # noqa: E402
+from style import TRIGGER_WORD  # noqa: E402
+
+_LORA_TAG = re.compile(r"<lora:[^>]+>\s*", re.IGNORECASE)
+_MULTI_COMMA = re.compile(r"\s*,\s*,+")
 
 
-def export_approved(*, min_rating: str = "approve", caption_mode: str = "full") -> dict[str, int]:
+def clean_prompt_for_training(prompt: str) -> str:
+    """Strip old LoRA tags; keep subject/style words for Flux captions."""
+    text = _LORA_TAG.sub("", prompt or "")
+    text = _MULTI_COMMA.sub(",", text)
+    return text.strip(" ,\n\t")
+
+
+def make_caption(prompt: str, trigger: str, mode: str) -> str:
+    cleaned = clean_prompt_for_training(prompt)
+    if mode == "trigger_only":
+        return trigger
+    if mode == "full":
+        # legacy: raw prompt including <lora:...> (not ideal for training)
+        return (prompt or "").strip()
+    if mode == "trigger":
+        return f"{trigger}, {cleaned}" if cleaned else trigger
+    # default training mode
+    if cleaned.lower().startswith(trigger.lower()):
+        return cleaned
+    return f"{trigger}, {cleaned}" if cleaned else trigger
+
+
+def export_approved(*, min_rating: str = "approve", caption_mode: str = "train") -> dict[str, int]:
     ratings = load_ratings()
     pack = load_prompts()
     prompt_by_id = {str(r["id"]): str(r["prompt"]) for r in pack["entries"]}
-    trigger = str(pack.get("trigger_word_suggestion") or "gf_bestiary")
+    trigger = str(pack.get("trigger_word_suggestion") or TRIGGER_WORD)
 
     allowed = {"approve"} if min_rating == "approve" else {"approve", "maybe"}
     entries = ratings.get("entries") or {}
 
     EXPORT_DIR.mkdir(parents=True, exist_ok=True)
-    # Clean previous export
     for old in EXPORT_DIR.glob("*"):
         if old.is_file():
             old.unlink()
@@ -36,14 +62,14 @@ def export_approved(*, min_rating: str = "approve", caption_mode: str = "full") 
         rating = str(row.get("rating") or "")
         if rating not in allowed:
             continue
-        image_rel = f"images/{entry_id}.png"
+
+        src = None
         for ext in ("png", "webp", "jpg", "jpeg"):
             candidate = _ROOT / "images" / f"{entry_id}.{ext}"
             if candidate.is_file():
-                image_rel = f"images/{entry_id}.{ext}"
+                src = candidate
                 break
-        src = _ROOT / image_rel
-        if not src.is_file():
+        if src is None:
             print(f"[skip] {entry_id}: image missing")
             continue
 
@@ -51,15 +77,8 @@ def export_approved(*, min_rating: str = "approve", caption_mode: str = "full") 
         shutil.copy2(src, dst_img)
 
         prompt = prompt_by_id.get(entry_id, "")
-        if caption_mode == "trigger":
-            caption = f"{trigger}, {prompt}"
-        elif caption_mode == "trigger_only":
-            caption = trigger
-        else:
-            caption = prompt
-
-        dst_txt = dst_img.with_suffix(".txt")
-        dst_txt.write_text(caption.strip() + "\n", encoding="utf-8")
+        caption = make_caption(prompt, trigger, caption_mode)
+        dst_img.with_suffix(".txt").write_text(caption + "\n", encoding="utf-8")
         copied += 1
         print(f"[export] {entry_id} -> {dst_img.name}")
 
@@ -68,6 +87,7 @@ def export_approved(*, min_rating: str = "approve", caption_mode: str = "full") 
         "trigger_word": trigger,
         "min_rating": min_rating,
         "caption_mode": caption_mode,
+        "export_dir": str(EXPORT_DIR),
     }
     (EXPORT_DIR / "dataset_meta.json").write_text(
         json.dumps(meta, ensure_ascii=False, indent=2) + "\n",
@@ -79,16 +99,12 @@ def export_approved(*, min_rating: str = "approve", caption_mode: str = "full") 
 
 def main() -> int:
     parser = argparse.ArgumentParser(description="Export approved images for LoRA training")
-    parser.add_argument(
-        "--include-maybe",
-        action="store_true",
-        help="Also export entries rated 'maybe'",
-    )
+    parser.add_argument("--include-maybe", action="store_true")
     parser.add_argument(
         "--caption-mode",
-        choices=("full", "trigger", "trigger_only"),
-        default="full",
-        help="Caption file content for each image",
+        choices=("train", "trigger", "trigger_only", "full"),
+        default="train",
+        help="train = gf_lowpoly + cleaned prompt (recommended)",
     )
     args = parser.parse_args()
     min_rating = "maybe" if args.include_maybe else "approve"

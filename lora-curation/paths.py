@@ -18,7 +18,7 @@ _IMAGE_EXTS = (".png", ".webp", ".jpg", ".jpeg")
 
 
 def game_repo() -> Path:
-    """Reign of Devorio checkout (for promote / rembg into game assets)."""
+    """gameFarmling checkout (for promote / rembg into game assets)."""
     env = os.environ.get("GAME_REPO")
     if env:
         return Path(env).expanduser().resolve()
@@ -29,7 +29,7 @@ def game_repo() -> Path:
     sibling = gpu_root.parent / "gameFarmling"
     if (sibling / "frontend" / "public" / "assets").is_dir():
         return sibling
-    raise SystemExit("Set GAME_REPO to the Reign of Devorio repo root")
+    raise SystemExit("Set GAME_REPO to the gameFarmling repo root")
 
 
 def monsters_dir() -> Path:

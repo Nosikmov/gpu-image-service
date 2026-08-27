@@ -2,8 +2,8 @@
 <html lang="ru">
 <head>
   <meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>LoRA Curation — Reign of Devorio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>LoRA Curation — gameFarmling</title>
   <style>
     :root {
       color-scheme: dark;
@@ -41,8 +41,13 @@
     h1 { margin: 0; font-size: 1.05rem; font-weight: 600; }
     .stats { display: flex; gap: 10px; flex-wrap: wrap; font-size: 0.85rem; color: var(--muted); }
     .stats span b { color: var(--text); }
+    .auto-line {
+      margin-top: 6px;
+      font-size: 0.82rem;
+      color: var(--accent);
+    }
     .filters { display: flex; gap: 8px; flex-wrap: wrap; align-items: center; }
-    select, button, textarea {
+    select, button, textarea, input[type="text"] {
       background: #0f1218;
       color: var(--text);
       border: 1px solid var(--border);
@@ -73,7 +78,7 @@
       padding: 14px;
     }
     .queue-list {
-      max-height: calc(100vh - 120px);
+      max-height: calc(100vh - 280px);
       overflow: auto;
       display: flex;
       flex-direction: column;
@@ -139,6 +144,10 @@
     }
     .meta { color: var(--muted); font-size: 0.82rem; margin-top: 8px; }
     textarea { width: 100%; min-height: 72px; margin-top: 10px; resize: vertical; }
+    .add-box { margin-top: 14px; border-top: 1px solid var(--border); padding-top: 12px; }
+    .add-box h3 { margin: 0 0 8px; font-size: 0.95rem; }
+    .add-box .hint { color: var(--muted); font-size: 0.78rem; margin-bottom: 8px; }
+    .add-box input[type="text"] { width: 100%; margin-bottom: 8px; }
     .progress {
       height: 8px;
       background: #0f1218;
@@ -159,6 +168,7 @@
     <div>
       <h1>LoRA Style Curation</h1>
       <div class="stats" id="stats"></div>
+      <div class="auto-line" id="autoLine">авто: …</div>
       <div class="progress"><div id="progressBar"></div></div>
     </div>
     <div class="filters">
@@ -183,6 +193,15 @@
     <section class="card">
       <strong>Очередь</strong>
       <div class="queue-list" id="queueList"></div>
+      <div class="add-box">
+        <h3>Добавить промпт</h3>
+        <div class="hint">Название (English в скобках) + описание. LoRA-теги можно не писать — добавятся сами. Авто-цикл сгенерирует картинку.</div>
+        <input type="text" id="newTitle" placeholder="Кот-Феникс (Phoenix Cat)" />
+        <textarea id="newPrompt" placeholder="anthropomorphic cat hybrid, phoenix cat, fiery low-poly wings, … T-pose, neutral solid light grey background"></textarea>
+        <div class="actions">
+          <button class="primary" id="addPromptBtn">Добавить в очередь</button>
+        </div>
+      </div>
     </section>
 
     <section class="card">
@@ -191,14 +210,14 @@
       </div>
       <div class="meta" id="meta"></div>
       <div class="prompt" id="prompt"></div>
-      <textarea id="note" placeholder="Заметка (опционально): фон грязный, не тот силуэт…"></textarea>
+      <textarea id="note" placeholder="Заметка (опционально)"></textarea>
       <div class="actions">
-        <button class="approve" data-rate="approve">✓ Approve (A)</button>
-        <button class="maybe" data-rate="maybe">? Maybe (M)</button>
-        <button class="reject" data-rate="reject">✕ Reject (R)</button>
+        <button class="approve" data-rate="approve">Approve (A)</button>
+        <button class="maybe" data-rate="maybe">Maybe (M)</button>
+        <button class="reject" data-rate="reject">Reject (R)</button>
         <button data-rate="unset">Сброс</button>
-        <button class="primary" id="prevBtn">← Prev</button>
-        <button class="primary" id="nextBtn">Next →</button>
+        <button class="primary" id="prevBtn">Prev</button>
+        <button class="primary" id="nextBtn">Next</button>
       </div>
     </section>
   </main>
@@ -206,9 +225,11 @@
   <script>
     let items = [];
     let index = 0;
+    let lastAutoMsg = "";
 
     const els = {
       stats: document.getElementById("stats"),
+      autoLine: document.getElementById("autoLine"),
       progressBar: document.getElementById("progressBar"),
       queueList: document.getElementById("queueList"),
       previewWrap: document.getElementById("previewWrap"),
@@ -220,23 +241,36 @@
       reloadBtn: document.getElementById("reloadBtn"),
       prevBtn: document.getElementById("prevBtn"),
       nextBtn: document.getElementById("nextBtn"),
+      newTitle: document.getElementById("newTitle"),
+      newPrompt: document.getElementById("newPrompt"),
+      addPromptBtn: document.getElementById("addPromptBtn"),
     };
 
     function current() {
       return items[index] || null;
     }
 
+    function renderAuto(auto) {
+      if (!auto) return;
+      const msg = `${auto.state || "?"}: ${auto.message || ""}`;
+      els.autoLine.textContent = "авто · " + msg;
+      if (msg !== lastAutoMsg && (auto.state === "idle" || auto.state === "generating" || auto.state === "regenerating")) {
+        lastAutoMsg = msg;
+      }
+    }
+
     function renderStats(stats, count) {
+      const approve = stats.approve || 0;
+      const totalHint = (stats.approve || 0) + (stats.reject || 0) + (stats.maybe || 0) + (stats.unset || 0);
       els.stats.innerHTML = [
-        `<span><b>${count}</b> в очереди</span>`,
-        `<span>✓ <b>${stats.approve || 0}</b></span>`,
+        `<span><b>${count}</b> в фильтре</span>`,
+        `<span>✓ <b>${approve}</b></span>`,
         `<span>? <b>${stats.maybe || 0}</b></span>`,
         `<span>✕ <b>${stats.reject || 0}</b></span>`,
         `<span>○ <b>${stats.unset || 0}</b></span>`,
       ].join("");
-      const rated = (stats.approve || 0) + (stats.maybe || 0) + (stats.reject || 0);
-      const total = count || 1;
-      els.progressBar.style.width = `${Math.min(100, (rated / total) * 100)}%`;
+      const denom = Math.max(1, totalHint);
+      els.progressBar.style.width = `${Math.min(100, (approve / denom) * 100)}%`;
     }
 
     function renderQueue() {
@@ -248,7 +282,7 @@
         const badge = item.rating && item.rating !== "unset"
           ? `<span class="badge ${item.rating}">${item.rating}</span>`
           : "";
-        btn.innerHTML = `<div>${item.id}${badge}</div><div class="id">${item.category || ""}${item.image_exists ? "" : " · нет PNG"}</div>`;
+        btn.innerHTML = `<div>${item.id}${badge}</div><div class="id">${item.title || item.category || ""}${item.image_exists ? "" : " · нет PNG"}</div>`;
         btn.addEventListener("click", () => {
           index = i;
           renderCurrent();
@@ -275,8 +309,7 @@
       els.prompt.textContent = item.prompt || "";
       els.meta.textContent = [
         item.id,
-        item.monster_id ? `monster: ${item.monster_id}` : "",
-        item.variant ? `variant: ${item.variant}` : "",
+        item.title || "",
         item.rating ? `rating: ${item.rating}` : "rating: unset",
       ].filter(Boolean).join(" · ");
       els.note.value = item.note || "";
@@ -292,6 +325,7 @@
       items = data.items || [];
       if (index >= items.length) index = Math.max(0, items.length - 1);
       renderStats(data.stats || {}, data.count || 0);
+      renderAuto(data.auto);
       renderQueue();
       renderCurrent();
     }
@@ -312,12 +346,36 @@
       item.rating = rating === "unset" ? "unset" : rating;
       item.note = els.note.value.trim();
       renderStats(data.stats || {}, items.length);
+      renderAuto(data.auto);
       renderQueue();
       if (rating !== "unset" && index < items.length - 1) {
         index += 1;
         renderCurrent();
         renderQueue();
       }
+    }
+
+    async function addPrompt() {
+      const title = els.newTitle.value.trim();
+      const prompt = els.newPrompt.value.trim();
+      if (!title || !prompt) {
+        alert("Нужны название и промпт");
+        return;
+      }
+      const res = await fetch("/api/prompts/add", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ title, prompt }),
+      });
+      const data = await res.json();
+      if (!res.ok) {
+        alert(data.error || "Ошибка");
+        return;
+      }
+      els.newTitle.value = "";
+      els.newPrompt.value = "";
+      alert(`Добавлено: ${data.id}\nАвто-цикл скоро сгенерирует.`);
+      setTimeout(loadItems, 2500);
     }
 
     document.querySelectorAll("[data-rate]").forEach((btn) => {
@@ -329,9 +387,10 @@
     els.onlyWithImage.addEventListener("change", () => { index = 0; loadItems(); });
     els.prevBtn.addEventListener("click", () => { if (index > 0) { index -= 1; renderCurrent(); renderQueue(); } });
     els.nextBtn.addEventListener("click", () => { if (index < items.length - 1) { index += 1; renderCurrent(); renderQueue(); } });
+    els.addPromptBtn.addEventListener("click", addPrompt);
 
     window.addEventListener("keydown", (e) => {
-      if (e.target === els.note) return;
+      if (e.target === els.note || e.target === els.newPrompt || e.target === els.newTitle) return;
       if (e.key === "a" || e.key === "A") rate("approve");
       if (e.key === "r" || e.key === "R") rate("reject");
       if (e.key === "m" || e.key === "M") rate("maybe");
@@ -340,6 +399,7 @@
     });
 
     loadItems();
+    setInterval(loadItems, 4000);
   </script>
 </body>
 </html>
