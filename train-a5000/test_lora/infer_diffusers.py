@@ -84,7 +84,7 @@ def main() -> int:
     manifest = []
     style = (
         "ningraphix, ps1 game screenshot, low-poly mesh, flat shaded, crisp hard edges, "
-        "chibi proportions, big angular head, identical paired low-poly cat eyes, "
+        "chibi proportions, big angular head, feline cat eyes, identical paired low-poly cat eyes, "
         "two matching oval eyes, flat white sclera, same size simple black round pupils, "
         "symmetrical, no mismatched eyes"
     )

@@ -4,7 +4,7 @@ from __future__ import annotations
 
 HOUSE_STYLE = (
     "ningraphix, ps1 game screenshot, low-poly mesh, flat shaded, crisp hard edges, "
-    "chibi proportions, big angular head, neutral solid light grey background"
+    "chibi proportions, big angular head, feline cat eyes, neutral solid light grey background"
 )
 
 STYLE_LOCK = (
