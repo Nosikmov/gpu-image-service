@@ -1,743 +1,523 @@
 {
-  "version": 1,
-  "count": 105,
-  "style_suffix": "dark medieval fantasy hand-painted illustration, classic RPG bestiary art, visible brushstrokes, muted earthy palette, semi-realistic, same look as fantasy NPC portrait, dark medieval fantasy RPG art, stylized hand-painted 2D, painterly textures, muted earthy palette, warm highlights, soft cinematic lighting, subtle shadows, refined shapes, not photoreal, cohesive game art style, one single creature, full body, centered, three quarter view, single creature only, plain neutral gray background, no scenery, no text, no sheet",
-  "trigger_word_suggestion": "gf_bestiary",
+  "version": 2,
+  "count": 64,
+  "base_count": 64,
+  "variants_per_prompt": 1,
+  "source": "promts-for-generate.txt",
+  "trigger_word_suggestion": "gf_lowpoly",
+  "negative_prompt": "",
   "entries": [
     {
-      "id": "cat_mob_main_1",
-      "prompt": "lime-green jelly slime blob, two small dark eyes, no limbs, dark medieval fantasy hand-painted illustration, classic RPG bestiary art, visible brushstrokes, muted earthy palette, semi-realistic, same look as fantasy NPC portrait, dark medieval fantasy RPG art, stylized hand-painted 2D, painterly textures, muted earthy palette, warm highlights, soft cinematic lighting, subtle shadows, refined shapes, not photoreal, cohesive game art style, one single creature, full body, centered, three quarter view, single creature only, plain neutral gray background, no scenery, no text, no sheet",
-      "category": "catalog",
-      "monster_id": "mob_main_1",
+      "id": "mage_with_staff",
+      "title": "Маг с посохом (Mage with Staff)",
+      "prompt": "<lora:Low_Poly_Papercraft:0.75> <lora:ningraphix:0.85>, ningraphix, ps1 game screenshot, anthropomorphic cat mage, blue wizard hat, low-poly magic robe, holding a tall wooden staff with a glowing polygonal crystal tip, chibi proportions, big angular head, low-poly mesh, flat shaded, crisp hard edges, T-pose, neutral solid light grey background",
+      "category": "creature",
+      "monster_id": "mage_with_staff",
       "variant": "base"
     },
     {
-      "id": "cat_mob_main_2",
-      "prompt": "insect beetle bug, six legs, brown chitin carapace, mandibles, NOT humanoid, dark medieval fantasy hand-painted illustration, classic RPG bestiary art, visible brushstrokes, muted earthy palette, semi-realistic, same look as fantasy NPC portrait, dark medieval fantasy RPG art, stylized hand-painted 2D, painterly textures, muted earthy palette, warm highlights, soft cinematic lighting, subtle shadows, refined shapes, not photoreal, cohesive game art style, one single creature, full body, centered, three quarter view, single creature only, plain neutral gray background, no scenery, no text, no sheet",
-      "category": "catalog",
-      "monster_id": "mob_main_2",
+      "id": "summoner_with_orb",
+      "title": "Призыватель с шаром (Summoner with Orb)",
+      "prompt": "<lora:Low_Poly_Papercraft:0.75> <lora:ningraphix:0.85>, ningraphix, ps1 game screenshot, anthropomorphic cat summoner, dark purple mystic cloak, holding a glowing magical orb floating above palm, mystical low-poly runes, chibi proportions, big angular head, low-poly mesh, flat shaded, crisp hard edges, T-pose, neutral solid light grey background",
+      "category": "creature",
+      "monster_id": "summoner_with_orb",
       "variant": "base"
     },
     {
-      "id": "cat_mob_main_3",
-      "prompt": "gray feral rat beast, red eyes, long pink tail, on all fours, dark medieval fantasy hand-painted illustration, classic RPG bestiary art, visible brushstrokes, muted earthy palette, semi-realistic, same look as fantasy NPC portrait, dark medieval fantasy RPG art, stylized hand-painted 2D, painterly textures, muted earthy palette, warm highlights, soft cinematic lighting, subtle shadows, refined shapes, not photoreal, cohesive game art style, one single creature, full body, centered, three quarter view, single creature only, plain neutral gray background, no scenery, no text, no sheet",
-      "category": "catalog",
-      "monster_id": "mob_main_3",
+      "id": "archer_ranger",
+      "title": "Лучник (Archer / Ranger)",
+      "prompt": "<lora:Low_Poly_Papercraft:0.75> <lora:ningraphix:0.85>, ningraphix, ps1 game screenshot, anthropomorphic cat archer, wearing low-poly leather tunic and cowl, holding a simple polygonal wooden bow, quiver with arrows on back, chibi proportions, big angular head, low-poly mesh, flat shaded, crisp hard edges, T-pose, neutral solid light grey background",
+      "category": "creature",
+      "monster_id": "archer_ranger",
       "variant": "base"
     },
     {
-      "id": "cat_mob_main_4",
-      "prompt": "green warty toad beast, bumpy skin, golden eyes, squat body, dark medieval fantasy hand-painted illustration, classic RPG bestiary art, visible brushstrokes, muted earthy palette, semi-realistic, same look as fantasy NPC portrait, dark medieval fantasy RPG art, stylized hand-painted 2D, painterly textures, muted earthy palette, warm highlights, soft cinematic lighting, subtle shadows, refined shapes, not photoreal, cohesive game art style, one single creature, full body, centered, three quarter view, single creature only, plain neutral gray background, no scenery, no text, no sheet",
-      "category": "catalog",
-      "monster_id": "mob_main_4",
+      "id": "knight",
+      "title": "Рыцарь (Knight)",
+      "prompt": "<lora:Low_Poly_Papercraft:0.75> <lora:ningraphix:0.85>, ningraphix, ps1 game screenshot, anthropomorphic orange cat knight, wearing simple low poly iron plate armor, blocky shoulder pads, holding a flat polygonal sword, chibi proportions, big angular head, low-poly mesh, flat shaded, crisp hard edges, T-pose, neutral solid light grey background",
+      "category": "creature",
+      "monster_id": "knight",
       "variant": "base"
     },
     {
-      "id": "cat_wm_named_slime",
-      "prompt": "purple jelly slime blob, two eyes, small gold crown on top, dark medieval fantasy hand-painted illustration, classic RPG bestiary art, visible brushstrokes, muted earthy palette, semi-realistic, same look as fantasy NPC portrait, dark medieval fantasy RPG art, stylized hand-painted 2D, painterly textures, muted earthy palette, warm highlights, soft cinematic lighting, subtle shadows, refined shapes, not photoreal, cohesive game art style, one single creature, full body, centered, three quarter view, single creature only, plain neutral gray background, no scenery, no text, no sheet",
-      "category": "catalog",
-      "monster_id": "wm_named_slime",
+      "id": "green_slime",
+      "title": "Зеленый Слизень (Green Slime Cat)",
+      "prompt": "<lora:Low_Poly_Papercraft:0.75> <lora:ningraphix:0.85>, ningraphix, ps1 game screenshot, anthropomorphic cat hybrid, green slime creature cat, translucent gooey emerald green body, cat ears and tail, dripping low poly green slime, chibi proportions, big angular head, low-poly mesh, flat shaded, crisp hard edges, T-pose, neutral solid light grey background",
+      "category": "creature",
+      "monster_id": "green_slime",
       "variant": "base"
     },
     {
-      "id": "cat_mob_mist_wraith",
-      "prompt": "pale gray swamp wraith, tattered hooded robes, dark medieval fantasy hand-painted illustration, classic RPG bestiary art, visible brushstrokes, muted earthy palette, semi-realistic, same look as fantasy NPC portrait, dark medieval fantasy RPG art, stylized hand-painted 2D, painterly textures, muted earthy palette, warm highlights, soft cinematic lighting, subtle shadows, refined shapes, not photoreal, cohesive game art style, one single creature, full body, centered, three quarter view, single creature only, plain neutral gray background, no scenery, no text, no sheet",
-      "category": "catalog",
-      "monster_id": "mob_mist_wraith",
+      "id": "red_slime",
+      "title": "Красный Слизень (Red Slime Cat)",
+      "prompt": "<lora:Low_Poly_Papercraft:0.75> <lora:ningraphix:0.85>, ningraphix, ps1 game screenshot, anthropomorphic cat hybrid, red slime creature cat, translucent gooey ruby red body, cat ears and tail, dripping low poly red slime, chibi proportions, big angular head, low-poly mesh, flat shaded, crisp hard edges, T-pose, neutral solid light grey background",
+      "category": "creature",
+      "monster_id": "red_slime",
       "variant": "base"
     },
     {
-      "id": "cat_mob_mist_mosquito",
-      "prompt": "giant gray-red blood mosquito, long proboscis, dark medieval fantasy hand-painted illustration, classic RPG bestiary art, visible brushstrokes, muted earthy palette, semi-realistic, same look as fantasy NPC portrait, dark medieval fantasy RPG art, stylized hand-painted 2D, painterly textures, muted earthy palette, warm highlights, soft cinematic lighting, subtle shadows, refined shapes, not photoreal, cohesive game art style, one single creature, full body, centered, three quarter view, single creature only, plain neutral gray background, no scenery, no text, no sheet",
-      "category": "catalog",
-      "monster_id": "mob_mist_mosquito",
+      "id": "yellow_slime",
+      "title": "Желтый Слизень (Yellow Slime Cat)",
+      "prompt": "<lora:Low_Poly_Papercraft:0.75> <lora:ningraphix:0.85>, ningraphix, ps1 game screenshot, anthropomorphic cat hybrid, yellow slime creature cat, translucent gooey amber yellow body, cat ears and tail, dripping low poly yellow slime, chibi proportions, big angular head, low-poly mesh, flat shaded, crisp hard edges, T-pose, neutral solid light grey background",
+      "category": "creature",
+      "monster_id": "yellow_slime",
       "variant": "base"
     },
     {
-      "id": "cat_mob_mist_bogling",
-      "prompt": "brown mud bogling, squat muddy humanoid, dark medieval fantasy hand-painted illustration, classic RPG bestiary art, visible brushstrokes, muted earthy palette, semi-realistic, same look as fantasy NPC portrait, dark medieval fantasy RPG art, stylized hand-painted 2D, painterly textures, muted earthy palette, warm highlights, soft cinematic lighting, subtle shadows, refined shapes, not photoreal, cohesive game art style, one single creature, full body, centered, three quarter view, single creature only, plain neutral gray background, no scenery, no text, no sheet",
-      "category": "catalog",
-      "monster_id": "mob_mist_bogling",
+      "id": "three_quarter_view",
+      "title": "Ракурс 3/4 (Three-Quarter View)",
+      "prompt": "<lora:Low_Poly_Papercraft:0.75> <lora:ningraphix:0.85>, ningraphix, ps1 game screenshot, anthropomorphic orange cat knight, three-quarter side view, chibi proportions, big angular head, low-poly mesh, flat shaded, crisp hard edges, iron plate armor, neutral solid light grey background",
+      "category": "pose",
+      "monster_id": "three_quarter_view",
       "variant": "base"
     },
     {
-      "id": "cat_mob_mist_hydra",
-      "prompt": "green swamp hydra hatchling, two snake heads, dark medieval fantasy hand-painted illustration, classic RPG bestiary art, visible brushstrokes, muted earthy palette, semi-realistic, same look as fantasy NPC portrait, dark medieval fantasy RPG art, stylized hand-painted 2D, painterly textures, muted earthy palette, warm highlights, soft cinematic lighting, subtle shadows, refined shapes, not photoreal, cohesive game art style, one single creature, full body, centered, three quarter view, single creature only, plain neutral gray background, no scenery, no text, no sheet",
-      "category": "catalog",
-      "monster_id": "mob_mist_hydra",
+      "id": "idle_action_pose",
+      "title": "Поза Покой / Стоит (Idle Action Pose)",
+      "prompt": "<lora:Low_Poly_Papercraft:0.75> <lora:ningraphix:0.85>, ningraphix, ps1 game screenshot, anthropomorphic grey cat warrior, standing combat ready pose, holding sword with both hands, chibi proportions, big angular head, low-poly mesh, flat shaded, crisp hard edges, neutral solid light grey background",
+      "category": "pose",
+      "monster_id": "idle_action_pose",
       "variant": "base"
     },
     {
-      "id": "cat_wm_mist_mother",
-      "prompt": "pale fog spirit woman, veiled gray mist dress, dark medieval fantasy hand-painted illustration, classic RPG bestiary art, visible brushstrokes, muted earthy palette, semi-realistic, same look as fantasy NPC portrait, dark medieval fantasy RPG art, stylized hand-painted 2D, painterly textures, muted earthy palette, warm highlights, soft cinematic lighting, subtle shadows, refined shapes, not photoreal, cohesive game art style, one single creature, full body, centered, three quarter view, single creature only, plain neutral gray background, no scenery, no text, no sheet",
-      "category": "catalog",
-      "monster_id": "wm_mist_mother",
+      "id": "sitting_pose",
+      "title": "Кот Сидит (Sitting Pose)",
+      "prompt": "<lora:Low_Poly_Papercraft:0.75> <lora:ningraphix:0.85>, ningraphix, ps1 game screenshot, anthropomorphic orange cat villager, sitting cross-legged, simple blocky clothes, chibi proportions, big angular head, low-poly mesh, flat shaded, crisp hard edges, neutral solid light grey background",
+      "category": "pose",
+      "monster_id": "sitting_pose",
       "variant": "base"
     },
     {
-      "id": "cat_wm_boss_titan",
-      "prompt": "stone-and-ember lava golem titan, cracked basalt body, magma veins, dark medieval fantasy hand-painted illustration, classic RPG bestiary art, visible brushstrokes, muted earthy palette, semi-realistic, same look as fantasy NPC portrait, dark medieval fantasy RPG art, stylized hand-painted 2D, painterly textures, muted earthy palette, warm highlights, soft cinematic lighting, subtle shadows, refined shapes, not photoreal, cohesive game art style, one single creature, full body, centered, three quarter view, single creature only, plain neutral gray background, no scenery, no text, no sheet",
-      "category": "catalog",
-      "monster_id": "wm_boss_titan",
+      "id": "back_view",
+      "title": "Вид Сзади (Back View)",
+      "prompt": "<lora:Low_Poly_Papercraft:0.75> <lora:ningraphix:0.85>, ningraphix, ps1 game screenshot, anthropomorphic cat knight seen from behind, back view, low-poly cat tail visible, blocky armor plates, sword sheathed on back, chibi proportions, low-poly mesh, flat shaded, crisp hard edges, neutral solid light grey background",
+      "category": "pose",
+      "monster_id": "back_view",
       "variant": "base"
     },
     {
-      "id": "cat_mob_locb_cave_slime",
-      "prompt": "green mountain goblin, crude scrap armor, dark medieval fantasy hand-painted illustration, classic RPG bestiary art, visible brushstrokes, muted earthy palette, semi-realistic, same look as fantasy NPC portrait, dark medieval fantasy RPG art, stylized hand-painted 2D, painterly textures, muted earthy palette, warm highlights, soft cinematic lighting, subtle shadows, refined shapes, not photoreal, cohesive game art style, one single creature, full body, centered, three quarter view, single creature only, plain neutral gray background, no scenery, no text, no sheet",
-      "category": "catalog",
-      "monster_id": "mob_locb_cave_slime",
+      "id": "merchant",
+      "title": "Кадры без оружия / Простой гражданин (Merchant Cat)",
+      "prompt": "<lora:Low_Poly_Papercraft:0.75> <lora:ningraphix:0.85>, ningraphix, ps1 game screenshot, anthropomorphic cat merchant, holding a small blocky treasure chest, apron over tunic, chibi proportions, big angular head, low-poly mesh, flat shaded, crisp hard edges, T-pose, neutral solid light grey background",
+      "category": "creature",
+      "monster_id": "merchant",
       "variant": "base"
     },
     {
-      "id": "cat_mob_locb_amber_slime",
-      "prompt": "gray stone monitor lizard, rocky scales, dark medieval fantasy hand-painted illustration, classic RPG bestiary art, visible brushstrokes, muted earthy palette, semi-realistic, same look as fantasy NPC portrait, dark medieval fantasy RPG art, stylized hand-painted 2D, painterly textures, muted earthy palette, warm highlights, soft cinematic lighting, subtle shadows, refined shapes, not photoreal, cohesive game art style, one single creature, full body, centered, three quarter view, single creature only, plain neutral gray background, no scenery, no text, no sheet",
-      "category": "catalog",
-      "monster_id": "mob_locb_amber_slime",
+      "id": "orange_fire_elemental",
+      "title": "Оранжевый огненный элементаль (Orange Fire Elemental Cat)",
+      "prompt": "<lora:Low_Poly_Papercraft:0.75> <lora:ningraphix:0.85>, ningraphix, ps1 game screenshot, anthropomorphic cat hybrid, orange fire elemental cat, bright orange low-poly flame body, amber molten core, glowing orange flame shards, cat ear silhouettes in orange fire, no solid skin, no dragon wings, chibi proportions, big angular head, low-poly mesh, flat shaded, crisp hard edges, T-pose, neutral solid light grey background",
+      "category": "creature",
+      "monster_id": "orange_fire_elemental",
       "variant": "base"
     },
     {
-      "id": "cat_mob_locb_ash_hound",
-      "prompt": "gray granite guardian hound statue, dark medieval fantasy hand-painted illustration, classic RPG bestiary art, visible brushstrokes, muted earthy palette, semi-realistic, same look as fantasy NPC portrait, dark medieval fantasy RPG art, stylized hand-painted 2D, painterly textures, muted earthy palette, warm highlights, soft cinematic lighting, subtle shadows, refined shapes, not photoreal, cohesive game art style, one single creature, full body, centered, three quarter view, single creature only, plain neutral gray background, no scenery, no text, no sheet",
-      "category": "catalog",
-      "monster_id": "mob_locb_ash_hound",
+      "id": "cyberpunk",
+      "title": "Киберпанк-Кот (Cyberpunk Cat)",
+      "prompt": "<lora:Low_Poly_Papercraft:0.75> <lora:ningraphix:0.85>, ningraphix, ps1 game screenshot, anthropomorphic cat hybrid, cyberpunk cat, neon visor over eyes, blocky futuristic jacket, robotic low-poly arm, chibi proportions, big angular head, low-poly mesh, flat shaded, crisp hard edges, T-pose, neutral solid light grey background",
+      "category": "creature",
+      "monster_id": "cyberpunk",
       "variant": "base"
     },
     {
-      "id": "cat_mob_stone_harpy",
-      "prompt": "brown-feathered mountain harpy, wings, talons, dark medieval fantasy hand-painted illustration, classic RPG bestiary art, visible brushstrokes, muted earthy palette, semi-realistic, same look as fantasy NPC portrait, dark medieval fantasy RPG art, stylized hand-painted 2D, painterly textures, muted earthy palette, warm highlights, soft cinematic lighting, subtle shadows, refined shapes, not photoreal, cohesive game art style, one single creature, full body, centered, three quarter view, single creature only, plain neutral gray background, no scenery, no text, no sheet",
-      "category": "catalog",
-      "monster_id": "mob_stone_harpy",
+      "id": "astronaut",
+      "title": "Кот-Космонавт (Astronaut Cat)",
+      "prompt": "<lora:Low_Poly_Papercraft:0.75> <lora:ningraphix:0.85>, ningraphix, ps1 game screenshot, anthropomorphic cat astronaut, bulky spherical low-poly space helmet, retro space suit, oxygen tank on back, chibi proportions, big angular head, low-poly mesh, flat shaded, crisp hard edges, T-pose, neutral solid light grey background",
+      "category": "creature",
+      "monster_id": "astronaut",
       "variant": "base"
     },
     {
-      "id": "cat_wm_bone_warden",
-      "prompt": "white skeleton knight, horned skull helm, dark medieval fantasy hand-painted illustration, classic RPG bestiary art, visible brushstrokes, muted earthy palette, semi-realistic, same look as fantasy NPC portrait, dark medieval fantasy RPG art, stylized hand-painted 2D, painterly textures, muted earthy palette, warm highlights, soft cinematic lighting, subtle shadows, refined shapes, not photoreal, cohesive game art style, one single creature, full body, centered, three quarter view, single creature only, plain neutral gray background, no scenery, no text, no sheet",
-      "category": "catalog",
-      "monster_id": "wm_bone_warden",
+      "id": "ninja",
+      "title": "Кот-Ниндзя (Ninja Cat)",
+      "prompt": "<lora:Low_Poly_Papercraft:0.75> <lora:ningraphix:0.85>, ningraphix, ps1 game screenshot, anthropomorphic Siamese cat ninja, black shinobi outfit, katana on back, red sash belt, chibi proportions, big angular head, low-poly mesh, flat shaded, crisp hard edges, T-pose, neutral solid light grey background",
+      "category": "creature",
+      "monster_id": "ninja",
       "variant": "base"
     },
     {
-      "id": "cat_mob_ash_slag",
-      "prompt": "orange molten slag slime blob, ash cinders, dark medieval fantasy hand-painted illustration, classic RPG bestiary art, visible brushstrokes, muted earthy palette, semi-realistic, same look as fantasy NPC portrait, dark medieval fantasy RPG art, stylized hand-painted 2D, painterly textures, muted earthy palette, warm highlights, soft cinematic lighting, subtle shadows, refined shapes, not photoreal, cohesive game art style, one single creature, full body, centered, three quarter view, single creature only, plain neutral gray background, no scenery, no text, no sheet",
-      "category": "catalog",
-      "monster_id": "mob_ash_slag",
+      "id": "pirate",
+      "title": "Кот-Пират (Pirate Cat)",
+      "prompt": "<lora:Low_Poly_Papercraft:0.75> <lora:ningraphix:0.85>, ningraphix, ps1 game screenshot, anthropomorphic cat pirate, eye patch, captain hat, blocky hook hand, holding a flintlock pistol, chibi proportions, big angular head, low-poly mesh, flat shaded, crisp hard edges, T-pose, neutral solid light grey background",
+      "category": "creature",
+      "monster_id": "pirate",
       "variant": "base"
     },
     {
-      "id": "cat_mob_ash_burner",
-      "prompt": "smoldering charcoal ember humanoid, dark medieval fantasy hand-painted illustration, classic RPG bestiary art, visible brushstrokes, muted earthy palette, semi-realistic, same look as fantasy NPC portrait, dark medieval fantasy RPG art, stylized hand-painted 2D, painterly textures, muted earthy palette, warm highlights, soft cinematic lighting, subtle shadows, refined shapes, not photoreal, cohesive game art style, one single creature, full body, centered, three quarter view, single creature only, plain neutral gray background, no scenery, no text, no sheet",
-      "category": "catalog",
-      "monster_id": "mob_ash_burner",
+      "id": "goblin",
+      "title": "goblin",
+      "prompt": "<lora:Low_Poly_Papercraft:0.75> <lora:ningraphix:0.85>, ningraphix, ps1 game screenshot, anthropomorphic cat hybrid, goblin cat, green skin, pointed ears, chibi proportions, big angular head, low-poly mesh, flat shaded, crisp hard edges, low-sided cylinder arms, truncated pyramid torso, ragged leather tunic, holding a small polygonal dagger, T-pose, neutral solid light grey background",
+      "category": "creature",
+      "monster_id": "goblin",
       "variant": "base"
     },
     {
-      "id": "cat_mob_ash_golem",
-      "prompt": "bulky volcanic ash golem, dark rock, dark medieval fantasy hand-painted illustration, classic RPG bestiary art, visible brushstrokes, muted earthy palette, semi-realistic, same look as fantasy NPC portrait, dark medieval fantasy RPG art, stylized hand-painted 2D, painterly textures, muted earthy palette, warm highlights, soft cinematic lighting, subtle shadows, refined shapes, not photoreal, cohesive game art style, one single creature, full body, centered, three quarter view, single creature only, plain neutral gray background, no scenery, no text, no sheet",
-      "category": "catalog",
-      "monster_id": "mob_ash_golem",
+      "id": "slime",
+      "title": "Кот-Слизень (Slime Cat)",
+      "prompt": "<lora:Low_Poly_Papercraft:0.75> <lora:ningraphix:0.85>, ningraphix, ps1 game screenshot, anthropomorphic cat hybrid, slime creature cat, translucent green gooey body, cat ears and tail, chibi proportions, big angular head, low-poly mesh, flat shaded, crisp hard edges, low-sided cylinder arms, truncated pyramid torso, dripping slime details, T-pose, neutral solid light grey background",
+      "category": "creature",
+      "monster_id": "slime",
       "variant": "base"
     },
     {
-      "id": "cat_mob_ash_salamander",
-      "prompt": "orange fire salamander, glowing scales, dark medieval fantasy hand-painted illustration, classic RPG bestiary art, visible brushstrokes, muted earthy palette, semi-realistic, same look as fantasy NPC portrait, dark medieval fantasy RPG art, stylized hand-painted 2D, painterly textures, muted earthy palette, warm highlights, soft cinematic lighting, subtle shadows, refined shapes, not photoreal, cohesive game art style, one single creature, full body, centered, three quarter view, single creature only, plain neutral gray background, no scenery, no text, no sheet",
-      "category": "catalog",
-      "monster_id": "mob_ash_salamander",
+      "id": "orc",
+      "title": "Кот-Орк (Orc Cat)",
+      "prompt": "<lora:Low_Poly_Papercraft:0.75> <lora:ningraphix:0.85>, ningraphix, ps1 game screenshot, anthropomorphic cat hybrid, massive orc cat, green fur skin, lower tusks, chibi proportions, heavy broad angular head, low-poly mesh, flat shaded, crisp hard edges, thick cylinder arms, broad torso, rough spiked iron armor, holding a polygonal battle axe, T-pose, neutral solid light grey background",
+      "category": "creature",
+      "monster_id": "orc",
       "variant": "base"
     },
     {
-      "id": "cat_wm_heat_overseer",
-      "prompt": "red-black demon foreman, dark iron armor, dark medieval fantasy hand-painted illustration, classic RPG bestiary art, visible brushstrokes, muted earthy palette, semi-realistic, same look as fantasy NPC portrait, dark medieval fantasy RPG art, stylized hand-painted 2D, painterly textures, muted earthy palette, warm highlights, soft cinematic lighting, subtle shadows, refined shapes, not photoreal, cohesive game art style, one single creature, full body, centered, three quarter view, single creature only, plain neutral gray background, no scenery, no text, no sheet",
-      "category": "catalog",
-      "monster_id": "wm_heat_overseer",
+      "id": "kobold",
+      "title": "Кот-Кобольд (Kobold Cat)",
+      "prompt": "<lora:Low_Poly_Papercraft:0.75> <lora:ningraphix:0.85>, ningraphix, ps1 game screenshot, anthropomorphic cat hybrid, kobold cat, red reptilian scaled skin, small dragon horns, cat whiskers, long lizard tail, chibi proportions, big angular head, low-poly mesh, flat shaded, crisp hard edges, holding a low-poly wooden spear, T-pose, neutral solid light grey background",
+      "category": "creature",
+      "monster_id": "kobold",
       "variant": "base"
     },
     {
-      "id": "cat_mob_fang_scarab",
-      "prompt": "large void-black shadow scarab beetle monster, insect six spiny legs, segmented chitin carapace with glowing purple void runes, oversized curved horned mandibles, faint shadow smoke wisps, small glowing void eyes, eldritch corrupted fantasy beetle, standing on ground, side three-quarter view showing body depth, NOT top-down, NOT bird eye view, NOT flat icon, NOT humanoid, NOT realistic photo, dark medieval fantasy hand-painted illustration, classic RPG bestiary art, visible brushstrokes, muted earthy palette, semi-realistic, same look as fantasy NPC portrait, dark medieval fantasy RPG art, stylized hand-painted 2D, painterly textures, muted earthy palette, warm highlights, soft cinematic lighting, subtle shadows, refined shapes, not photoreal, cohesive game art style, one single creature, full body, centered, three quarter view, single creature only, plain neutral gray background, no scenery, no text, no sheet",
-      "category": "catalog",
-      "monster_id": "mob_fang_scarab",
+      "id": "undead_skeleton",
+      "title": "Кот-Скелет (Undead / Skeleton Cat)",
+      "prompt": "<lora:Low_Poly_Papercraft:0.75> <lora:ningraphix:0.85>, ningraphix, ps1 game screenshot, anthropomorphic cat hybrid, skeleton cat, skull head with cat ears, bone ribcage, chibi proportions, big angular head, low-poly mesh, flat shaded, crisp hard edges, blocky bone limbs, holding a polygonal scythe, T-pose, neutral solid light grey background",
+      "category": "creature",
+      "monster_id": "undead_skeleton",
       "variant": "base"
     },
     {
-      "id": "cat_mob_fang_blade",
-      "prompt": "dark void wraith fused with living sword, dark medieval fantasy hand-painted illustration, classic RPG bestiary art, visible brushstrokes, muted earthy palette, semi-realistic, same look as fantasy NPC portrait, dark medieval fantasy RPG art, stylized hand-painted 2D, painterly textures, muted earthy palette, warm highlights, soft cinematic lighting, subtle shadows, refined shapes, not photoreal, cohesive game art style, one single creature, full body, centered, three quarter view, single creature only, plain neutral gray background, no scenery, no text, no sheet",
-      "category": "catalog",
-      "monster_id": "mob_fang_blade",
+      "id": "zombie",
+      "title": "Кот-Зомби (Zombie Cat)",
+      "prompt": "<lora:Low_Poly_Papercraft:0.75> <lora:ningraphix:0.85>, ningraphix, ps1 game screenshot, anthropomorphic cat hybrid, zombie cat, pale greenish gray skin, glowing hollow eye sockets, exposed low-poly bone ribs, torn tattered clothes, chibi proportions, big angular head, low-poly mesh, flat shaded, crisp hard edges, T-pose, neutral solid light grey background",
+      "category": "creature",
+      "monster_id": "zombie",
       "variant": "base"
     },
     {
-      "id": "cat_mob_fang_knight",
-      "prompt": "Rift Knight blackened plate armor, dark medieval fantasy hand-painted illustration, classic RPG bestiary art, visible brushstrokes, muted earthy palette, semi-realistic, same look as fantasy NPC portrait, dark medieval fantasy RPG art, stylized hand-painted 2D, painterly textures, muted earthy palette, warm highlights, soft cinematic lighting, subtle shadows, refined shapes, not photoreal, cohesive game art style, one single creature, full body, centered, three quarter view, single creature only, plain neutral gray background, no scenery, no text, no sheet",
-      "category": "catalog",
-      "monster_id": "mob_fang_knight",
+      "id": "dark_orc",
+      "title": "Кот-Тёмный Орк (Dark Orc Cat)",
+      "prompt": "<lora:Low_Poly_Papercraft:0.75> <lora:ningraphix:0.85>, ningraphix, ps1 game screenshot, anthropomorphic cat hybrid, massive dark orc cat, dark grey slate skin, red glowing eyes, large lower tusks, heavy black low-poly spiked armor, holding a jagged polygonal war cleaver, chibi proportions, big angular head, low-poly mesh, flat shaded, crisp hard edges, T-pose, neutral solid light grey background",
+      "category": "creature",
+      "monster_id": "dark_orc",
       "variant": "base"
     },
     {
-      "id": "cat_mob_fang_herald",
-      "prompt": "mage purple robes with void staff, dark medieval fantasy hand-painted illustration, classic RPG bestiary art, visible brushstrokes, muted earthy palette, semi-realistic, same look as fantasy NPC portrait, dark medieval fantasy RPG art, stylized hand-painted 2D, painterly textures, muted earthy palette, warm highlights, soft cinematic lighting, subtle shadows, refined shapes, not photoreal, cohesive game art style, one single creature, full body, centered, three quarter view, single creature only, plain neutral gray background, no scenery, no text, no sheet",
-      "category": "catalog",
-      "monster_id": "mob_fang_herald",
+      "id": "leprechaun",
+      "title": "Кот-Лепрекон (Leprechaun Cat)",
+      "prompt": "<lora:Low_Poly_Papercraft:0.75> <lora:ningraphix:0.85>, ningraphix, ps1 game screenshot, anthropomorphic orange cat leprechaun, green top hat with gold buckle, ginger beard under cat chin, green coat, holding a small low-poly pot of gold, chibi proportions, big angular head, low-poly mesh, flat shaded, crisp hard edges, T-pose, neutral solid light grey background",
+      "category": "creature",
+      "monster_id": "leprechaun",
       "variant": "base"
     },
     {
-      "id": "cat_wm_boss_varkan",
-      "prompt": "dragonoid boss violet abyss armor wings, dark medieval fantasy hand-painted illustration, classic RPG bestiary art, visible brushstrokes, muted earthy palette, semi-realistic, same look as fantasy NPC portrait, dark medieval fantasy RPG art, stylized hand-painted 2D, painterly textures, muted earthy palette, warm highlights, soft cinematic lighting, subtle shadows, refined shapes, not photoreal, cohesive game art style, one single creature, full body, centered, three quarter view, single creature only, plain neutral gray background, no scenery, no text, no sheet",
-      "category": "catalog",
-      "monster_id": "wm_boss_varkan",
+      "id": "werewolf_wolf",
+      "title": "Кот-Оборотень (Werewolf Cat / Wolf-Cat)",
+      "prompt": "<lora:Low_Poly_Papercraft:0.75> <lora:ningraphix:0.85>, ningraphix, ps1 game screenshot, anthropomorphic cat hybrid, werewolf cat hybrid, dark grey scruffy fur, sharp wolf fangs mixed with cat whiskers, large claws, torn trousers, feral posture, chibi proportions, big angular head, low-poly mesh, flat shaded, crisp hard edges, T-pose, neutral solid light grey background",
+      "category": "creature",
+      "monster_id": "werewolf_wolf",
       "variant": "base"
     },
     {
-      "id": "cat_wm_event_wolf",
-      "prompt": "huge dark-fur alpha wolf, scarred muzzle, dark medieval fantasy hand-painted illustration, classic RPG bestiary art, visible brushstrokes, muted earthy palette, semi-realistic, same look as fantasy NPC portrait, dark medieval fantasy RPG art, stylized hand-painted 2D, painterly textures, muted earthy palette, warm highlights, soft cinematic lighting, subtle shadows, refined shapes, not photoreal, cohesive game art style, one single creature, full body, centered, three quarter view, single creature only, plain neutral gray background, no scenery, no text, no sheet",
-      "category": "catalog",
-      "monster_id": "wm_event_wolf",
+      "id": "gnoll",
+      "title": "Кот-Гнолл / Собако-Кот (Gnoll Cat)",
+      "prompt": "<lora:Low_Poly_Papercraft:0.75> <lora:ningraphix:0.85>, ningraphix, ps1 game screenshot, anthropomorphic cat hybrid, hyena cat gnoll, spotted fur coat, floppy dog-hyena ears mixed with cat ears, jagged fangs, crude low-poly leather armor, holding a blocky bone club, chibi proportions, big angular head, low-poly mesh, flat shaded, crisp hard edges, T-pose, neutral solid light grey background",
+      "category": "creature",
+      "monster_id": "gnoll",
       "variant": "base"
     },
     {
-      "id": "var_mob_main_1",
-      "prompt": "lime-green jelly slime blob, two small dark eyes, no limbs, soft warm torchlight, dark medieval fantasy hand-painted illustration, classic RPG bestiary art, visible brushstrokes, muted earthy palette, semi-realistic, same look as fantasy NPC portrait, dark medieval fantasy RPG art, stylized hand-painted 2D, painterly textures, muted earthy palette, warm highlights, soft cinematic lighting, subtle shadows, refined shapes, not photoreal, cohesive game art style, one single creature, full body, centered, three quarter view, single creature only, plain neutral gray background, no scenery, no text, no sheet",
-      "category": "catalog_variant",
-      "monster_id": "mob_main_1",
-      "variant": "soft warm torchlight"
-    },
-    {
-      "id": "var_mob_main_2",
-      "prompt": "insect beetle bug, six legs, brown chitin carapace, mandibles, NOT humanoid, cool moonlit highlights, dark medieval fantasy hand-painted illustration, classic RPG bestiary art, visible brushstrokes, muted earthy palette, semi-realistic, same look as fantasy NPC portrait, dark medieval fantasy RPG art, stylized hand-painted 2D, painterly textures, muted earthy palette, warm highlights, soft cinematic lighting, subtle shadows, refined shapes, not photoreal, cohesive game art style, one single creature, full body, centered, three quarter view, single creature only, plain neutral gray background, no scenery, no text, no sheet",
-      "category": "catalog_variant",
-      "monster_id": "mob_main_2",
-      "variant": "cool moonlit highlights"
-    },
-    {
-      "id": "var_mob_main_3",
-      "prompt": "gray feral rat beast, red eyes, long pink tail, on all fours, muted overcast daylight, dark medieval fantasy hand-painted illustration, classic RPG bestiary art, visible brushstrokes, muted earthy palette, semi-realistic, same look as fantasy NPC portrait, dark medieval fantasy RPG art, stylized hand-painted 2D, painterly textures, muted earthy palette, warm highlights, soft cinematic lighting, subtle shadows, refined shapes, not photoreal, cohesive game art style, one single creature, full body, centered, three quarter view, single creature only, plain neutral gray background, no scenery, no text, no sheet",
-      "category": "catalog_variant",
-      "monster_id": "mob_main_3",
-      "variant": "muted overcast daylight"
-    },
-    {
-      "id": "var_mob_main_4",
-      "prompt": "green warty toad beast, bumpy skin, golden eyes, squat body, soft warm torchlight, dark medieval fantasy hand-painted illustration, classic RPG bestiary art, visible brushstrokes, muted earthy palette, semi-realistic, same look as fantasy NPC portrait, dark medieval fantasy RPG art, stylized hand-painted 2D, painterly textures, muted earthy palette, warm highlights, soft cinematic lighting, subtle shadows, refined shapes, not photoreal, cohesive game art style, one single creature, full body, centered, three quarter view, single creature only, plain neutral gray background, no scenery, no text, no sheet",
-      "category": "catalog_variant",
-      "monster_id": "mob_main_4",
-      "variant": "soft warm torchlight"
-    },
-    {
-      "id": "var_wm_named_slime",
-      "prompt": "purple jelly slime blob, two eyes, small gold crown on top, cool moonlit highlights, dark medieval fantasy hand-painted illustration, classic RPG bestiary art, visible brushstrokes, muted earthy palette, semi-realistic, same look as fantasy NPC portrait, dark medieval fantasy RPG art, stylized hand-painted 2D, painterly textures, muted earthy palette, warm highlights, soft cinematic lighting, subtle shadows, refined shapes, not photoreal, cohesive game art style, one single creature, full body, centered, three quarter view, single creature only, plain neutral gray background, no scenery, no text, no sheet",
-      "category": "catalog_variant",
-      "monster_id": "wm_named_slime",
-      "variant": "cool moonlit highlights"
-    },
-    {
-      "id": "var_mob_mist_wraith",
-      "prompt": "pale gray swamp wraith, tattered hooded robes, muted overcast daylight, dark medieval fantasy hand-painted illustration, classic RPG bestiary art, visible brushstrokes, muted earthy palette, semi-realistic, same look as fantasy NPC portrait, dark medieval fantasy RPG art, stylized hand-painted 2D, painterly textures, muted earthy palette, warm highlights, soft cinematic lighting, subtle shadows, refined shapes, not photoreal, cohesive game art style, one single creature, full body, centered, three quarter view, single creature only, plain neutral gray background, no scenery, no text, no sheet",
-      "category": "catalog_variant",
-      "monster_id": "mob_mist_wraith",
-      "variant": "muted overcast daylight"
-    },
-    {
-      "id": "var_mob_mist_mosquito",
-      "prompt": "giant gray-red blood mosquito, long proboscis, soft warm torchlight, dark medieval fantasy hand-painted illustration, classic RPG bestiary art, visible brushstrokes, muted earthy palette, semi-realistic, same look as fantasy NPC portrait, dark medieval fantasy RPG art, stylized hand-painted 2D, painterly textures, muted earthy palette, warm highlights, soft cinematic lighting, subtle shadows, refined shapes, not photoreal, cohesive game art style, one single creature, full body, centered, three quarter view, single creature only, plain neutral gray background, no scenery, no text, no sheet",
-      "category": "catalog_variant",
-      "monster_id": "mob_mist_mosquito",
-      "variant": "soft warm torchlight"
-    },
-    {
-      "id": "var_mob_mist_bogling",
-      "prompt": "brown mud bogling, squat muddy humanoid, cool moonlit highlights, dark medieval fantasy hand-painted illustration, classic RPG bestiary art, visible brushstrokes, muted earthy palette, semi-realistic, same look as fantasy NPC portrait, dark medieval fantasy RPG art, stylized hand-painted 2D, painterly textures, muted earthy palette, warm highlights, soft cinematic lighting, subtle shadows, refined shapes, not photoreal, cohesive game art style, one single creature, full body, centered, three quarter view, single creature only, plain neutral gray background, no scenery, no text, no sheet",
-      "category": "catalog_variant",
-      "monster_id": "mob_mist_bogling",
-      "variant": "cool moonlit highlights"
-    },
-    {
-      "id": "var_mob_mist_hydra",
-      "prompt": "green swamp hydra hatchling, two snake heads, muted overcast daylight, dark medieval fantasy hand-painted illustration, classic RPG bestiary art, visible brushstrokes, muted earthy palette, semi-realistic, same look as fantasy NPC portrait, dark medieval fantasy RPG art, stylized hand-painted 2D, painterly textures, muted earthy palette, warm highlights, soft cinematic lighting, subtle shadows, refined shapes, not photoreal, cohesive game art style, one single creature, full body, centered, three quarter view, single creature only, plain neutral gray background, no scenery, no text, no sheet",
-      "category": "catalog_variant",
-      "monster_id": "mob_mist_hydra",
-      "variant": "muted overcast daylight"
-    },
-    {
-      "id": "var_wm_mist_mother",
-      "prompt": "pale fog spirit woman, veiled gray mist dress, soft warm torchlight, dark medieval fantasy hand-painted illustration, classic RPG bestiary art, visible brushstrokes, muted earthy palette, semi-realistic, same look as fantasy NPC portrait, dark medieval fantasy RPG art, stylized hand-painted 2D, painterly textures, muted earthy palette, warm highlights, soft cinematic lighting, subtle shadows, refined shapes, not photoreal, cohesive game art style, one single creature, full body, centered, three quarter view, single creature only, plain neutral gray background, no scenery, no text, no sheet",
-      "category": "catalog_variant",
-      "monster_id": "wm_mist_mother",
-      "variant": "soft warm torchlight"
-    },
-    {
-      "id": "var_wm_boss_titan",
-      "prompt": "stone-and-ember lava golem titan, cracked basalt body, magma veins, cool moonlit highlights, dark medieval fantasy hand-painted illustration, classic RPG bestiary art, visible brushstrokes, muted earthy palette, semi-realistic, same look as fantasy NPC portrait, dark medieval fantasy RPG art, stylized hand-painted 2D, painterly textures, muted earthy palette, warm highlights, soft cinematic lighting, subtle shadows, refined shapes, not photoreal, cohesive game art style, one single creature, full body, centered, three quarter view, single creature only, plain neutral gray background, no scenery, no text, no sheet",
-      "category": "catalog_variant",
-      "monster_id": "wm_boss_titan",
-      "variant": "cool moonlit highlights"
-    },
-    {
-      "id": "var_mob_locb_cave_slime",
-      "prompt": "green mountain goblin, crude scrap armor, muted overcast daylight, dark medieval fantasy hand-painted illustration, classic RPG bestiary art, visible brushstrokes, muted earthy palette, semi-realistic, same look as fantasy NPC portrait, dark medieval fantasy RPG art, stylized hand-painted 2D, painterly textures, muted earthy palette, warm highlights, soft cinematic lighting, subtle shadows, refined shapes, not photoreal, cohesive game art style, one single creature, full body, centered, three quarter view, single creature only, plain neutral gray background, no scenery, no text, no sheet",
-      "category": "catalog_variant",
-      "monster_id": "mob_locb_cave_slime",
-      "variant": "muted overcast daylight"
-    },
-    {
-      "id": "var_mob_locb_amber_slime",
-      "prompt": "gray stone monitor lizard, rocky scales, soft warm torchlight, dark medieval fantasy hand-painted illustration, classic RPG bestiary art, visible brushstrokes, muted earthy palette, semi-realistic, same look as fantasy NPC portrait, dark medieval fantasy RPG art, stylized hand-painted 2D, painterly textures, muted earthy palette, warm highlights, soft cinematic lighting, subtle shadows, refined shapes, not photoreal, cohesive game art style, one single creature, full body, centered, three quarter view, single creature only, plain neutral gray background, no scenery, no text, no sheet",
-      "category": "catalog_variant",
-      "monster_id": "mob_locb_amber_slime",
-      "variant": "soft warm torchlight"
-    },
-    {
-      "id": "var_mob_locb_ash_hound",
-      "prompt": "gray granite guardian hound statue, cool moonlit highlights, dark medieval fantasy hand-painted illustration, classic RPG bestiary art, visible brushstrokes, muted earthy palette, semi-realistic, same look as fantasy NPC portrait, dark medieval fantasy RPG art, stylized hand-painted 2D, painterly textures, muted earthy palette, warm highlights, soft cinematic lighting, subtle shadows, refined shapes, not photoreal, cohesive game art style, one single creature, full body, centered, three quarter view, single creature only, plain neutral gray background, no scenery, no text, no sheet",
-      "category": "catalog_variant",
-      "monster_id": "mob_locb_ash_hound",
-      "variant": "cool moonlit highlights"
-    },
-    {
-      "id": "var_mob_stone_harpy",
-      "prompt": "brown-feathered mountain harpy, wings, talons, muted overcast daylight, dark medieval fantasy hand-painted illustration, classic RPG bestiary art, visible brushstrokes, muted earthy palette, semi-realistic, same look as fantasy NPC portrait, dark medieval fantasy RPG art, stylized hand-painted 2D, painterly textures, muted earthy palette, warm highlights, soft cinematic lighting, subtle shadows, refined shapes, not photoreal, cohesive game art style, one single creature, full body, centered, three quarter view, single creature only, plain neutral gray background, no scenery, no text, no sheet",
-      "category": "catalog_variant",
-      "monster_id": "mob_stone_harpy",
-      "variant": "muted overcast daylight"
-    },
-    {
-      "id": "var_wm_bone_warden",
-      "prompt": "white skeleton knight, horned skull helm, soft warm torchlight, dark medieval fantasy hand-painted illustration, classic RPG bestiary art, visible brushstrokes, muted earthy palette, semi-realistic, same look as fantasy NPC portrait, dark medieval fantasy RPG art, stylized hand-painted 2D, painterly textures, muted earthy palette, warm highlights, soft cinematic lighting, subtle shadows, refined shapes, not photoreal, cohesive game art style, one single creature, full body, centered, three quarter view, single creature only, plain neutral gray background, no scenery, no text, no sheet",
-      "category": "catalog_variant",
-      "monster_id": "wm_bone_warden",
-      "variant": "soft warm torchlight"
-    },
-    {
-      "id": "var_mob_ash_slag",
-      "prompt": "orange molten slag slime blob, ash cinders, cool moonlit highlights, dark medieval fantasy hand-painted illustration, classic RPG bestiary art, visible brushstrokes, muted earthy palette, semi-realistic, same look as fantasy NPC portrait, dark medieval fantasy RPG art, stylized hand-painted 2D, painterly textures, muted earthy palette, warm highlights, soft cinematic lighting, subtle shadows, refined shapes, not photoreal, cohesive game art style, one single creature, full body, centered, three quarter view, single creature only, plain neutral gray background, no scenery, no text, no sheet",
-      "category": "catalog_variant",
-      "monster_id": "mob_ash_slag",
-      "variant": "cool moonlit highlights"
-    },
-    {
-      "id": "var_mob_ash_burner",
-      "prompt": "smoldering charcoal ember humanoid, muted overcast daylight, dark medieval fantasy hand-painted illustration, classic RPG bestiary art, visible brushstrokes, muted earthy palette, semi-realistic, same look as fantasy NPC portrait, dark medieval fantasy RPG art, stylized hand-painted 2D, painterly textures, muted earthy palette, warm highlights, soft cinematic lighting, subtle shadows, refined shapes, not photoreal, cohesive game art style, one single creature, full body, centered, three quarter view, single creature only, plain neutral gray background, no scenery, no text, no sheet",
-      "category": "catalog_variant",
-      "monster_id": "mob_ash_burner",
-      "variant": "muted overcast daylight"
-    },
-    {
-      "id": "var_mob_ash_golem",
-      "prompt": "bulky volcanic ash golem, dark rock, soft warm torchlight, dark medieval fantasy hand-painted illustration, classic RPG bestiary art, visible brushstrokes, muted earthy palette, semi-realistic, same look as fantasy NPC portrait, dark medieval fantasy RPG art, stylized hand-painted 2D, painterly textures, muted earthy palette, warm highlights, soft cinematic lighting, subtle shadows, refined shapes, not photoreal, cohesive game art style, one single creature, full body, centered, three quarter view, single creature only, plain neutral gray background, no scenery, no text, no sheet",
-      "category": "catalog_variant",
-      "monster_id": "mob_ash_golem",
-      "variant": "soft warm torchlight"
-    },
-    {
-      "id": "var_mob_ash_salamander",
-      "prompt": "orange fire salamander, glowing scales, cool moonlit highlights, dark medieval fantasy hand-painted illustration, classic RPG bestiary art, visible brushstrokes, muted earthy palette, semi-realistic, same look as fantasy NPC portrait, dark medieval fantasy RPG art, stylized hand-painted 2D, painterly textures, muted earthy palette, warm highlights, soft cinematic lighting, subtle shadows, refined shapes, not photoreal, cohesive game art style, one single creature, full body, centered, three quarter view, single creature only, plain neutral gray background, no scenery, no text, no sheet",
-      "category": "catalog_variant",
-      "monster_id": "mob_ash_salamander",
-      "variant": "cool moonlit highlights"
-    },
-    {
-      "id": "var_wm_heat_overseer",
-      "prompt": "red-black demon foreman, dark iron armor, muted overcast daylight, dark medieval fantasy hand-painted illustration, classic RPG bestiary art, visible brushstrokes, muted earthy palette, semi-realistic, same look as fantasy NPC portrait, dark medieval fantasy RPG art, stylized hand-painted 2D, painterly textures, muted earthy palette, warm highlights, soft cinematic lighting, subtle shadows, refined shapes, not photoreal, cohesive game art style, one single creature, full body, centered, three quarter view, single creature only, plain neutral gray background, no scenery, no text, no sheet",
-      "category": "catalog_variant",
-      "monster_id": "wm_heat_overseer",
-      "variant": "muted overcast daylight"
-    },
-    {
-      "id": "var_mob_fang_scarab",
-      "prompt": "large void-black shadow scarab beetle monster, insect six spiny legs, segmented chitin carapace with glowing purple void runes, oversized curved horned mandibles, faint shadow smoke wisps, small glowing void eyes, eldritch corrupted fantasy beetle, standing on ground, side three-quarter view showing body depth, NOT top-down, NOT bird eye view, NOT flat icon, NOT humanoid, NOT realistic photo, soft warm torchlight, dark medieval fantasy hand-painted illustration, classic RPG bestiary art, visible brushstrokes, muted earthy palette, semi-realistic, same look as fantasy NPC portrait, dark medieval fantasy RPG art, stylized hand-painted 2D, painterly textures, muted earthy palette, warm highlights, soft cinematic lighting, subtle shadows, refined shapes, not photoreal, cohesive game art style, one single creature, full body, centered, three quarter view, single creature only, plain neutral gray background, no scenery, no text, no sheet",
-      "category": "catalog_variant",
-      "monster_id": "mob_fang_scarab",
-      "variant": "soft warm torchlight"
-    },
-    {
-      "id": "var_mob_fang_blade",
-      "prompt": "dark void wraith fused with living sword, cool moonlit highlights, dark medieval fantasy hand-painted illustration, classic RPG bestiary art, visible brushstrokes, muted earthy palette, semi-realistic, same look as fantasy NPC portrait, dark medieval fantasy RPG art, stylized hand-painted 2D, painterly textures, muted earthy palette, warm highlights, soft cinematic lighting, subtle shadows, refined shapes, not photoreal, cohesive game art style, one single creature, full body, centered, three quarter view, single creature only, plain neutral gray background, no scenery, no text, no sheet",
-      "category": "catalog_variant",
-      "monster_id": "mob_fang_blade",
-      "variant": "cool moonlit highlights"
-    },
-    {
-      "id": "var_mob_fang_knight",
-      "prompt": "Rift Knight blackened plate armor, muted overcast daylight, dark medieval fantasy hand-painted illustration, classic RPG bestiary art, visible brushstrokes, muted earthy palette, semi-realistic, same look as fantasy NPC portrait, dark medieval fantasy RPG art, stylized hand-painted 2D, painterly textures, muted earthy palette, warm highlights, soft cinematic lighting, subtle shadows, refined shapes, not photoreal, cohesive game art style, one single creature, full body, centered, three quarter view, single creature only, plain neutral gray background, no scenery, no text, no sheet",
-      "category": "catalog_variant",
-      "monster_id": "mob_fang_knight",
-      "variant": "muted overcast daylight"
-    },
-    {
-      "id": "var_mob_fang_herald",
-      "prompt": "mage purple robes with void staff, soft warm torchlight, dark medieval fantasy hand-painted illustration, classic RPG bestiary art, visible brushstrokes, muted earthy palette, semi-realistic, same look as fantasy NPC portrait, dark medieval fantasy RPG art, stylized hand-painted 2D, painterly textures, muted earthy palette, warm highlights, soft cinematic lighting, subtle shadows, refined shapes, not photoreal, cohesive game art style, one single creature, full body, centered, three quarter view, single creature only, plain neutral gray background, no scenery, no text, no sheet",
-      "category": "catalog_variant",
-      "monster_id": "mob_fang_herald",
-      "variant": "soft warm torchlight"
-    },
-    {
-      "id": "var_wm_boss_varkan",
-      "prompt": "dragonoid boss violet abyss armor wings, cool moonlit highlights, dark medieval fantasy hand-painted illustration, classic RPG bestiary art, visible brushstrokes, muted earthy palette, semi-realistic, same look as fantasy NPC portrait, dark medieval fantasy RPG art, stylized hand-painted 2D, painterly textures, muted earthy palette, warm highlights, soft cinematic lighting, subtle shadows, refined shapes, not photoreal, cohesive game art style, one single creature, full body, centered, three quarter view, single creature only, plain neutral gray background, no scenery, no text, no sheet",
-      "category": "catalog_variant",
-      "monster_id": "wm_boss_varkan",
-      "variant": "cool moonlit highlights"
-    },
-    {
-      "id": "var_wm_event_wolf",
-      "prompt": "huge dark-fur alpha wolf, scarred muzzle, muted overcast daylight, dark medieval fantasy hand-painted illustration, classic RPG bestiary art, visible brushstrokes, muted earthy palette, semi-realistic, same look as fantasy NPC portrait, dark medieval fantasy RPG art, stylized hand-painted 2D, painterly textures, muted earthy palette, warm highlights, soft cinematic lighting, subtle shadows, refined shapes, not photoreal, cohesive game art style, one single creature, full body, centered, three quarter view, single creature only, plain neutral gray background, no scenery, no text, no sheet",
-      "category": "catalog_variant",
-      "monster_id": "wm_event_wolf",
-      "variant": "muted overcast daylight"
-    },
-    {
-      "id": "gen_dire_bear",
-      "prompt": "massive brown dire bear beast, scarred hide, roaring, dark medieval fantasy hand-painted illustration, classic RPG bestiary art, visible brushstrokes, muted earthy palette, semi-realistic, same look as fantasy NPC portrait, dark medieval fantasy RPG art, stylized hand-painted 2D, painterly textures, muted earthy palette, warm highlights, soft cinematic lighting, subtle shadows, refined shapes, not photoreal, cohesive game art style, one single creature, full body, centered, three quarter view, single creature only, plain neutral gray background, no scenery, no text, no sheet",
-      "category": "generic",
-      "monster_id": null,
-      "variant": "base"
-    },
-    {
-      "id": "gen_cave_bat",
-      "prompt": "giant cave bat, leathery wings spread, fanged, dark medieval fantasy hand-painted illustration, classic RPG bestiary art, visible brushstrokes, muted earthy palette, semi-realistic, same look as fantasy NPC portrait, dark medieval fantasy RPG art, stylized hand-painted 2D, painterly textures, muted earthy palette, warm highlights, soft cinematic lighting, subtle shadows, refined shapes, not photoreal, cohesive game art style, one single creature, full body, centered, three quarter view, single creature only, plain neutral gray background, no scenery, no text, no sheet",
-      "category": "generic",
-      "monster_id": null,
-      "variant": "base"
-    },
-    {
-      "id": "gen_iron_crab",
-      "prompt": "iron-plated dungeon crab, rusted pincers, dark medieval fantasy hand-painted illustration, classic RPG bestiary art, visible brushstrokes, muted earthy palette, semi-realistic, same look as fantasy NPC portrait, dark medieval fantasy RPG art, stylized hand-painted 2D, painterly textures, muted earthy palette, warm highlights, soft cinematic lighting, subtle shadows, refined shapes, not photoreal, cohesive game art style, one single creature, full body, centered, three quarter view, single creature only, plain neutral gray background, no scenery, no text, no sheet",
-      "category": "generic",
-      "monster_id": null,
-      "variant": "base"
-    },
-    {
-      "id": "gen_moss_treant",
-      "prompt": "small moss treant sapling, root feet, glowing eyes, dark medieval fantasy hand-painted illustration, classic RPG bestiary art, visible brushstrokes, muted earthy palette, semi-realistic, same look as fantasy NPC portrait, dark medieval fantasy RPG art, stylized hand-painted 2D, painterly textures, muted earthy palette, warm highlights, soft cinematic lighting, subtle shadows, refined shapes, not photoreal, cohesive game art style, one single creature, full body, centered, three quarter view, single creature only, plain neutral gray background, no scenery, no text, no sheet",
-      "category": "generic",
-      "monster_id": null,
-      "variant": "base"
-    },
-    {
-      "id": "gen_ice_wisp",
-      "prompt": "pale blue ice wisp spirit, floating orb core, dark medieval fantasy hand-painted illustration, classic RPG bestiary art, visible brushstrokes, muted earthy palette, semi-realistic, same look as fantasy NPC portrait, dark medieval fantasy RPG art, stylized hand-painted 2D, painterly textures, muted earthy palette, warm highlights, soft cinematic lighting, subtle shadows, refined shapes, not photoreal, cohesive game art style, one single creature, full body, centered, three quarter view, single creature only, plain neutral gray background, no scenery, no text, no sheet",
-      "category": "generic",
-      "monster_id": null,
-      "variant": "base"
-    },
-    {
-      "id": "gen_flame_imp",
-      "prompt": "small red flame imp demon, pointed tail, mischievous grin, dark medieval fantasy hand-painted illustration, classic RPG bestiary art, visible brushstrokes, muted earthy palette, semi-realistic, same look as fantasy NPC portrait, dark medieval fantasy RPG art, stylized hand-painted 2D, painterly textures, muted earthy palette, warm highlights, soft cinematic lighting, subtle shadows, refined shapes, not photoreal, cohesive game art style, one single creature, full body, centered, three quarter view, single creature only, plain neutral gray background, no scenery, no text, no sheet",
-      "category": "generic",
-      "monster_id": null,
-      "variant": "base"
-    },
-    {
-      "id": "gen_bone_hound",
-      "prompt": "skeletal hound beast, ribcage visible, glowing eye sockets, dark medieval fantasy hand-painted illustration, classic RPG bestiary art, visible brushstrokes, muted earthy palette, semi-realistic, same look as fantasy NPC portrait, dark medieval fantasy RPG art, stylized hand-painted 2D, painterly textures, muted earthy palette, warm highlights, soft cinematic lighting, subtle shadows, refined shapes, not photoreal, cohesive game art style, one single creature, full body, centered, three quarter view, single creature only, plain neutral gray background, no scenery, no text, no sheet",
-      "category": "generic",
-      "monster_id": null,
-      "variant": "base"
-    },
-    {
-      "id": "gen_swamp_leech",
-      "prompt": "giant black swamp leech, segmented body, suckers, dark medieval fantasy hand-painted illustration, classic RPG bestiary art, visible brushstrokes, muted earthy palette, semi-realistic, same look as fantasy NPC portrait, dark medieval fantasy RPG art, stylized hand-painted 2D, painterly textures, muted earthy palette, warm highlights, soft cinematic lighting, subtle shadows, refined shapes, not photoreal, cohesive game art style, one single creature, full body, centered, three quarter view, single creature only, plain neutral gray background, no scenery, no text, no sheet",
-      "category": "generic",
-      "monster_id": null,
-      "variant": "base"
-    },
-    {
-      "id": "gen_crystal_golem",
-      "prompt": "small crystal golem, amethyst shards, chunky limbs, dark medieval fantasy hand-painted illustration, classic RPG bestiary art, visible brushstrokes, muted earthy palette, semi-realistic, same look as fantasy NPC portrait, dark medieval fantasy RPG art, stylized hand-painted 2D, painterly textures, muted earthy palette, warm highlights, soft cinematic lighting, subtle shadows, refined shapes, not photoreal, cohesive game art style, one single creature, full body, centered, three quarter view, single creature only, plain neutral gray background, no scenery, no text, no sheet",
-      "category": "generic",
-      "monster_id": null,
-      "variant": "base"
-    },
-    {
-      "id": "gen_poison_spider",
-      "prompt": "large toxic green spider, dripping fangs, hairy legs, dark medieval fantasy hand-painted illustration, classic RPG bestiary art, visible brushstrokes, muted earthy palette, semi-realistic, same look as fantasy NPC portrait, dark medieval fantasy RPG art, stylized hand-painted 2D, painterly textures, muted earthy palette, warm highlights, soft cinematic lighting, subtle shadows, refined shapes, not photoreal, cohesive game art style, one single creature, full body, centered, three quarter view, single creature only, plain neutral gray background, no scenery, no text, no sheet",
-      "category": "generic",
-      "monster_id": null,
+      "id": "lizard_reptile",
+      "title": "Кот-Ящер (Lizard / Reptile Cat)",
+      "prompt": "<lora:Low_Poly_Papercraft:0.75> <lora:ningraphix:0.85>, ningraphix, ps1 game screenshot, anthropomorphic cat hybrid, lizard cat, green scaly skin, reptilian slit eyes, cat ears, long thick low-poly lizard tail, wearing simple loincloth, holding a polygonal dagger, chibi proportions, big angular head, low-poly mesh, flat shaded, crisp hard edges, T-pose, neutral solid light grey background",
+      "category": "creature",
+      "monster_id": "lizard_reptile",
       "variant": "base"
     },
     {
-      "id": "gen_storm_eel",
-      "prompt": "electric storm eel serpent, crackling scales, dark medieval fantasy hand-painted illustration, classic RPG bestiary art, visible brushstrokes, muted earthy palette, semi-realistic, same look as fantasy NPC portrait, dark medieval fantasy RPG art, stylized hand-painted 2D, painterly textures, muted earthy palette, warm highlights, soft cinematic lighting, subtle shadows, refined shapes, not photoreal, cohesive game art style, one single creature, full body, centered, three quarter view, single creature only, plain neutral gray background, no scenery, no text, no sheet",
-      "category": "generic",
-      "monster_id": null,
+      "id": "worm",
+      "title": "Кот-Червь (Worm Cat)",
+      "prompt": "<lora:Low_Poly_Papercraft:0.75> <lora:ningraphix:0.85>, ningraphix, ps1 game screenshot, cat worm hybrid, pink segmented low-poly worm body, cat head on front with ears and whiskers, no legs, upright coiled stance, chibi proportions, big angular head, low-poly mesh, flat shaded, crisp hard edges, neutral solid light grey background",
+      "category": "creature",
+      "monster_id": "worm",
       "variant": "base"
     },
     {
-      "id": "gen_grave_gargoyle",
-      "prompt": "stone gargoyle beast, crouched wings, weathered, dark medieval fantasy hand-painted illustration, classic RPG bestiary art, visible brushstrokes, muted earthy palette, semi-realistic, same look as fantasy NPC portrait, dark medieval fantasy RPG art, stylized hand-painted 2D, painterly textures, muted earthy palette, warm highlights, soft cinematic lighting, subtle shadows, refined shapes, not photoreal, cohesive game art style, one single creature, full body, centered, three quarter view, single creature only, plain neutral gray background, no scenery, no text, no sheet",
-      "category": "generic",
-      "monster_id": null,
+      "id": "larva_grub",
+      "title": "Кот-Личинка (Larva / Grub Cat)",
+      "prompt": "<lora:Low_Poly_Papercraft:0.75> <lora:ningraphix:0.85>, ningraphix, ps1 game screenshot, cat grub larva hybrid, fat segmented cream-colored low-poly grub body, cat face with ears, tiny insectoid legs under head, chibi proportions, big angular head, low-poly mesh, flat shaded, crisp hard edges, neutral solid light grey background",
+      "category": "creature",
+      "monster_id": "larva_grub",
       "variant": "base"
     },
     {
-      "id": "gen_fungal_shambler",
-      "prompt": "fungal shambler humanoid, mushroom cap head, spores, dark medieval fantasy hand-painted illustration, classic RPG bestiary art, visible brushstrokes, muted earthy palette, semi-realistic, same look as fantasy NPC portrait, dark medieval fantasy RPG art, stylized hand-painted 2D, painterly textures, muted earthy palette, warm highlights, soft cinematic lighting, subtle shadows, refined shapes, not photoreal, cohesive game art style, one single creature, full body, centered, three quarter view, single creature only, plain neutral gray background, no scenery, no text, no sheet",
-      "category": "generic",
-      "monster_id": null,
+      "id": "wood_spider",
+      "title": "Кот-Древопаук (Wood-Spider Cat — высокий, с длинными тонко-угольными лапами)",
+      "prompt": "<lora:Low_Poly_Papercraft:0.75> <lora:ningraphix:0.85>, ningraphix, ps1 game screenshot, wood spider cat hybrid, cat head with ears and whiskers, wooden bark texture, 6 extremely long spindly wooden spider legs, tall towering legs structure, no arms, chibi proportions, big angular head, low-poly mesh, flat shaded, crisp hard edges, neutral solid light grey background",
+      "category": "creature",
+      "monster_id": "wood_spider",
       "variant": "base"
     },
     {
-      "id": "gen_sand_scorpion",
-      "prompt": "giant sand scorpion, chitin armor, raised tail, dark medieval fantasy hand-painted illustration, classic RPG bestiary art, visible brushstrokes, muted earthy palette, semi-realistic, same look as fantasy NPC portrait, dark medieval fantasy RPG art, stylized hand-painted 2D, painterly textures, muted earthy palette, warm highlights, soft cinematic lighting, subtle shadows, refined shapes, not photoreal, cohesive game art style, one single creature, full body, centered, three quarter view, single creature only, plain neutral gray background, no scenery, no text, no sheet",
-      "category": "generic",
-      "monster_id": null,
+      "id": "mantis",
+      "title": "Кот-Мантис / Богомол (Mantis Cat — полувысокий инсектоид с серпами)",
+      "prompt": "<lora:Low_Poly_Papercraft:0.75> <lora:ningraphix:0.85>, ningraphix, ps1 game screenshot, anthropomorphic cat hybrid, mantis cat, insectoid green body, cat ears, long thin stilt legs, big scythe blades for hands, medium height, chibi proportions, big angular head, low-poly mesh, flat shaded, crisp hard edges, T-pose, neutral solid light grey background",
+      "category": "creature",
+      "monster_id": "mantis",
       "variant": "base"
     },
     {
-      "id": "gen_frost_wolf",
-      "prompt": "white frost wolf, icy breath, thick fur, dark medieval fantasy hand-painted illustration, classic RPG bestiary art, visible brushstrokes, muted earthy palette, semi-realistic, same look as fantasy NPC portrait, dark medieval fantasy RPG art, stylized hand-painted 2D, painterly textures, muted earthy palette, warm highlights, soft cinematic lighting, subtle shadows, refined shapes, not photoreal, cohesive game art style, one single creature, full body, centered, three quarter view, single creature only, plain neutral gray background, no scenery, no text, no sheet",
-      "category": "generic",
-      "monster_id": null,
+      "id": "dinosaur_t_rex",
+      "title": "Кот-Динозавр (Dinosaur Cat / T-Rex Cat)",
+      "prompt": "<lora:Low_Poly_Papercraft:0.75> <lora:ningraphix:0.85>, ningraphix, ps1 game screenshot, anthropomorphic cat hybrid, dinosaur cat, green scaled skin, tiny 3-sided low-poly arms, thick heavy tail, cat ears and whiskers, sharp blocky teeth, chibi proportions, big angular head, low-poly mesh, flat shaded, crisp hard edges, T-pose, neutral solid light grey background",
+      "category": "creature",
+      "monster_id": "dinosaur_t_rex",
       "variant": "base"
     },
     {
-      "id": "gen_magma_snail",
-      "prompt": "magma snail beast, shell of cooled rock, lava trail, dark medieval fantasy hand-painted illustration, classic RPG bestiary art, visible brushstrokes, muted earthy palette, semi-realistic, same look as fantasy NPC portrait, dark medieval fantasy RPG art, stylized hand-painted 2D, painterly textures, muted earthy palette, warm highlights, soft cinematic lighting, subtle shadows, refined shapes, not photoreal, cohesive game art style, one single creature, full body, centered, three quarter view, single creature only, plain neutral gray background, no scenery, no text, no sheet",
-      "category": "generic",
-      "monster_id": null,
+      "id": "humanoid_man",
+      "title": "Кот-Человек (Humanoid / Man Cat)",
+      "prompt": "<lora:Low_Poly_Papercraft:0.75> <lora:ningraphix:0.85>, ningraphix, ps1 game screenshot, anthropomorphic cat man, smooth pale peach skin, cat ears and cat tail, wearing simple blocky t-shirt and pants, chibi proportions, big angular head, low-poly mesh, flat shaded, crisp hard edges, T-pose, neutral solid light grey background",
+      "category": "creature",
+      "monster_id": "humanoid_man",
       "variant": "base"
     },
     {
-      "id": "gen_void_moth",
-      "prompt": "void purple giant moth, dust wings, alien antennae, dark medieval fantasy hand-painted illustration, classic RPG bestiary art, visible brushstrokes, muted earthy palette, semi-realistic, same look as fantasy NPC portrait, dark medieval fantasy RPG art, stylized hand-painted 2D, painterly textures, muted earthy palette, warm highlights, soft cinematic lighting, subtle shadows, refined shapes, not photoreal, cohesive game art style, one single creature, full body, centered, three quarter view, single creature only, plain neutral gray background, no scenery, no text, no sheet",
-      "category": "generic",
-      "monster_id": null,
+      "id": "doll_marionette",
+      "title": "Кот-Кукла (Doll / Marionette Cat)",
+      "prompt": "<lora:Low_Poly_Papercraft:0.75> <lora:ningraphix:0.85>, ningraphix, ps1 game screenshot, wooden doll cat, stitched cloth seams, wooden ball joints at elbows and knees, button eyes, cat ears, cloth tunic, chibi proportions, big angular head, low-poly mesh, flat shaded, crisp hard edges, T-pose, neutral solid light grey background",
+      "category": "creature",
+      "monster_id": "doll_marionette",
       "variant": "base"
     },
     {
-      "id": "gen_rust_automaton",
-      "prompt": "rusty clockwork automaton scout, gears exposed, dark medieval fantasy hand-painted illustration, classic RPG bestiary art, visible brushstrokes, muted earthy palette, semi-realistic, same look as fantasy NPC portrait, dark medieval fantasy RPG art, stylized hand-painted 2D, painterly textures, muted earthy palette, warm highlights, soft cinematic lighting, subtle shadows, refined shapes, not photoreal, cohesive game art style, one single creature, full body, centered, three quarter view, single creature only, plain neutral gray background, no scenery, no text, no sheet",
-      "category": "generic",
-      "monster_id": null,
+      "id": "cyclops",
+      "title": "Кот-Циклоп (Cyclops Cat)",
+      "prompt": "<lora:Low_Poly_Papercraft:0.75> <lora:ningraphix:0.85>, ningraphix, ps1 game screenshot, anthropomorphic cat hybrid, cyclops cat, single large glowing eye in center of forehead, cat ears, small horns, giant club weapon, chibi proportions, big angular head, low-poly mesh, flat shaded, crisp hard edges, T-pose, neutral solid light grey background",
+      "category": "creature",
+      "monster_id": "cyclops",
       "variant": "base"
     },
     {
-      "id": "gen_amber_wasp",
-      "prompt": "giant amber wasp, translucent wings, stinger, dark medieval fantasy hand-painted illustration, classic RPG bestiary art, visible brushstrokes, muted earthy palette, semi-realistic, same look as fantasy NPC portrait, dark medieval fantasy RPG art, stylized hand-painted 2D, painterly textures, muted earthy palette, warm highlights, soft cinematic lighting, subtle shadows, refined shapes, not photoreal, cohesive game art style, one single creature, full body, centered, three quarter view, single creature only, plain neutral gray background, no scenery, no text, no sheet",
-      "category": "generic",
-      "monster_id": null,
+      "id": "centaur",
+      "title": "Кот-Кентавр (Centaur Cat)",
+      "prompt": "<lora:Low_Poly_Papercraft:0.75> <lora:ningraphix:0.85>, ningraphix, ps1 game screenshot, cat-centaur, upper body is anthropomorphic cat only, cat face with whiskers and pointed cat ears, feline chest and arms, from the waist down a four-legged horse body with hooves and horse tail, NOT a horse head, no equine face, no horse muzzle on the head, chibi proportions, big angular cat head, low-poly mesh, flat shaded, crisp hard edges, holding a bow, T-pose, neutral solid light grey background",
+      "category": "creature",
+      "monster_id": "centaur",
       "variant": "base"
     },
     {
-      "id": "gen_bog_turtle",
-      "prompt": "armored bog turtle beast, moss shell, snapping jaw, dark medieval fantasy hand-painted illustration, classic RPG bestiary art, visible brushstrokes, muted earthy palette, semi-realistic, same look as fantasy NPC portrait, dark medieval fantasy RPG art, stylized hand-painted 2D, painterly textures, muted earthy palette, warm highlights, soft cinematic lighting, subtle shadows, refined shapes, not photoreal, cohesive game art style, one single creature, full body, centered, three quarter view, single creature only, plain neutral gray background, no scenery, no text, no sheet",
-      "category": "generic",
-      "monster_id": null,
+      "id": "giant_colossus",
+      "title": "Кот-Гигант (Giant / Colossus Cat)",
+      "prompt": "<lora:Low_Poly_Papercraft:0.75> <lora:ningraphix:0.85>, ningraphix, ps1 game screenshot, giant stone colossus cat, rocky boulder texture, glowing blue crystal veins on body, massive broad shoulders, tiny legs relative to body, chibi proportions, big angular head, low-poly mesh, flat shaded, crisp hard edges, T-pose, neutral solid light grey background",
+      "category": "creature",
+      "monster_id": "giant_colossus",
       "variant": "base"
     },
     {
-      "id": "gen_shadow_stag",
-      "prompt": "shadow black stag beast, antlers of smoke, dark medieval fantasy hand-painted illustration, classic RPG bestiary art, visible brushstrokes, muted earthy palette, semi-realistic, same look as fantasy NPC portrait, dark medieval fantasy RPG art, stylized hand-painted 2D, painterly textures, muted earthy palette, warm highlights, soft cinematic lighting, subtle shadows, refined shapes, not photoreal, cohesive game art style, one single creature, full body, centered, three quarter view, single creature only, plain neutral gray background, no scenery, no text, no sheet",
-      "category": "generic",
-      "monster_id": null,
+      "id": "phoenix",
+      "title": "Кот-Феникс (Phoenix Cat)",
+      "prompt": "<lora:Low_Poly_Papercraft:0.75> <lora:ningraphix:0.85>, ningraphix, ps1 game screenshot, anthropomorphic cat hybrid, phoenix cat, fiery orange-red feathers, low-poly flaming wings, glowing ember eyes, chibi proportions, big angular head, low-poly mesh, flat shaded, crisp hard edges, T-pose, neutral solid light grey background",
+      "category": "creature",
+      "monster_id": "phoenix",
       "variant": "base"
     },
     {
-      "id": "gen_coal_elemental",
-      "prompt": "coal elemental humanoid, ember cracks, hunched, dark medieval fantasy hand-painted illustration, classic RPG bestiary art, visible brushstrokes, muted earthy palette, semi-realistic, same look as fantasy NPC portrait, dark medieval fantasy RPG art, stylized hand-painted 2D, painterly textures, muted earthy palette, warm highlights, soft cinematic lighting, subtle shadows, refined shapes, not photoreal, cohesive game art style, one single creature, full body, centered, three quarter view, single creature only, plain neutral gray background, no scenery, no text, no sheet",
-      "category": "generic",
-      "monster_id": null,
+      "id": "basilisk",
+      "title": "Кот-Василиск (Basilisk Cat)",
+      "prompt": "<lora:Low_Poly_Papercraft:0.75> <lora:ningraphix:0.85>, ningraphix, ps1 game screenshot, anthropomorphic cat hybrid, basilisk cat, green reptile scales, crown of polygonal spines, glowing yellow eyes, long scaled tail, chibi proportions, big angular head, low-poly mesh, flat shaded, crisp hard edges, T-pose, neutral solid light grey background",
+      "category": "creature",
+      "monster_id": "basilisk",
       "variant": "base"
     },
     {
-      "id": "gen_plague_rat_king",
-      "prompt": "plague rat king beast, crown of bone, swollen, dark medieval fantasy hand-painted illustration, classic RPG bestiary art, visible brushstrokes, muted earthy palette, semi-realistic, same look as fantasy NPC portrait, dark medieval fantasy RPG art, stylized hand-painted 2D, painterly textures, muted earthy palette, warm highlights, soft cinematic lighting, subtle shadows, refined shapes, not photoreal, cohesive game art style, one single creature, full body, centered, three quarter view, single creature only, plain neutral gray background, no scenery, no text, no sheet",
-      "category": "generic",
-      "monster_id": null,
+      "id": "griffin",
+      "title": "Кот-Грифон (Griffin Cat)",
+      "prompt": "<lora:Low_Poly_Papercraft:0.75> <lora:ningraphix:0.85>, ningraphix, ps1 game screenshot, cat griffin hybrid, eagle wings and beak mixed with cat head ears, lion-like low-poly body, feathered polygonal wings, chibi proportions, big angular head, low-poly mesh, flat shaded, crisp hard edges, T-pose, neutral solid light grey background",
+      "category": "creature",
+      "monster_id": "griffin",
       "variant": "base"
     },
     {
-      "id": "gen_thorn_lizard",
-      "prompt": "thorn-covered lizard beast, spiked back, dark medieval fantasy hand-painted illustration, classic RPG bestiary art, visible brushstrokes, muted earthy palette, semi-realistic, same look as fantasy NPC portrait, dark medieval fantasy RPG art, stylized hand-painted 2D, painterly textures, muted earthy palette, warm highlights, soft cinematic lighting, subtle shadows, refined shapes, not photoreal, cohesive game art style, one single creature, full body, centered, three quarter view, single creature only, plain neutral gray background, no scenery, no text, no sheet",
-      "category": "generic",
-      "monster_id": null,
+      "id": "minotaur",
+      "title": "Кот-Минотавр (Minotaur Cat)",
+      "prompt": "<lora:Low_Poly_Papercraft:0.75> <lora:ningraphix:0.85>, ningraphix, ps1 game screenshot, anthropomorphic cat hybrid, minotaur cat, bull horns, heavy muzzle, thick neck, holding a polygonal labrys axe, leather loincloth, chibi proportions, big angular head, low-poly mesh, flat shaded, crisp hard edges, T-pose, neutral solid light grey background",
+      "category": "creature",
+      "monster_id": "minotaur",
       "variant": "base"
     },
     {
-      "id": "gen_abyss_fish",
-      "prompt": "abyssal deep fish monster, bioluminescent lure, dark medieval fantasy hand-painted illustration, classic RPG bestiary art, visible brushstrokes, muted earthy palette, semi-realistic, same look as fantasy NPC portrait, dark medieval fantasy RPG art, stylized hand-painted 2D, painterly textures, muted earthy palette, warm highlights, soft cinematic lighting, subtle shadows, refined shapes, not photoreal, cohesive game art style, one single creature, full body, centered, three quarter view, single creature only, plain neutral gray background, no scenery, no text, no sheet",
-      "category": "generic",
-      "monster_id": null,
+      "id": "harpy",
+      "title": "Кот-Гарпия (Harpy Cat)",
+      "prompt": "<lora:Low_Poly_Papercraft:0.75> <lora:ningraphix:0.85>, ningraphix, ps1 game screenshot, anthropomorphic cat hybrid, harpy cat, feathered low-poly wings instead of arms, bird talon feet, cat ears, windblown feathers, chibi proportions, big angular head, low-poly mesh, flat shaded, crisp hard edges, T-pose, neutral solid light grey background",
+      "category": "creature",
+      "monster_id": "harpy",
       "variant": "base"
     },
     {
-      "id": "gen_cinder_bat",
-      "prompt": "cinder ash bat, ember wing membranes, dark medieval fantasy hand-painted illustration, classic RPG bestiary art, visible brushstrokes, muted earthy palette, semi-realistic, same look as fantasy NPC portrait, dark medieval fantasy RPG art, stylized hand-painted 2D, painterly textures, muted earthy palette, warm highlights, soft cinematic lighting, subtle shadows, refined shapes, not photoreal, cohesive game art style, one single creature, full body, centered, three quarter view, single creature only, plain neutral gray background, no scenery, no text, no sheet",
-      "category": "generic",
-      "monster_id": null,
+      "id": "chimera",
+      "title": "Кот-Химера (Chimera Cat)",
+      "prompt": "<lora:Low_Poly_Papercraft:0.75> <lora:ningraphix:0.85>, ningraphix, ps1 game screenshot, chimera cat hybrid, lion cat head, goat head on shoulder, snake tail tip, mismatched low-poly body parts, chibi proportions, big angular head, low-poly mesh, flat shaded, crisp hard edges, T-pose, neutral solid light grey background",
+      "category": "creature",
+      "monster_id": "chimera",
       "variant": "base"
     },
     {
-      "id": "gen_mire_ooze",
-      "prompt": "dark mire ooze puddle beast, bubbles, single eye, dark medieval fantasy hand-painted illustration, classic RPG bestiary art, visible brushstrokes, muted earthy palette, semi-realistic, same look as fantasy NPC portrait, dark medieval fantasy RPG art, stylized hand-painted 2D, painterly textures, muted earthy palette, warm highlights, soft cinematic lighting, subtle shadows, refined shapes, not photoreal, cohesive game art style, one single creature, full body, centered, three quarter view, single creature only, plain neutral gray background, no scenery, no text, no sheet",
-      "category": "generic",
-      "monster_id": null,
+      "id": "unicorn",
+      "title": "Кот-Единорог (Unicorn Cat)",
+      "prompt": "<lora:Low_Poly_Papercraft:0.75> <lora:ningraphix:0.85>, ningraphix, ps1 game screenshot, anthropomorphic cat unicorn, single spiral polygonal horn, white pastel fur, sparkling low-poly mane, chibi proportions, big angular head, low-poly mesh, flat shaded, crisp hard edges, T-pose, neutral solid light grey background",
+      "category": "creature",
+      "monster_id": "unicorn",
       "variant": "base"
     },
     {
-      "id": "gen_rune_golem",
-      "prompt": "rune-carved stone golem fragment, glowing sigils, dark medieval fantasy hand-painted illustration, classic RPG bestiary art, visible brushstrokes, muted earthy palette, semi-realistic, same look as fantasy NPC portrait, dark medieval fantasy RPG art, stylized hand-painted 2D, painterly textures, muted earthy palette, warm highlights, soft cinematic lighting, subtle shadows, refined shapes, not photoreal, cohesive game art style, one single creature, full body, centered, three quarter view, single creature only, plain neutral gray background, no scenery, no text, no sheet",
-      "category": "generic",
-      "monster_id": null,
+      "id": "demon",
+      "title": "Кот-Демон (Demon Cat)",
+      "prompt": "<lora:Low_Poly_Papercraft:0.75> <lora:ningraphix:0.85>, ningraphix, ps1 game screenshot, anthropomorphic cat hybrid, demon cat, red skin, curved horns, bat-like low-poly wings, spiked tail, holding a polygonal pitchfork, chibi proportions, big angular head, low-poly mesh, flat shaded, crisp hard edges, T-pose, neutral solid light grey background",
+      "category": "creature",
+      "monster_id": "demon",
       "variant": "base"
     },
     {
-      "id": "gen_hollow_knight",
-      "prompt": "hollow black knight specter, tattered cape, no face, dark medieval fantasy hand-painted illustration, classic RPG bestiary art, visible brushstrokes, muted earthy palette, semi-realistic, same look as fantasy NPC portrait, dark medieval fantasy RPG art, stylized hand-painted 2D, painterly textures, muted earthy palette, warm highlights, soft cinematic lighting, subtle shadows, refined shapes, not photoreal, cohesive game art style, one single creature, full body, centered, three quarter view, single creature only, plain neutral gray background, no scenery, no text, no sheet",
-      "category": "generic",
-      "monster_id": null,
+      "id": "angel",
+      "title": "Кот-Ангел (Angel Cat)",
+      "prompt": "<lora:Low_Poly_Papercraft:0.75> <lora:ningraphix:0.85>, ningraphix, ps1 game screenshot, anthropomorphic cat angel, white blocky robes, simple polygonal halo, soft feathered low-poly wings, gentle pose, chibi proportions, big angular head, low-poly mesh, flat shaded, crisp hard edges, T-pose, neutral solid light grey background",
+      "category": "creature",
+      "monster_id": "angel",
       "variant": "base"
     },
     {
-      "id": "gen_vine_serpent",
-      "prompt": "vine serpent beast, thorny coils, yellow eyes, dark medieval fantasy hand-painted illustration, classic RPG bestiary art, visible brushstrokes, muted earthy palette, semi-realistic, same look as fantasy NPC portrait, dark medieval fantasy RPG art, stylized hand-painted 2D, painterly textures, muted earthy palette, warm highlights, soft cinematic lighting, subtle shadows, refined shapes, not photoreal, cohesive game art style, one single creature, full body, centered, three quarter view, single creature only, plain neutral gray background, no scenery, no text, no sheet",
-      "category": "generic",
-      "monster_id": null,
+      "id": "mummy",
+      "title": "Кот-Мумия (Mummy Cat)",
+      "prompt": "<lora:Low_Poly_Papercraft:0.75> <lora:ningraphix:0.85>, ningraphix, ps1 game screenshot, anthropomorphic cat hybrid, mummy cat, wrapped in low-poly linen bandages, glowing blue eyes through wraps, ancient sash, chibi proportions, big angular head, low-poly mesh, flat shaded, crisp hard edges, T-pose, neutral solid light grey background",
+      "category": "creature",
+      "monster_id": "mummy",
       "variant": "base"
     },
     {
-      "id": "gen_slate_gryphon",
-      "prompt": "slate gray gryphon hatchling, small wings, dark medieval fantasy hand-painted illustration, classic RPG bestiary art, visible brushstrokes, muted earthy palette, semi-realistic, same look as fantasy NPC portrait, dark medieval fantasy RPG art, stylized hand-painted 2D, painterly textures, muted earthy palette, warm highlights, soft cinematic lighting, subtle shadows, refined shapes, not photoreal, cohesive game art style, one single creature, full body, centered, three quarter view, single creature only, plain neutral gray background, no scenery, no text, no sheet",
-      "category": "generic",
-      "monster_id": null,
+      "id": "clay_golem",
+      "title": "Кот-Голем (Clay Golem Cat)",
+      "prompt": "<lora:Low_Poly_Papercraft:0.75> <lora:ningraphix:0.85>, ningraphix, ps1 game screenshot, anthropomorphic cat hybrid, clay golem cat, cracked terracotta body, rune stamp on forehead, heavy blocky limbs, chibi proportions, big angular head, low-poly mesh, flat shaded, crisp hard edges, T-pose, neutral solid light grey background",
+      "category": "creature",
+      "monster_id": "clay_golem",
       "variant": "base"
     },
     {
-      "id": "gen_blood_fly",
-      "prompt": "oversized blood-red horsefly beast, compound eyes, dark medieval fantasy hand-painted illustration, classic RPG bestiary art, visible brushstrokes, muted earthy palette, semi-realistic, same look as fantasy NPC portrait, dark medieval fantasy RPG art, stylized hand-painted 2D, painterly textures, muted earthy palette, warm highlights, soft cinematic lighting, subtle shadows, refined shapes, not photoreal, cohesive game art style, one single creature, full body, centered, three quarter view, single creature only, plain neutral gray background, no scenery, no text, no sheet",
-      "category": "generic",
-      "monster_id": null,
+      "id": "fire_elemental",
+      "title": "Кот-Элементаль Огня (Fire Elemental Cat)",
+      "prompt": "<lora:Low_Poly_Papercraft:0.75> <lora:ningraphix:0.85>, ningraphix, ps1 game screenshot, anthropomorphic cat hybrid, fire elemental cat, body of low-poly flame shards, molten core, no solid skin, cat ear silhouettes in fire, chibi proportions, big angular head, low-poly mesh, flat shaded, crisp hard edges, T-pose, neutral solid light grey background",
+      "category": "creature",
+      "monster_id": "fire_elemental",
       "variant": "base"
     },
     {
-      "id": "gen_quartz_beetle",
-      "prompt": "quartz crystal beetle, faceted shell, dark medieval fantasy hand-painted illustration, classic RPG bestiary art, visible brushstrokes, muted earthy palette, semi-realistic, same look as fantasy NPC portrait, dark medieval fantasy RPG art, stylized hand-painted 2D, painterly textures, muted earthy palette, warm highlights, soft cinematic lighting, subtle shadows, refined shapes, not photoreal, cohesive game art style, one single creature, full body, centered, three quarter view, single creature only, plain neutral gray background, no scenery, no text, no sheet",
-      "category": "generic",
-      "monster_id": null,
+      "id": "ice_elemental",
+      "title": "Кот-Элементаль Льда (Ice Elemental Cat)",
+      "prompt": "<lora:Low_Poly_Papercraft:0.75> <lora:ningraphix:0.85>, ningraphix, ps1 game screenshot, anthropomorphic cat hybrid, ice elemental cat, translucent blue crystal body, jagged ice spikes, frosty whiskers, chibi proportions, big angular head, low-poly mesh, flat shaded, crisp hard edges, T-pose, neutral solid light grey background",
+      "category": "creature",
+      "monster_id": "ice_elemental",
       "variant": "base"
     },
     {
-      "id": "gen_peat_worm",
-      "prompt": "giant peat worm, segmented pink-gray body, dark medieval fantasy hand-painted illustration, classic RPG bestiary art, visible brushstrokes, muted earthy palette, semi-realistic, same look as fantasy NPC portrait, dark medieval fantasy RPG art, stylized hand-painted 2D, painterly textures, muted earthy palette, warm highlights, soft cinematic lighting, subtle shadows, refined shapes, not photoreal, cohesive game art style, one single creature, full body, centered, three quarter view, single creature only, plain neutral gray background, no scenery, no text, no sheet",
-      "category": "generic",
-      "monster_id": null,
+      "id": "shadow",
+      "title": "Кот-Тень (Shadow Cat)",
+      "prompt": "<lora:Low_Poly_Papercraft:0.75> <lora:ningraphix:0.85>, ningraphix, ps1 game screenshot, anthropomorphic cat hybrid, shadow wraith cat, flat black silhouette body, glowing white eyes, wispy low-poly smoke edges, chibi proportions, big angular head, low-poly mesh, flat shaded, crisp hard edges, T-pose, neutral solid light grey background",
+      "category": "creature",
+      "monster_id": "shadow",
       "variant": "base"
     },
     {
-      "id": "gen_ember_fox",
-      "prompt": "ember orange fox spirit beast, flame tail tips, dark medieval fantasy hand-painted illustration, classic RPG bestiary art, visible brushstrokes, muted earthy palette, semi-realistic, same look as fantasy NPC portrait, dark medieval fantasy RPG art, stylized hand-painted 2D, painterly textures, muted earthy palette, warm highlights, soft cinematic lighting, subtle shadows, refined shapes, not photoreal, cohesive game art style, one single creature, full body, centered, three quarter view, single creature only, plain neutral gray background, no scenery, no text, no sheet",
-      "category": "generic",
-      "monster_id": null,
+      "id": "mushroom",
+      "title": "Кот-Гриб (Mushroom Cat)",
+      "prompt": "<lora:Low_Poly_Papercraft:0.75> <lora:ningraphix:0.85>, ningraphix, ps1 game screenshot, anthropomorphic cat hybrid, mushroom cat, spotted red cap on head, fungal stem body, tiny spore clouds, cat ears under cap, chibi proportions, big angular head, low-poly mesh, flat shaded, crisp hard edges, T-pose, neutral solid light grey background",
+      "category": "creature",
+      "monster_id": "mushroom",
       "variant": "base"
     },
     {
-      "id": "gen_slate_crab",
-      "prompt": "slate rock crab guardian, barnacle patches, dark medieval fantasy hand-painted illustration, classic RPG bestiary art, visible brushstrokes, muted earthy palette, semi-realistic, same look as fantasy NPC portrait, dark medieval fantasy RPG art, stylized hand-painted 2D, painterly textures, muted earthy palette, warm highlights, soft cinematic lighting, subtle shadows, refined shapes, not photoreal, cohesive game art style, one single creature, full body, centered, three quarter view, single creature only, plain neutral gray background, no scenery, no text, no sheet",
-      "category": "generic",
-      "monster_id": null,
+      "id": "cactus",
+      "title": "Кот-Кактус (Cactus Cat)",
+      "prompt": "<lora:Low_Poly_Papercraft:0.75> <lora:ningraphix:0.85>, ningraphix, ps1 game screenshot, anthropomorphic cat hybrid, cactus cat, green ribbed low-poly cactus body, yellow spines, small flower on head, cat face, chibi proportions, big angular head, low-poly mesh, flat shaded, crisp hard edges, T-pose, neutral solid light grey background",
+      "category": "creature",
+      "monster_id": "cactus",
       "variant": "base"
     },
     {
-      "id": "gen_mist_serpent",
-      "prompt": "mist gray sea serpent head, fog trailing, dark medieval fantasy hand-painted illustration, classic RPG bestiary art, visible brushstrokes, muted earthy palette, semi-realistic, same look as fantasy NPC portrait, dark medieval fantasy RPG art, stylized hand-painted 2D, painterly textures, muted earthy palette, warm highlights, soft cinematic lighting, subtle shadows, refined shapes, not photoreal, cohesive game art style, one single creature, full body, centered, three quarter view, single creature only, plain neutral gray background, no scenery, no text, no sheet",
-      "category": "generic",
-      "monster_id": null,
+      "id": "kraken",
+      "title": "Кот-Кракен (Kraken Cat)",
+      "prompt": "<lora:Low_Poly_Papercraft:0.75> <lora:ningraphix:0.85>, ningraphix, ps1 game screenshot, cat kraken hybrid, cat head with ears, many low-poly octopus tentacles instead of legs, suction cups, deep blue skin, chibi proportions, big angular head, low-poly mesh, flat shaded, crisp hard edges, T-pose, neutral solid light grey background",
+      "category": "creature",
+      "monster_id": "kraken",
       "variant": "base"
     },
     {
-      "id": "gen_iron_boar",
-      "prompt": "iron-tusked war boar, bristled hide, dark medieval fantasy hand-painted illustration, classic RPG bestiary art, visible brushstrokes, muted earthy palette, semi-realistic, same look as fantasy NPC portrait, dark medieval fantasy RPG art, stylized hand-painted 2D, painterly textures, muted earthy palette, warm highlights, soft cinematic lighting, subtle shadows, refined shapes, not photoreal, cohesive game art style, one single creature, full body, centered, three quarter view, single creature only, plain neutral gray background, no scenery, no text, no sheet",
-      "category": "generic",
-      "monster_id": null,
+      "id": "jellyfish",
+      "title": "Кот-Медуза (Jellyfish Cat)",
+      "prompt": "<lora:Low_Poly_Papercraft:0.75> <lora:ningraphix:0.85>, ningraphix, ps1 game screenshot, jellyfish cat, head shaped exactly like a cat head with ears and whiskers, no arms, no legs, no limbs at all, only dangling jellyfish tentacles hanging downward from under the cat head, translucent soft body, floating, chibi proportions, big angular cat head, low-poly mesh, flat shaded, crisp hard edges, neutral solid light grey background",
+      "category": "creature",
+      "monster_id": "jellyfish",
       "variant": "base"
     },
     {
-      "id": "gen_obsidian_raven",
-      "prompt": "obsidian feather raven beast, glowing red eyes, dark medieval fantasy hand-painted illustration, classic RPG bestiary art, visible brushstrokes, muted earthy palette, semi-realistic, same look as fantasy NPC portrait, dark medieval fantasy RPG art, stylized hand-painted 2D, painterly textures, muted earthy palette, warm highlights, soft cinematic lighting, subtle shadows, refined shapes, not photoreal, cohesive game art style, one single creature, full body, centered, three quarter view, single creature only, plain neutral gray background, no scenery, no text, no sheet",
-      "category": "generic",
-      "monster_id": null,
+      "id": "bee",
+      "title": "Кот-Пчела (Bee Cat)",
+      "prompt": "<lora:Low_Poly_Papercraft:0.75> <lora:ningraphix:0.85>, ningraphix, ps1 game screenshot, bee cat, cat head only with ears and whiskers, body is a simple low-poly yellow-black striped rectangle box, no arms, no legs, no limbs, exactly two flat polygonal bee wings on the back, tiny stinger on rear of box body, floating, chibi proportions, big angular cat head, low-poly mesh, flat shaded, crisp hard edges, neutral solid light grey background",
+      "category": "creature",
+      "monster_id": "bee",
       "variant": "base"
     },
     {
-      "id": "gen_sulfur_slime",
-      "prompt": "yellow sulfur slime blob, toxic fumes, no limbs, dark medieval fantasy hand-painted illustration, classic RPG bestiary art, visible brushstrokes, muted earthy palette, semi-realistic, same look as fantasy NPC portrait, dark medieval fantasy RPG art, stylized hand-painted 2D, painterly textures, muted earthy palette, warm highlights, soft cinematic lighting, subtle shadows, refined shapes, not photoreal, cohesive game art style, one single creature, full body, centered, three quarter view, single creature only, plain neutral gray background, no scenery, no text, no sheet",
-      "category": "generic",
-      "monster_id": null,
+      "id": "scorpion",
+      "title": "Кот-Скорпион (Scorpion Cat)",
+      "prompt": "<lora:Low_Poly_Papercraft:0.75> <lora:ningraphix:0.85>, ningraphix, ps1 game screenshot, anthropomorphic cat hybrid, scorpion cat, armored chitin plates, large pincer hands, arched stinger tail, desert beige colors, chibi proportions, big angular head, low-poly mesh, flat shaded, crisp hard edges, T-pose, neutral solid light grey background",
+      "category": "creature",
+      "monster_id": "scorpion",
       "variant": "base"
     },
     {
-      "id": "gen_grave_rose",
-      "prompt": "walking grave rose plant monster, thorny stem legs, dark medieval fantasy hand-painted illustration, classic RPG bestiary art, visible brushstrokes, muted earthy palette, semi-realistic, same look as fantasy NPC portrait, dark medieval fantasy RPG art, stylized hand-painted 2D, painterly textures, muted earthy palette, warm highlights, soft cinematic lighting, subtle shadows, refined shapes, not photoreal, cohesive game art style, one single creature, full body, centered, three quarter view, single creature only, plain neutral gray background, no scenery, no text, no sheet",
-      "category": "generic",
-      "monster_id": null,
+      "id": "vampire",
+      "title": "Кот-Вампир (Vampire Cat)",
+      "prompt": "<lora:Low_Poly_Papercraft:0.75> <lora:ningraphix:0.85>, ningraphix, ps1 game screenshot, anthropomorphic cat vampire, pale fur, fangs, high collar cape, crimson eyes, holding a polygonal goblet, chibi proportions, big angular head, low-poly mesh, flat shaded, crisp hard edges, T-pose, neutral solid light grey background",
+      "category": "creature",
+      "monster_id": "vampire",
       "variant": "base"
     },
     {
-      "id": "gen_dust_wraith",
-      "prompt": "dust brown wraith silhouette, tattered strips, dark medieval fantasy hand-painted illustration, classic RPG bestiary art, visible brushstrokes, muted earthy palette, semi-realistic, same look as fantasy NPC portrait, dark medieval fantasy RPG art, stylized hand-painted 2D, painterly textures, muted earthy palette, warm highlights, soft cinematic lighting, subtle shadows, refined shapes, not photoreal, cohesive game art style, one single creature, full body, centered, three quarter view, single creature only, plain neutral gray background, no scenery, no text, no sheet",
-      "category": "generic",
-      "monster_id": null,
+      "id": "alchemist",
+      "title": "Кот-Алхимик (Alchemist Cat)",
+      "prompt": "<lora:Low_Poly_Papercraft:0.75> <lora:ningraphix:0.85>, ningraphix, ps1 game screenshot, anthropomorphic cat alchemist, round glasses, stained apron, holding bubbling low-poly potion flasks, belt of vials, chibi proportions, big angular head, low-poly mesh, flat shaded, crisp hard edges, T-pose, neutral solid light grey background",
+      "category": "creature",
+      "monster_id": "alchemist",
       "variant": "base"
     },
     {
-      "id": "gen_copper_wyrmling",
-      "prompt": "copper wyrmling dragon, small wings, fierce, dark medieval fantasy hand-painted illustration, classic RPG bestiary art, visible brushstrokes, muted earthy palette, semi-realistic, same look as fantasy NPC portrait, dark medieval fantasy RPG art, stylized hand-painted 2D, painterly textures, muted earthy palette, warm highlights, soft cinematic lighting, subtle shadows, refined shapes, not photoreal, cohesive game art style, one single creature, full body, centered, three quarter view, single creature only, plain neutral gray background, no scenery, no text, no sheet",
-      "category": "generic",
-      "monster_id": null,
+      "id": "druid",
+      "title": "Кот-Друид (Druid Cat)",
+      "prompt": "<lora:Low_Poly_Papercraft:0.75> <lora:ningraphix:0.85>, ningraphix, ps1 game screenshot, anthropomorphic cat druid, leaf cloak, wooden antler circlet, holding a living vine staff, moss details, chibi proportions, big angular head, low-poly mesh, flat shaded, crisp hard edges, T-pose, neutral solid light grey background",
+      "category": "creature",
+      "monster_id": "druid",
       "variant": "base"
     },
     {
-      "id": "gen_lichen_troll",
-      "prompt": "small lichen-covered cave troll, hunched, dark medieval fantasy hand-painted illustration, classic RPG bestiary art, visible brushstrokes, muted earthy palette, semi-realistic, same look as fantasy NPC portrait, dark medieval fantasy RPG art, stylized hand-painted 2D, painterly textures, muted earthy palette, warm highlights, soft cinematic lighting, subtle shadows, refined shapes, not photoreal, cohesive game art style, one single creature, full body, centered, three quarter view, single creature only, plain neutral gray background, no scenery, no text, no sheet",
-      "category": "generic",
-      "monster_id": null,
+      "id": "bard",
+      "title": "Кот-Бард (Bard Cat)",
+      "prompt": "<lora:Low_Poly_Papercraft:0.75> <lora:ningraphix:0.85>, ningraphix, ps1 game screenshot, anthropomorphic cat bard, colorful patchwork tunic, holding a low-poly lute, feathered cap, chibi proportions, big angular head, low-poly mesh, flat shaded, crisp hard edges, T-pose, neutral solid light grey background",
+      "category": "creature",
+      "monster_id": "bard",
       "variant": "base"
     },
     {
-      "id": "gen_night_mantis",
-      "prompt": "night black praying mantis beast, blade arms, dark medieval fantasy hand-painted illustration, classic RPG bestiary art, visible brushstrokes, muted earthy palette, semi-realistic, same look as fantasy NPC portrait, dark medieval fantasy RPG art, stylized hand-painted 2D, painterly textures, muted earthy palette, warm highlights, soft cinematic lighting, subtle shadows, refined shapes, not photoreal, cohesive game art style, one single creature, full body, centered, three quarter view, single creature only, plain neutral gray background, no scenery, no text, no sheet",
-      "category": "generic",
-      "monster_id": null,
+      "id": "paladin",
+      "title": "Кот-Паладин (Paladin Cat)",
+      "prompt": "<lora:Low_Poly_Papercraft:0.75> <lora:ningraphix:0.85>, ningraphix, ps1 game screenshot, anthropomorphic cat paladin, shiny gold low-poly plate armor, holy emblem shield, glowing polygonal sword, chibi proportions, big angular head, low-poly mesh, flat shaded, crisp hard edges, T-pose, neutral solid light grey background",
+      "category": "creature",
+      "monster_id": "paladin",
       "variant": "base"
     },
     {
-      "id": "gen_ash_vulture",
-      "prompt": "ash gray vulture beast, ragged wings, hunched, dark medieval fantasy hand-painted illustration, classic RPG bestiary art, visible brushstrokes, muted earthy palette, semi-realistic, same look as fantasy NPC portrait, dark medieval fantasy RPG art, stylized hand-painted 2D, painterly textures, muted earthy palette, warm highlights, soft cinematic lighting, subtle shadows, refined shapes, not photoreal, cohesive game art style, one single creature, full body, centered, three quarter view, single creature only, plain neutral gray background, no scenery, no text, no sheet",
-      "category": "generic",
-      "monster_id": null,
+      "id": "necromancer",
+      "title": "Кот-Некромант (Necromancer Cat)",
+      "prompt": "<lora:Low_Poly_Papercraft:0.75> <lora:ningraphix:0.85>, ningraphix, ps1 game screenshot, anthropomorphic cat necromancer, tattered black robes, skull shoulder piece, holding a bone staff with floating skull, green ghost glow, chibi proportions, big angular head, low-poly mesh, flat shaded, crisp hard edges, T-pose, neutral solid light grey background",
+      "category": "creature",
+      "monster_id": "necromancer",
       "variant": "base"
-    },
-    {
-      "id": "sphere_health_qualities_sheet",
-      "prompt": "OPTION A v2: four health (crimson) combat spheres left-to-right common→legendary. ONE sphere per icon (not twin). Quality = ornament/glow tier.",
-      "category": "items_spheres",
-      "monster_id": "sphere_health",
-      "variant": "qualities_sheet_v2_single"
-    },
-    {
-      "id": "item_sphere_health_common",
-      "prompt": "health combat sphere common: single crimson orbs, no metal rim, single sphere crop from quality strip v2",
-      "category": "items_spheres",
-      "monster_id": "sphere_health",
-      "variant": "common"
-    },
-    {
-      "id": "item_sphere_health_rare",
-      "prompt": "health combat sphere rare: single crimson orbs, thin silver rim, single sphere crop from quality strip v2",
-      "category": "items_spheres",
-      "monster_id": "sphere_health",
-      "variant": "rare"
-    },
-    {
-      "id": "item_sphere_health_epic",
-      "prompt": "health combat sphere epic: faceted ruby with ornate gold spiked frame, single sphere crop from quality strip v2",
-      "category": "items_spheres",
-      "monster_id": "sphere_health",
-      "variant": "epic"
-    },
-    {
-      "id": "item_sphere_health_legendary",
-      "prompt": "health combat sphere legendary: single gold-framed orbs, bright core, single sphere crop from quality strip v2",
-      "category": "items_spheres",
-      "monster_id": "sphere_health",
-      "variant": "legendary"
     }
   ]
 }

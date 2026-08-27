@@ -10,6 +10,11 @@
 
 set -euo pipefail
 
+# MUST be set before any Python process imports huggingface_hub (XET hangs on many VPS)
+export HF_HUB_DISABLE_XET="${HF_HUB_DISABLE_XET:-1}"
+export HF_HUB_ENABLE_HF_TRANSFER="${HF_HUB_ENABLE_HF_TRANSFER:-0}"
+export HF_XET_HIGH_PERFORMANCE="${HF_XET_HIGH_PERFORMANCE:-0}"
+
 ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 REPO_ROOT="$(cd "${ROOT}/.." && pwd)"
 DATASET="${ROOT}/dataset"
@@ -30,6 +35,7 @@ need_cmd() {
 }
 
 info "gf_lowpoly A5000 trainer"
+info "HF_HUB_DISABLE_XET=${HF_HUB_DISABLE_XET} (must be 1 if downloads stuck at 0B)"
 info "dataset: ${DATASET}"
 info "toolkit: ${TOOLKIT_DIR}"
 
@@ -72,10 +78,7 @@ export HF_HOME="${HF_CACHE}"
 export HF_HUB_CACHE="${HF_CACHE}/hub"
 export TRANSFORMERS_CACHE="${HF_CACHE}/transformers"
 export TORCH_HOME="${ROOT}/.torch-cache"
-# Rented VPS: XET / hf_transfer often hang at "Downloading bytes: 0.00B"
-export HF_HUB_DISABLE_XET="${HF_HUB_DISABLE_XET:-1}"
-export HF_HUB_ENABLE_HF_TRANSFER="${HF_HUB_ENABLE_HF_TRANSFER:-0}"
-export HF_XET_HIGH_PERFORMANCE="${HF_XET_HIGH_PERFORMANCE:-0}"
+# (XET flags already exported at top of script)
 mkdir -p "${HF_HUB_CACHE}" "${TRANSFORMERS_CACHE}" "${TORCH_HOME}" "${OUTPUT_DIR}" "${ROOT}/runtime"
 
 nvidia-smi --query-gpu=name,memory.total --format=csv,noheader || true
@@ -102,13 +105,44 @@ if [[ ! -x "${VENV_PY}" ]]; then
   exit 1
 fi
 
+# Ostris run.py defaults XET on; force-disable in that file + drop xet packages
+info "Forcing HTTP Hub downloads (disable XET)..."
+if [[ -f "${TOOLKIT_DIR}/run.py" ]]; then
+  sed -i \
+    -e 's/os.environ\["HF_XET_HIGH_PERFORMANCE"\] = os.getenv("HF_XET_HIGH_PERFORMANCE", "1")/os.environ["HF_XET_HIGH_PERFORMANCE"] = os.getenv("HF_XET_HIGH_PERFORMANCE", "0")/' \
+    -e 's/os.environ\["HF_HUB_DISABLE_XET"\] = os.getenv("HF_HUB_DISABLE_XET", "0")/os.environ["HF_HUB_DISABLE_XET"] = os.getenv("HF_HUB_DISABLE_XET", "1")/' \
+    "${TOOLKIT_DIR}/run.py" || true
+fi
+"${VENV_PY}" -m pip uninstall -y hf-xet hf_xet hf_transfer 2>/dev/null || true
+
 info "Logging into Hugging Face..."
 "${VENV_PY}" - <<'PY'
 import os
+os.environ["HF_HUB_DISABLE_XET"] = "1"
+os.environ["HF_HUB_ENABLE_HF_TRANSFER"] = "0"
 from huggingface_hub import login
 login(token=os.environ["HF_TOKEN"], add_to_git_credential=False)
-print("HF login ok")
+print("HF login ok; HF_HUB_DISABLE_XET=", os.environ.get("HF_HUB_DISABLE_XET"))
 PY
+
+# Pre-download FLUX over plain HTTP so training does not hang on XET "Reconstructing 0B"
+if [[ "${SKIP_MODEL_DOWNLOAD:-0}" != "1" && "${UPLOAD_ONLY:-0}" != "1" ]]; then
+  info "Pre-downloading FLUX.1-dev into ${HF_HUB_CACHE} (long; watch MB progress)..."
+  HF_HUB_DISABLE_XET=1 HF_HUB_ENABLE_HF_TRANSFER=0 HF_XET_HIGH_PERFORMANCE=0 \
+  "${VENV_PY}" - <<'PY'
+import os
+os.environ["HF_HUB_DISABLE_XET"] = "1"
+os.environ["HF_HUB_ENABLE_HF_TRANSFER"] = "0"
+os.environ["HF_XET_HIGH_PERFORMANCE"] = "0"
+from huggingface_hub import snapshot_download
+path = snapshot_download(
+    repo_id="black-forest-labs/FLUX.1-dev",
+    token=os.environ["HF_TOKEN"],
+    resume_download=True,
+)
+print("FLUX ready at", path)
+PY
+fi
 
 info "Writing config with absolute paths..."
 # Paths must be absolute for Ostris on Linux
