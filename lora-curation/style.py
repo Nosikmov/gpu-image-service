@@ -28,3 +28,7 @@ STYLE_NEGATIVE = ""
 MONSTER_NEGATIVE = STYLE_NEGATIVE
 
 TRIGGER_WORD = "gf_lowpoly"
+
+# Use trained LoRA to regenerate the curation set (v2), then retrain.
+GENERATION_LORA_TAG = "<lora:gf_lowpoly:0.85>"
+GENERATION_PROMPT_PREFIX = f"{GENERATION_LORA_TAG}, {TRIGGER_WORD}, ningraphix, ps1 game screenshot"
