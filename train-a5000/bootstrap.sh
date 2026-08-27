@@ -78,6 +78,8 @@ export HF_HOME="${HF_CACHE}"
 export HF_HUB_CACHE="${HF_CACHE}/hub"
 export TRANSFORMERS_CACHE="${HF_CACHE}/transformers"
 export TORCH_HOME="${ROOT}/.torch-cache"
+# Reduce CUDA fragmentation on 24GB cards (4090 / A5000)
+export PYTORCH_CUDA_ALLOC_CONF="${PYTORCH_CUDA_ALLOC_CONF:-expandable_segments:True}"
 # (XET flags already exported at top of script)
 mkdir -p "${HF_HUB_CACHE}" "${TRANSFORMERS_CACHE}" "${TORCH_HOME}" "${OUTPUT_DIR}" "${ROOT}/runtime"
 
@@ -189,26 +191,24 @@ config:
         dtype: bf16
         cache_text_embeddings: true
         unload_text_encoder: true
-        skip_first_sample: false
-        disable_sampling: false
+        # 24GB VRAM (4090/A5000): samples + EMA often OOM during Flux LoRA
+        skip_first_sample: true
+        disable_sampling: true
         ema_config:
-          use_ema: true
-          ema_decay: 0.99
+          use_ema: false
       model:
         name_or_path: "black-forest-labs/FLUX.1-dev"
         is_flux: true
         quantize: true
         quantize_te: true
-        low_vram: false
+        low_vram: true
       sample:
         sampler: flowmatch
-        sample_every: 250
+        sample_every: 99999
         width: 512
         height: 512
         prompts:
           - "gf_lowpoly, ningraphix, ps1 game screenshot, anthropomorphic cat mage, blue wizard hat, low-poly mesh, flat shaded, crisp hard edges, T-pose, neutral solid light grey background"
-          - "gf_lowpoly, ningraphix, ps1 game screenshot, anthropomorphic cat hybrid, orc cat, green fur, tusks, spiked armor, low-poly mesh, flat shaded, T-pose, neutral solid light grey background"
-          - "gf_lowpoly, ningraphix, ps1 game screenshot, phoenix cat, fiery low-poly wings, cat head with ears, no scenery, neutral solid light grey background"
         neg: ""
         seed: 42
         walk_seed: true
@@ -216,9 +216,9 @@ config:
         sample_steps: 20
 meta:
   name: gf_lowpoly
-  version: "1.0-a5000"
+  version: "1.1-24gb"
   trigger: gf_lowpoly
-  notes: "A5000 24GB VRAM + 64GB RAM; curated style dataset"
+  notes: "24GB VRAM safe: low_vram, no EMA, no mid-train samples"
 EOF
 
 info "Starting training (resume from last checkpoint if present)..."
