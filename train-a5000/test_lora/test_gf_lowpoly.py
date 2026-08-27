@@ -53,10 +53,13 @@ def wait_forge(forge: str, max_wait_s: float = 900) -> None:
 
 
 def build_prompt(subject: str, *, lora: str, weight: float, trigger: str) -> str:
-    style = "ningraphix, ps1 game screenshot, low-poly mesh, flat shaded, crisp hard edges, chibi proportions, big angular head"
-    return (
-        f"<lora:{lora}:{weight}>, {trigger}, {style}, {subject}"
+    style = (
+        "ningraphix, ps1 game screenshot, low-poly mesh, flat shaded, crisp hard edges, "
+        "chibi proportions, big angular head, identical paired low-poly cat eyes, "
+        "two matching oval eyes, flat white sclera, same size simple black round pupils, "
+        "symmetrical, no mismatched eyes"
     )
+    return f"<lora:{lora}:{weight}>, {trigger}, {style}, {subject}"
 
 
 def main() -> int:
