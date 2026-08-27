@@ -1,0 +1,30 @@
+{
+  "lora": "gf_lowpoly",
+  "lora_weight": 0.85,
+  "trigger": "gf_lowpoly",
+  "forge_url": "http://127.0.0.1:7860",
+  "model": "flux1-dev-Q6_K.gguf",
+  "unet_storage_dtype": "Automatic (fp16 LoRA)",
+  "width": 512,
+  "height": 512,
+  "steps": 20,
+  "sampler_name": "Euler",
+  "scheduler": "Simple",
+  "cfg_scale": 1.0,
+  "distilled_cfg_scale": 3.5,
+  "seed_base": 42,
+  "prompts": [
+    "anthropomorphic cat mage, blue wizard hat, low-poly mesh, flat shaded, crisp hard edges, T-pose, neutral solid light grey background",
+    "anthropomorphic cat hybrid, orc cat, green fur, tusks, spiked armor, low-poly mesh, flat shaded, T-pose, neutral solid light grey background",
+    "phoenix cat, fiery low-poly wings, cat head with ears, orange flame accents, no scenery, T-pose, neutral solid light grey background",
+    "orange fire elemental cat, bright orange low-poly flame body, amber molten core, cat ear silhouettes in orange fire, T-pose, neutral solid light grey background",
+    "anthropomorphic cat knight, blocky plate armor, small shield, chibi proportions, big angular head, T-pose, neutral solid light grey background",
+    "anthropomorphic cat ninja, dark low-poly hood, twin daggers, chibi proportions, T-pose, neutral solid light grey background",
+    "slime cat hybrid, green translucent low-poly blob body, cat ears, chibi proportions, T-pose, neutral solid light grey background",
+    "anthropomorphic cat pirate, tricorne hat, hook hand, low-poly mesh, flat shaded, T-pose, neutral solid light grey background",
+    "ice elemental cat, translucent blue crystal body, jagged ice spikes, frosty whiskers, T-pose, neutral solid light grey background",
+    "anthropomorphic cat merchant, holding small blocky treasure chest, apron, chibi proportions, T-pose, neutral solid light grey background",
+    "griffin cat hybrid, eagle wings and beak mixed with cat, low-poly mesh, flat shaded, T-pose, neutral solid light grey background",
+    "anthropomorphic cat alchemist, round glasses, bubbling low-poly potion flasks, T-pose, neutral solid light grey background"
+  ]
+}
