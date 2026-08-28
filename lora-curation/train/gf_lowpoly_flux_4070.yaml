@@ -1,0 +1,70 @@
+---
+job: extension
+config:
+  name: gf_lowpoly
+  process:
+    - type: sd_trainer
+      training_folder: "F:/fluxGenerationForLora/ai-toolkit/output"
+      device: cuda:0
+      trigger_word: "gf_lowpoly"
+      network:
+        type: lora
+        linear: 16
+        linear_alpha: 16
+      save:
+        dtype: float16
+        save_every: 250
+        max_step_saves_to_keep: 4
+      datasets:
+        - folder_path: "F:/fluxGenerationForLora/gpu-image-service/lora-curation/export/approved"
+          caption_ext: txt
+          caption_dropout_rate: 0.05
+          shuffle_tokens: false
+          cache_latents_to_disk: true
+          cache_text_embeddings: true
+          resolution: [512]
+      train:
+        batch_size: 1
+        steps: 1500
+        gradient_accumulation_steps: 1
+        train_unet: true
+        train_text_encoder: false
+        # Kohya-equivalent speed/VRAM opts (Ostris names)
+        gradient_checkpointing: true
+        attention_backend: flash
+        xformers: false
+        noise_scheduler: flowmatch
+        optimizer: adamw8bit
+        lr: 0.0001
+        dtype: bf16
+        # RAM savers for 32GB systems (FLUX load spikes hard)
+        cache_text_embeddings: true
+        unload_text_encoder: true
+        skip_first_sample: true
+        disable_sampling: true
+        ema_config:
+          use_ema: false
+      model:
+        # Full FLUX.1-dev from HF + qfloat8 quant (same idea as training on fp8 base)
+        name_or_path: "black-forest-labs/FLUX.1-dev"
+        is_flux: true
+        quantize: true
+        quantize_te: true
+        low_vram: true
+      sample:
+        sampler: flowmatch
+        sample_every: 99999
+        width: 512
+        height: 512
+        prompts:
+          - "gf_lowpoly, ningraphix, ps1 game screenshot, anthropomorphic cat mage, blue wizard hat, low-poly mesh, flat shaded, T-pose, neutral solid light grey background"
+        neg: ""
+        seed: 42
+        walk_seed: true
+        guidance_scale: 3.5
+        sample_steps: 20
+meta:
+  name: gf_lowpoly
+  version: "1.1"
+  trigger: gf_lowpoly
+  notes: "RAM-tight 32GB + 4070 12GB; sampling/EMA off"

@@ -53,5 +53,6 @@ train-a5000/.ai-toolkit/
 train-a5000/.hf-cache/
 train-a5000/.torch-cache/
 train-a5000/output/
-train-a5000/runtime/
+train-a5000/test_lora/out/
+train-a5000/test_lora/out_100poly/
 

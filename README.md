@@ -246,7 +246,7 @@ gpu-image-service/
   app/                 # FastAPI + worker + services
   workflows/           # allowlisted ComfyUI API graphs
   lora-curation/       # style LoRA dataset: prompts, GPU batch, reviewer
-  train-a5000/         # one-command Flux LoRA train (Ubuntu + A5000)
+  train-a5000/         # one-command Flux LoRA train (Ubuntu + 4090/A5000)
   docker/              # ComfyUI Dockerfile
   scripts/             # install/start/stop/deploy
   tests/
@@ -255,9 +255,11 @@ gpu-image-service/
   .env.example
 ```
 
-## Train style LoRA on a rented A5000 (Ubuntu)
+## Train style LoRA on rented GPU (4090 / A5000)
 
-See [`train-a5000/README.md`](train-a5000/README.md). Short version:
+Full server guide (curation + train): **[`SERVER_4090.md`](SERVER_4090.md)**
+
+Short train-only:
 
 ```bash
 cd train-a5000

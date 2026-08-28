@@ -106,7 +106,7 @@
     }
     .badge.approve { color: var(--approve); border-color: #2f8f62; }
     .badge.reject { color: var(--reject); border-color: #a34a4a; }
-    .badge.maybe { color: var(--maybe); border-color: #9a7a1f; }
+    .queue-item .badge.hidden { display: none; }
     .preview-wrap {
       display: flex;
       align-items: center;
@@ -185,6 +185,15 @@
       <label>
         <input type="checkbox" id="onlyWithImage" checked /> только с картинкой
       </label>
+      <label>
+        Сортировка
+        <select id="sortBy">
+          <option value="id" selected>id (A→Z)</option>
+          <option value="title">название</option>
+          <option value="rating">рейтинг</option>
+          <option value="category">категория</option>
+        </select>
+      </label>
       <button class="primary" id="reloadBtn">Обновить</button>
     </div>
   </header>
@@ -206,7 +215,8 @@
 
     <section class="card">
       <div class="preview-wrap" id="previewWrap">
-        <div class="placeholder">Выберите элемент или дождитесь генерации</div>
+        <img id="previewImg" alt="" hidden />
+        <div class="placeholder" id="previewPlaceholder">Выберите элемент или нажмите «Обновить»</div>
       </div>
       <div class="meta" id="meta"></div>
       <div class="prompt" id="prompt"></div>
@@ -225,7 +235,9 @@
   <script>
     let items = [];
     let index = 0;
-    let lastAutoMsg = "";
+    let selectedId = null;
+    let statsCache = { approve: 0, reject: 0, maybe: 0, unset: 0 };
+    let totalPrompts = 0;
 
     const els = {
       stats: document.getElementById("stats"),
@@ -233,11 +245,14 @@
       progressBar: document.getElementById("progressBar"),
       queueList: document.getElementById("queueList"),
       previewWrap: document.getElementById("previewWrap"),
+      previewImg: document.getElementById("previewImg"),
+      previewPlaceholder: document.getElementById("previewPlaceholder"),
       prompt: document.getElementById("prompt"),
       meta: document.getElementById("meta"),
       note: document.getElementById("note"),
       filterRating: document.getElementById("filterRating"),
       onlyWithImage: document.getElementById("onlyWithImage"),
+      sortBy: document.getElementById("sortBy"),
       reloadBtn: document.getElementById("reloadBtn"),
       prevBtn: document.getElementById("prevBtn"),
       nextBtn: document.getElementById("nextBtn"),
@@ -250,18 +265,46 @@
       return items[index] || null;
     }
 
-    function renderAuto(auto) {
-      if (!auto) return;
-      const msg = `${auto.state || "?"}: ${auto.message || ""}`;
-      els.autoLine.textContent = "авто · " + msg;
-      if (msg !== lastAutoMsg && (auto.state === "idle" || auto.state === "generating" || auto.state === "regenerating")) {
-        lastAutoMsg = msg;
+    function sortItems(list) {
+      const key = els.sortBy.value || "id";
+      const ratingOrder = { unset: 0, maybe: 1, reject: 2, approve: 3 };
+      return [...list].sort((a, b) => {
+        if (key === "rating") {
+          const ra = ratingOrder[a.rating] ?? 0;
+          const rb = ratingOrder[b.rating] ?? 0;
+          if (ra !== rb) return ra - rb;
+          return String(a.id).localeCompare(String(b.id));
+        }
+        const av = String(a[key] || a.id || "");
+        const bv = String(b[key] || b.id || "");
+        return av.localeCompare(bv, undefined, { sensitivity: "base" });
+      });
+    }
+
+    function restoreSelection(preferredId) {
+      const id = preferredId || selectedId;
+      if (id) {
+        const idx = items.findIndex((i) => i.id === id);
+        if (idx >= 0) {
+          index = idx;
+          return;
+        }
       }
+      if (index >= items.length) index = Math.max(0, items.length - 1);
+    }
+
+    function renderAuto(auto) {
+      if (!auto) {
+        els.autoLine.textContent = "обновление списка — кнопка «Обновить»";
+        return;
+      }
+      els.autoLine.textContent = "авто · " + `${auto.state || "?"}: ${auto.message || ""}`;
     }
 
     function renderStats(stats, count) {
+      statsCache = { ...stats };
       const approve = stats.approve || 0;
-      const totalHint = (stats.approve || 0) + (stats.reject || 0) + (stats.maybe || 0) + (stats.unset || 0);
+      const totalHint = totalPrompts || (stats.approve || 0) + (stats.reject || 0) + (stats.maybe || 0) + (stats.unset || 0);
       els.stats.innerHTML = [
         `<span><b>${count}</b> в фильтре</span>`,
         `<span>✓ <b>${approve}</b></span>`,
@@ -273,86 +316,171 @@
       els.progressBar.style.width = `${Math.min(100, (approve / denom) * 100)}%`;
     }
 
+    function badgeHtml(rating) {
+      if (!rating || rating === "unset") return `<span class="badge hidden" data-role="badge"></span>`;
+      return `<span class="badge ${rating}" data-role="badge">${rating}</span>`;
+    }
+
     function renderQueue() {
-      els.queueList.innerHTML = "";
+      const scrollTop = els.queueList.scrollTop;
+      els.queueList.replaceChildren();
       items.forEach((item, i) => {
         const btn = document.createElement("button");
         btn.type = "button";
         btn.className = "queue-item" + (i === index ? " active" : "");
-        const badge = item.rating && item.rating !== "unset"
-          ? `<span class="badge ${item.rating}">${item.rating}</span>`
-          : "";
-        btn.innerHTML = `<div>${item.id}${badge}</div><div class="id">${item.title || item.category || ""}${item.image_exists ? "" : " · нет PNG"}</div>`;
-        btn.addEventListener("click", () => {
-          index = i;
-          renderCurrent();
-          renderQueue();
-        });
+        btn.dataset.index = String(i);
+        btn.innerHTML = `<div><span data-role="label">${item.id}</span>${badgeHtml(item.rating)}</div><div class="id">${item.title || item.category || ""}${item.image_exists ? "" : " · нет PNG"}</div>`;
+        btn.addEventListener("click", () => selectIndex(i));
         els.queueList.appendChild(btn);
       });
+      els.queueList.scrollTop = scrollTop;
     }
 
-    function renderCurrent() {
-      const item = current();
+    function setActiveQueueItem(newIndex) {
+      const nodes = els.queueList.querySelectorAll(".queue-item");
+      nodes.forEach((n, i) => n.classList.toggle("active", i === newIndex));
+      index = newIndex;
+    }
+
+    function updateQueueBadgeAt(i, rating) {
+      const node = els.queueList.children[i];
+      if (!node) return;
+      const badge = node.querySelector('[data-role="badge"]');
+      if (!badge) return;
+      if (!rating || rating === "unset") {
+        badge.className = "badge hidden";
+        badge.textContent = "";
+      } else {
+        badge.className = `badge ${rating}`;
+        badge.textContent = rating;
+      }
+    }
+
+    function removeQueueItemAt(i) {
+      const node = els.queueList.children[i];
+      if (node) node.remove();
+      const nodes = els.queueList.querySelectorAll(".queue-item");
+      nodes.forEach((n, idx) => { n.dataset.index = String(idx); });
+    }
+
+    function selectIndex(i) {
+      if (i < 0 || i >= items.length) return;
+      setActiveQueueItem(i);
+      showItem(items[i]);
+    }
+
+    function showItem(item) {
+      selectedId = item ? item.id : null;
       if (!item) {
-        els.previewWrap.innerHTML = `<div class="placeholder">Нет элементов по фильтру</div>`;
+        els.previewImg.hidden = true;
+        els.previewPlaceholder.hidden = false;
+        els.previewPlaceholder.textContent = "Нет элементов по фильтру";
         els.prompt.textContent = "";
         els.meta.textContent = "";
         els.note.value = "";
         return;
       }
       if (item.image_exists && item.image) {
-        els.previewWrap.innerHTML = `<img src="/${item.image}?t=${Date.now()}" alt="${item.id}" />`;
+        const bust = item._imgBust || item.image_mtime || "";
+        const nextSrc = `/${item.image}?v=${encodeURIComponent(bust)}`;
+        if (els.previewImg.getAttribute("src") !== nextSrc) {
+          els.previewImg.src = nextSrc;
+        }
+        els.previewImg.alt = item.id;
+        els.previewImg.hidden = false;
+        els.previewPlaceholder.hidden = true;
       } else {
-        els.previewWrap.innerHTML = `<div class="placeholder">Картинка ещё не сгенерирована<br><code>${item.id}</code></div>`;
+        els.previewImg.hidden = true;
+        els.previewPlaceholder.hidden = false;
+        els.previewPlaceholder.innerHTML = `Картинка ещё не сгенерирована<br><code>${item.id}</code>`;
       }
       els.prompt.textContent = item.prompt || "";
       els.meta.textContent = [
         item.id,
         item.title || "",
-        item.rating ? `rating: ${item.rating}` : "rating: unset",
+        item.rating && item.rating !== "unset" ? `rating: ${item.rating}` : "rating: unset",
       ].filter(Boolean).join(" · ");
       els.note.value = item.note || "";
     }
 
-    async function loadItems() {
-      const params = new URLSearchParams();
-      const rating = els.filterRating.value;
-      if (rating) params.set("rating", rating);
-      if (els.onlyWithImage.checked) params.set("only_with_image", "1");
-      const res = await fetch(`/api/items?${params}`);
-      const data = await res.json();
-      items = data.items || [];
-      if (index >= items.length) index = Math.max(0, items.length - 1);
-      renderStats(data.stats || {}, data.count || 0);
-      renderAuto(data.auto);
-      renderQueue();
-      renderCurrent();
+    async function loadItems(options = {}) {
+      const keepId = options.keepId !== false ? selectedId : null;
+      els.reloadBtn.disabled = true;
+      els.reloadBtn.textContent = "Загрузка…";
+      try {
+        const params = new URLSearchParams();
+        const rating = els.filterRating.value;
+        if (rating) params.set("rating", rating);
+        if (els.onlyWithImage.checked) params.set("only_with_image", "1");
+        const res = await fetch(`/api/items?${params}`);
+        const data = await res.json();
+        items = sortItems(data.items || []);
+        totalPrompts = (data.stats?.approve || 0) + (data.stats?.reject || 0) + (data.stats?.maybe || 0) + (data.stats?.unset || 0);
+        if (!totalPrompts) totalPrompts = items.length;
+        restoreSelection(keepId);
+        renderStats(data.stats || {}, data.count || 0);
+        renderAuto(data.auto);
+        renderQueue();
+        showItem(current());
+      } finally {
+        els.reloadBtn.disabled = false;
+        els.reloadBtn.textContent = "Обновить";
+      }
+    }
+
+    function bumpStats(oldRating, newRating) {
+      const from = oldRating && oldRating !== "unset" ? oldRating : "unset";
+      const to = newRating && newRating !== "unset" ? newRating : "unset";
+      if (from === to) return;
+      if (from !== "unset" && statsCache[from] > 0) statsCache[from]--;
+      else if (from === "unset" && statsCache.unset > 0) statsCache.unset--;
+      if (to !== "unset") statsCache[to] = (statsCache[to] || 0) + 1;
+      else statsCache.unset = (statsCache.unset || 0) + 1;
+      renderStats(statsCache, items.length);
     }
 
     async function rate(rating) {
       const item = current();
       if (!item) return;
-      const res = await fetch("/api/rate", {
+
+      const oldRating = item.rating || "unset";
+      const note = els.note.value.trim();
+      const filter = els.filterRating.value;
+      const leavesFilter = filter && rating !== "unset" && rating !== filter;
+
+      item.rating = rating === "unset" ? "unset" : rating;
+      item.note = note;
+
+      if (leavesFilter) {
+        removeQueueItemAt(index);
+        items.splice(index, 1);
+        if (index >= items.length) index = Math.max(0, items.length - 1);
+        setActiveQueueItem(index);
+      } else {
+        updateQueueBadgeAt(index, item.rating);
+        if (rating !== "unset" && index < items.length - 1) {
+          index += 1;
+        }
+        setActiveQueueItem(index);
+      }
+
+      bumpStats(oldRating, item.rating);
+      renderStats(statsCache, items.length);
+      showItem(current());
+
+      fetch("/api/rate", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ id: item.id, rating, note: els.note.value.trim() }),
-      });
-      if (!res.ok) {
-        alert("Ошибка сохранения");
-        return;
-      }
-      const data = await res.json();
-      item.rating = rating === "unset" ? "unset" : rating;
-      item.note = els.note.value.trim();
-      renderStats(data.stats || {}, items.length);
-      renderAuto(data.auto);
-      renderQueue();
-      if (rating !== "unset" && index < items.length - 1) {
-        index += 1;
-        renderCurrent();
-        renderQueue();
-      }
+        body: JSON.stringify({ id: item.id, rating, note }),
+      })
+        .then((res) => {
+          if (!res.ok) throw new Error("save failed");
+          return res.json();
+        })
+        .then((data) => {
+          if (data.stats) renderStats(data.stats, items.length);
+        })
+        .catch(() => alert("Не удалось сохранить оценку — обновите страницу"));
     }
 
     async function addPrompt() {
@@ -374,19 +502,29 @@
       }
       els.newTitle.value = "";
       els.newPrompt.value = "";
-      alert(`Добавлено: ${data.id}\nАвто-цикл скоро сгенерирует.`);
-      setTimeout(loadItems, 2500);
+      alert(`Добавлено: ${data.id}\nНажмите «Обновить», когда картинка будет готова.`);
     }
 
     document.querySelectorAll("[data-rate]").forEach((btn) => {
       btn.addEventListener("click", () => rate(btn.dataset.rate));
     });
 
-    els.reloadBtn.addEventListener("click", loadItems);
-    els.filterRating.addEventListener("change", () => { index = 0; loadItems(); });
-    els.onlyWithImage.addEventListener("change", () => { index = 0; loadItems(); });
-    els.prevBtn.addEventListener("click", () => { if (index > 0) { index -= 1; renderCurrent(); renderQueue(); } });
-    els.nextBtn.addEventListener("click", () => { if (index < items.length - 1) { index += 1; renderCurrent(); renderQueue(); } });
+    els.reloadBtn.addEventListener("click", () => loadItems({ keepId: selectedId }));
+    els.filterRating.addEventListener("change", () => {
+      selectedId = null;
+      index = 0;
+      loadItems({ keepId: null });
+    });
+    els.onlyWithImage.addEventListener("change", () => loadItems({ keepId: selectedId }));
+    els.sortBy.addEventListener("change", () => {
+      sessionStorage.setItem("loraReviewSort", els.sortBy.value);
+      items = sortItems(items);
+      restoreSelection(selectedId);
+      renderQueue();
+      showItem(current());
+    });
+    els.prevBtn.addEventListener("click", () => selectIndex(index - 1));
+    els.nextBtn.addEventListener("click", () => selectIndex(index + 1));
     els.addPromptBtn.addEventListener("click", addPrompt);
 
     window.addEventListener("keydown", (e) => {
@@ -398,8 +536,10 @@
       if (e.key === "ArrowRight") els.nextBtn.click();
     });
 
-    loadItems();
-    setInterval(loadItems, 4000);
+    const savedSort = sessionStorage.getItem("loraReviewSort");
+    if (savedSort) els.sortBy.value = savedSort;
+
+    loadItems({ keepId: null });
   </script>
 </body>
 </html>

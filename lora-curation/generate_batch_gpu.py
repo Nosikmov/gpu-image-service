@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Generate curation images via Forge (A1111) txt2img API — Flux + style LoRAs."""
+"""Generate curation images via Forge (A1111) txt2img API — Flux GGUF + style LoRAs."""
 
 from __future__ import annotations
 
@@ -31,6 +31,9 @@ from paths import (  # noqa: E402
 from style import STYLE_NEGATIVE  # noqa: E402
 
 DEFAULT_FORGE = "http://127.0.0.1:7860"
+DEFAULT_FORGE_DIR = Path(
+    os.environ.get("FORGE_DIR", r"F:\fluxGenerationForLora\stable-diffusion-webui-forge")
+)
 GEN_CONFIG_PATH = _ROOT / "forge_gen.json"
 
 
@@ -46,7 +49,7 @@ def _load_gen_config() -> dict[str, Any]:
     if GEN_CONFIG_PATH.is_file():
         return json.loads(GEN_CONFIG_PATH.read_text(encoding="utf-8"))
     return {
-        "model": "flux1-dev-Q6_K.gguf",
+        "model": "flux1-dev-fp8.safetensors",
         "width": 512,
         "height": 512,
         "steps": 20,
@@ -56,7 +59,20 @@ def _load_gen_config() -> dict[str, Any]:
         "distilled_cfg_scale": 3.5,
         "seed": -1,
         "timeout_sec": 300,
+        "unet_storage_dtype": "Automatic (fp16 LoRA)",
     }
+
+
+def _resolve_forge_modules(modules: list[Any] | None) -> list[str]:
+    if not modules:
+        return []
+    out: list[str] = []
+    for item in modules:
+        p = Path(str(item))
+        if not p.is_absolute():
+            p = DEFAULT_FORGE_DIR / p
+        out.append(str(p))
+    return out
 
 
 def _http_json(method: str, url: str, body: dict | None = None, timeout: float = 120) -> Any:
@@ -106,13 +122,19 @@ def _ping_forge(forge: str, timeout: float = 30) -> None:
 
 
 def _ensure_forge_options(forge: str, cfg: dict[str, Any]) -> None:
-    """GGUF + LoRA requires Diffusion in Low Bits = Automatic (fp16 LoRA). Set once per batch."""
-    body = {
-        "sd_model_checkpoint": str(cfg.get("model") or "flux1-dev-Q6_K.gguf"),
+    """Set Flux GGUF checkpoint + encoders once per batch (avoid reload mid-batch)."""
+    body: dict[str, Any] = {
+        "sd_model_checkpoint": str(cfg.get("model") or "flux1-dev-fp8.safetensors"),
         "forge_unet_storage_dtype": str(
             cfg.get("unet_storage_dtype") or "Automatic (fp16 LoRA)"
         ),
     }
+    if cfg.get("sd_vae") is not None:
+        body["sd_vae"] = str(cfg["sd_vae"])
+    if "forge_additional_modules" in cfg:
+        body["forge_additional_modules"] = _resolve_forge_modules(
+            cfg.get("forge_additional_modules") or []
+        )
     try:
         _http_json("POST", f"{forge}/sdapi/v1/options", body, timeout=120)
         print(f"[forge] options set: {body}", flush=True)
@@ -138,15 +160,14 @@ def generate_one(
     retries: int = 5,
 ) -> dict[str, Any]:
     timeout = float(cfg.get("timeout_sec") or 180)
-    # Do NOT override checkpoint every call — reloading Flux mid-batch crashes Forge.
-    payload = {
+    # Do NOT override checkpoint every call — reloading mid-batch crashes Forge.
+    payload: dict[str, Any] = {
         "prompt": prompt,
         "negative_prompt": negative,
         "steps": int(cfg.get("steps", 20)),
         "sampler_name": str(cfg.get("sampler_name") or "Euler"),
         "scheduler": str(cfg.get("scheduler") or "Simple"),
         "cfg_scale": float(cfg.get("cfg_scale", 1.0)),
-        "distilled_cfg_scale": float(cfg.get("distilled_cfg_scale", 3.5)),
         "width": int(cfg.get("width", 512)),
         "height": int(cfg.get("height", 512)),
         "seed": int(cfg.get("seed", -1)),
@@ -155,12 +176,13 @@ def generate_one(
         "save_images": False,
         "send_images": True,
     }
+    if cfg.get("distilled_cfg_scale") is not None:
+        payload["distilled_cfg_scale"] = float(cfg.get("distilled_cfg_scale", 3.5))
     last_exc: Exception | None = None
     for attempt in range(1, retries + 1):
         try:
             _wait_forge(forge, max_wait_s=600)
-            # Do NOT interrupt before a normal request — that destabilizes Forge
-            # after 1-2 Flux gens (model unload mid-cycle -> hard exit).
+            # Do NOT interrupt before a normal request — destabilizes Forge mid-batch.
             if attempt > 1:
                 _interrupt_forge(forge)
                 time.sleep(2)
@@ -273,7 +295,7 @@ def generate_batch_forge(
 
     manifest = load_manifest()
     manifest.setdefault("version", 1)
-    manifest["generator"] = "forge-flux"
+    manifest["generator"] = "forge-flux-q6k"
     store = manifest.setdefault("entries", {})
 
     ok = skipped = failed = 0
@@ -299,7 +321,7 @@ def generate_batch_forge(
                 "title": row.get("title"),
                 "image": f"images/{entry_id}.png",
                 "status": "ok",
-                "source": "forge-flux",
+                "source": "forge-flux-q6k",
                 "model": cfg.get("model"),
                 "generated_at": _utc_now(),
                 "needs_review": True,
@@ -315,7 +337,7 @@ def generate_batch_forge(
             store[entry_id] = {
                 "id": entry_id,
                 "status": "error",
-                "source": "forge-flux",
+                "source": "forge-flux-q6k",
                 "error": str(exc),
                 "failed_at": _utc_now(),
             }
@@ -336,7 +358,7 @@ generate_batch_gpu = generate_batch_forge
 
 
 def main() -> int:
-    parser = argparse.ArgumentParser(description="Forge Flux batch for LoRA curation")
+    parser = argparse.ArgumentParser(description="Forge Flux GGUF batch for LoRA curation")
     parser.add_argument("--limit", type=int, default=None)
     parser.add_argument("--skip-existing", action="store_true", default=True)
     parser.add_argument("--no-skip-existing", action="store_false", dest="skip_existing")

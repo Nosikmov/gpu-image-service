@@ -1,22 +1,45 @@
-"""gameFarmling low-poly / PS1 cat style for LoRA curation (Forge + Flux)."""
+"""gameFarmling low-poly style for LoRA curation (Forge + Flux GGUF)."""
 
 from __future__ import annotations
 
-HOUSE_STYLE = (
-    "ningraphix, ps1 game screenshot, chunky low-poly, simple geometric forms, large clean flat facets, PS1 game character, flat shaded, crisp silhouette, limited detail, "
-    "chibi proportions, big angular head, feline cat eyes, neutral solid light grey background"
+# Trained style LoRA (Forge: models/Lora/gf_lowpoly.safetensors).
+TRIGGER_WORD = "gf_lowpoly"
+GENERATION_LORA_TAGS = "<lora:gf_lowpoly:0.9>"
+GENERATION_PROMPT_PREFIX = (
+    f"{GENERATION_LORA_TAGS}, {TRIGGER_WORD}, ningraphix, ps1 game screenshot,"
+)
+GENERATION_LORA_TAG = GENERATION_LORA_TAGS
+
+# Strong low-poly mesh + crisp stylized textures (avoid extreme poly-count wording).
+MESH_STYLE = (
+    "very low polygon mesh, extremely chunky blocky silhouette, "
+    "few large geometric facets, highly optimized game model, minimal geometry"
+)
+TEXTURE_STYLE = (
+    "crisp stylized hand-painted textures, rich clean color blocks, "
+    "sharp material definition, painted PS1 textures on flat facets"
+)
+CHARACTER_BODY = (
+    f"chibi proportions, big angular head, {MESH_STYLE}, {TEXTURE_STYLE}, "
+    "flat shaded, crisp silhouette"
 )
 
-STYLE_LOCK = (
-    "anthropomorphic cat, chunky PS1 low-poly game look, single character, "
-    "full body, centered, no scenery, T-pose"
+FELINE_EYE_LOCK = "feline cat eyes"
+
+PROMPT_FRAMING = (
+    "T-pose, full body, centered, plain solid light grey background, "
+    "no scenery, no environment, no ground, empty background"
 )
 
-# Light negatives help Flux avoid broken geometry when pushing low-poly.
-STYLE_NEGATIVE = "high-poly, smooth subdivision, muddy artifacts, broken geometry, extra limbs"
+STYLE_NEGATIVE = (
+    "high-poly, smooth subdivision, muddy textures, blurry textures, "
+    "flat untextured plastic, muddy artifacts, broken geometry, extra limbs, "
+    "cube body, box body, scenery, landscape, environment, sky, clouds, forest, grass, "
+    "ground, floor, horizon, room, interior, outdoor, dungeon, castle, props, furniture, "
+    "platform, gradient background, detailed background, blurry, watermark, text, "
+    "round eyes, huge round eyes, anime round eyes, circular eyes, bug eyes"
+)
 MONSTER_NEGATIVE = STYLE_NEGATIVE
 
-TRIGGER_WORD = "gf_lowpoly"
-
-GENERATION_LORA_TAG = "<lora:gf_lowpoly:0.9>"
-GENERATION_PROMPT_PREFIX = f"{GENERATION_LORA_TAG}, {TRIGGER_WORD}, ningraphix, ps1 game screenshot"
+HOUSE_STYLE = PROMPT_FRAMING
+STYLE_LOCK = "single character, full body, centered, no scenery"

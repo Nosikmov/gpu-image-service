@@ -1,525 +1,1035 @@
 {
   "version": 2,
-  "count": 64,
+  "count": 128,
   "base_count": 64,
-  "variants_per_prompt": 1,
+  "variants_per_prompt": 2,
   "source": "promts-for-generate.txt",
   "trigger_word_suggestion": "gf_lowpoly",
-  "negative_prompt": "high-poly, smooth subdivision, muddy artifacts, broken geometry, extra limbs, deformed face",
+  "negative_prompt": "high-poly, smooth subdivision, muddy textures, blurry textures, flat untextured plastic, muddy artifacts, broken geometry, extra limbs, cube body, box body, scenery, landscape, environment, sky, clouds, forest, grass, ground, floor, horizon, room, interior, outdoor, dungeon, castle, props, furniture, platform, gradient background, detailed background, blurry, watermark, text, round eyes, huge round eyes, anime round eyes, circular eyes, bug eyes",
   "entries": [
     {
       "id": "mage_with_staff",
       "title": "Маг с посохом (Mage with Staff)",
-      "prompt": "<lora:gf_lowpoly:0.9>, gf_lowpoly, ningraphix, ps1 game screenshot, anthropomorphic cat mage, blue wizard hat, low-poly magic robe, holding a tall wooden staff with a glowing polygonal crystal tip, chibi proportions, big angular head, feline cat eyes, chunky low-poly, simple geometric forms, large clean flat facets, PS1 game character, flat shaded, crisp silhouette, limited detail, T-pose, neutral solid light grey background",
+      "prompt": "<lora:gf_lowpoly:0.9>, gf_lowpoly, ningraphix, ps1 game screenshot, anthropomorphic cat mage, blue wizard hat, low-poly magic robe, chibi proportions, big angular head, very low polygon mesh, extremely chunky blocky silhouette, few large geometric facets, highly optimized game model, minimal geometry, crisp stylized hand-painted textures, rich clean color blocks, sharp material definition, painted PS1 textures on flat facets, flat shaded, crisp silhouette, feline cat eyes, T-pose, full body, centered, plain solid light grey background, no scenery, no environment, no ground, empty background, single character, full body, centered, no scenery",
       "category": "creature",
       "monster_id": "mage_with_staff",
-      "variant": "base"
+      "variant": "seed_1"
+    },
+    {
+      "id": "mage_with_staff_v2",
+      "title": "Маг с посохом (Mage with Staff)",
+      "prompt": "<lora:gf_lowpoly:0.9>, gf_lowpoly, ningraphix, ps1 game screenshot, anthropomorphic cat mage, blue wizard hat, low-poly magic robe, chibi proportions, big angular head, very low polygon mesh, extremely chunky blocky silhouette, few large geometric facets, highly optimized game model, minimal geometry, crisp stylized hand-painted textures, rich clean color blocks, sharp material definition, painted PS1 textures on flat facets, flat shaded, crisp silhouette, feline cat eyes, T-pose, full body, centered, plain solid light grey background, no scenery, no environment, no ground, empty background, single character, full body, centered, no scenery",
+      "category": "creature",
+      "monster_id": "mage_with_staff",
+      "variant": "seed_2"
     },
     {
       "id": "summoner_with_orb",
       "title": "Призыватель с шаром (Summoner with Orb)",
-      "prompt": "<lora:gf_lowpoly:0.9>, gf_lowpoly, ningraphix, ps1 game screenshot, anthropomorphic cat summoner, dark purple mystic cloak, holding a glowing magical orb floating above palm, mystical low-poly runes, chibi proportions, big angular head, feline cat eyes, chunky low-poly, simple geometric forms, large clean flat facets, PS1 game character, flat shaded, crisp silhouette, limited detail, T-pose, neutral solid light grey background",
+      "prompt": "<lora:gf_lowpoly:0.9>, gf_lowpoly, ningraphix, ps1 game screenshot, anthropomorphic cat summoner, dark purple mystic cloak, mystical low-poly runes, chibi proportions, big angular head, very low polygon mesh, extremely chunky blocky silhouette, few large geometric facets, highly optimized game model, minimal geometry, crisp stylized hand-painted textures, rich clean color blocks, sharp material definition, painted PS1 textures on flat facets, flat shaded, crisp silhouette, feline cat eyes, T-pose, full body, centered, plain solid light grey background, no scenery, no environment, no ground, empty background, single character, full body, centered, no scenery",
       "category": "creature",
       "monster_id": "summoner_with_orb",
-      "variant": "base"
+      "variant": "seed_1"
+    },
+    {
+      "id": "summoner_with_orb_v2",
+      "title": "Призыватель с шаром (Summoner with Orb)",
+      "prompt": "<lora:gf_lowpoly:0.9>, gf_lowpoly, ningraphix, ps1 game screenshot, anthropomorphic cat summoner, dark purple mystic cloak, mystical low-poly runes, chibi proportions, big angular head, very low polygon mesh, extremely chunky blocky silhouette, few large geometric facets, highly optimized game model, minimal geometry, crisp stylized hand-painted textures, rich clean color blocks, sharp material definition, painted PS1 textures on flat facets, flat shaded, crisp silhouette, feline cat eyes, T-pose, full body, centered, plain solid light grey background, no scenery, no environment, no ground, empty background, single character, full body, centered, no scenery",
+      "category": "creature",
+      "monster_id": "summoner_with_orb",
+      "variant": "seed_2"
     },
     {
       "id": "archer_ranger",
       "title": "Лучник (Archer / Ranger)",
-      "prompt": "<lora:gf_lowpoly:0.9>, gf_lowpoly, ningraphix, ps1 game screenshot, anthropomorphic cat archer, wearing low-poly leather tunic and cowl, holding a simple polygonal wooden bow, quiver with arrows on back, chibi proportions, big angular head, feline cat eyes, chunky low-poly, simple geometric forms, large clean flat facets, PS1 game character, flat shaded, crisp silhouette, limited detail, T-pose, neutral solid light grey background",
+      "prompt": "<lora:gf_lowpoly:0.9>, gf_lowpoly, ningraphix, ps1 game screenshot, feral wild cat, rugged primitive survivor, simple ragged cloth tunic and wraps, rustic patched outfit, no bow, no quiver, no weapons, chibi proportions, big angular head, very low polygon mesh, extremely chunky blocky silhouette, few large geometric facets, highly optimized game model, minimal geometry, crisp stylized hand-painted textures, rich clean color blocks, sharp material definition, painted PS1 textures on flat facets, flat shaded, crisp silhouette, T-pose, full body, centered, plain solid light grey background, no scenery, no environment, no ground, empty background, single character, full body, centered, no scenery",
       "category": "creature",
       "monster_id": "archer_ranger",
-      "variant": "base"
+      "variant": "seed_1"
+    },
+    {
+      "id": "archer_ranger_v2",
+      "title": "Лучник (Archer / Ranger)",
+      "prompt": "<lora:gf_lowpoly:0.9>, gf_lowpoly, ningraphix, ps1 game screenshot, feral wild cat, rugged primitive survivor, simple ragged cloth tunic and wraps, rustic patched outfit, no bow, no quiver, no weapons, chibi proportions, big angular head, very low polygon mesh, extremely chunky blocky silhouette, few large geometric facets, highly optimized game model, minimal geometry, crisp stylized hand-painted textures, rich clean color blocks, sharp material definition, painted PS1 textures on flat facets, flat shaded, crisp silhouette, T-pose, full body, centered, plain solid light grey background, no scenery, no environment, no ground, empty background, single character, full body, centered, no scenery",
+      "category": "creature",
+      "monster_id": "archer_ranger",
+      "variant": "seed_2"
     },
     {
       "id": "knight",
       "title": "Рыцарь (Knight)",
-      "prompt": "<lora:gf_lowpoly:0.9>, gf_lowpoly, ningraphix, ps1 game screenshot, anthropomorphic orange cat knight, wearing simple low poly iron plate armor, blocky shoulder pads, holding a flat polygonal sword, chibi proportions, big angular head, feline cat eyes, chunky low-poly, simple geometric forms, large clean flat facets, PS1 game character, flat shaded, crisp silhouette, limited detail, T-pose, neutral solid light grey background",
+      "prompt": "<lora:gf_lowpoly:0.9>, gf_lowpoly, ningraphix, ps1 game screenshot, anthropomorphic orange cat knight, wearing simple low poly iron plate armor, blocky shoulder pads, chibi proportions, big angular head, very low polygon mesh, extremely chunky blocky silhouette, few large geometric facets, highly optimized game model, minimal geometry, crisp stylized hand-painted textures, rich clean color blocks, sharp material definition, painted PS1 textures on flat facets, flat shaded, crisp silhouette, feline cat eyes, T-pose, full body, centered, plain solid light grey background, no scenery, no environment, no ground, empty background, single character, full body, centered, no scenery",
       "category": "creature",
       "monster_id": "knight",
-      "variant": "base"
+      "variant": "seed_1"
+    },
+    {
+      "id": "knight_v2",
+      "title": "Рыцарь (Knight)",
+      "prompt": "<lora:gf_lowpoly:0.9>, gf_lowpoly, ningraphix, ps1 game screenshot, anthropomorphic orange cat knight, wearing simple low poly iron plate armor, blocky shoulder pads, chibi proportions, big angular head, very low polygon mesh, extremely chunky blocky silhouette, few large geometric facets, highly optimized game model, minimal geometry, crisp stylized hand-painted textures, rich clean color blocks, sharp material definition, painted PS1 textures on flat facets, flat shaded, crisp silhouette, feline cat eyes, T-pose, full body, centered, plain solid light grey background, no scenery, no environment, no ground, empty background, single character, full body, centered, no scenery",
+      "category": "creature",
+      "monster_id": "knight",
+      "variant": "seed_2"
     },
     {
       "id": "green_slime",
       "title": "Зеленый Слизень (Green Slime Cat)",
-      "prompt": "<lora:gf_lowpoly:0.9>, gf_lowpoly, ningraphix, ps1 game screenshot, anthropomorphic cat hybrid, green slime creature cat, translucent gooey emerald green body, cat ears and tail, dripping low poly green slime, chibi proportions, big angular head, feline cat eyes, chunky low-poly, simple geometric forms, large clean flat facets, PS1 game character, flat shaded, crisp silhouette, limited detail, T-pose, neutral solid light grey background",
+      "prompt": "<lora:gf_lowpoly:0.9>, gf_lowpoly, ningraphix, ps1 game screenshot, anthropomorphic cat hybrid, green slime creature cat, translucent gooey emerald green body, cat ears and tail, dripping low poly green slime, chibi proportions, big angular head, very low polygon mesh, extremely chunky blocky silhouette, few large geometric facets, highly optimized game model, minimal geometry, crisp stylized hand-painted textures, rich clean color blocks, sharp material definition, painted PS1 textures on flat facets, flat shaded, crisp silhouette, feline cat eyes, T-pose, full body, centered, plain solid light grey background, no scenery, no environment, no ground, empty background, single character, full body, centered, no scenery",
       "category": "creature",
       "monster_id": "green_slime",
-      "variant": "base"
+      "variant": "seed_1"
+    },
+    {
+      "id": "green_slime_v2",
+      "title": "Зеленый Слизень (Green Slime Cat)",
+      "prompt": "<lora:gf_lowpoly:0.9>, gf_lowpoly, ningraphix, ps1 game screenshot, anthropomorphic cat hybrid, green slime creature cat, translucent gooey emerald green body, cat ears and tail, dripping low poly green slime, chibi proportions, big angular head, very low polygon mesh, extremely chunky blocky silhouette, few large geometric facets, highly optimized game model, minimal geometry, crisp stylized hand-painted textures, rich clean color blocks, sharp material definition, painted PS1 textures on flat facets, flat shaded, crisp silhouette, feline cat eyes, T-pose, full body, centered, plain solid light grey background, no scenery, no environment, no ground, empty background, single character, full body, centered, no scenery",
+      "category": "creature",
+      "monster_id": "green_slime",
+      "variant": "seed_2"
     },
     {
       "id": "red_slime",
       "title": "Красный Слизень (Red Slime Cat)",
-      "prompt": "<lora:gf_lowpoly:0.9>, gf_lowpoly, ningraphix, ps1 game screenshot, anthropomorphic cat hybrid, red slime creature cat, translucent gooey ruby red body, cat ears and tail, dripping low poly red slime, chibi proportions, big angular head, feline cat eyes, chunky low-poly, simple geometric forms, large clean flat facets, PS1 game character, flat shaded, crisp silhouette, limited detail, T-pose, neutral solid light grey background",
+      "prompt": "<lora:gf_lowpoly:0.9>, gf_lowpoly, ningraphix, ps1 game screenshot, red slime cat, round plush blob body, cat face, cat eyes, cat ears, small cat tail, chibi proportions, big angular head, very low polygon mesh, extremely chunky blocky silhouette, few large geometric facets, highly optimized game model, minimal geometry, crisp stylized hand-painted textures, rich clean color blocks, sharp material definition, painted PS1 textures on flat facets, flat shaded, crisp silhouette, T-pose, full body, centered, plain solid light grey background, no scenery, no environment, no ground, empty background, single character, full body, centered, no scenery",
       "category": "creature",
       "monster_id": "red_slime",
-      "variant": "base"
+      "variant": "seed_1"
+    },
+    {
+      "id": "red_slime_v2",
+      "title": "Красный Слизень (Red Slime Cat)",
+      "prompt": "<lora:gf_lowpoly:0.9>, gf_lowpoly, ningraphix, ps1 game screenshot, red slime cat, round plush blob body, cat face, cat eyes, cat ears, small cat tail, chibi proportions, big angular head, very low polygon mesh, extremely chunky blocky silhouette, few large geometric facets, highly optimized game model, minimal geometry, crisp stylized hand-painted textures, rich clean color blocks, sharp material definition, painted PS1 textures on flat facets, flat shaded, crisp silhouette, T-pose, full body, centered, plain solid light grey background, no scenery, no environment, no ground, empty background, single character, full body, centered, no scenery",
+      "category": "creature",
+      "monster_id": "red_slime",
+      "variant": "seed_2"
     },
     {
       "id": "yellow_slime",
       "title": "Желтый Слизень (Yellow Slime Cat)",
-      "prompt": "<lora:gf_lowpoly:0.9>, gf_lowpoly, ningraphix, ps1 game screenshot, anthropomorphic cat hybrid, yellow slime creature cat, translucent gooey amber yellow body, cat ears and tail, dripping low poly yellow slime, chibi proportions, big angular head, feline cat eyes, chunky low-poly, simple geometric forms, large clean flat facets, PS1 game character, flat shaded, crisp silhouette, limited detail, T-pose, neutral solid light grey background",
+      "prompt": "<lora:gf_lowpoly:0.9>, gf_lowpoly, ningraphix, ps1 game screenshot, yellow slime cat, round plush blob body, cat face, cat eyes, cat ears, small cat tail, chibi proportions, big angular head, very low polygon mesh, extremely chunky blocky silhouette, few large geometric facets, highly optimized game model, minimal geometry, crisp stylized hand-painted textures, rich clean color blocks, sharp material definition, painted PS1 textures on flat facets, flat shaded, crisp silhouette, T-pose, full body, centered, plain solid light grey background, no scenery, no environment, no ground, empty background, single character, full body, centered, no scenery",
       "category": "creature",
       "monster_id": "yellow_slime",
-      "variant": "base"
+      "variant": "seed_1"
+    },
+    {
+      "id": "yellow_slime_v2",
+      "title": "Желтый Слизень (Yellow Slime Cat)",
+      "prompt": "<lora:gf_lowpoly:0.9>, gf_lowpoly, ningraphix, ps1 game screenshot, yellow slime cat, round plush blob body, cat face, cat eyes, cat ears, small cat tail, chibi proportions, big angular head, very low polygon mesh, extremely chunky blocky silhouette, few large geometric facets, highly optimized game model, minimal geometry, crisp stylized hand-painted textures, rich clean color blocks, sharp material definition, painted PS1 textures on flat facets, flat shaded, crisp silhouette, T-pose, full body, centered, plain solid light grey background, no scenery, no environment, no ground, empty background, single character, full body, centered, no scenery",
+      "category": "creature",
+      "monster_id": "yellow_slime",
+      "variant": "seed_2"
     },
     {
       "id": "merchant",
       "title": "Кадры без оружия / Простой гражданин (Merchant Cat)",
-      "prompt": "<lora:gf_lowpoly:0.9>, gf_lowpoly, ningraphix, ps1 game screenshot, anthropomorphic cat merchant, holding a small blocky treasure chest, apron over tunic, chibi proportions, big angular head, feline cat eyes, chunky low-poly, simple geometric forms, large clean flat facets, PS1 game character, flat shaded, crisp silhouette, limited detail, T-pose, neutral solid light grey background",
+      "prompt": "<lora:gf_lowpoly:0.9>, gf_lowpoly, ningraphix, ps1 game screenshot, anthropomorphic cat merchant, apron over tunic, chibi proportions, big angular head, very low polygon mesh, extremely chunky blocky silhouette, few large geometric facets, highly optimized game model, minimal geometry, crisp stylized hand-painted textures, rich clean color blocks, sharp material definition, painted PS1 textures on flat facets, flat shaded, crisp silhouette, feline cat eyes, T-pose, full body, centered, plain solid light grey background, no scenery, no environment, no ground, empty background, single character, full body, centered, no scenery",
       "category": "creature",
       "monster_id": "merchant",
-      "variant": "base"
+      "variant": "seed_1"
+    },
+    {
+      "id": "merchant_v2",
+      "title": "Кадры без оружия / Простой гражданин (Merchant Cat)",
+      "prompt": "<lora:gf_lowpoly:0.9>, gf_lowpoly, ningraphix, ps1 game screenshot, anthropomorphic cat merchant, apron over tunic, chibi proportions, big angular head, very low polygon mesh, extremely chunky blocky silhouette, few large geometric facets, highly optimized game model, minimal geometry, crisp stylized hand-painted textures, rich clean color blocks, sharp material definition, painted PS1 textures on flat facets, flat shaded, crisp silhouette, feline cat eyes, T-pose, full body, centered, plain solid light grey background, no scenery, no environment, no ground, empty background, single character, full body, centered, no scenery",
+      "category": "creature",
+      "monster_id": "merchant",
+      "variant": "seed_2"
     },
     {
       "id": "orange_fire_elemental",
       "title": "Оранжевый огненный элементаль (Orange Fire Elemental Cat)",
-      "prompt": "<lora:gf_lowpoly:0.9>, gf_lowpoly, ningraphix, ps1 game screenshot, anthropomorphic cat hybrid, orange fire elemental cat, bright orange low-poly flame body, amber molten core, glowing orange flame shards, cat ear silhouettes in orange fire, no solid skin, no dragon wings, chibi proportions, big angular head, feline cat eyes, chunky low-poly, simple geometric forms, large clean flat facets, PS1 game character, flat shaded, crisp silhouette, limited detail, T-pose, neutral solid light grey background",
+      "prompt": "<lora:gf_lowpoly:0.9>, gf_lowpoly, ningraphix, ps1 game screenshot, anthropomorphic cat hybrid, orange fire elemental cat, bright orange low-poly flame body, amber molten core, glowing orange flame shards, cat ear silhouettes in orange fire, no solid skin, no dragon wings, chibi proportions, big angular head, very low polygon mesh, extremely chunky blocky silhouette, few large geometric facets, highly optimized game model, minimal geometry, crisp stylized hand-painted textures, rich clean color blocks, sharp material definition, painted PS1 textures on flat facets, flat shaded, crisp silhouette, feline cat eyes, T-pose, full body, centered, plain solid light grey background, no scenery, no environment, no ground, empty background, single character, full body, centered, no scenery",
       "category": "creature",
       "monster_id": "orange_fire_elemental",
-      "variant": "base"
+      "variant": "seed_1"
+    },
+    {
+      "id": "orange_fire_elemental_v2",
+      "title": "Оранжевый огненный элементаль (Orange Fire Elemental Cat)",
+      "prompt": "<lora:gf_lowpoly:0.9>, gf_lowpoly, ningraphix, ps1 game screenshot, anthropomorphic cat hybrid, orange fire elemental cat, bright orange low-poly flame body, amber molten core, glowing orange flame shards, cat ear silhouettes in orange fire, no solid skin, no dragon wings, chibi proportions, big angular head, very low polygon mesh, extremely chunky blocky silhouette, few large geometric facets, highly optimized game model, minimal geometry, crisp stylized hand-painted textures, rich clean color blocks, sharp material definition, painted PS1 textures on flat facets, flat shaded, crisp silhouette, feline cat eyes, T-pose, full body, centered, plain solid light grey background, no scenery, no environment, no ground, empty background, single character, full body, centered, no scenery",
+      "category": "creature",
+      "monster_id": "orange_fire_elemental",
+      "variant": "seed_2"
     },
     {
       "id": "cyberpunk",
       "title": "Киберпанк-Кот (Cyberpunk Cat)",
-      "prompt": "<lora:gf_lowpoly:0.9>, gf_lowpoly, ningraphix, ps1 game screenshot, anthropomorphic cat hybrid, cyberpunk cat, blocky futuristic jacket, robotic low-poly arm, chibi proportions, big angular head, feline cat eyes, chunky low-poly, simple geometric forms, large clean flat facets, PS1 game character, flat shaded, crisp silhouette, limited detail, T-pose, neutral solid light grey background",
+      "prompt": "<lora:gf_lowpoly:0.9>, gf_lowpoly, ningraphix, ps1 game screenshot, anthropomorphic cat hybrid, cyberpunk cat, blocky futuristic jacket, robotic low-poly arm, chibi proportions, big angular head, very low polygon mesh, extremely chunky blocky silhouette, few large geometric facets, highly optimized game model, minimal geometry, crisp stylized hand-painted textures, rich clean color blocks, sharp material definition, painted PS1 textures on flat facets, flat shaded, crisp silhouette, feline cat eyes, T-pose, full body, centered, plain solid light grey background, no scenery, no environment, no ground, empty background, single character, full body, centered, no scenery",
       "category": "creature",
       "monster_id": "cyberpunk",
-      "variant": "base"
+      "variant": "seed_1"
+    },
+    {
+      "id": "cyberpunk_v2",
+      "title": "Киберпанк-Кот (Cyberpunk Cat)",
+      "prompt": "<lora:gf_lowpoly:0.9>, gf_lowpoly, ningraphix, ps1 game screenshot, anthropomorphic cat hybrid, cyberpunk cat, blocky futuristic jacket, robotic low-poly arm, chibi proportions, big angular head, very low polygon mesh, extremely chunky blocky silhouette, few large geometric facets, highly optimized game model, minimal geometry, crisp stylized hand-painted textures, rich clean color blocks, sharp material definition, painted PS1 textures on flat facets, flat shaded, crisp silhouette, feline cat eyes, T-pose, full body, centered, plain solid light grey background, no scenery, no environment, no ground, empty background, single character, full body, centered, no scenery",
+      "category": "creature",
+      "monster_id": "cyberpunk",
+      "variant": "seed_2"
     },
     {
       "id": "astronaut",
       "title": "Кот-Космонавт (Astronaut Cat)",
-      "prompt": "<lora:gf_lowpoly:0.9>, gf_lowpoly, ningraphix, ps1 game screenshot, anthropomorphic cat astronaut, bulky spherical low-poly space helmet, retro space suit, oxygen tank on back, chibi proportions, big angular head, feline cat eyes, chunky low-poly, simple geometric forms, large clean flat facets, PS1 game character, flat shaded, crisp silhouette, limited detail, T-pose, neutral solid light grey background",
+      "prompt": "<lora:gf_lowpoly:0.9>, gf_lowpoly, ningraphix, ps1 game screenshot, anthropomorphic cat astronaut, bulky spherical low-poly space helmet, retro space suit, chibi proportions, big angular head, very low polygon mesh, extremely chunky blocky silhouette, few large geometric facets, highly optimized game model, minimal geometry, crisp stylized hand-painted textures, rich clean color blocks, sharp material definition, painted PS1 textures on flat facets, flat shaded, crisp silhouette, feline cat eyes, T-pose, full body, centered, plain solid light grey background, no scenery, no environment, no ground, empty background, single character, full body, centered, no scenery",
       "category": "creature",
       "monster_id": "astronaut",
-      "variant": "base"
+      "variant": "seed_1"
+    },
+    {
+      "id": "astronaut_v2",
+      "title": "Кот-Космонавт (Astronaut Cat)",
+      "prompt": "<lora:gf_lowpoly:0.9>, gf_lowpoly, ningraphix, ps1 game screenshot, anthropomorphic cat astronaut, bulky spherical low-poly space helmet, retro space suit, chibi proportions, big angular head, very low polygon mesh, extremely chunky blocky silhouette, few large geometric facets, highly optimized game model, minimal geometry, crisp stylized hand-painted textures, rich clean color blocks, sharp material definition, painted PS1 textures on flat facets, flat shaded, crisp silhouette, feline cat eyes, T-pose, full body, centered, plain solid light grey background, no scenery, no environment, no ground, empty background, single character, full body, centered, no scenery",
+      "category": "creature",
+      "monster_id": "astronaut",
+      "variant": "seed_2"
     },
     {
       "id": "ninja",
       "title": "Кот-Ниндзя (Ninja Cat)",
-      "prompt": "<lora:gf_lowpoly:0.9>, gf_lowpoly, ningraphix, ps1 game screenshot, anthropomorphic Siamese cat ninja, black shinobi outfit, katana on back, red sash belt, chibi proportions, big angular head, feline cat eyes, chunky low-poly, simple geometric forms, large clean flat facets, PS1 game character, flat shaded, crisp silhouette, limited detail, T-pose, neutral solid light grey background",
+      "prompt": "<lora:gf_lowpoly:0.9>, gf_lowpoly, ningraphix, ps1 game screenshot, anthropomorphic Siamese cat ninja, black shinobi outfit, red sash belt, chibi proportions, big angular head, very low polygon mesh, extremely chunky blocky silhouette, few large geometric facets, highly optimized game model, minimal geometry, crisp stylized hand-painted textures, rich clean color blocks, sharp material definition, painted PS1 textures on flat facets, flat shaded, crisp silhouette, feline cat eyes, T-pose, full body, centered, plain solid light grey background, no scenery, no environment, no ground, empty background, single character, full body, centered, no scenery",
       "category": "creature",
       "monster_id": "ninja",
-      "variant": "base"
+      "variant": "seed_1"
+    },
+    {
+      "id": "ninja_v2",
+      "title": "Кот-Ниндзя (Ninja Cat)",
+      "prompt": "<lora:gf_lowpoly:0.9>, gf_lowpoly, ningraphix, ps1 game screenshot, anthropomorphic Siamese cat ninja, black shinobi outfit, red sash belt, chibi proportions, big angular head, very low polygon mesh, extremely chunky blocky silhouette, few large geometric facets, highly optimized game model, minimal geometry, crisp stylized hand-painted textures, rich clean color blocks, sharp material definition, painted PS1 textures on flat facets, flat shaded, crisp silhouette, feline cat eyes, T-pose, full body, centered, plain solid light grey background, no scenery, no environment, no ground, empty background, single character, full body, centered, no scenery",
+      "category": "creature",
+      "monster_id": "ninja",
+      "variant": "seed_2"
     },
     {
       "id": "pirate",
       "title": "Кот-Пират (Pirate Cat)",
-      "prompt": "<lora:gf_lowpoly:0.9>, gf_lowpoly, ningraphix, ps1 game screenshot, anthropomorphic cat pirate, captain hat, blocky hook hand, holding a flintlock pistol, chibi proportions, big angular head, feline cat eyes, chunky low-poly, simple geometric forms, large clean flat facets, PS1 game character, flat shaded, crisp silhouette, limited detail, T-pose, neutral solid light grey background",
+      "prompt": "<lora:gf_lowpoly:0.9>, gf_lowpoly, ningraphix, ps1 game screenshot, anthropomorphic cat pirate, captain hat, chibi proportions, big angular head, very low polygon mesh, extremely chunky blocky silhouette, few large geometric facets, highly optimized game model, minimal geometry, crisp stylized hand-painted textures, rich clean color blocks, sharp material definition, painted PS1 textures on flat facets, flat shaded, crisp silhouette, feline cat eyes, T-pose, full body, centered, plain solid light grey background, no scenery, no environment, no ground, empty background, single character, full body, centered, no scenery",
       "category": "creature",
       "monster_id": "pirate",
-      "variant": "base"
+      "variant": "seed_1"
+    },
+    {
+      "id": "pirate_v2",
+      "title": "Кот-Пират (Pirate Cat)",
+      "prompt": "<lora:gf_lowpoly:0.9>, gf_lowpoly, ningraphix, ps1 game screenshot, anthropomorphic cat pirate, captain hat, chibi proportions, big angular head, very low polygon mesh, extremely chunky blocky silhouette, few large geometric facets, highly optimized game model, minimal geometry, crisp stylized hand-painted textures, rich clean color blocks, sharp material definition, painted PS1 textures on flat facets, flat shaded, crisp silhouette, feline cat eyes, T-pose, full body, centered, plain solid light grey background, no scenery, no environment, no ground, empty background, single character, full body, centered, no scenery",
+      "category": "creature",
+      "monster_id": "pirate",
+      "variant": "seed_2"
     },
     {
       "id": "goblin",
       "title": "goblin",
-      "prompt": "<lora:gf_lowpoly:0.9>, gf_lowpoly, ningraphix, ps1 game screenshot, anthropomorphic cat hybrid, goblin cat, green skin, pointed ears, chibi proportions, big angular head, feline cat eyes, chunky low-poly, simple geometric forms, large clean flat facets, PS1 game character, flat shaded, crisp silhouette, limited detail, low-sided cylinder arms, truncated pyramid torso, ragged leather tunic, holding a small polygonal dagger, T-pose, neutral solid light grey background",
+      "prompt": "<lora:gf_lowpoly:0.9>, gf_lowpoly, ningraphix, ps1 game screenshot, anthropomorphic cat hybrid, goblin cat, green skin, pointed ears, , , , low-sided cylinder arms, truncated pyramid torso, ragged leather tunic, chibi proportions, big angular head, very low polygon mesh, extremely chunky blocky silhouette, few large geometric facets, highly optimized game model, minimal geometry, crisp stylized hand-painted textures, rich clean color blocks, sharp material definition, painted PS1 textures on flat facets, flat shaded, crisp silhouette, feline cat eyes, T-pose, full body, centered, plain solid light grey background, no scenery, no environment, no ground, empty background, single character, full body, centered, no scenery",
       "category": "creature",
       "monster_id": "goblin",
-      "variant": "base"
+      "variant": "seed_1"
+    },
+    {
+      "id": "goblin_v2",
+      "title": "goblin",
+      "prompt": "<lora:gf_lowpoly:0.9>, gf_lowpoly, ningraphix, ps1 game screenshot, anthropomorphic cat hybrid, goblin cat, green skin, pointed ears, , , , low-sided cylinder arms, truncated pyramid torso, ragged leather tunic, chibi proportions, big angular head, very low polygon mesh, extremely chunky blocky silhouette, few large geometric facets, highly optimized game model, minimal geometry, crisp stylized hand-painted textures, rich clean color blocks, sharp material definition, painted PS1 textures on flat facets, flat shaded, crisp silhouette, feline cat eyes, T-pose, full body, centered, plain solid light grey background, no scenery, no environment, no ground, empty background, single character, full body, centered, no scenery",
+      "category": "creature",
+      "monster_id": "goblin",
+      "variant": "seed_2"
     },
     {
       "id": "slime",
       "title": "Кот-Слизень (Slime Cat)",
-      "prompt": "<lora:gf_lowpoly:0.9>, gf_lowpoly, ningraphix, ps1 game screenshot, anthropomorphic cat hybrid, slime creature cat, translucent green gooey body, cat ears and tail, chibi proportions, big angular head, feline cat eyes, chunky low-poly, simple geometric forms, large clean flat facets, PS1 game character, flat shaded, crisp silhouette, limited detail, low-sided cylinder arms, truncated pyramid torso, dripping slime details, T-pose, neutral solid light grey background",
+      "prompt": "<lora:gf_lowpoly:0.9>, gf_lowpoly, ningraphix, ps1 game screenshot, anthropomorphic cat hybrid, slime creature cat, translucent green gooey body, cat ears and tail, , , , low-sided cylinder arms, truncated pyramid torso, dripping slime details, chibi proportions, big angular head, very low polygon mesh, extremely chunky blocky silhouette, few large geometric facets, highly optimized game model, minimal geometry, crisp stylized hand-painted textures, rich clean color blocks, sharp material definition, painted PS1 textures on flat facets, flat shaded, crisp silhouette, feline cat eyes, T-pose, full body, centered, plain solid light grey background, no scenery, no environment, no ground, empty background, single character, full body, centered, no scenery",
       "category": "creature",
       "monster_id": "slime",
-      "variant": "base"
+      "variant": "seed_1"
+    },
+    {
+      "id": "slime_v2",
+      "title": "Кот-Слизень (Slime Cat)",
+      "prompt": "<lora:gf_lowpoly:0.9>, gf_lowpoly, ningraphix, ps1 game screenshot, anthropomorphic cat hybrid, slime creature cat, translucent green gooey body, cat ears and tail, , , , low-sided cylinder arms, truncated pyramid torso, dripping slime details, chibi proportions, big angular head, very low polygon mesh, extremely chunky blocky silhouette, few large geometric facets, highly optimized game model, minimal geometry, crisp stylized hand-painted textures, rich clean color blocks, sharp material definition, painted PS1 textures on flat facets, flat shaded, crisp silhouette, feline cat eyes, T-pose, full body, centered, plain solid light grey background, no scenery, no environment, no ground, empty background, single character, full body, centered, no scenery",
+      "category": "creature",
+      "monster_id": "slime",
+      "variant": "seed_2"
     },
     {
       "id": "orc",
       "title": "Кот-Орк (Orc Cat)",
-      "prompt": "<lora:gf_lowpoly:0.9>, gf_lowpoly, ningraphix, ps1 game screenshot, anthropomorphic cat hybrid, massive orc cat, green fur skin, lower tusks, chibi proportions, heavy broad angular head, chunky low-poly, simple geometric forms, large clean flat facets, PS1 game character, flat shaded, crisp silhouette, limited detail, thick cylinder arms, broad torso, rough spiked iron armor, holding a polygonal battle axe, feline cat eyes, T-pose, neutral solid light grey background",
+      "prompt": "<lora:gf_lowpoly:0.9>, gf_lowpoly, ningraphix, ps1 game screenshot, anthropomorphic cat hybrid, massive orc cat, green fur skin, lower tusks, chibi proportions, heavy broad angular head, , thick cylinder arms, broad torso, rough spiked iron armor, chibi proportions, big angular head, very low polygon mesh, extremely chunky blocky silhouette, few large geometric facets, highly optimized game model, minimal geometry, crisp stylized hand-painted textures, rich clean color blocks, sharp material definition, painted PS1 textures on flat facets, flat shaded, crisp silhouette, feline cat eyes, T-pose, full body, centered, plain solid light grey background, no scenery, no environment, no ground, empty background, single character, full body, centered, no scenery",
       "category": "creature",
       "monster_id": "orc",
-      "variant": "base"
+      "variant": "seed_1"
+    },
+    {
+      "id": "orc_v2",
+      "title": "Кот-Орк (Orc Cat)",
+      "prompt": "<lora:gf_lowpoly:0.9>, gf_lowpoly, ningraphix, ps1 game screenshot, anthropomorphic cat hybrid, massive orc cat, green fur skin, lower tusks, chibi proportions, heavy broad angular head, , thick cylinder arms, broad torso, rough spiked iron armor, chibi proportions, big angular head, very low polygon mesh, extremely chunky blocky silhouette, few large geometric facets, highly optimized game model, minimal geometry, crisp stylized hand-painted textures, rich clean color blocks, sharp material definition, painted PS1 textures on flat facets, flat shaded, crisp silhouette, feline cat eyes, T-pose, full body, centered, plain solid light grey background, no scenery, no environment, no ground, empty background, single character, full body, centered, no scenery",
+      "category": "creature",
+      "monster_id": "orc",
+      "variant": "seed_2"
     },
     {
       "id": "kobold",
       "title": "Кот-Кобольд (Kobold Cat)",
-      "prompt": "<lora:gf_lowpoly:0.9>, gf_lowpoly, ningraphix, ps1 game screenshot, anthropomorphic cat hybrid, kobold cat, red reptilian scaled skin, small dragon horns, cat whiskers, long lizard tail, chibi proportions, big angular head, feline cat eyes, chunky low-poly, simple geometric forms, large clean flat facets, PS1 game character, flat shaded, crisp silhouette, limited detail, holding a low-poly wooden spear, T-pose, neutral solid light grey background",
+      "prompt": "<lora:gf_lowpoly:0.9>, gf_lowpoly, ningraphix, ps1 game screenshot, anthropomorphic cat hybrid, kobold cat, red reptilian scaled skin, small dragon horns, cat whiskers, long lizard tail, chibi proportions, big angular head, very low polygon mesh, extremely chunky blocky silhouette, few large geometric facets, highly optimized game model, minimal geometry, crisp stylized hand-painted textures, rich clean color blocks, sharp material definition, painted PS1 textures on flat facets, flat shaded, crisp silhouette, feline cat eyes, T-pose, full body, centered, plain solid light grey background, no scenery, no environment, no ground, empty background, single character, full body, centered, no scenery",
       "category": "creature",
       "monster_id": "kobold",
-      "variant": "base"
+      "variant": "seed_1"
+    },
+    {
+      "id": "kobold_v2",
+      "title": "Кот-Кобольд (Kobold Cat)",
+      "prompt": "<lora:gf_lowpoly:0.9>, gf_lowpoly, ningraphix, ps1 game screenshot, anthropomorphic cat hybrid, kobold cat, red reptilian scaled skin, small dragon horns, cat whiskers, long lizard tail, chibi proportions, big angular head, very low polygon mesh, extremely chunky blocky silhouette, few large geometric facets, highly optimized game model, minimal geometry, crisp stylized hand-painted textures, rich clean color blocks, sharp material definition, painted PS1 textures on flat facets, flat shaded, crisp silhouette, feline cat eyes, T-pose, full body, centered, plain solid light grey background, no scenery, no environment, no ground, empty background, single character, full body, centered, no scenery",
+      "category": "creature",
+      "monster_id": "kobold",
+      "variant": "seed_2"
     },
     {
       "id": "undead_skeleton",
       "title": "Кот-Скелет (Undead / Skeleton Cat)",
-      "prompt": "<lora:gf_lowpoly:0.9>, gf_lowpoly, ningraphix, ps1 game screenshot, anthropomorphic cat hybrid, skeleton cat, skull head with cat ears, bone ribcage, chibi proportions, big angular head, feline cat eyes, chunky low-poly, simple geometric forms, large clean flat facets, PS1 game character, flat shaded, crisp silhouette, limited detail, blocky bone limbs, holding a polygonal scythe, T-pose, neutral solid light grey background",
+      "prompt": "<lora:gf_lowpoly:0.9>, gf_lowpoly, ningraphix, ps1 game screenshot, anthropomorphic cat hybrid, skeleton cat, skull head with cat ears, bone ribcage, , , , blocky bone limbs, chibi proportions, big angular head, very low polygon mesh, extremely chunky blocky silhouette, few large geometric facets, highly optimized game model, minimal geometry, crisp stylized hand-painted textures, rich clean color blocks, sharp material definition, painted PS1 textures on flat facets, flat shaded, crisp silhouette, feline cat eyes, T-pose, full body, centered, plain solid light grey background, no scenery, no environment, no ground, empty background, single character, full body, centered, no scenery",
       "category": "creature",
       "monster_id": "undead_skeleton",
-      "variant": "base"
+      "variant": "seed_1"
+    },
+    {
+      "id": "undead_skeleton_v2",
+      "title": "Кот-Скелет (Undead / Skeleton Cat)",
+      "prompt": "<lora:gf_lowpoly:0.9>, gf_lowpoly, ningraphix, ps1 game screenshot, anthropomorphic cat hybrid, skeleton cat, skull head with cat ears, bone ribcage, , , , blocky bone limbs, chibi proportions, big angular head, very low polygon mesh, extremely chunky blocky silhouette, few large geometric facets, highly optimized game model, minimal geometry, crisp stylized hand-painted textures, rich clean color blocks, sharp material definition, painted PS1 textures on flat facets, flat shaded, crisp silhouette, feline cat eyes, T-pose, full body, centered, plain solid light grey background, no scenery, no environment, no ground, empty background, single character, full body, centered, no scenery",
+      "category": "creature",
+      "monster_id": "undead_skeleton",
+      "variant": "seed_2"
     },
     {
       "id": "zombie",
       "title": "Кот-Зомби (Zombie Cat)",
-      "prompt": "<lora:gf_lowpoly:0.9>, gf_lowpoly, ningraphix, ps1 game screenshot, anthropomorphic cat hybrid, zombie cat, pale greenish gray skin, exposed low-poly bone ribs, torn tattered clothes, chibi proportions, big angular head, feline cat eyes, chunky low-poly, simple geometric forms, large clean flat facets, PS1 game character, flat shaded, crisp silhouette, limited detail, T-pose, neutral solid light grey background",
+      "prompt": "<lora:gf_lowpoly:0.9>, gf_lowpoly, ningraphix, ps1 game screenshot, anthropomorphic cat hybrid, zombie cat, pale greenish gray skin, exposed low-poly bone ribs, torn tattered clothes, chibi proportions, big angular head, very low polygon mesh, extremely chunky blocky silhouette, few large geometric facets, highly optimized game model, minimal geometry, crisp stylized hand-painted textures, rich clean color blocks, sharp material definition, painted PS1 textures on flat facets, flat shaded, crisp silhouette, feline cat eyes, T-pose, full body, centered, plain solid light grey background, no scenery, no environment, no ground, empty background, single character, full body, centered, no scenery",
       "category": "creature",
       "monster_id": "zombie",
-      "variant": "base"
+      "variant": "seed_1"
+    },
+    {
+      "id": "zombie_v2",
+      "title": "Кот-Зомби (Zombie Cat)",
+      "prompt": "<lora:gf_lowpoly:0.9>, gf_lowpoly, ningraphix, ps1 game screenshot, anthropomorphic cat hybrid, zombie cat, pale greenish gray skin, exposed low-poly bone ribs, torn tattered clothes, chibi proportions, big angular head, very low polygon mesh, extremely chunky blocky silhouette, few large geometric facets, highly optimized game model, minimal geometry, crisp stylized hand-painted textures, rich clean color blocks, sharp material definition, painted PS1 textures on flat facets, flat shaded, crisp silhouette, feline cat eyes, T-pose, full body, centered, plain solid light grey background, no scenery, no environment, no ground, empty background, single character, full body, centered, no scenery",
+      "category": "creature",
+      "monster_id": "zombie",
+      "variant": "seed_2"
     },
     {
       "id": "dark_orc",
       "title": "Кот-Тёмный Орк (Dark Orc Cat)",
-      "prompt": "<lora:gf_lowpoly:0.9>, gf_lowpoly, ningraphix, ps1 game screenshot, anthropomorphic cat hybrid, massive dark orc cat, dark grey slate skin, large lower tusks, heavy black low-poly spiked armor, holding a jagged polygonal war cleaver, chibi proportions, big angular head, feline cat eyes, chunky low-poly, simple geometric forms, large clean flat facets, PS1 game character, flat shaded, crisp silhouette, limited detail, T-pose, neutral solid light grey background",
+      "prompt": "<lora:gf_lowpoly:0.9>, gf_lowpoly, ningraphix, ps1 game screenshot, anthropomorphic cat hybrid, massive dark orc cat, dark grey slate skin, large lower tusks, heavy black low-poly spiked armor, chibi proportions, big angular head, very low polygon mesh, extremely chunky blocky silhouette, few large geometric facets, highly optimized game model, minimal geometry, crisp stylized hand-painted textures, rich clean color blocks, sharp material definition, painted PS1 textures on flat facets, flat shaded, crisp silhouette, feline cat eyes, T-pose, full body, centered, plain solid light grey background, no scenery, no environment, no ground, empty background, single character, full body, centered, no scenery",
       "category": "creature",
       "monster_id": "dark_orc",
-      "variant": "base"
+      "variant": "seed_1"
+    },
+    {
+      "id": "dark_orc_v2",
+      "title": "Кот-Тёмный Орк (Dark Orc Cat)",
+      "prompt": "<lora:gf_lowpoly:0.9>, gf_lowpoly, ningraphix, ps1 game screenshot, anthropomorphic cat hybrid, massive dark orc cat, dark grey slate skin, large lower tusks, heavy black low-poly spiked armor, chibi proportions, big angular head, very low polygon mesh, extremely chunky blocky silhouette, few large geometric facets, highly optimized game model, minimal geometry, crisp stylized hand-painted textures, rich clean color blocks, sharp material definition, painted PS1 textures on flat facets, flat shaded, crisp silhouette, feline cat eyes, T-pose, full body, centered, plain solid light grey background, no scenery, no environment, no ground, empty background, single character, full body, centered, no scenery",
+      "category": "creature",
+      "monster_id": "dark_orc",
+      "variant": "seed_2"
     },
     {
       "id": "leprechaun",
       "title": "Кот-Лепрекон (Leprechaun Cat)",
-      "prompt": "<lora:gf_lowpoly:0.9>, gf_lowpoly, ningraphix, ps1 game screenshot, anthropomorphic orange cat leprechaun, green top hat with gold buckle, ginger beard under cat chin, green coat, holding a small low-poly pot of gold, chibi proportions, big angular head, feline cat eyes, chunky low-poly, simple geometric forms, large clean flat facets, PS1 game character, flat shaded, crisp silhouette, limited detail, T-pose, neutral solid light grey background",
+      "prompt": "<lora:gf_lowpoly:0.9>, gf_lowpoly, ningraphix, ps1 game screenshot, anthropomorphic orange cat leprechaun, green top hat with gold buckle, ginger beard under cat chin, green coat, chibi proportions, big angular head, very low polygon mesh, extremely chunky blocky silhouette, few large geometric facets, highly optimized game model, minimal geometry, crisp stylized hand-painted textures, rich clean color blocks, sharp material definition, painted PS1 textures on flat facets, flat shaded, crisp silhouette, feline cat eyes, T-pose, full body, centered, plain solid light grey background, no scenery, no environment, no ground, empty background, single character, full body, centered, no scenery",
       "category": "creature",
       "monster_id": "leprechaun",
-      "variant": "base"
+      "variant": "seed_1"
+    },
+    {
+      "id": "leprechaun_v2",
+      "title": "Кот-Лепрекон (Leprechaun Cat)",
+      "prompt": "<lora:gf_lowpoly:0.9>, gf_lowpoly, ningraphix, ps1 game screenshot, anthropomorphic orange cat leprechaun, green top hat with gold buckle, ginger beard under cat chin, green coat, chibi proportions, big angular head, very low polygon mesh, extremely chunky blocky silhouette, few large geometric facets, highly optimized game model, minimal geometry, crisp stylized hand-painted textures, rich clean color blocks, sharp material definition, painted PS1 textures on flat facets, flat shaded, crisp silhouette, feline cat eyes, T-pose, full body, centered, plain solid light grey background, no scenery, no environment, no ground, empty background, single character, full body, centered, no scenery",
+      "category": "creature",
+      "monster_id": "leprechaun",
+      "variant": "seed_2"
     },
     {
       "id": "werewolf_wolf",
       "title": "Кот-Оборотень (Werewolf Cat / Wolf-Cat)",
-      "prompt": "<lora:gf_lowpoly:0.9>, gf_lowpoly, ningraphix, ps1 game screenshot, anthropomorphic cat hybrid, werewolf cat hybrid, dark grey scruffy fur, sharp wolf fangs mixed with cat whiskers, large claws, torn trousers, feral posture, chibi proportions, big angular head, feline cat eyes, chunky low-poly, simple geometric forms, large clean flat facets, PS1 game character, flat shaded, crisp silhouette, limited detail, T-pose, neutral solid light grey background",
+      "prompt": "<lora:gf_lowpoly:0.9>, gf_lowpoly, ningraphix, ps1 game screenshot, anthropomorphic cat hybrid, werewolf cat hybrid, dark grey scruffy fur, sharp wolf fangs mixed with cat whiskers, large claws, torn trousers, feral posture, chibi proportions, big angular head, very low polygon mesh, extremely chunky blocky silhouette, few large geometric facets, highly optimized game model, minimal geometry, crisp stylized hand-painted textures, rich clean color blocks, sharp material definition, painted PS1 textures on flat facets, flat shaded, crisp silhouette, feline cat eyes, T-pose, full body, centered, plain solid light grey background, no scenery, no environment, no ground, empty background, single character, full body, centered, no scenery",
       "category": "creature",
       "monster_id": "werewolf_wolf",
-      "variant": "base"
+      "variant": "seed_1"
+    },
+    {
+      "id": "werewolf_wolf_v2",
+      "title": "Кот-Оборотень (Werewolf Cat / Wolf-Cat)",
+      "prompt": "<lora:gf_lowpoly:0.9>, gf_lowpoly, ningraphix, ps1 game screenshot, anthropomorphic cat hybrid, werewolf cat hybrid, dark grey scruffy fur, sharp wolf fangs mixed with cat whiskers, large claws, torn trousers, feral posture, chibi proportions, big angular head, very low polygon mesh, extremely chunky blocky silhouette, few large geometric facets, highly optimized game model, minimal geometry, crisp stylized hand-painted textures, rich clean color blocks, sharp material definition, painted PS1 textures on flat facets, flat shaded, crisp silhouette, feline cat eyes, T-pose, full body, centered, plain solid light grey background, no scenery, no environment, no ground, empty background, single character, full body, centered, no scenery",
+      "category": "creature",
+      "monster_id": "werewolf_wolf",
+      "variant": "seed_2"
     },
     {
       "id": "gnoll",
       "title": "Кот-Гнолл / Собако-Кот (Gnoll Cat)",
-      "prompt": "<lora:gf_lowpoly:0.9>, gf_lowpoly, ningraphix, ps1 game screenshot, anthropomorphic cat hybrid, hyena cat gnoll, spotted fur coat, floppy dog-hyena ears mixed with cat ears, jagged fangs, crude low-poly leather armor, holding a blocky bone club, chibi proportions, big angular head, feline cat eyes, chunky low-poly, simple geometric forms, large clean flat facets, PS1 game character, flat shaded, crisp silhouette, limited detail, T-pose, neutral solid light grey background",
+      "prompt": "<lora:gf_lowpoly:0.9>, gf_lowpoly, ningraphix, ps1 game screenshot, anthropomorphic cat hybrid, hyena cat gnoll, spotted fur coat, floppy dog-hyena ears mixed with cat ears, jagged fangs, crude low-poly leather armor, chibi proportions, big angular head, very low polygon mesh, extremely chunky blocky silhouette, few large geometric facets, highly optimized game model, minimal geometry, crisp stylized hand-painted textures, rich clean color blocks, sharp material definition, painted PS1 textures on flat facets, flat shaded, crisp silhouette, feline cat eyes, T-pose, full body, centered, plain solid light grey background, no scenery, no environment, no ground, empty background, single character, full body, centered, no scenery",
       "category": "creature",
       "monster_id": "gnoll",
-      "variant": "base"
+      "variant": "seed_1"
+    },
+    {
+      "id": "gnoll_v2",
+      "title": "Кот-Гнолл / Собако-Кот (Gnoll Cat)",
+      "prompt": "<lora:gf_lowpoly:0.9>, gf_lowpoly, ningraphix, ps1 game screenshot, anthropomorphic cat hybrid, hyena cat gnoll, spotted fur coat, floppy dog-hyena ears mixed with cat ears, jagged fangs, crude low-poly leather armor, chibi proportions, big angular head, very low polygon mesh, extremely chunky blocky silhouette, few large geometric facets, highly optimized game model, minimal geometry, crisp stylized hand-painted textures, rich clean color blocks, sharp material definition, painted PS1 textures on flat facets, flat shaded, crisp silhouette, feline cat eyes, T-pose, full body, centered, plain solid light grey background, no scenery, no environment, no ground, empty background, single character, full body, centered, no scenery",
+      "category": "creature",
+      "monster_id": "gnoll",
+      "variant": "seed_2"
     },
     {
       "id": "lizard_reptile",
       "title": "Кот-Ящер (Lizard / Reptile Cat)",
-      "prompt": "<lora:gf_lowpoly:0.9>, gf_lowpoly, ningraphix, ps1 game screenshot, anthropomorphic cat hybrid, lizard cat, green scaly skin, cat ears, long thick low-poly lizard tail, wearing simple loincloth, holding a polygonal dagger, chibi proportions, big angular head, feline cat eyes, chunky low-poly, simple geometric forms, large clean flat facets, PS1 game character, flat shaded, crisp silhouette, limited detail, T-pose, neutral solid light grey background",
+      "prompt": "<lora:gf_lowpoly:0.9>, gf_lowpoly, ningraphix, ps1 game screenshot, anthropomorphic cat hybrid, lizard cat, green scaly skin, cat ears, long thick low-poly lizard tail, wearing simple loincloth, chibi proportions, big angular head, very low polygon mesh, extremely chunky blocky silhouette, few large geometric facets, highly optimized game model, minimal geometry, crisp stylized hand-painted textures, rich clean color blocks, sharp material definition, painted PS1 textures on flat facets, flat shaded, crisp silhouette, feline cat eyes, T-pose, full body, centered, plain solid light grey background, no scenery, no environment, no ground, empty background, single character, full body, centered, no scenery",
       "category": "creature",
       "monster_id": "lizard_reptile",
-      "variant": "base"
+      "variant": "seed_1"
+    },
+    {
+      "id": "lizard_reptile_v2",
+      "title": "Кот-Ящер (Lizard / Reptile Cat)",
+      "prompt": "<lora:gf_lowpoly:0.9>, gf_lowpoly, ningraphix, ps1 game screenshot, anthropomorphic cat hybrid, lizard cat, green scaly skin, cat ears, long thick low-poly lizard tail, wearing simple loincloth, chibi proportions, big angular head, very low polygon mesh, extremely chunky blocky silhouette, few large geometric facets, highly optimized game model, minimal geometry, crisp stylized hand-painted textures, rich clean color blocks, sharp material definition, painted PS1 textures on flat facets, flat shaded, crisp silhouette, feline cat eyes, T-pose, full body, centered, plain solid light grey background, no scenery, no environment, no ground, empty background, single character, full body, centered, no scenery",
+      "category": "creature",
+      "monster_id": "lizard_reptile",
+      "variant": "seed_2"
     },
     {
       "id": "worm",
       "title": "Кот-Червь (Worm Cat)",
-      "prompt": "<lora:gf_lowpoly:0.9>, gf_lowpoly, ningraphix, ps1 game screenshot, cat worm hybrid, pink segmented low-poly worm body, cat head on front with ears and whiskers, no legs, upright coiled stance, chibi proportions, big angular head, feline cat eyes, chunky low-poly, simple geometric forms, large clean flat facets, PS1 game character, flat shaded, crisp silhouette, limited detail, neutral solid light grey background",
+      "prompt": "<lora:gf_lowpoly:0.9>, gf_lowpoly, ningraphix, ps1 game screenshot, cat worm hybrid, pink segmented low-poly worm body, cat head on front, cat ears, whiskers, no legs, upright coiled stance, feline cat eyes, chibi proportions, big angular head, very low polygon mesh, extremely chunky blocky silhouette, few large geometric facets, highly optimized game model, minimal geometry, crisp stylized hand-painted textures, rich clean color blocks, sharp material definition, painted PS1 textures on flat facets, flat shaded, crisp silhouette, T-pose, full body, centered, plain solid light grey background, no scenery, no environment, no ground, empty background, single character, full body, centered, no scenery",
       "category": "creature",
       "monster_id": "worm",
-      "variant": "base"
+      "variant": "seed_1"
+    },
+    {
+      "id": "worm_v2",
+      "title": "Кот-Червь (Worm Cat)",
+      "prompt": "<lora:gf_lowpoly:0.9>, gf_lowpoly, ningraphix, ps1 game screenshot, cat worm hybrid, pink segmented low-poly worm body, cat head on front, cat ears, whiskers, no legs, upright coiled stance, feline cat eyes, chibi proportions, big angular head, very low polygon mesh, extremely chunky blocky silhouette, few large geometric facets, highly optimized game model, minimal geometry, crisp stylized hand-painted textures, rich clean color blocks, sharp material definition, painted PS1 textures on flat facets, flat shaded, crisp silhouette, T-pose, full body, centered, plain solid light grey background, no scenery, no environment, no ground, empty background, single character, full body, centered, no scenery",
+      "category": "creature",
+      "monster_id": "worm",
+      "variant": "seed_2"
     },
     {
       "id": "larva_grub",
       "title": "Кот-Личинка (Larva / Grub Cat)",
-      "prompt": "<lora:gf_lowpoly:0.9>, gf_lowpoly, ningraphix, ps1 game screenshot, cat grub larva hybrid, fat segmented cream-colored low-poly grub body, cat face with ears, tiny insectoid legs under head, chibi proportions, big angular head, feline cat eyes, chunky low-poly, simple geometric forms, large clean flat facets, PS1 game character, flat shaded, crisp silhouette, limited detail, neutral solid light grey background",
+      "prompt": "<lora:gf_lowpoly:0.9>, gf_lowpoly, ningraphix, ps1 game screenshot, larva grub cat, fat segmented cream grub body, cat face, cat ears, tiny insect legs under head, feline cat eyes, chibi proportions, big angular head, very low polygon mesh, extremely chunky blocky silhouette, few large geometric facets, highly optimized game model, minimal geometry, crisp stylized hand-painted textures, rich clean color blocks, sharp material definition, painted PS1 textures on flat facets, flat shaded, crisp silhouette, T-pose, full body, centered, plain solid light grey background, no scenery, no environment, no ground, empty background, single character, full body, centered, no scenery",
       "category": "creature",
       "monster_id": "larva_grub",
-      "variant": "base"
+      "variant": "seed_1"
+    },
+    {
+      "id": "larva_grub_v2",
+      "title": "Кот-Личинка (Larva / Grub Cat)",
+      "prompt": "<lora:gf_lowpoly:0.9>, gf_lowpoly, ningraphix, ps1 game screenshot, larva grub cat, fat segmented cream grub body, cat face, cat ears, tiny insect legs under head, feline cat eyes, chibi proportions, big angular head, very low polygon mesh, extremely chunky blocky silhouette, few large geometric facets, highly optimized game model, minimal geometry, crisp stylized hand-painted textures, rich clean color blocks, sharp material definition, painted PS1 textures on flat facets, flat shaded, crisp silhouette, T-pose, full body, centered, plain solid light grey background, no scenery, no environment, no ground, empty background, single character, full body, centered, no scenery",
+      "category": "creature",
+      "monster_id": "larva_grub",
+      "variant": "seed_2"
     },
     {
       "id": "wood_spider",
       "title": "Кот-Древопаук (Wood-Spider Cat — высокий, с длинными тонко-угольными лапами)",
-      "prompt": "<lora:gf_lowpoly:0.9>, gf_lowpoly, ningraphix, ps1 game screenshot, wood spider cat hybrid, cat head with ears and whiskers, wooden bark texture, 6 extremely long spindly wooden spider legs, tall towering legs structure, no arms, chibi proportions, big angular head, feline cat eyes, chunky low-poly, simple geometric forms, large clean flat facets, PS1 game character, flat shaded, crisp silhouette, limited detail, neutral solid light grey background",
+      "prompt": "<lora:gf_lowpoly:0.9>, gf_lowpoly, ningraphix, ps1 game screenshot, wood spider cat hybrid, cat head with ears and whiskers, wooden bark texture, 6 extremely long spindly wooden spider legs, tall towering legs structure, no arms, chibi proportions, big angular head, very low polygon mesh, extremely chunky blocky silhouette, few large geometric facets, highly optimized game model, minimal geometry, crisp stylized hand-painted textures, rich clean color blocks, sharp material definition, painted PS1 textures on flat facets, flat shaded, crisp silhouette, feline cat eyes, T-pose, full body, centered, plain solid light grey background, no scenery, no environment, no ground, empty background, single character, full body, centered, no scenery",
       "category": "creature",
       "monster_id": "wood_spider",
-      "variant": "base"
+      "variant": "seed_1"
+    },
+    {
+      "id": "wood_spider_v2",
+      "title": "Кот-Древопаук (Wood-Spider Cat — высокий, с длинными тонко-угольными лапами)",
+      "prompt": "<lora:gf_lowpoly:0.9>, gf_lowpoly, ningraphix, ps1 game screenshot, wood spider cat hybrid, cat head with ears and whiskers, wooden bark texture, 6 extremely long spindly wooden spider legs, tall towering legs structure, no arms, chibi proportions, big angular head, very low polygon mesh, extremely chunky blocky silhouette, few large geometric facets, highly optimized game model, minimal geometry, crisp stylized hand-painted textures, rich clean color blocks, sharp material definition, painted PS1 textures on flat facets, flat shaded, crisp silhouette, feline cat eyes, T-pose, full body, centered, plain solid light grey background, no scenery, no environment, no ground, empty background, single character, full body, centered, no scenery",
+      "category": "creature",
+      "monster_id": "wood_spider",
+      "variant": "seed_2"
     },
     {
       "id": "mantis",
       "title": "Кот-Мантис / Богомол (Mantis Cat — полувысокий инсектоид с серпами)",
-      "prompt": "<lora:gf_lowpoly:0.9>, gf_lowpoly, ningraphix, ps1 game screenshot, anthropomorphic cat hybrid, mantis cat, insectoid green body, cat ears, long thin stilt legs, big scythe blades for hands, medium height, chibi proportions, big angular head, feline cat eyes, chunky low-poly, simple geometric forms, large clean flat facets, PS1 game character, flat shaded, crisp silhouette, limited detail, T-pose, neutral solid light grey background",
+      "prompt": "<lora:gf_lowpoly:0.9>, gf_lowpoly, ningraphix, ps1 game screenshot, anthropomorphic cat hybrid, mantis cat, insectoid green body, cat ears, long thin stilt legs, big scythe blades for hands, medium height, chibi proportions, big angular head, very low polygon mesh, extremely chunky blocky silhouette, few large geometric facets, highly optimized game model, minimal geometry, crisp stylized hand-painted textures, rich clean color blocks, sharp material definition, painted PS1 textures on flat facets, flat shaded, crisp silhouette, feline cat eyes, T-pose, full body, centered, plain solid light grey background, no scenery, no environment, no ground, empty background, single character, full body, centered, no scenery",
       "category": "creature",
       "monster_id": "mantis",
-      "variant": "base"
+      "variant": "seed_1"
+    },
+    {
+      "id": "mantis_v2",
+      "title": "Кот-Мантис / Богомол (Mantis Cat — полувысокий инсектоид с серпами)",
+      "prompt": "<lora:gf_lowpoly:0.9>, gf_lowpoly, ningraphix, ps1 game screenshot, anthropomorphic cat hybrid, mantis cat, insectoid green body, cat ears, long thin stilt legs, big scythe blades for hands, medium height, chibi proportions, big angular head, very low polygon mesh, extremely chunky blocky silhouette, few large geometric facets, highly optimized game model, minimal geometry, crisp stylized hand-painted textures, rich clean color blocks, sharp material definition, painted PS1 textures on flat facets, flat shaded, crisp silhouette, feline cat eyes, T-pose, full body, centered, plain solid light grey background, no scenery, no environment, no ground, empty background, single character, full body, centered, no scenery",
+      "category": "creature",
+      "monster_id": "mantis",
+      "variant": "seed_2"
     },
     {
       "id": "dinosaur_t_rex",
       "title": "Кот-Динозавр (Dinosaur Cat / T-Rex Cat)",
-      "prompt": "<lora:gf_lowpoly:0.9>, gf_lowpoly, ningraphix, ps1 game screenshot, anthropomorphic cat hybrid, dinosaur cat, green scaled skin, tiny 3-sided low-poly arms, thick heavy tail, cat ears and whiskers, sharp blocky teeth, chibi proportions, big angular head, feline cat eyes, chunky low-poly, simple geometric forms, large clean flat facets, PS1 game character, flat shaded, crisp silhouette, limited detail, T-pose, neutral solid light grey background",
+      "prompt": "<lora:gf_lowpoly:0.9>, gf_lowpoly, ningraphix, ps1 game screenshot, anthropomorphic cat hybrid, dinosaur cat, green scaled skin, tiny 3-sided low-poly arms, thick heavy tail, cat ears and whiskers, sharp blocky teeth, chibi proportions, big angular head, very low polygon mesh, extremely chunky blocky silhouette, few large geometric facets, highly optimized game model, minimal geometry, crisp stylized hand-painted textures, rich clean color blocks, sharp material definition, painted PS1 textures on flat facets, flat shaded, crisp silhouette, feline cat eyes, T-pose, full body, centered, plain solid light grey background, no scenery, no environment, no ground, empty background, single character, full body, centered, no scenery",
       "category": "creature",
       "monster_id": "dinosaur_t_rex",
-      "variant": "base"
+      "variant": "seed_1"
+    },
+    {
+      "id": "dinosaur_t_rex_v2",
+      "title": "Кот-Динозавр (Dinosaur Cat / T-Rex Cat)",
+      "prompt": "<lora:gf_lowpoly:0.9>, gf_lowpoly, ningraphix, ps1 game screenshot, anthropomorphic cat hybrid, dinosaur cat, green scaled skin, tiny 3-sided low-poly arms, thick heavy tail, cat ears and whiskers, sharp blocky teeth, chibi proportions, big angular head, very low polygon mesh, extremely chunky blocky silhouette, few large geometric facets, highly optimized game model, minimal geometry, crisp stylized hand-painted textures, rich clean color blocks, sharp material definition, painted PS1 textures on flat facets, flat shaded, crisp silhouette, feline cat eyes, T-pose, full body, centered, plain solid light grey background, no scenery, no environment, no ground, empty background, single character, full body, centered, no scenery",
+      "category": "creature",
+      "monster_id": "dinosaur_t_rex",
+      "variant": "seed_2"
     },
     {
       "id": "humanoid_man",
       "title": "Кот-Человек (Humanoid / Man Cat)",
-      "prompt": "<lora:gf_lowpoly:0.9>, gf_lowpoly, ningraphix, ps1 game screenshot, anthropomorphic cat man, smooth pale peach skin, cat ears and cat tail, wearing simple blocky t-shirt and pants, chibi proportions, big angular head, feline cat eyes, chunky low-poly, simple geometric forms, large clean flat facets, PS1 game character, flat shaded, crisp silhouette, limited detail, T-pose, neutral solid light grey background",
+      "prompt": "<lora:gf_lowpoly:0.9>, gf_lowpoly, ningraphix, ps1 game screenshot, anthropomorphic cat man, smooth pale peach skin, cat ears and cat tail, wearing simple blocky t-shirt and pants, chibi proportions, big angular head, very low polygon mesh, extremely chunky blocky silhouette, few large geometric facets, highly optimized game model, minimal geometry, crisp stylized hand-painted textures, rich clean color blocks, sharp material definition, painted PS1 textures on flat facets, flat shaded, crisp silhouette, feline cat eyes, T-pose, full body, centered, plain solid light grey background, no scenery, no environment, no ground, empty background, single character, full body, centered, no scenery",
       "category": "creature",
       "monster_id": "humanoid_man",
-      "variant": "base"
+      "variant": "seed_1"
+    },
+    {
+      "id": "humanoid_man_v2",
+      "title": "Кот-Человек (Humanoid / Man Cat)",
+      "prompt": "<lora:gf_lowpoly:0.9>, gf_lowpoly, ningraphix, ps1 game screenshot, anthropomorphic cat man, smooth pale peach skin, cat ears and cat tail, wearing simple blocky t-shirt and pants, chibi proportions, big angular head, very low polygon mesh, extremely chunky blocky silhouette, few large geometric facets, highly optimized game model, minimal geometry, crisp stylized hand-painted textures, rich clean color blocks, sharp material definition, painted PS1 textures on flat facets, flat shaded, crisp silhouette, feline cat eyes, T-pose, full body, centered, plain solid light grey background, no scenery, no environment, no ground, empty background, single character, full body, centered, no scenery",
+      "category": "creature",
+      "monster_id": "humanoid_man",
+      "variant": "seed_2"
     },
     {
       "id": "doll_marionette",
       "title": "Кот-Кукла (Doll / Marionette Cat)",
-      "prompt": "<lora:gf_lowpoly:0.9>, gf_lowpoly, ningraphix, ps1 game screenshot, wooden doll cat, stitched cloth seams, wooden ball joints at elbows and knees, cat ears, cloth tunic, chibi proportions, big angular head, feline cat eyes, chunky low-poly, simple geometric forms, large clean flat facets, PS1 game character, flat shaded, crisp silhouette, limited detail, T-pose, neutral solid light grey background",
+      "prompt": "<lora:gf_lowpoly:0.9>, gf_lowpoly, ningraphix, ps1 game screenshot, wooden doll cat, stitched cloth seams, wooden ball joints at elbows and knees, cat ears, cloth tunic, chibi proportions, big angular head, very low polygon mesh, extremely chunky blocky silhouette, few large geometric facets, highly optimized game model, minimal geometry, crisp stylized hand-painted textures, rich clean color blocks, sharp material definition, painted PS1 textures on flat facets, flat shaded, crisp silhouette, feline cat eyes, T-pose, full body, centered, plain solid light grey background, no scenery, no environment, no ground, empty background, single character, full body, centered, no scenery",
       "category": "creature",
       "monster_id": "doll_marionette",
-      "variant": "base"
+      "variant": "seed_1"
+    },
+    {
+      "id": "doll_marionette_v2",
+      "title": "Кот-Кукла (Doll / Marionette Cat)",
+      "prompt": "<lora:gf_lowpoly:0.9>, gf_lowpoly, ningraphix, ps1 game screenshot, wooden doll cat, stitched cloth seams, wooden ball joints at elbows and knees, cat ears, cloth tunic, chibi proportions, big angular head, very low polygon mesh, extremely chunky blocky silhouette, few large geometric facets, highly optimized game model, minimal geometry, crisp stylized hand-painted textures, rich clean color blocks, sharp material definition, painted PS1 textures on flat facets, flat shaded, crisp silhouette, feline cat eyes, T-pose, full body, centered, plain solid light grey background, no scenery, no environment, no ground, empty background, single character, full body, centered, no scenery",
+      "category": "creature",
+      "monster_id": "doll_marionette",
+      "variant": "seed_2"
     },
     {
       "id": "cyclops",
       "title": "Кот-Циклоп (Cyclops Cat)",
-      "prompt": "<lora:gf_lowpoly:0.9>, gf_lowpoly, ningraphix, ps1 game screenshot, anthropomorphic cat hybrid, cyclops cat, single large glowing eye in center of forehead, cat ears, small horns, giant club weapon, chibi proportions, big angular head, feline cat eyes, chunky low-poly, simple geometric forms, large clean flat facets, PS1 game character, flat shaded, crisp silhouette, limited detail, T-pose, neutral solid light grey background",
+      "prompt": "<lora:gf_lowpoly:0.9>, gf_lowpoly, ningraphix, ps1 game screenshot, anthropomorphic cat hybrid, cyclops cat, single large glowing eye in center of forehead, cat ears, small horns, chibi proportions, big angular head, very low polygon mesh, extremely chunky blocky silhouette, few large geometric facets, highly optimized game model, minimal geometry, crisp stylized hand-painted textures, rich clean color blocks, sharp material definition, painted PS1 textures on flat facets, flat shaded, crisp silhouette, feline cat eyes, T-pose, full body, centered, plain solid light grey background, no scenery, no environment, no ground, empty background, single character, full body, centered, no scenery",
       "category": "creature",
       "monster_id": "cyclops",
-      "variant": "base"
+      "variant": "seed_1"
+    },
+    {
+      "id": "cyclops_v2",
+      "title": "Кот-Циклоп (Cyclops Cat)",
+      "prompt": "<lora:gf_lowpoly:0.9>, gf_lowpoly, ningraphix, ps1 game screenshot, anthropomorphic cat hybrid, cyclops cat, single large glowing eye in center of forehead, cat ears, small horns, chibi proportions, big angular head, very low polygon mesh, extremely chunky blocky silhouette, few large geometric facets, highly optimized game model, minimal geometry, crisp stylized hand-painted textures, rich clean color blocks, sharp material definition, painted PS1 textures on flat facets, flat shaded, crisp silhouette, feline cat eyes, T-pose, full body, centered, plain solid light grey background, no scenery, no environment, no ground, empty background, single character, full body, centered, no scenery",
+      "category": "creature",
+      "monster_id": "cyclops",
+      "variant": "seed_2"
     },
     {
       "id": "centaur",
       "title": "Кот-Кентавр (Centaur Cat)",
-      "prompt": "<lora:gf_lowpoly:0.9>, gf_lowpoly, ningraphix, ps1 game screenshot, cat-centaur, upper body is anthropomorphic cat only, cat face with whiskers and pointed cat ears, feline chest and arms, from the waist down a four-legged horse body with hooves and horse tail, NOT a horse head, no equine face, no horse muzzle on the head, chibi proportions, big angular cat head, chunky low-poly, simple geometric forms, large clean flat facets, PS1 game character, flat shaded, crisp silhouette, limited detail, holding a bow, feline cat eyes, T-pose, neutral solid light grey background",
+      "prompt": "<lora:gf_lowpoly:0.9>, gf_lowpoly, ningraphix, ps1 game screenshot, cat-centaur, upper body is anthropomorphic cat only, cat face with whiskers and pointed cat ears, feline chest and arms, from the waist down a four-legged horse body with hooves and horse tail, NOT a horse head, no equine face, no horse muzzle on the head, chibi proportions, big angular cat head, chibi proportions, big angular head, very low polygon mesh, extremely chunky blocky silhouette, few large geometric facets, highly optimized game model, minimal geometry, crisp stylized hand-painted textures, rich clean color blocks, sharp material definition, painted PS1 textures on flat facets, flat shaded, crisp silhouette, feline cat eyes, T-pose, full body, centered, plain solid light grey background, no scenery, no environment, no ground, empty background, single character, full body, centered, no scenery",
       "category": "creature",
       "monster_id": "centaur",
-      "variant": "base"
+      "variant": "seed_1"
+    },
+    {
+      "id": "centaur_v2",
+      "title": "Кот-Кентавр (Centaur Cat)",
+      "prompt": "<lora:gf_lowpoly:0.9>, gf_lowpoly, ningraphix, ps1 game screenshot, cat-centaur, upper body is anthropomorphic cat only, cat face with whiskers and pointed cat ears, feline chest and arms, from the waist down a four-legged horse body with hooves and horse tail, NOT a horse head, no equine face, no horse muzzle on the head, chibi proportions, big angular cat head, chibi proportions, big angular head, very low polygon mesh, extremely chunky blocky silhouette, few large geometric facets, highly optimized game model, minimal geometry, crisp stylized hand-painted textures, rich clean color blocks, sharp material definition, painted PS1 textures on flat facets, flat shaded, crisp silhouette, feline cat eyes, T-pose, full body, centered, plain solid light grey background, no scenery, no environment, no ground, empty background, single character, full body, centered, no scenery",
+      "category": "creature",
+      "monster_id": "centaur",
+      "variant": "seed_2"
     },
     {
       "id": "giant_colossus",
       "title": "Кот-Гигант (Giant / Colossus Cat)",
-      "prompt": "<lora:gf_lowpoly:0.9>, gf_lowpoly, ningraphix, ps1 game screenshot, giant stone colossus cat, rocky boulder texture, glowing blue crystal veins on body, massive broad shoulders, tiny legs relative to body, chibi proportions, big angular head, feline cat eyes, chunky low-poly, simple geometric forms, large clean flat facets, PS1 game character, flat shaded, crisp silhouette, limited detail, T-pose, neutral solid light grey background",
+      "prompt": "<lora:gf_lowpoly:0.9>, gf_lowpoly, ningraphix, ps1 game screenshot, giant stone colossus cat, rocky boulder texture, glowing blue crystal veins on body, massive broad shoulders, tiny legs relative to body, chibi proportions, big angular head, very low polygon mesh, extremely chunky blocky silhouette, few large geometric facets, highly optimized game model, minimal geometry, crisp stylized hand-painted textures, rich clean color blocks, sharp material definition, painted PS1 textures on flat facets, flat shaded, crisp silhouette, feline cat eyes, T-pose, full body, centered, plain solid light grey background, no scenery, no environment, no ground, empty background, single character, full body, centered, no scenery",
       "category": "creature",
       "monster_id": "giant_colossus",
-      "variant": "base"
+      "variant": "seed_1"
+    },
+    {
+      "id": "giant_colossus_v2",
+      "title": "Кот-Гигант (Giant / Colossus Cat)",
+      "prompt": "<lora:gf_lowpoly:0.9>, gf_lowpoly, ningraphix, ps1 game screenshot, giant stone colossus cat, rocky boulder texture, glowing blue crystal veins on body, massive broad shoulders, tiny legs relative to body, chibi proportions, big angular head, very low polygon mesh, extremely chunky blocky silhouette, few large geometric facets, highly optimized game model, minimal geometry, crisp stylized hand-painted textures, rich clean color blocks, sharp material definition, painted PS1 textures on flat facets, flat shaded, crisp silhouette, feline cat eyes, T-pose, full body, centered, plain solid light grey background, no scenery, no environment, no ground, empty background, single character, full body, centered, no scenery",
+      "category": "creature",
+      "monster_id": "giant_colossus",
+      "variant": "seed_2"
     },
     {
       "id": "phoenix",
       "title": "Кот-Феникс (Phoenix Cat)",
-      "prompt": "<lora:gf_lowpoly:0.9>, gf_lowpoly, ningraphix, ps1 game screenshot, anthropomorphic cat hybrid, phoenix cat, fiery orange-red feathers, low-poly flaming wings, chibi proportions, big angular head, feline cat eyes, chunky low-poly, simple geometric forms, large clean flat facets, PS1 game character, flat shaded, crisp silhouette, limited detail, T-pose, neutral solid light grey background",
+      "prompt": "<lora:gf_lowpoly:0.9>, gf_lowpoly, ningraphix, ps1 game screenshot, anthropomorphic cat hybrid, phoenix cat, fiery orange-red feathers, low-poly flaming wings, chibi proportions, big angular head, very low polygon mesh, extremely chunky blocky silhouette, few large geometric facets, highly optimized game model, minimal geometry, crisp stylized hand-painted textures, rich clean color blocks, sharp material definition, painted PS1 textures on flat facets, flat shaded, crisp silhouette, feline cat eyes, T-pose, full body, centered, plain solid light grey background, no scenery, no environment, no ground, empty background, single character, full body, centered, no scenery",
       "category": "creature",
       "monster_id": "phoenix",
-      "variant": "base"
+      "variant": "seed_1"
+    },
+    {
+      "id": "phoenix_v2",
+      "title": "Кот-Феникс (Phoenix Cat)",
+      "prompt": "<lora:gf_lowpoly:0.9>, gf_lowpoly, ningraphix, ps1 game screenshot, anthropomorphic cat hybrid, phoenix cat, fiery orange-red feathers, low-poly flaming wings, chibi proportions, big angular head, very low polygon mesh, extremely chunky blocky silhouette, few large geometric facets, highly optimized game model, minimal geometry, crisp stylized hand-painted textures, rich clean color blocks, sharp material definition, painted PS1 textures on flat facets, flat shaded, crisp silhouette, feline cat eyes, T-pose, full body, centered, plain solid light grey background, no scenery, no environment, no ground, empty background, single character, full body, centered, no scenery",
+      "category": "creature",
+      "monster_id": "phoenix",
+      "variant": "seed_2"
     },
     {
       "id": "basilisk",
       "title": "Кот-Василиск (Basilisk Cat)",
-      "prompt": "<lora:gf_lowpoly:0.9>, gf_lowpoly, ningraphix, ps1 game screenshot, anthropomorphic cat hybrid, basilisk cat, green reptile scales, crown of polygonal spines, long scaled tail, chibi proportions, big angular head, feline cat eyes, chunky low-poly, simple geometric forms, large clean flat facets, PS1 game character, flat shaded, crisp silhouette, limited detail, T-pose, neutral solid light grey background",
+      "prompt": "<lora:gf_lowpoly:0.9>, gf_lowpoly, ningraphix, ps1 game screenshot, anthropomorphic cat hybrid, basilisk cat, green reptile scales, crown of polygonal spines, long scaled tail, chibi proportions, big angular head, very low polygon mesh, extremely chunky blocky silhouette, few large geometric facets, highly optimized game model, minimal geometry, crisp stylized hand-painted textures, rich clean color blocks, sharp material definition, painted PS1 textures on flat facets, flat shaded, crisp silhouette, feline cat eyes, T-pose, full body, centered, plain solid light grey background, no scenery, no environment, no ground, empty background, single character, full body, centered, no scenery",
       "category": "creature",
       "monster_id": "basilisk",
-      "variant": "base"
+      "variant": "seed_1"
+    },
+    {
+      "id": "basilisk_v2",
+      "title": "Кот-Василиск (Basilisk Cat)",
+      "prompt": "<lora:gf_lowpoly:0.9>, gf_lowpoly, ningraphix, ps1 game screenshot, anthropomorphic cat hybrid, basilisk cat, green reptile scales, crown of polygonal spines, long scaled tail, chibi proportions, big angular head, very low polygon mesh, extremely chunky blocky silhouette, few large geometric facets, highly optimized game model, minimal geometry, crisp stylized hand-painted textures, rich clean color blocks, sharp material definition, painted PS1 textures on flat facets, flat shaded, crisp silhouette, feline cat eyes, T-pose, full body, centered, plain solid light grey background, no scenery, no environment, no ground, empty background, single character, full body, centered, no scenery",
+      "category": "creature",
+      "monster_id": "basilisk",
+      "variant": "seed_2"
     },
     {
       "id": "griffin",
       "title": "Кот-Грифон (Griffin Cat)",
-      "prompt": "<lora:gf_lowpoly:0.9>, gf_lowpoly, ningraphix, ps1 game screenshot, cat griffin hybrid, eagle wings and beak mixed with cat head ears, lion-like low-poly body, feathered polygonal wings, chibi proportions, big angular head, feline cat eyes, chunky low-poly, simple geometric forms, large clean flat facets, PS1 game character, flat shaded, crisp silhouette, limited detail, T-pose, neutral solid light grey background",
+      "prompt": "<lora:gf_lowpoly:0.9>, gf_lowpoly, ningraphix, ps1 game screenshot, cat griffin hybrid, eagle wings and beak mixed with cat head ears, lion-like low-poly body, feathered polygonal wings, chibi proportions, big angular head, very low polygon mesh, extremely chunky blocky silhouette, few large geometric facets, highly optimized game model, minimal geometry, crisp stylized hand-painted textures, rich clean color blocks, sharp material definition, painted PS1 textures on flat facets, flat shaded, crisp silhouette, feline cat eyes, T-pose, full body, centered, plain solid light grey background, no scenery, no environment, no ground, empty background, single character, full body, centered, no scenery",
       "category": "creature",
       "monster_id": "griffin",
-      "variant": "base"
+      "variant": "seed_1"
+    },
+    {
+      "id": "griffin_v2",
+      "title": "Кот-Грифон (Griffin Cat)",
+      "prompt": "<lora:gf_lowpoly:0.9>, gf_lowpoly, ningraphix, ps1 game screenshot, cat griffin hybrid, eagle wings and beak mixed with cat head ears, lion-like low-poly body, feathered polygonal wings, chibi proportions, big angular head, very low polygon mesh, extremely chunky blocky silhouette, few large geometric facets, highly optimized game model, minimal geometry, crisp stylized hand-painted textures, rich clean color blocks, sharp material definition, painted PS1 textures on flat facets, flat shaded, crisp silhouette, feline cat eyes, T-pose, full body, centered, plain solid light grey background, no scenery, no environment, no ground, empty background, single character, full body, centered, no scenery",
+      "category": "creature",
+      "monster_id": "griffin",
+      "variant": "seed_2"
     },
     {
       "id": "minotaur",
       "title": "Кот-Минотавр (Minotaur Cat)",
-      "prompt": "<lora:gf_lowpoly:0.9>, gf_lowpoly, ningraphix, ps1 game screenshot, anthropomorphic cat hybrid, minotaur cat, bull horns, heavy muzzle, thick neck, holding a polygonal labrys axe, leather loincloth, chibi proportions, big angular head, feline cat eyes, chunky low-poly, simple geometric forms, large clean flat facets, PS1 game character, flat shaded, crisp silhouette, limited detail, T-pose, neutral solid light grey background",
+      "prompt": "<lora:gf_lowpoly:0.9>, gf_lowpoly, ningraphix, ps1 game screenshot, anthropomorphic cat hybrid, minotaur cat, bull horns, heavy muzzle, thick neck, leather loincloth, chibi proportions, big angular head, very low polygon mesh, extremely chunky blocky silhouette, few large geometric facets, highly optimized game model, minimal geometry, crisp stylized hand-painted textures, rich clean color blocks, sharp material definition, painted PS1 textures on flat facets, flat shaded, crisp silhouette, feline cat eyes, T-pose, full body, centered, plain solid light grey background, no scenery, no environment, no ground, empty background, single character, full body, centered, no scenery",
       "category": "creature",
       "monster_id": "minotaur",
-      "variant": "base"
+      "variant": "seed_1"
+    },
+    {
+      "id": "minotaur_v2",
+      "title": "Кот-Минотавр (Minotaur Cat)",
+      "prompt": "<lora:gf_lowpoly:0.9>, gf_lowpoly, ningraphix, ps1 game screenshot, anthropomorphic cat hybrid, minotaur cat, bull horns, heavy muzzle, thick neck, leather loincloth, chibi proportions, big angular head, very low polygon mesh, extremely chunky blocky silhouette, few large geometric facets, highly optimized game model, minimal geometry, crisp stylized hand-painted textures, rich clean color blocks, sharp material definition, painted PS1 textures on flat facets, flat shaded, crisp silhouette, feline cat eyes, T-pose, full body, centered, plain solid light grey background, no scenery, no environment, no ground, empty background, single character, full body, centered, no scenery",
+      "category": "creature",
+      "monster_id": "minotaur",
+      "variant": "seed_2"
     },
     {
       "id": "harpy",
       "title": "Кот-Гарпия (Harpy Cat)",
-      "prompt": "<lora:gf_lowpoly:0.9>, gf_lowpoly, ningraphix, ps1 game screenshot, anthropomorphic cat hybrid, harpy cat, feathered low-poly wings instead of arms, bird talon feet, cat ears, windblown feathers, chibi proportions, big angular head, feline cat eyes, chunky low-poly, simple geometric forms, large clean flat facets, PS1 game character, flat shaded, crisp silhouette, limited detail, T-pose, neutral solid light grey background",
+      "prompt": "<lora:gf_lowpoly:0.9>, gf_lowpoly, ningraphix, ps1 game screenshot, anthropomorphic cat hybrid, harpy cat, feathered low-poly wings instead of arms, bird talon feet, cat ears, windblown feathers, chibi proportions, big angular head, very low polygon mesh, extremely chunky blocky silhouette, few large geometric facets, highly optimized game model, minimal geometry, crisp stylized hand-painted textures, rich clean color blocks, sharp material definition, painted PS1 textures on flat facets, flat shaded, crisp silhouette, feline cat eyes, T-pose, full body, centered, plain solid light grey background, no scenery, no environment, no ground, empty background, single character, full body, centered, no scenery",
       "category": "creature",
       "monster_id": "harpy",
-      "variant": "base"
+      "variant": "seed_1"
+    },
+    {
+      "id": "harpy_v2",
+      "title": "Кот-Гарпия (Harpy Cat)",
+      "prompt": "<lora:gf_lowpoly:0.9>, gf_lowpoly, ningraphix, ps1 game screenshot, anthropomorphic cat hybrid, harpy cat, feathered low-poly wings instead of arms, bird talon feet, cat ears, windblown feathers, chibi proportions, big angular head, very low polygon mesh, extremely chunky blocky silhouette, few large geometric facets, highly optimized game model, minimal geometry, crisp stylized hand-painted textures, rich clean color blocks, sharp material definition, painted PS1 textures on flat facets, flat shaded, crisp silhouette, feline cat eyes, T-pose, full body, centered, plain solid light grey background, no scenery, no environment, no ground, empty background, single character, full body, centered, no scenery",
+      "category": "creature",
+      "monster_id": "harpy",
+      "variant": "seed_2"
     },
     {
       "id": "chimera",
       "title": "Кот-Химера (Chimera Cat)",
-      "prompt": "<lora:gf_lowpoly:0.9>, gf_lowpoly, ningraphix, ps1 game screenshot, chimera cat hybrid, lion cat head, goat head on shoulder, snake tail tip, mismatched low-poly body parts, chibi proportions, big angular head, feline cat eyes, chunky low-poly, simple geometric forms, large clean flat facets, PS1 game character, flat shaded, crisp silhouette, limited detail, T-pose, neutral solid light grey background",
+      "prompt": "<lora:gf_lowpoly:0.9>, gf_lowpoly, ningraphix, ps1 game screenshot, chimera cat hybrid, lion cat head, goat head on shoulder, snake tail tip, mismatched low-poly body parts, chibi proportions, big angular head, very low polygon mesh, extremely chunky blocky silhouette, few large geometric facets, highly optimized game model, minimal geometry, crisp stylized hand-painted textures, rich clean color blocks, sharp material definition, painted PS1 textures on flat facets, flat shaded, crisp silhouette, feline cat eyes, T-pose, full body, centered, plain solid light grey background, no scenery, no environment, no ground, empty background, single character, full body, centered, no scenery",
       "category": "creature",
       "monster_id": "chimera",
-      "variant": "base"
+      "variant": "seed_1"
+    },
+    {
+      "id": "chimera_v2",
+      "title": "Кот-Химера (Chimera Cat)",
+      "prompt": "<lora:gf_lowpoly:0.9>, gf_lowpoly, ningraphix, ps1 game screenshot, chimera cat hybrid, lion cat head, goat head on shoulder, snake tail tip, mismatched low-poly body parts, chibi proportions, big angular head, very low polygon mesh, extremely chunky blocky silhouette, few large geometric facets, highly optimized game model, minimal geometry, crisp stylized hand-painted textures, rich clean color blocks, sharp material definition, painted PS1 textures on flat facets, flat shaded, crisp silhouette, feline cat eyes, T-pose, full body, centered, plain solid light grey background, no scenery, no environment, no ground, empty background, single character, full body, centered, no scenery",
+      "category": "creature",
+      "monster_id": "chimera",
+      "variant": "seed_2"
     },
     {
       "id": "unicorn",
       "title": "Кот-Единорог (Unicorn Cat)",
-      "prompt": "<lora:gf_lowpoly:0.9>, gf_lowpoly, ningraphix, ps1 game screenshot, anthropomorphic cat unicorn, single spiral polygonal horn, white pastel fur, sparkling low-poly mane, chibi proportions, big angular head, feline cat eyes, chunky low-poly, simple geometric forms, large clean flat facets, PS1 game character, flat shaded, crisp silhouette, limited detail, T-pose, neutral solid light grey background",
+      "prompt": "<lora:gf_lowpoly:0.9>, gf_lowpoly, ningraphix, ps1 game screenshot, anthropomorphic cat unicorn, single spiral polygonal horn, white pastel fur, sparkling low-poly mane, chibi proportions, big angular head, very low polygon mesh, extremely chunky blocky silhouette, few large geometric facets, highly optimized game model, minimal geometry, crisp stylized hand-painted textures, rich clean color blocks, sharp material definition, painted PS1 textures on flat facets, flat shaded, crisp silhouette, feline cat eyes, T-pose, full body, centered, plain solid light grey background, no scenery, no environment, no ground, empty background, single character, full body, centered, no scenery",
       "category": "creature",
       "monster_id": "unicorn",
-      "variant": "base"
+      "variant": "seed_1"
+    },
+    {
+      "id": "unicorn_v2",
+      "title": "Кот-Единорог (Unicorn Cat)",
+      "prompt": "<lora:gf_lowpoly:0.9>, gf_lowpoly, ningraphix, ps1 game screenshot, anthropomorphic cat unicorn, single spiral polygonal horn, white pastel fur, sparkling low-poly mane, chibi proportions, big angular head, very low polygon mesh, extremely chunky blocky silhouette, few large geometric facets, highly optimized game model, minimal geometry, crisp stylized hand-painted textures, rich clean color blocks, sharp material definition, painted PS1 textures on flat facets, flat shaded, crisp silhouette, feline cat eyes, T-pose, full body, centered, plain solid light grey background, no scenery, no environment, no ground, empty background, single character, full body, centered, no scenery",
+      "category": "creature",
+      "monster_id": "unicorn",
+      "variant": "seed_2"
     },
     {
       "id": "demon",
       "title": "Кот-Демон (Demon Cat)",
-      "prompt": "<lora:gf_lowpoly:0.9>, gf_lowpoly, ningraphix, ps1 game screenshot, anthropomorphic cat hybrid, demon cat, red skin, curved horns, bat-like low-poly wings, spiked tail, holding a polygonal pitchfork, chibi proportions, big angular head, feline cat eyes, chunky low-poly, simple geometric forms, large clean flat facets, PS1 game character, flat shaded, crisp silhouette, limited detail, T-pose, neutral solid light grey background",
+      "prompt": "<lora:gf_lowpoly:0.9>, gf_lowpoly, ningraphix, ps1 game screenshot, anthropomorphic cat hybrid, demon cat, red skin, curved horns, bat-like low-poly wings, spiked tail, chibi proportions, big angular head, very low polygon mesh, extremely chunky blocky silhouette, few large geometric facets, highly optimized game model, minimal geometry, crisp stylized hand-painted textures, rich clean color blocks, sharp material definition, painted PS1 textures on flat facets, flat shaded, crisp silhouette, feline cat eyes, T-pose, full body, centered, plain solid light grey background, no scenery, no environment, no ground, empty background, single character, full body, centered, no scenery",
       "category": "creature",
       "monster_id": "demon",
-      "variant": "base"
+      "variant": "seed_1"
+    },
+    {
+      "id": "demon_v2",
+      "title": "Кот-Демон (Demon Cat)",
+      "prompt": "<lora:gf_lowpoly:0.9>, gf_lowpoly, ningraphix, ps1 game screenshot, anthropomorphic cat hybrid, demon cat, red skin, curved horns, bat-like low-poly wings, spiked tail, chibi proportions, big angular head, very low polygon mesh, extremely chunky blocky silhouette, few large geometric facets, highly optimized game model, minimal geometry, crisp stylized hand-painted textures, rich clean color blocks, sharp material definition, painted PS1 textures on flat facets, flat shaded, crisp silhouette, feline cat eyes, T-pose, full body, centered, plain solid light grey background, no scenery, no environment, no ground, empty background, single character, full body, centered, no scenery",
+      "category": "creature",
+      "monster_id": "demon",
+      "variant": "seed_2"
     },
     {
       "id": "angel",
       "title": "Кот-Ангел (Angel Cat)",
-      "prompt": "<lora:gf_lowpoly:0.9>, gf_lowpoly, ningraphix, ps1 game screenshot, anthropomorphic cat angel, white blocky robes, simple polygonal halo, soft feathered low-poly wings, gentle pose, chibi proportions, big angular head, feline cat eyes, chunky low-poly, simple geometric forms, large clean flat facets, PS1 game character, flat shaded, crisp silhouette, limited detail, T-pose, neutral solid light grey background",
+      "prompt": "<lora:gf_lowpoly:0.9>, gf_lowpoly, ningraphix, ps1 game screenshot, anthropomorphic cat angel, white blocky robes, simple polygonal halo, soft feathered low-poly wings, gentle pose, chibi proportions, big angular head, very low polygon mesh, extremely chunky blocky silhouette, few large geometric facets, highly optimized game model, minimal geometry, crisp stylized hand-painted textures, rich clean color blocks, sharp material definition, painted PS1 textures on flat facets, flat shaded, crisp silhouette, feline cat eyes, T-pose, full body, centered, plain solid light grey background, no scenery, no environment, no ground, empty background, single character, full body, centered, no scenery",
       "category": "creature",
       "monster_id": "angel",
-      "variant": "base"
+      "variant": "seed_1"
+    },
+    {
+      "id": "angel_v2",
+      "title": "Кот-Ангел (Angel Cat)",
+      "prompt": "<lora:gf_lowpoly:0.9>, gf_lowpoly, ningraphix, ps1 game screenshot, anthropomorphic cat angel, white blocky robes, simple polygonal halo, soft feathered low-poly wings, gentle pose, chibi proportions, big angular head, very low polygon mesh, extremely chunky blocky silhouette, few large geometric facets, highly optimized game model, minimal geometry, crisp stylized hand-painted textures, rich clean color blocks, sharp material definition, painted PS1 textures on flat facets, flat shaded, crisp silhouette, feline cat eyes, T-pose, full body, centered, plain solid light grey background, no scenery, no environment, no ground, empty background, single character, full body, centered, no scenery",
+      "category": "creature",
+      "monster_id": "angel",
+      "variant": "seed_2"
     },
     {
       "id": "mummy",
       "title": "Кот-Мумия (Mummy Cat)",
-      "prompt": "<lora:gf_lowpoly:0.9>, gf_lowpoly, ningraphix, ps1 game screenshot, anthropomorphic cat hybrid, mummy cat, wrapped in low-poly linen bandages, ancient sash, chibi proportions, big angular head, feline cat eyes, chunky low-poly, simple geometric forms, large clean flat facets, PS1 game character, flat shaded, crisp silhouette, limited detail, T-pose, neutral solid light grey background",
+      "prompt": "<lora:gf_lowpoly:0.9>, gf_lowpoly, ningraphix, ps1 game screenshot, anthropomorphic cat hybrid, mummy cat, wrapped in low-poly linen bandages, ancient sash, chibi proportions, big angular head, very low polygon mesh, extremely chunky blocky silhouette, few large geometric facets, highly optimized game model, minimal geometry, crisp stylized hand-painted textures, rich clean color blocks, sharp material definition, painted PS1 textures on flat facets, flat shaded, crisp silhouette, feline cat eyes, T-pose, full body, centered, plain solid light grey background, no scenery, no environment, no ground, empty background, single character, full body, centered, no scenery",
       "category": "creature",
       "monster_id": "mummy",
-      "variant": "base"
+      "variant": "seed_1"
+    },
+    {
+      "id": "mummy_v2",
+      "title": "Кот-Мумия (Mummy Cat)",
+      "prompt": "<lora:gf_lowpoly:0.9>, gf_lowpoly, ningraphix, ps1 game screenshot, anthropomorphic cat hybrid, mummy cat, wrapped in low-poly linen bandages, ancient sash, chibi proportions, big angular head, very low polygon mesh, extremely chunky blocky silhouette, few large geometric facets, highly optimized game model, minimal geometry, crisp stylized hand-painted textures, rich clean color blocks, sharp material definition, painted PS1 textures on flat facets, flat shaded, crisp silhouette, feline cat eyes, T-pose, full body, centered, plain solid light grey background, no scenery, no environment, no ground, empty background, single character, full body, centered, no scenery",
+      "category": "creature",
+      "monster_id": "mummy",
+      "variant": "seed_2"
     },
     {
       "id": "clay_golem",
       "title": "Кот-Голем (Clay Golem Cat)",
-      "prompt": "<lora:gf_lowpoly:0.9>, gf_lowpoly, ningraphix, ps1 game screenshot, anthropomorphic cat hybrid, clay golem cat, cracked terracotta body, rune stamp on forehead, heavy blocky limbs, chibi proportions, big angular head, feline cat eyes, chunky low-poly, simple geometric forms, large clean flat facets, PS1 game character, flat shaded, crisp silhouette, limited detail, T-pose, neutral solid light grey background",
+      "prompt": "<lora:gf_lowpoly:0.9>, gf_lowpoly, ningraphix, ps1 game screenshot, anthropomorphic cat hybrid, clay golem cat, cracked terracotta body, rune stamp on forehead, heavy blocky limbs, chibi proportions, big angular head, very low polygon mesh, extremely chunky blocky silhouette, few large geometric facets, highly optimized game model, minimal geometry, crisp stylized hand-painted textures, rich clean color blocks, sharp material definition, painted PS1 textures on flat facets, flat shaded, crisp silhouette, feline cat eyes, T-pose, full body, centered, plain solid light grey background, no scenery, no environment, no ground, empty background, single character, full body, centered, no scenery",
       "category": "creature",
       "monster_id": "clay_golem",
-      "variant": "base"
+      "variant": "seed_1"
+    },
+    {
+      "id": "clay_golem_v2",
+      "title": "Кот-Голем (Clay Golem Cat)",
+      "prompt": "<lora:gf_lowpoly:0.9>, gf_lowpoly, ningraphix, ps1 game screenshot, anthropomorphic cat hybrid, clay golem cat, cracked terracotta body, rune stamp on forehead, heavy blocky limbs, chibi proportions, big angular head, very low polygon mesh, extremely chunky blocky silhouette, few large geometric facets, highly optimized game model, minimal geometry, crisp stylized hand-painted textures, rich clean color blocks, sharp material definition, painted PS1 textures on flat facets, flat shaded, crisp silhouette, feline cat eyes, T-pose, full body, centered, plain solid light grey background, no scenery, no environment, no ground, empty background, single character, full body, centered, no scenery",
+      "category": "creature",
+      "monster_id": "clay_golem",
+      "variant": "seed_2"
     },
     {
       "id": "fire_elemental",
       "title": "Кот-Элементаль Огня (Fire Elemental Cat)",
-      "prompt": "<lora:gf_lowpoly:0.9>, gf_lowpoly, ningraphix, ps1 game screenshot, anthropomorphic cat hybrid, fire elemental cat, body of low-poly flame shards, molten core, no solid skin, cat ear silhouettes in fire, chibi proportions, big angular head, feline cat eyes, chunky low-poly, simple geometric forms, large clean flat facets, PS1 game character, flat shaded, crisp silhouette, limited detail, T-pose, neutral solid light grey background",
+      "prompt": "<lora:gf_lowpoly:0.9>, gf_lowpoly, ningraphix, ps1 game screenshot, anthropomorphic cat hybrid, fire elemental cat, body of low-poly flame shards, molten core, no solid skin, cat ear silhouettes in fire, chibi proportions, big angular head, very low polygon mesh, extremely chunky blocky silhouette, few large geometric facets, highly optimized game model, minimal geometry, crisp stylized hand-painted textures, rich clean color blocks, sharp material definition, painted PS1 textures on flat facets, flat shaded, crisp silhouette, feline cat eyes, T-pose, full body, centered, plain solid light grey background, no scenery, no environment, no ground, empty background, single character, full body, centered, no scenery",
       "category": "creature",
       "monster_id": "fire_elemental",
-      "variant": "base"
+      "variant": "seed_1"
+    },
+    {
+      "id": "fire_elemental_v2",
+      "title": "Кот-Элементаль Огня (Fire Elemental Cat)",
+      "prompt": "<lora:gf_lowpoly:0.9>, gf_lowpoly, ningraphix, ps1 game screenshot, anthropomorphic cat hybrid, fire elemental cat, body of low-poly flame shards, molten core, no solid skin, cat ear silhouettes in fire, chibi proportions, big angular head, very low polygon mesh, extremely chunky blocky silhouette, few large geometric facets, highly optimized game model, minimal geometry, crisp stylized hand-painted textures, rich clean color blocks, sharp material definition, painted PS1 textures on flat facets, flat shaded, crisp silhouette, feline cat eyes, T-pose, full body, centered, plain solid light grey background, no scenery, no environment, no ground, empty background, single character, full body, centered, no scenery",
+      "category": "creature",
+      "monster_id": "fire_elemental",
+      "variant": "seed_2"
     },
     {
       "id": "ice_elemental",
       "title": "Кот-Элементаль Льда (Ice Elemental Cat)",
-      "prompt": "<lora:gf_lowpoly:0.9>, gf_lowpoly, ningraphix, ps1 game screenshot, anthropomorphic cat hybrid, ice elemental cat, translucent blue crystal body, jagged ice spikes, frosty whiskers, chibi proportions, big angular head, feline cat eyes, chunky low-poly, simple geometric forms, large clean flat facets, PS1 game character, flat shaded, crisp silhouette, limited detail, T-pose, neutral solid light grey background",
+      "prompt": "<lora:gf_lowpoly:0.9>, gf_lowpoly, ningraphix, ps1 game screenshot, anthropomorphic cat hybrid, ice elemental cat, translucent blue crystal body, jagged ice spikes, frosty whiskers, chibi proportions, big angular head, very low polygon mesh, extremely chunky blocky silhouette, few large geometric facets, highly optimized game model, minimal geometry, crisp stylized hand-painted textures, rich clean color blocks, sharp material definition, painted PS1 textures on flat facets, flat shaded, crisp silhouette, feline cat eyes, T-pose, full body, centered, plain solid light grey background, no scenery, no environment, no ground, empty background, single character, full body, centered, no scenery",
       "category": "creature",
       "monster_id": "ice_elemental",
-      "variant": "base"
+      "variant": "seed_1"
+    },
+    {
+      "id": "ice_elemental_v2",
+      "title": "Кот-Элементаль Льда (Ice Elemental Cat)",
+      "prompt": "<lora:gf_lowpoly:0.9>, gf_lowpoly, ningraphix, ps1 game screenshot, anthropomorphic cat hybrid, ice elemental cat, translucent blue crystal body, jagged ice spikes, frosty whiskers, chibi proportions, big angular head, very low polygon mesh, extremely chunky blocky silhouette, few large geometric facets, highly optimized game model, minimal geometry, crisp stylized hand-painted textures, rich clean color blocks, sharp material definition, painted PS1 textures on flat facets, flat shaded, crisp silhouette, feline cat eyes, T-pose, full body, centered, plain solid light grey background, no scenery, no environment, no ground, empty background, single character, full body, centered, no scenery",
+      "category": "creature",
+      "monster_id": "ice_elemental",
+      "variant": "seed_2"
     },
     {
       "id": "shadow",
       "title": "Кот-Тень (Shadow Cat)",
-      "prompt": "<lora:gf_lowpoly:0.9>, gf_lowpoly, ningraphix, ps1 game screenshot, anthropomorphic cat hybrid, shadow wraith cat, flat black silhouette body, wispy low-poly smoke edges, chibi proportions, big angular head, feline cat eyes, chunky low-poly, simple geometric forms, large clean flat facets, PS1 game character, flat shaded, crisp silhouette, limited detail, T-pose, neutral solid light grey background",
+      "prompt": "<lora:gf_lowpoly:0.9>, gf_lowpoly, ningraphix, ps1 game screenshot, anthropomorphic cat hybrid, shadow wraith cat, flat black silhouette body, wispy low-poly smoke edges, chibi proportions, big angular head, very low polygon mesh, extremely chunky blocky silhouette, few large geometric facets, highly optimized game model, minimal geometry, crisp stylized hand-painted textures, rich clean color blocks, sharp material definition, painted PS1 textures on flat facets, flat shaded, crisp silhouette, feline cat eyes, T-pose, full body, centered, plain solid light grey background, no scenery, no environment, no ground, empty background, single character, full body, centered, no scenery",
       "category": "creature",
       "monster_id": "shadow",
-      "variant": "base"
+      "variant": "seed_1"
+    },
+    {
+      "id": "shadow_v2",
+      "title": "Кот-Тень (Shadow Cat)",
+      "prompt": "<lora:gf_lowpoly:0.9>, gf_lowpoly, ningraphix, ps1 game screenshot, anthropomorphic cat hybrid, shadow wraith cat, flat black silhouette body, wispy low-poly smoke edges, chibi proportions, big angular head, very low polygon mesh, extremely chunky blocky silhouette, few large geometric facets, highly optimized game model, minimal geometry, crisp stylized hand-painted textures, rich clean color blocks, sharp material definition, painted PS1 textures on flat facets, flat shaded, crisp silhouette, feline cat eyes, T-pose, full body, centered, plain solid light grey background, no scenery, no environment, no ground, empty background, single character, full body, centered, no scenery",
+      "category": "creature",
+      "monster_id": "shadow",
+      "variant": "seed_2"
     },
     {
       "id": "mushroom",
       "title": "Кот-Гриб (Mushroom Cat)",
-      "prompt": "<lora:gf_lowpoly:0.9>, gf_lowpoly, ningraphix, ps1 game screenshot, anthropomorphic cat hybrid, mushroom cat, spotted red cap on head, fungal stem body, tiny spore clouds, cat ears under cap, chibi proportions, big angular head, feline cat eyes, chunky low-poly, simple geometric forms, large clean flat facets, PS1 game character, flat shaded, crisp silhouette, limited detail, T-pose, neutral solid light grey background",
+      "prompt": "<lora:gf_lowpoly:0.9>, gf_lowpoly, ningraphix, ps1 game screenshot, anthropomorphic cat hybrid, mushroom cat, spotted red cap on head, fungal stem body, tiny spore clouds, cat ears under cap, chibi proportions, big angular head, very low polygon mesh, extremely chunky blocky silhouette, few large geometric facets, highly optimized game model, minimal geometry, crisp stylized hand-painted textures, rich clean color blocks, sharp material definition, painted PS1 textures on flat facets, flat shaded, crisp silhouette, feline cat eyes, T-pose, full body, centered, plain solid light grey background, no scenery, no environment, no ground, empty background, single character, full body, centered, no scenery",
       "category": "creature",
       "monster_id": "mushroom",
-      "variant": "base"
+      "variant": "seed_1"
+    },
+    {
+      "id": "mushroom_v2",
+      "title": "Кот-Гриб (Mushroom Cat)",
+      "prompt": "<lora:gf_lowpoly:0.9>, gf_lowpoly, ningraphix, ps1 game screenshot, anthropomorphic cat hybrid, mushroom cat, spotted red cap on head, fungal stem body, tiny spore clouds, cat ears under cap, chibi proportions, big angular head, very low polygon mesh, extremely chunky blocky silhouette, few large geometric facets, highly optimized game model, minimal geometry, crisp stylized hand-painted textures, rich clean color blocks, sharp material definition, painted PS1 textures on flat facets, flat shaded, crisp silhouette, feline cat eyes, T-pose, full body, centered, plain solid light grey background, no scenery, no environment, no ground, empty background, single character, full body, centered, no scenery",
+      "category": "creature",
+      "monster_id": "mushroom",
+      "variant": "seed_2"
     },
     {
       "id": "cactus",
       "title": "Кот-Кактус (Cactus Cat)",
-      "prompt": "<lora:gf_lowpoly:0.9>, gf_lowpoly, ningraphix, ps1 game screenshot, anthropomorphic cat hybrid, cactus cat, green ribbed low-poly cactus body, yellow spines, small flower on head, cat face, chibi proportions, big angular head, feline cat eyes, chunky low-poly, simple geometric forms, large clean flat facets, PS1 game character, flat shaded, crisp silhouette, limited detail, T-pose, neutral solid light grey background",
+      "prompt": "<lora:gf_lowpoly:0.9>, gf_lowpoly, ningraphix, ps1 game screenshot, anthropomorphic cat hybrid, cactus cat, green ribbed low-poly cactus body, yellow spines, small flower on head, cat face, chibi proportions, big angular head, very low polygon mesh, extremely chunky blocky silhouette, few large geometric facets, highly optimized game model, minimal geometry, crisp stylized hand-painted textures, rich clean color blocks, sharp material definition, painted PS1 textures on flat facets, flat shaded, crisp silhouette, feline cat eyes, T-pose, full body, centered, plain solid light grey background, no scenery, no environment, no ground, empty background, single character, full body, centered, no scenery",
       "category": "creature",
       "monster_id": "cactus",
-      "variant": "base"
+      "variant": "seed_1"
+    },
+    {
+      "id": "cactus_v2",
+      "title": "Кот-Кактус (Cactus Cat)",
+      "prompt": "<lora:gf_lowpoly:0.9>, gf_lowpoly, ningraphix, ps1 game screenshot, anthropomorphic cat hybrid, cactus cat, green ribbed low-poly cactus body, yellow spines, small flower on head, cat face, chibi proportions, big angular head, very low polygon mesh, extremely chunky blocky silhouette, few large geometric facets, highly optimized game model, minimal geometry, crisp stylized hand-painted textures, rich clean color blocks, sharp material definition, painted PS1 textures on flat facets, flat shaded, crisp silhouette, feline cat eyes, T-pose, full body, centered, plain solid light grey background, no scenery, no environment, no ground, empty background, single character, full body, centered, no scenery",
+      "category": "creature",
+      "monster_id": "cactus",
+      "variant": "seed_2"
     },
     {
       "id": "kraken",
       "title": "Кот-Кракен (Kraken Cat)",
-      "prompt": "<lora:gf_lowpoly:0.9>, gf_lowpoly, ningraphix, ps1 game screenshot, cat kraken hybrid, cat head with ears, many low-poly octopus tentacles instead of legs, suction cups, deep blue skin, chibi proportions, big angular head, feline cat eyes, chunky low-poly, simple geometric forms, large clean flat facets, PS1 game character, flat shaded, crisp silhouette, limited detail, T-pose, neutral solid light grey background",
+      "prompt": "<lora:gf_lowpoly:0.9>, gf_lowpoly, ningraphix, ps1 game screenshot, cat kraken hybrid, cat head with ears, many low-poly octopus tentacles instead of legs, suction cups, deep blue skin, chibi proportions, big angular head, very low polygon mesh, extremely chunky blocky silhouette, few large geometric facets, highly optimized game model, minimal geometry, crisp stylized hand-painted textures, rich clean color blocks, sharp material definition, painted PS1 textures on flat facets, flat shaded, crisp silhouette, feline cat eyes, T-pose, full body, centered, plain solid light grey background, no scenery, no environment, no ground, empty background, single character, full body, centered, no scenery",
       "category": "creature",
       "monster_id": "kraken",
-      "variant": "base"
+      "variant": "seed_1"
+    },
+    {
+      "id": "kraken_v2",
+      "title": "Кот-Кракен (Kraken Cat)",
+      "prompt": "<lora:gf_lowpoly:0.9>, gf_lowpoly, ningraphix, ps1 game screenshot, cat kraken hybrid, cat head with ears, many low-poly octopus tentacles instead of legs, suction cups, deep blue skin, chibi proportions, big angular head, very low polygon mesh, extremely chunky blocky silhouette, few large geometric facets, highly optimized game model, minimal geometry, crisp stylized hand-painted textures, rich clean color blocks, sharp material definition, painted PS1 textures on flat facets, flat shaded, crisp silhouette, feline cat eyes, T-pose, full body, centered, plain solid light grey background, no scenery, no environment, no ground, empty background, single character, full body, centered, no scenery",
+      "category": "creature",
+      "monster_id": "kraken",
+      "variant": "seed_2"
     },
     {
       "id": "jellyfish",
       "title": "Кот-Медуза (Jellyfish Cat)",
-      "prompt": "<lora:gf_lowpoly:0.9>, gf_lowpoly, ningraphix, ps1 game screenshot, jellyfish cat, head shaped exactly like a cat head with ears and whiskers, no arms, no legs, no limbs at all, only dangling jellyfish tentacles hanging downward from under the cat head, translucent soft body, floating, chibi proportions, big angular cat head, chunky low-poly, simple geometric forms, large clean flat facets, PS1 game character, flat shaded, crisp silhouette, limited detail, neutral solid light grey background, feline cat eyes",
+      "prompt": "<lora:gf_lowpoly:0.9>, gf_lowpoly, ningraphix, ps1 game screenshot, jellyfish cat, head shaped exactly like a cat head with ears and whiskers, no arms, no legs, no limbs at all, only dangling jellyfish tentacles hanging downward from under the cat head, translucent soft body, floating, chibi proportions, big angular cat head, chibi proportions, big angular head, very low polygon mesh, extremely chunky blocky silhouette, few large geometric facets, highly optimized game model, minimal geometry, crisp stylized hand-painted textures, rich clean color blocks, sharp material definition, painted PS1 textures on flat facets, flat shaded, crisp silhouette, feline cat eyes, T-pose, full body, centered, plain solid light grey background, no scenery, no environment, no ground, empty background, single character, full body, centered, no scenery",
       "category": "creature",
       "monster_id": "jellyfish",
-      "variant": "base"
+      "variant": "seed_1"
+    },
+    {
+      "id": "jellyfish_v2",
+      "title": "Кот-Медуза (Jellyfish Cat)",
+      "prompt": "<lora:gf_lowpoly:0.9>, gf_lowpoly, ningraphix, ps1 game screenshot, jellyfish cat, head shaped exactly like a cat head with ears and whiskers, no arms, no legs, no limbs at all, only dangling jellyfish tentacles hanging downward from under the cat head, translucent soft body, floating, chibi proportions, big angular cat head, chibi proportions, big angular head, very low polygon mesh, extremely chunky blocky silhouette, few large geometric facets, highly optimized game model, minimal geometry, crisp stylized hand-painted textures, rich clean color blocks, sharp material definition, painted PS1 textures on flat facets, flat shaded, crisp silhouette, feline cat eyes, T-pose, full body, centered, plain solid light grey background, no scenery, no environment, no ground, empty background, single character, full body, centered, no scenery",
+      "category": "creature",
+      "monster_id": "jellyfish",
+      "variant": "seed_2"
     },
     {
       "id": "bee",
       "title": "Кот-Пчела (Bee Cat)",
-      "prompt": "<lora:gf_lowpoly:0.9>, gf_lowpoly, ningraphix, ps1 game screenshot, bee cat, cat head only with ears and whiskers, body is a simple low-poly yellow-black striped rectangle box, no arms, no legs, no limbs, exactly two flat polygonal bee wings on the back, tiny stinger on rear of box body, floating, chibi proportions, big angular cat head, chunky low-poly, simple geometric forms, large clean flat facets, PS1 game character, flat shaded, crisp silhouette, limited detail, neutral solid light grey background, feline cat eyes",
+      "prompt": "<lora:gf_lowpoly:0.9>, gf_lowpoly, ningraphix, ps1 game screenshot, bee cat, angular blocky bee body, yellow-black striped, flat polygonal bee wings, small stinger, cat face, cat eyes, cat ears, chunky geometric shapes, not round, chibi proportions, big angular head, very low polygon mesh, extremely chunky blocky silhouette, few large geometric facets, highly optimized game model, minimal geometry, crisp stylized hand-painted textures, rich clean color blocks, sharp material definition, painted PS1 textures on flat facets, flat shaded, crisp silhouette, T-pose, full body, centered, plain solid light grey background, no scenery, no environment, no ground, empty background, single character, full body, centered, no scenery",
       "category": "creature",
       "monster_id": "bee",
-      "variant": "base"
+      "variant": "seed_1"
+    },
+    {
+      "id": "bee_v2",
+      "title": "Кот-Пчела (Bee Cat)",
+      "prompt": "<lora:gf_lowpoly:0.9>, gf_lowpoly, ningraphix, ps1 game screenshot, bee cat, angular blocky bee body, yellow-black striped, flat polygonal bee wings, small stinger, cat face, cat eyes, cat ears, chunky geometric shapes, not round, chibi proportions, big angular head, very low polygon mesh, extremely chunky blocky silhouette, few large geometric facets, highly optimized game model, minimal geometry, crisp stylized hand-painted textures, rich clean color blocks, sharp material definition, painted PS1 textures on flat facets, flat shaded, crisp silhouette, T-pose, full body, centered, plain solid light grey background, no scenery, no environment, no ground, empty background, single character, full body, centered, no scenery",
+      "category": "creature",
+      "monster_id": "bee",
+      "variant": "seed_2"
     },
     {
       "id": "scorpion",
       "title": "Кот-Скорпион (Scorpion Cat)",
-      "prompt": "<lora:gf_lowpoly:0.9>, gf_lowpoly, ningraphix, ps1 game screenshot, anthropomorphic cat hybrid, scorpion cat, armored chitin plates, large pincer hands, arched stinger tail, desert beige colors, chibi proportions, big angular head, feline cat eyes, chunky low-poly, simple geometric forms, large clean flat facets, PS1 game character, flat shaded, crisp silhouette, limited detail, T-pose, neutral solid light grey background",
+      "prompt": "<lora:gf_lowpoly:0.9>, gf_lowpoly, ningraphix, ps1 game screenshot, anthropomorphic cat hybrid, scorpion cat, armored chitin plates, large pincer hands, arched stinger tail, desert beige colors, chibi proportions, big angular head, very low polygon mesh, extremely chunky blocky silhouette, few large geometric facets, highly optimized game model, minimal geometry, crisp stylized hand-painted textures, rich clean color blocks, sharp material definition, painted PS1 textures on flat facets, flat shaded, crisp silhouette, feline cat eyes, T-pose, full body, centered, plain solid light grey background, no scenery, no environment, no ground, empty background, single character, full body, centered, no scenery",
       "category": "creature",
       "monster_id": "scorpion",
-      "variant": "base"
+      "variant": "seed_1"
+    },
+    {
+      "id": "scorpion_v2",
+      "title": "Кот-Скорпион (Scorpion Cat)",
+      "prompt": "<lora:gf_lowpoly:0.9>, gf_lowpoly, ningraphix, ps1 game screenshot, anthropomorphic cat hybrid, scorpion cat, armored chitin plates, large pincer hands, arched stinger tail, desert beige colors, chibi proportions, big angular head, very low polygon mesh, extremely chunky blocky silhouette, few large geometric facets, highly optimized game model, minimal geometry, crisp stylized hand-painted textures, rich clean color blocks, sharp material definition, painted PS1 textures on flat facets, flat shaded, crisp silhouette, feline cat eyes, T-pose, full body, centered, plain solid light grey background, no scenery, no environment, no ground, empty background, single character, full body, centered, no scenery",
+      "category": "creature",
+      "monster_id": "scorpion",
+      "variant": "seed_2"
     },
     {
       "id": "vampire",
       "title": "Кот-Вампир (Vampire Cat)",
-      "prompt": "<lora:gf_lowpoly:0.9>, gf_lowpoly, ningraphix, ps1 game screenshot, anthropomorphic cat vampire, pale fur, fangs, high collar cape, holding a polygonal goblet, chibi proportions, big angular head, feline cat eyes, chunky low-poly, simple geometric forms, large clean flat facets, PS1 game character, flat shaded, crisp silhouette, limited detail, T-pose, neutral solid light grey background",
+      "prompt": "<lora:gf_lowpoly:0.9>, gf_lowpoly, ningraphix, ps1 game screenshot, anthropomorphic cat vampire, pale fur, fangs, high collar cape, chibi proportions, big angular head, very low polygon mesh, extremely chunky blocky silhouette, few large geometric facets, highly optimized game model, minimal geometry, crisp stylized hand-painted textures, rich clean color blocks, sharp material definition, painted PS1 textures on flat facets, flat shaded, crisp silhouette, feline cat eyes, T-pose, full body, centered, plain solid light grey background, no scenery, no environment, no ground, empty background, single character, full body, centered, no scenery",
       "category": "creature",
       "monster_id": "vampire",
-      "variant": "base"
+      "variant": "seed_1"
+    },
+    {
+      "id": "vampire_v2",
+      "title": "Кот-Вампир (Vampire Cat)",
+      "prompt": "<lora:gf_lowpoly:0.9>, gf_lowpoly, ningraphix, ps1 game screenshot, anthropomorphic cat vampire, pale fur, fangs, high collar cape, chibi proportions, big angular head, very low polygon mesh, extremely chunky blocky silhouette, few large geometric facets, highly optimized game model, minimal geometry, crisp stylized hand-painted textures, rich clean color blocks, sharp material definition, painted PS1 textures on flat facets, flat shaded, crisp silhouette, feline cat eyes, T-pose, full body, centered, plain solid light grey background, no scenery, no environment, no ground, empty background, single character, full body, centered, no scenery",
+      "category": "creature",
+      "monster_id": "vampire",
+      "variant": "seed_2"
     },
     {
       "id": "alchemist",
       "title": "Кот-Алхимик (Alchemist Cat)",
-      "prompt": "<lora:gf_lowpoly:0.9>, gf_lowpoly, ningraphix, ps1 game screenshot, anthropomorphic cat alchemist, round glasses, stained apron, holding bubbling low-poly potion flasks, belt of vials, chibi proportions, big angular head, feline cat eyes, chunky low-poly, simple geometric forms, large clean flat facets, PS1 game character, flat shaded, crisp silhouette, limited detail, T-pose, neutral solid light grey background",
+      "prompt": "<lora:gf_lowpoly:0.9>, gf_lowpoly, ningraphix, ps1 game screenshot, anthropomorphic cat alchemist, small blocky rectangular glasses, stained apron, feline cat eyes, chibi proportions, big angular head, very low polygon mesh, extremely chunky blocky silhouette, few large geometric facets, highly optimized game model, minimal geometry, crisp stylized hand-painted textures, rich clean color blocks, sharp material definition, painted PS1 textures on flat facets, flat shaded, crisp silhouette, T-pose, full body, centered, plain solid light grey background, no scenery, no environment, no ground, empty background, single character, full body, centered, no scenery",
       "category": "creature",
       "monster_id": "alchemist",
-      "variant": "base"
+      "variant": "seed_1"
+    },
+    {
+      "id": "alchemist_v2",
+      "title": "Кот-Алхимик (Alchemist Cat)",
+      "prompt": "<lora:gf_lowpoly:0.9>, gf_lowpoly, ningraphix, ps1 game screenshot, anthropomorphic cat alchemist, small blocky rectangular glasses, stained apron, feline cat eyes, chibi proportions, big angular head, very low polygon mesh, extremely chunky blocky silhouette, few large geometric facets, highly optimized game model, minimal geometry, crisp stylized hand-painted textures, rich clean color blocks, sharp material definition, painted PS1 textures on flat facets, flat shaded, crisp silhouette, T-pose, full body, centered, plain solid light grey background, no scenery, no environment, no ground, empty background, single character, full body, centered, no scenery",
+      "category": "creature",
+      "monster_id": "alchemist",
+      "variant": "seed_2"
     },
     {
       "id": "druid",
       "title": "Кот-Друид (Druid Cat)",
-      "prompt": "<lora:gf_lowpoly:0.9>, gf_lowpoly, ningraphix, ps1 game screenshot, anthropomorphic cat druid, leaf cloak, wooden antler circlet, holding a living vine staff, moss details, chibi proportions, big angular head, feline cat eyes, chunky low-poly, simple geometric forms, large clean flat facets, PS1 game character, flat shaded, crisp silhouette, limited detail, T-pose, neutral solid light grey background",
+      "prompt": "<lora:gf_lowpoly:0.9>, gf_lowpoly, ningraphix, ps1 game screenshot, anthropomorphic cat druid, leaf cloak, wooden antler circlet, moss details, chibi proportions, big angular head, very low polygon mesh, extremely chunky blocky silhouette, few large geometric facets, highly optimized game model, minimal geometry, crisp stylized hand-painted textures, rich clean color blocks, sharp material definition, painted PS1 textures on flat facets, flat shaded, crisp silhouette, feline cat eyes, T-pose, full body, centered, plain solid light grey background, no scenery, no environment, no ground, empty background, single character, full body, centered, no scenery",
       "category": "creature",
       "monster_id": "druid",
-      "variant": "base"
+      "variant": "seed_1"
+    },
+    {
+      "id": "druid_v2",
+      "title": "Кот-Друид (Druid Cat)",
+      "prompt": "<lora:gf_lowpoly:0.9>, gf_lowpoly, ningraphix, ps1 game screenshot, anthropomorphic cat druid, leaf cloak, wooden antler circlet, moss details, chibi proportions, big angular head, very low polygon mesh, extremely chunky blocky silhouette, few large geometric facets, highly optimized game model, minimal geometry, crisp stylized hand-painted textures, rich clean color blocks, sharp material definition, painted PS1 textures on flat facets, flat shaded, crisp silhouette, feline cat eyes, T-pose, full body, centered, plain solid light grey background, no scenery, no environment, no ground, empty background, single character, full body, centered, no scenery",
+      "category": "creature",
+      "monster_id": "druid",
+      "variant": "seed_2"
     },
     {
       "id": "bard",
       "title": "Кот-Бард (Bard Cat)",
-      "prompt": "<lora:gf_lowpoly:0.9>, gf_lowpoly, ningraphix, ps1 game screenshot, anthropomorphic cat bard, colorful patchwork tunic, holding a low-poly lute, feathered cap, chibi proportions, big angular head, feline cat eyes, chunky low-poly, simple geometric forms, large clean flat facets, PS1 game character, flat shaded, crisp silhouette, limited detail, T-pose, neutral solid light grey background",
+      "prompt": "<lora:gf_lowpoly:0.9>, gf_lowpoly, ningraphix, ps1 game screenshot, anthropomorphic cat bard, colorful patchwork tunic, feathered cap, chibi proportions, big angular head, very low polygon mesh, extremely chunky blocky silhouette, few large geometric facets, highly optimized game model, minimal geometry, crisp stylized hand-painted textures, rich clean color blocks, sharp material definition, painted PS1 textures on flat facets, flat shaded, crisp silhouette, feline cat eyes, T-pose, full body, centered, plain solid light grey background, no scenery, no environment, no ground, empty background, single character, full body, centered, no scenery",
       "category": "creature",
       "monster_id": "bard",
-      "variant": "base"
+      "variant": "seed_1"
+    },
+    {
+      "id": "bard_v2",
+      "title": "Кот-Бард (Bard Cat)",
+      "prompt": "<lora:gf_lowpoly:0.9>, gf_lowpoly, ningraphix, ps1 game screenshot, anthropomorphic cat bard, colorful patchwork tunic, feathered cap, chibi proportions, big angular head, very low polygon mesh, extremely chunky blocky silhouette, few large geometric facets, highly optimized game model, minimal geometry, crisp stylized hand-painted textures, rich clean color blocks, sharp material definition, painted PS1 textures on flat facets, flat shaded, crisp silhouette, feline cat eyes, T-pose, full body, centered, plain solid light grey background, no scenery, no environment, no ground, empty background, single character, full body, centered, no scenery",
+      "category": "creature",
+      "monster_id": "bard",
+      "variant": "seed_2"
     },
     {
       "id": "paladin",
       "title": "Кот-Паладин (Paladin Cat)",
-      "prompt": "<lora:gf_lowpoly:0.9>, gf_lowpoly, ningraphix, ps1 game screenshot, anthropomorphic cat paladin, shiny gold low-poly plate armor, holy emblem shield, glowing polygonal sword, chibi proportions, big angular head, feline cat eyes, chunky low-poly, simple geometric forms, large clean flat facets, PS1 game character, flat shaded, crisp silhouette, limited detail, T-pose, neutral solid light grey background",
+      "prompt": "<lora:gf_lowpoly:0.9>, gf_lowpoly, ningraphix, ps1 game screenshot, anthropomorphic cat paladin, shiny gold low-poly plate armor, chibi proportions, big angular head, very low polygon mesh, extremely chunky blocky silhouette, few large geometric facets, highly optimized game model, minimal geometry, crisp stylized hand-painted textures, rich clean color blocks, sharp material definition, painted PS1 textures on flat facets, flat shaded, crisp silhouette, feline cat eyes, T-pose, full body, centered, plain solid light grey background, no scenery, no environment, no ground, empty background, single character, full body, centered, no scenery",
       "category": "creature",
       "monster_id": "paladin",
-      "variant": "base"
+      "variant": "seed_1"
+    },
+    {
+      "id": "paladin_v2",
+      "title": "Кот-Паладин (Paladin Cat)",
+      "prompt": "<lora:gf_lowpoly:0.9>, gf_lowpoly, ningraphix, ps1 game screenshot, anthropomorphic cat paladin, shiny gold low-poly plate armor, chibi proportions, big angular head, very low polygon mesh, extremely chunky blocky silhouette, few large geometric facets, highly optimized game model, minimal geometry, crisp stylized hand-painted textures, rich clean color blocks, sharp material definition, painted PS1 textures on flat facets, flat shaded, crisp silhouette, feline cat eyes, T-pose, full body, centered, plain solid light grey background, no scenery, no environment, no ground, empty background, single character, full body, centered, no scenery",
+      "category": "creature",
+      "monster_id": "paladin",
+      "variant": "seed_2"
     },
     {
       "id": "necromancer",
       "title": "Кот-Некромант (Necromancer Cat)",
-      "prompt": "<lora:gf_lowpoly:0.9>, gf_lowpoly, ningraphix, ps1 game screenshot, anthropomorphic cat necromancer, tattered black robes, skull shoulder piece, holding a bone staff with floating skull, green ghost glow, chibi proportions, big angular head, feline cat eyes, chunky low-poly, simple geometric forms, large clean flat facets, PS1 game character, flat shaded, crisp silhouette, limited detail, T-pose, neutral solid light grey background",
+      "prompt": "<lora:gf_lowpoly:0.9>, gf_lowpoly, ningraphix, ps1 game screenshot, anthropomorphic cat necromancer, tattered black robes, skull shoulder piece, green ghost glow, chibi proportions, big angular head, very low polygon mesh, extremely chunky blocky silhouette, few large geometric facets, highly optimized game model, minimal geometry, crisp stylized hand-painted textures, rich clean color blocks, sharp material definition, painted PS1 textures on flat facets, flat shaded, crisp silhouette, feline cat eyes, T-pose, full body, centered, plain solid light grey background, no scenery, no environment, no ground, empty background, single character, full body, centered, no scenery",
       "category": "creature",
       "monster_id": "necromancer",
-      "variant": "base"
+      "variant": "seed_1"
+    },
+    {
+      "id": "necromancer_v2",
+      "title": "Кот-Некромант (Necromancer Cat)",
+      "prompt": "<lora:gf_lowpoly:0.9>, gf_lowpoly, ningraphix, ps1 game screenshot, anthropomorphic cat necromancer, tattered black robes, skull shoulder piece, green ghost glow, chibi proportions, big angular head, very low polygon mesh, extremely chunky blocky silhouette, few large geometric facets, highly optimized game model, minimal geometry, crisp stylized hand-painted textures, rich clean color blocks, sharp material definition, painted PS1 textures on flat facets, flat shaded, crisp silhouette, feline cat eyes, T-pose, full body, centered, plain solid light grey background, no scenery, no environment, no ground, empty background, single character, full body, centered, no scenery",
+      "category": "creature",
+      "monster_id": "necromancer",
+      "variant": "seed_2"
     },
     {
       "id": "samurai",
       "title": "Кот-самурай (Samurai Cat)",
-      "prompt": "<lora:gf_lowpoly:0.9>, gf_lowpoly, ningraphix, ps1 game screenshot, anthropomorphic cat samurai, lacquered low-poly armor plates, kabuto helmet with cat ears cutouts, katana at hip, chibi proportions, big angular head, feline cat eyes, chunky low-poly, simple geometric forms, large clean flat facets, PS1 game character, flat shaded, crisp silhouette, limited detail, T-pose, neutral solid light grey background",
+      "prompt": "<lora:gf_lowpoly:0.9>, gf_lowpoly, ningraphix, ps1 game screenshot, anthropomorphic cat samurai, lacquered low-poly armor plates, kabuto helmet with cat ears cutouts, chibi proportions, big angular head, very low polygon mesh, extremely chunky blocky silhouette, few large geometric facets, highly optimized game model, minimal geometry, crisp stylized hand-painted textures, rich clean color blocks, sharp material definition, painted PS1 textures on flat facets, flat shaded, crisp silhouette, feline cat eyes, T-pose, full body, centered, plain solid light grey background, no scenery, no environment, no ground, empty background, single character, full body, centered, no scenery",
       "category": "creature",
       "monster_id": "samurai",
-      "variant": "base"
+      "variant": "seed_1"
+    },
+    {
+      "id": "samurai_v2",
+      "title": "Кот-самурай (Samurai Cat)",
+      "prompt": "<lora:gf_lowpoly:0.9>, gf_lowpoly, ningraphix, ps1 game screenshot, anthropomorphic cat samurai, lacquered low-poly armor plates, kabuto helmet with cat ears cutouts, chibi proportions, big angular head, very low polygon mesh, extremely chunky blocky silhouette, few large geometric facets, highly optimized game model, minimal geometry, crisp stylized hand-painted textures, rich clean color blocks, sharp material definition, painted PS1 textures on flat facets, flat shaded, crisp silhouette, feline cat eyes, T-pose, full body, centered, plain solid light grey background, no scenery, no environment, no ground, empty background, single character, full body, centered, no scenery",
+      "category": "creature",
+      "monster_id": "samurai",
+      "variant": "seed_2"
     },
     {
       "id": "steampunk_clockwork",
       "title": "Стимпанк-кот (Steampunk Clockwork Cat)",
-      "prompt": "<lora:gf_lowpoly:0.9>, gf_lowpoly, ningraphix, ps1 game screenshot, anthropomorphic clockwork cat, brass low-poly plating, visible gears in chest, monocle lens, steam vents on shoulders, chibi proportions, big angular head, feline cat eyes, chunky low-poly, simple geometric forms, large clean flat facets, PS1 game character, flat shaded, crisp silhouette, limited detail, T-pose, neutral solid light grey background",
+      "prompt": "<lora:gf_lowpoly:0.9>, gf_lowpoly, ningraphix, ps1 game screenshot, anthropomorphic clockwork cat, brass low-poly plating, visible gears in chest, monocle lens, steam vents on shoulders, chibi proportions, big angular head, very low polygon mesh, extremely chunky blocky silhouette, few large geometric facets, highly optimized game model, minimal geometry, crisp stylized hand-painted textures, rich clean color blocks, sharp material definition, painted PS1 textures on flat facets, flat shaded, crisp silhouette, feline cat eyes, T-pose, full body, centered, plain solid light grey background, no scenery, no environment, no ground, empty background, single character, full body, centered, no scenery",
       "category": "creature",
       "monster_id": "steampunk_clockwork",
-      "variant": "base"
+      "variant": "seed_1"
     },
     {
-      "id": "chef_cook",
-      "title": "Кот-повар (Chef Cat)",
-      "prompt": "<lora:gf_lowpoly:0.9>, gf_lowpoly, ningraphix, ps1 game screenshot, anthropomorphic cat chef, tall blocky chef hat, apron, holding a low-poly frying pan, chibi proportions, big angular head, feline cat eyes, chunky low-poly, simple geometric forms, large clean flat facets, PS1 game character, flat shaded, crisp silhouette, limited detail, T-pose, neutral solid light grey background",
+      "id": "steampunk_clockwork_v2",
+      "title": "Стимпанк-кот (Steampunk Clockwork Cat)",
+      "prompt": "<lora:gf_lowpoly:0.9>, gf_lowpoly, ningraphix, ps1 game screenshot, anthropomorphic clockwork cat, brass low-poly plating, visible gears in chest, monocle lens, steam vents on shoulders, chibi proportions, big angular head, very low polygon mesh, extremely chunky blocky silhouette, few large geometric facets, highly optimized game model, minimal geometry, crisp stylized hand-painted textures, rich clean color blocks, sharp material definition, painted PS1 textures on flat facets, flat shaded, crisp silhouette, feline cat eyes, T-pose, full body, centered, plain solid light grey background, no scenery, no environment, no ground, empty background, single character, full body, centered, no scenery",
       "category": "creature",
-      "monster_id": "chef_cook",
-      "variant": "base"
+      "monster_id": "steampunk_clockwork",
+      "variant": "seed_2"
+    },
+    {
+      "id": "chef",
+      "title": "Кот-повар (Chef Cat)",
+      "prompt": "<lora:gf_lowpoly:0.9>, gf_lowpoly, ningraphix, ps1 game screenshot, anthropomorphic cat chef, tall blocky chef hat, apron, chibi proportions, big angular head, very low polygon mesh, extremely chunky blocky silhouette, few large geometric facets, highly optimized game model, minimal geometry, crisp stylized hand-painted textures, rich clean color blocks, sharp material definition, painted PS1 textures on flat facets, flat shaded, crisp silhouette, feline cat eyes, T-pose, full body, centered, plain solid light grey background, no scenery, no environment, no ground, empty background, single character, full body, centered, no scenery",
+      "category": "creature",
+      "monster_id": "chef",
+      "variant": "seed_1"
+    },
+    {
+      "id": "chef_v2",
+      "title": "Кот-повар (Chef Cat)",
+      "prompt": "<lora:gf_lowpoly:0.9>, gf_lowpoly, ningraphix, ps1 game screenshot, anthropomorphic cat chef, tall blocky chef hat, apron, chibi proportions, big angular head, very low polygon mesh, extremely chunky blocky silhouette, few large geometric facets, highly optimized game model, minimal geometry, crisp stylized hand-painted textures, rich clean color blocks, sharp material definition, painted PS1 textures on flat facets, flat shaded, crisp silhouette, feline cat eyes, T-pose, full body, centered, plain solid light grey background, no scenery, no environment, no ground, empty background, single character, full body, centered, no scenery",
+      "category": "creature",
+      "monster_id": "chef",
+      "variant": "seed_2"
     },
     {
       "id": "frost_witch",
       "title": "Морозная ведьма-кот (Frost Witch Cat)",
-      "prompt": "<lora:gf_lowpoly:0.9>, gf_lowpoly, ningraphix, ps1 game screenshot, anthropomorphic cat frost witch, icy blue cloak, crystal staff with frozen tip, snowflake low-poly ornaments, chibi proportions, big angular head, feline cat eyes, chunky low-poly, simple geometric forms, large clean flat facets, PS1 game character, flat shaded, crisp silhouette, limited detail, T-pose, neutral solid light grey background",
+      "prompt": "<lora:gf_lowpoly:0.9>, gf_lowpoly, ningraphix, ps1 game screenshot, anthropomorphic cat frost witch, icy blue cloak, , snowflake low-poly ornaments, chibi proportions, big angular head, very low polygon mesh, extremely chunky blocky silhouette, few large geometric facets, highly optimized game model, minimal geometry, crisp stylized hand-painted textures, rich clean color blocks, sharp material definition, painted PS1 textures on flat facets, flat shaded, crisp silhouette, feline cat eyes, T-pose, full body, centered, plain solid light grey background, no scenery, no environment, no ground, empty background, single character, full body, centered, no scenery",
       "category": "creature",
       "monster_id": "frost_witch",
-      "variant": "base"
+      "variant": "seed_1"
+    },
+    {
+      "id": "frost_witch_v2",
+      "title": "Морозная ведьма-кот (Frost Witch Cat)",
+      "prompt": "<lora:gf_lowpoly:0.9>, gf_lowpoly, ningraphix, ps1 game screenshot, anthropomorphic cat frost witch, icy blue cloak, , snowflake low-poly ornaments, chibi proportions, big angular head, very low polygon mesh, extremely chunky blocky silhouette, few large geometric facets, highly optimized game model, minimal geometry, crisp stylized hand-painted textures, rich clean color blocks, sharp material definition, painted PS1 textures on flat facets, flat shaded, crisp silhouette, feline cat eyes, T-pose, full body, centered, plain solid light grey background, no scenery, no environment, no ground, empty background, single character, full body, centered, no scenery",
+      "category": "creature",
+      "monster_id": "frost_witch",
+      "variant": "seed_2"
     }
-  ],
-  "generation_lora": "gf_lowpoly",
-  "notes": "v2: gf_lowpoly@0.9; chunky PS1 low-poly without extreme poly-count (avoids artifacts)"
+  ]
 }

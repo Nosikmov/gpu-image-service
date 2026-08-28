@@ -1,4 +1,4 @@
-# gameFarmling curation — chunky PS1 low-poly (balanced, fewer artifacts)
+# gameFarmling curation — subject lines; build_prompts adds dual LoRA prefix automatically
 
 Маг с посохом (Mage with Staff):
 <lora:gf_lowpoly:0.9>, gf_lowpoly, ningraphix, ps1 game screenshot, anthropomorphic cat mage, blue wizard hat, low-poly magic robe, holding a tall wooden staff with a glowing polygonal crystal tip, chibi proportions, big angular head, feline cat eyes, chunky low-poly, simple geometric forms, large clean flat facets, PS1 game character, flat shaded, crisp silhouette, limited detail, T-pose, neutral solid light grey background
@@ -7,7 +7,7 @@
 <lora:gf_lowpoly:0.9>, gf_lowpoly, ningraphix, ps1 game screenshot, anthropomorphic cat summoner, dark purple mystic cloak, holding a glowing magical orb floating above palm, mystical low-poly runes, chibi proportions, big angular head, feline cat eyes, chunky low-poly, simple geometric forms, large clean flat facets, PS1 game character, flat shaded, crisp silhouette, limited detail, T-pose, neutral solid light grey background
 
 Лучник (Archer / Ranger):
-<lora:gf_lowpoly:0.9>, gf_lowpoly, ningraphix, ps1 game screenshot, anthropomorphic cat archer, wearing low-poly leather tunic and cowl, holding a simple polygonal wooden bow, quiver with arrows on back, chibi proportions, big angular head, feline cat eyes, chunky low-poly, simple geometric forms, large clean flat facets, PS1 game character, flat shaded, crisp silhouette, limited detail, T-pose, neutral solid light grey background
+feral wild cat, rugged primitive survivor, simple ragged cloth tunic and wraps, rustic patched outfit, no bow, no quiver, no weapons
 
 Рыцарь (Knight):
 <lora:gf_lowpoly:0.9>, gf_lowpoly, ningraphix, ps1 game screenshot, anthropomorphic orange cat knight, wearing simple low poly iron plate armor, blocky shoulder pads, holding a flat polygonal sword, chibi proportions, big angular head, feline cat eyes, chunky low-poly, simple geometric forms, large clean flat facets, PS1 game character, flat shaded, crisp silhouette, limited detail, T-pose, neutral solid light grey background
@@ -16,10 +16,10 @@
 <lora:gf_lowpoly:0.9>, gf_lowpoly, ningraphix, ps1 game screenshot, anthropomorphic cat hybrid, green slime creature cat, translucent gooey emerald green body, cat ears and tail, dripping low poly green slime, chibi proportions, big angular head, feline cat eyes, chunky low-poly, simple geometric forms, large clean flat facets, PS1 game character, flat shaded, crisp silhouette, limited detail, T-pose, neutral solid light grey background
 
 Красный Слизень (Red Slime Cat):
-<lora:gf_lowpoly:0.9>, gf_lowpoly, ningraphix, ps1 game screenshot, anthropomorphic cat hybrid, red slime creature cat, translucent gooey ruby red body, cat ears and tail, dripping low poly red slime, chibi proportions, big angular head, feline cat eyes, chunky low-poly, simple geometric forms, large clean flat facets, PS1 game character, flat shaded, crisp silhouette, limited detail, T-pose, neutral solid light grey background
+red slime cat, round plush blob body, cat face, cat eyes, cat ears, small cat tail
 
 Желтый Слизень (Yellow Slime Cat):
-<lora:gf_lowpoly:0.9>, gf_lowpoly, ningraphix, ps1 game screenshot, anthropomorphic cat hybrid, yellow slime creature cat, translucent gooey amber yellow body, cat ears and tail, dripping low poly yellow slime, chibi proportions, big angular head, feline cat eyes, chunky low-poly, simple geometric forms, large clean flat facets, PS1 game character, flat shaded, crisp silhouette, limited detail, T-pose, neutral solid light grey background
+yellow slime cat, round plush blob body, cat face, cat eyes, cat ears, small cat tail
 
 Кадры без оружия / Простой гражданин (Merchant Cat):
 <lora:gf_lowpoly:0.9>, gf_lowpoly, ningraphix, ps1 game screenshot, anthropomorphic cat merchant, holding a small blocky treasure chest, apron over tunic, chibi proportions, big angular head, feline cat eyes, chunky low-poly, simple geometric forms, large clean flat facets, PS1 game character, flat shaded, crisp silhouette, limited detail, T-pose, neutral solid light grey background
@@ -73,10 +73,10 @@ goblin:
 <lora:gf_lowpoly:0.9>, gf_lowpoly, ningraphix, ps1 game screenshot, anthropomorphic cat hybrid, lizard cat, green scaly skin, cat ears, long thick low-poly lizard tail, wearing simple loincloth, holding a polygonal dagger, chibi proportions, big angular head, feline cat eyes, chunky low-poly, simple geometric forms, large clean flat facets, PS1 game character, flat shaded, crisp silhouette, limited detail, T-pose, neutral solid light grey background
 
 Кот-Червь (Worm Cat):
-<lora:gf_lowpoly:0.9>, gf_lowpoly, ningraphix, ps1 game screenshot, cat worm hybrid, pink segmented low-poly worm body, cat head on front with ears and whiskers, no legs, upright coiled stance, chibi proportions, big angular head, feline cat eyes, chunky low-poly, simple geometric forms, large clean flat facets, PS1 game character, flat shaded, crisp silhouette, limited detail, neutral solid light grey background
+cat worm hybrid, pink segmented low-poly worm body, cat head on front, cat ears, whiskers, angular slanted feline cat eyes, narrow cat pupils, not round eyes, no legs, upright coiled stance
 
 Кот-Личинка (Larva / Grub Cat):
-<lora:gf_lowpoly:0.9>, gf_lowpoly, ningraphix, ps1 game screenshot, cat grub larva hybrid, fat segmented cream-colored low-poly grub body, cat face with ears, tiny insectoid legs under head, chibi proportions, big angular head, feline cat eyes, chunky low-poly, simple geometric forms, large clean flat facets, PS1 game character, flat shaded, crisp silhouette, limited detail, neutral solid light grey background
+larva grub cat, fat segmented cream grub body, cat face, cat ears, tiny insect legs under head, angular slanted feline cat eyes, narrow cat pupils, not round eyes
 
 Кот-Древопаук (Wood-Spider Cat — высокий, с длинными тонко-угольными лапами):
 <lora:gf_lowpoly:0.9>, gf_lowpoly, ningraphix, ps1 game screenshot, wood spider cat hybrid, cat head with ears and whiskers, wooden bark texture, 6 extremely long spindly wooden spider legs, tall towering legs structure, no arms, chibi proportions, big angular head, feline cat eyes, chunky low-poly, simple geometric forms, large clean flat facets, PS1 game character, flat shaded, crisp silhouette, limited detail, neutral solid light grey background
@@ -157,7 +157,7 @@ goblin:
 <lora:gf_lowpoly:0.9>, gf_lowpoly, ningraphix, ps1 game screenshot, jellyfish cat, head shaped exactly like a cat head with ears and whiskers, no arms, no legs, no limbs at all, only dangling jellyfish tentacles hanging downward from under the cat head, translucent soft body, floating, chibi proportions, big angular cat head, chunky low-poly, simple geometric forms, large clean flat facets, PS1 game character, flat shaded, crisp silhouette, limited detail, neutral solid light grey background, feline cat eyes
 
 Кот-Пчела (Bee Cat):
-<lora:gf_lowpoly:0.9>, gf_lowpoly, ningraphix, ps1 game screenshot, bee cat, cat head only with ears and whiskers, body is a simple low-poly yellow-black striped rectangle box, no arms, no legs, no limbs, exactly two flat polygonal bee wings on the back, tiny stinger on rear of box body, floating, chibi proportions, big angular cat head, chunky low-poly, simple geometric forms, large clean flat facets, PS1 game character, flat shaded, crisp silhouette, limited detail, neutral solid light grey background, feline cat eyes
+bee cat, angular blocky bee body, yellow-black striped, flat polygonal bee wings, small stinger, cat face, cat eyes, cat ears, chunky geometric shapes, not round
 
 Кот-Скорпион (Scorpion Cat):
 <lora:gf_lowpoly:0.9>, gf_lowpoly, ningraphix, ps1 game screenshot, anthropomorphic cat hybrid, scorpion cat, armored chitin plates, large pincer hands, arched stinger tail, desert beige colors, chibi proportions, big angular head, feline cat eyes, chunky low-poly, simple geometric forms, large clean flat facets, PS1 game character, flat shaded, crisp silhouette, limited detail, T-pose, neutral solid light grey background
@@ -166,7 +166,7 @@ goblin:
 <lora:gf_lowpoly:0.9>, gf_lowpoly, ningraphix, ps1 game screenshot, anthropomorphic cat vampire, pale fur, fangs, high collar cape, holding a polygonal goblet, chibi proportions, big angular head, feline cat eyes, chunky low-poly, simple geometric forms, large clean flat facets, PS1 game character, flat shaded, crisp silhouette, limited detail, T-pose, neutral solid light grey background
 
 Кот-Алхимик (Alchemist Cat):
-<lora:gf_lowpoly:0.9>, gf_lowpoly, ningraphix, ps1 game screenshot, anthropomorphic cat alchemist, round glasses, stained apron, holding bubbling low-poly potion flasks, belt of vials, chibi proportions, big angular head, feline cat eyes, chunky low-poly, simple geometric forms, large clean flat facets, PS1 game character, flat shaded, crisp silhouette, limited detail, T-pose, neutral solid light grey background
+anthropomorphic cat alchemist, small blocky rectangular glasses, stained apron, angular slanted feline cat eyes, narrow cat pupils, not round eyes
 
 Кот-Друид (Druid Cat):
 <lora:gf_lowpoly:0.9>, gf_lowpoly, ningraphix, ps1 game screenshot, anthropomorphic cat druid, leaf cloak, wooden antler circlet, holding a living vine staff, moss details, chibi proportions, big angular head, feline cat eyes, chunky low-poly, simple geometric forms, large clean flat facets, PS1 game character, flat shaded, crisp silhouette, limited detail, T-pose, neutral solid light grey background

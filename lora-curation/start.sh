@@ -12,7 +12,7 @@ if [[ -x "$ROOT/.venv/bin/python" ]]; then
   PY="$ROOT/.venv/bin/python"
 fi
 
-echo "=== LoRA curation (Forge Flux / gameFarmling) ==="
+echo "=== LoRA curation (Forge Flux Q6_K / gameFarmling) ==="
 echo "root: $ROOT"
 echo "python: $PY"
 echo "FORGE_URL: $FORGE_URL"

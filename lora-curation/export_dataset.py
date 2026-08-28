@@ -22,7 +22,7 @@ _MULTI_COMMA = re.compile(r"\s*,\s*,+")
 
 
 def clean_prompt_for_training(prompt: str) -> str:
-    """Strip old LoRA tags; keep subject/style words for Flux captions."""
+    """Strip LoRA tags; keep subject/style words for Flux training captions."""
     text = _LORA_TAG.sub("", prompt or "")
     text = _MULTI_COMMA.sub(",", text)
     return text.strip(" ,\n\t")

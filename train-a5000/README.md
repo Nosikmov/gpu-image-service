@@ -1,4 +1,4 @@
-# Train `gf_lowpoly` on Ubuntu + A5000 (one command)
+# Train `gf_lowpoly` on Ubuntu + RTX 4090 / A5000 (one command)
 
 Style LoRA for gameFarmling (Flux). Dataset: curated 512×512 PNGs + captions.  
 Home PC (4070) is only for **inference** after you download the `.safetensors`.
@@ -8,7 +8,7 @@ Home PC (4070) is only for **inference** after you download the `.safetensors`.
 - Ubuntu 22.04+
 - NVIDIA driver (`nvidia-smi` works)
 - `sudo` (bootstrap installs `libgl1` etc. for OpenCV on headless hosts)
-- ~1× **A5000 24GB** (or similar), **64GB RAM**
+- ~1× **RTX 4090 24GB** or **A5000 24GB**, **32–64GB RAM**
 - ~80GB free disk (FLUX download + caches + output)
 - Hugging Face account with access to [`FLUX.1-dev`](https://huggingface.co/black-forest-labs/FLUX.1-dev)
 
@@ -93,6 +93,12 @@ train-a5000\sync_dataset.bat
 ```
 
 Then commit/push (or `scp -r train-a5000/dataset user@server:...`).
+
+On the server after export:
+
+```bash
+bash train-a5000/sync_dataset.sh
+```
 
 ## Layout
 
