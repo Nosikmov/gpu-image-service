@@ -12,9 +12,13 @@ info "repo:  ${REPO}"
 info "forge: ${FORGE}"
 
 if command -v apt-get >/dev/null 2>&1; then
-  info "Installing system packages (sudo)..."
-  sudo apt-get update -qq
-  sudo DEBIAN_FRONTEND=noninteractive apt-get install -y -qq \
+  APT="apt-get"
+  if [[ "$(id -u)" -ne 0 ]] && command -v sudo >/dev/null 2>&1; then
+    APT="sudo apt-get"
+  fi
+  info "Installing system packages..."
+  ${APT} update -qq
+  DEBIAN_FRONTEND=noninteractive ${APT} install -y -qq \
     git tmux curl rsync \
     libgl1 libglib2.0-0 libsm6 libxext6 libxrender1 \
     python3 python3-venv
