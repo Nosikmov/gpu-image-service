@@ -234,6 +234,7 @@ ssh -L 8765:127.0.0.1:8765 user@SERVER_IP
 
 | Симптом | Решение |
 |---------|---------|
+| `must not be launched as root` | Forge только под обычным юзером: `bash lora-curation/deploy/start_forge.sh` (создаёт `sdforge`) |
 | HF download 0B / зависание | `HF_HUB_DISABLE_XET=1` уже в bootstrap; перезапуск |
 | OOM при train на 24GB | bootstrap уже: `low_vram`, no EMA, no samples |
 | `libGL.so.1` | `sudo apt install libgl1` или `setup_server.sh` |

@@ -4,7 +4,7 @@ set -euo pipefail
 
 FORGE_SRC="${FORGE_SRC:-}"
 REMOTE="${REMOTE:-}"
-FORGE_DST="${FORGE_DST:-$HOME/stable-diffusion-webui-forge}"
+export FORGE_DST="${FORGE_DST:-/home/sdforge/stable-diffusion-webui-forge}"
 
 if [[ -z "$FORGE_SRC" || -z "$REMOTE" ]]; then
   cat <<'EOF'
@@ -12,7 +12,7 @@ Usage (from Windows Git Bash / WSL / Linux):
 
   FORGE_SRC=/path/to/stable-diffusion-webui-forge \
   REMOTE=user@gpu-host \
-  FORGE_DST=/home/user/stable-diffusion-webui-forge \
+  FORGE_DST=/home/sdforge/stable-diffusion-webui-forge \
   bash lora-curation/deploy/sync_models.sh
 
 Copies Flux fp8 checkpoint, VAE, text encoders, optional gf_lowpoly LoRA.
