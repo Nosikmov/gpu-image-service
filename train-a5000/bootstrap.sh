@@ -24,6 +24,7 @@ OUTPUT_DIR="${ROOT}/output"
 HF_CACHE="${ROOT}/.hf-cache"
 STEPS="${STEPS:-1500}"
 BATCH="${BATCH:-1}"
+TRAIN_NAME="${TRAIN_NAME:-gf_lowpoly}"
 PY_BIN="${PY_BIN:-python3}"
 
 red() { printf '\033[31m%s\033[0m\n' "$*"; }
@@ -34,7 +35,7 @@ need_cmd() {
   command -v "$1" >/dev/null 2>&1 || { red "Missing command: $1"; exit 1; }
 }
 
-info "gf_lowpoly A5000 trainer"
+info "gf_lowpoly trainer (${TRAIN_NAME})"
 info "HF_HUB_DISABLE_XET=${HF_HUB_DISABLE_XET} (must be 1 if downloads stuck at 0B)"
 info "dataset: ${DATASET}"
 info "toolkit: ${TOOLKIT_DIR}"
@@ -154,7 +155,7 @@ cat > "${CONFIG_OUT}" <<EOF
 ---
 job: extension
 config:
-  name: gf_lowpoly
+  name: ${TRAIN_NAME}
   process:
     - type: sd_trainer
       training_folder: "${OUTPUT_ABS}"
@@ -208,15 +209,15 @@ config:
         width: 512
         height: 512
         prompts:
-          - "gf_lowpoly, ningraphix, ps1 game screenshot, anthropomorphic cat mage, blue wizard hat, low-poly mesh, flat shaded, crisp hard edges, T-pose, neutral solid light grey background"
+          - "gf_lowpoly, ps1 game screenshot, a low-poly 3D character asset of an anthropomorphic cat summoner, dark purple mystic cloak, mystical low-poly runes, empty hands, open palms, amber yellow feline cat eyes, chunky low-poly, T-pose, orthographic front view, neutral solid light grey background"
         neg: ""
         seed: 42
         walk_seed: true
         guidance_scale: 3.5
         sample_steps: 20
 meta:
-  name: gf_lowpoly
-  version: "1.1-24gb"
+  name: ${TRAIN_NAME}
+  version: "1.2-24gb"
   trigger: gf_lowpoly
   notes: "24GB VRAM safe: low_vram, no EMA, no mid-train samples"
 EOF
@@ -239,14 +240,14 @@ fi
 
 if [[ "${TRAIN_STATUS}" -eq 0 ]]; then
   green "Done training stage."
-  green "LoRA checkpoints: ${OUTPUT_ABS}/gf_lowpoly/"
-  ls -lah "${OUTPUT_ABS}/gf_lowpoly/"/*.safetensors 2>/dev/null || true
+  green "LoRA checkpoints: ${OUTPUT_ABS}/${TRAIN_NAME}/"
+  ls -lah "${OUTPUT_ABS}/${TRAIN_NAME}/"/*.safetensors 2>/dev/null || true
 fi
 
 # --- Deliver weights off the server (so you can leave / kill the box) ---
 # Set HF_REPO_ID=YourName/gf-lowpoly  (private by default)
 upload_to_hf() {
-  local out_dir="${OUTPUT_ABS}/gf_lowpoly"
+  local out_dir="${OUTPUT_ABS}/${TRAIN_NAME}"
   if [[ -z "${HF_REPO_ID:-}" ]]; then
     info "No HF_REPO_ID set — skipping Hub upload."
     info "Re-run with: HF_REPO_ID=YourName/gf-lowpoly SKIP_INSTALL=1 UPLOAD_ONLY=1 ./bootstrap.sh"
@@ -318,7 +319,7 @@ notify_ntfy() {
   if [[ "${status}" == "ok" ]]; then
     title="gf_lowpoly DONE"
     tags="white_check_mark"
-    body="LoRA ready: ${OUTPUT_ABS}/gf_lowpoly/"
+    body="LoRA ready: ${OUTPUT_ABS}/${TRAIN_NAME}/"
     if [[ -n "${HF_REPO_ID:-}" ]]; then
       body="${body}"$'\n'"https://huggingface.co/${HF_REPO_ID}"
     fi

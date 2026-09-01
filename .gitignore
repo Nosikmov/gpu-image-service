@@ -46,6 +46,7 @@ lora-curation/ratings.json
 lora-curation/manifest.json
 lora-curation/auto_status.json
 lora-curation/export/
+lora-curation/archive/
 lora-curation/*.log
 
 # Local Ostris / Windows train helpers (server package is train-a5000/)

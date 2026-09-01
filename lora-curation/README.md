@@ -3,12 +3,14 @@
 Сбор style LoRA для **gameFarmling**: промпты low-poly + hand-painted textures → Forge txt2img → оценка в браузере → экспорт approved.
 
 Trigger word **`gf_lowpoly`**.  
-**Генерация:** обученная LoRA `<lora:gf_lowpoly:0.9>` (или dual Papercraft+ningraphix на старом пайплайне).
+**Генерация:** `lowpoly_flux:0.9` + `OOTN64_Krea2:0.9`  
+**Export/train:** trigger `gf_lowpoly`  
+**Dataset v2:** 40 промптов, 1 вариант, пустые руки, T-pose
 
 | Параметр | Значение |
 |----------|----------|
 | Model | `flux1-dev-fp8.safetensors` |
-| LoRA | `gf_lowpoly:0.9` |
+| LoRA | `lowpoly_flux:0.9`, `OOTN64_Krea2:0.9` |
 | Encoders | `ae`, `clip_l`, `t5xxl_fp8_e4m3fn` |
 | Size | 512×512 |
 | Steps | 20 |

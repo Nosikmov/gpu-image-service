@@ -12,7 +12,10 @@ from style import (  # noqa: E402
     FELINE_EYE_LOCK,
     GENERATION_PROMPT_PREFIX,
     PROMPT_FRAMING,
+    SLIME_CHARACTER_BODY,
+    SLIME_ENTRY_IDS,
     STYLE_LOCK,
+    SUBJECT_PREFIX,
     TRIGGER_WORD,
 )
 
@@ -22,6 +25,7 @@ _ROOT = Path(__file__).resolve().parent
 _STRIP_PHRASES: tuple[str, ...] = (
     "gf_lowpoly,",
     "ningraphix,",
+    "OOTN64_Krea2,",
     "ps1 game screenshot,",
     "T-pose,",
     "neutral solid light grey background",
@@ -36,6 +40,14 @@ _STRIP_PHRASES: tuple[str, ...] = (
     "chibi proportions, big angular head",
     "feline cat eyes",
     "angular slanted feline cat eyes, narrow cat pupils, not round eyes",
+    "ultra minimal low polygon mesh, tiny circle head, small circle ears, short circle stub arms and legs, few large flat facets, highly optimized game model, almost no geometric detail",
+    "cat face drawn as flat painted texture decal on the mesh, not a sculpted 3D face, simple painted feline eyes nose whiskers",
+    "orthographic front view",
+    "empty hands, open palms, clear hands visible",
+    "empty hands, open palms",
+    "limited detail",
+    "PS1 game character, flat shaded, crisp silhouette",
+    "simple geometric forms, large clean flat facets",
 )
 
 # Held weapons, props, and worn item clutter — stripped for clean character silhouettes.
@@ -100,41 +112,16 @@ def _strip_weapons_and_items(text: str) -> str:
     return out
 
 # Per-id subject overrides (short subject-only text).
-_SUBJECT_OVERRIDES: dict[str, str] = {
-    "archer_ranger": (
-        "feral wild cat, rugged primitive survivor, simple ragged cloth tunic and wraps, "
-        "rustic patched outfit, no bow, no quiver, no weapons"
-    ),
-    "bee": (
-        "bee cat, angular blocky bee body, yellow-black striped, "
-        "flat polygonal bee wings, small stinger, "
-        "cat face, cat eyes, cat ears, chunky geometric shapes, not round"
-    ),
-    "red_slime": "red slime cat, round plush blob body, cat face, cat eyes, cat ears, small cat tail",
-    "yellow_slime": "yellow slime cat, round plush blob body, cat face, cat eyes, cat ears, small cat tail",
-    "larva_grub": (
-        "larva grub cat, fat segmented cream grub body, cat face, cat ears, "
-        "tiny insect legs under head, "
-        f"{FELINE_EYE_LOCK}"
-    ),
-    "worm": (
-        "cat worm hybrid, pink segmented low-poly worm body, cat head on front, "
-        "cat ears, whiskers, no legs, upright coiled stance, "
-        f"{FELINE_EYE_LOCK}"
-    ),
-    "alchemist": (
-        "anthropomorphic cat alchemist, small blocky rectangular glasses, stained apron, "
-        f"{FELINE_EYE_LOCK}"
-    ),
-}
+_SUBJECT_OVERRIDES: dict[str, str] = {}
 
 
 def normalize_prompt_body(raw: str, *, entry_id: str | None = None) -> str:
     """Keep LoRA prefix + subject; drop redundant style tokens."""
     if entry_id and entry_id in _SUBJECT_OVERRIDES:
         subject = _SUBJECT_OVERRIDES[entry_id]
+        body = SLIME_CHARACTER_BODY if entry_id in SLIME_ENTRY_IDS else CHARACTER_BODY
         return (
-            f"{GENERATION_PROMPT_PREFIX} {subject}, {CHARACTER_BODY}, "
+            f"{GENERATION_PROMPT_PREFIX} {subject}, {body}, "
             f"{PROMPT_FRAMING}, {STYLE_LOCK}"
         )
 
@@ -146,13 +133,17 @@ def normalize_prompt_body(raw: str, *, entry_id: str | None = None) -> str:
     line = re.sub(r",?\s*T-pose\s*,?", ",", line, flags=re.I)
     line = re.sub(r",\s*glowing\s*,", ",", line, flags=re.I)
     line = re.sub(r",\s*glowing\s*$", "", line, flags=re.I)
+    line = re.sub(r",?\s*orthographic front view\s*,?", ",", line, flags=re.I)
     line = re.sub(r"\s+", " ", line).strip(" ,")
 
     low = line.lower()
-    if "hand-painted textures" not in low:
-        line = f"{line}, {CHARACTER_BODY}" if line else CHARACTER_BODY
-    if "feline cat eyes" not in low:
+    body = SLIME_CHARACTER_BODY if entry_id in SLIME_ENTRY_IDS else CHARACTER_BODY
+    if "large clean flat facets" not in low:
+        line = f"{line}, {body}" if line else body
+    if FELINE_EYE_LOCK and "feline cat eyes" not in low:
         line = f"{line}, {FELINE_EYE_LOCK}" if line else FELINE_EYE_LOCK
+    if line and "low-poly 3d character asset" not in low:
+        line = f"{SUBJECT_PREFIX} {line}"
 
     framing = f"{PROMPT_FRAMING}, {STYLE_LOCK}"
     return f"{GENERATION_PROMPT_PREFIX} {line}, {framing}" if line else f"{GENERATION_PROMPT_PREFIX} {framing}"

@@ -32,8 +32,8 @@ def main() -> int:
     parser.add_argument(
         "--variants",
         type=int,
-        default=2,
-        help="Seed slots per prompt (2 => ~76 candidates from 38 bases)",
+        default=1,
+        help="Seed slots per prompt (1 => 40 candidates from 40 bases)",
     )
     parser.add_argument(
         "--trigger",

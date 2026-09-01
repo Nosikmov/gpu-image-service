@@ -7,6 +7,10 @@ LORA="$(cd "$CUR/.." && pwd)"
 ROOT="$(cd "$LORA/.." && pwd)"
 cd "$ROOT"
 
+# shellcheck source=forge_user.sh
+source "${CUR}/forge_user.sh"
+export FORGE_DIR="${FORGE_DIR:-$(default_forge_dir)}"
+
 PY="${PY:-python3}"
 if [[ -x "$ROOT/.venv/bin/python" ]]; then
   PY="$ROOT/.venv/bin/python"
@@ -18,7 +22,7 @@ PORT="${PORT:-8765}"
 SKIP_GENERATE="${SKIP_GENERATE:-0}"
 
 echo "=== run_curation ==="
-echo "FORGE_URL=$FORGE_URL  variants=$VARIANTS  port=$PORT"
+echo "FORGE_URL=$FORGE_URL  FORGE_DIR=$FORGE_DIR  variants=$VARIANTS  port=$PORT"
 
 echo "[1/3] build_prompts…"
 "$PY" "$LORA/build_prompts.py" --variants "$VARIANTS"

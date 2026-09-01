@@ -1,19 +1,20 @@
-{
-  "model": "flux1-dev-fp8.safetensors",
-  "width": 512,
-  "height": 512,
-  "steps": 20,
-  "sampler_name": "Euler",
-  "scheduler": "Simple",
-  "cfg_scale": 1.0,
-  "distilled_cfg_scale": 3.5,
-  "seed": -1,
-  "timeout_sec": 300,
-  "unet_storage_dtype": "Automatic (fp16 LoRA)",
-  "negative_prompt": "high-poly, smooth subdivision, muddy textures, blurry textures, flat untextured plastic, muddy artifacts, broken geometry, extra limbs, cube body, box body, scenery, landscape, environment, sky, clouds, forest, grass, ground, floor, horizon, room, interior, outdoor, dungeon, castle, props, furniture, platform, gradient background, detailed background, blurry, watermark, text, round eyes, huge round eyes, anime round eyes, circular eyes, bug eyes",
-  "forge_additional_modules": [
-    "models/VAE/ae.safetensors",
-    "models/text_encoder/clip_l.safetensors",
-    "models/text_encoder/t5xxl_fp8_e4m3fn.safetensors"
-  ]
-}
+{
+  "model": "flux1-dev-fp8.safetensors",
+  "width": 512,
+  "height": 512,
+  "steps": 20,
+  "sampler_name": "Euler",
+  "scheduler": "Simple",
+  "cfg_scale": 1.0,
+  "distilled_cfg_scale": 3.5,
+  "seed": -1,
+  "timeout_sec": 300,
+  "unet_storage_dtype": "Automatic (fp16 LoRA)",
+  "negative_prompt": "high-poly, smooth subdivision, muddy textures, blurry textures, flat untextured plastic, muddy artifacts, broken geometry, extra limbs, weapon, sword, staff, bow, shield, gun, dagger, axe, spear, scythe, holding object, props in hands, cube body, box body, scenery, landscape, environment, sky, clouds, forest, grass, ground, floor, horizon, room, interior, outdoor, dungeon, castle, furniture, platform, gradient background, detailed background, blurry, watermark, text, black dot eyes, solid black eyes, beady black eyes, pitch black eyes, identical round black eyes, black circular dot pupils, void black eyes, round eyes, huge round eyes, anime round eyes, circular eyes, bug eyes",
+  "forge_additional_modules": [
+    "models/VAE/ae.safetensors",
+    "models/text_encoder/clip_l.safetensors",
+    "models/text_encoder/t5xxl_fp8_e4m3fn.safetensors"
+  ]
+}
+
