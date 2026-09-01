@@ -209,7 +209,7 @@ config:
         width: 512
         height: 512
         prompts:
-          - "gf_lowpoly, ps1 game screenshot, a low-poly 3D character asset of an anthropomorphic cat summoner, dark purple mystic cloak, mystical low-poly runes, empty hands, open palms, amber yellow feline cat eyes, chunky low-poly, T-pose, orthographic front view, neutral solid light grey background"
+          - "gf_lowpoly, ps1 game screenshot, a low-poly 3D character asset of an anthropomorphic cat summoner, dark purple mystic cloak, mystical low-poly runes, empty hands, open palms, identical paired amber yellow cat eyes, flat painted oval eyes, vertical slit pupils, same eye style on every character, chunky low-poly, T-pose, orthographic front view, neutral solid light grey background"
         neg: ""
         seed: 42
         walk_seed: true

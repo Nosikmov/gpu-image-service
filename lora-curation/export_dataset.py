@@ -5,7 +5,6 @@ from __future__ import annotations
 
 import argparse
 import json
-import re
 import shutil
 import sys
 from pathlib import Path
@@ -14,33 +13,21 @@ _ROOT = Path(__file__).resolve().parent
 if str(_ROOT) not in sys.path:
     sys.path.insert(0, str(_ROOT))
 
+from caption_train import normalize_training_caption  # noqa: E402
 from paths import EXPORT_DIR, load_prompts, load_ratings  # noqa: E402
 from style import TRIGGER_WORD  # noqa: E402
 
-_LORA_TAG = re.compile(r"<lora:[^>]+>\s*", re.IGNORECASE)
-_MULTI_COMMA = re.compile(r"\s*,\s*,+")
 
-
-def clean_prompt_for_training(prompt: str) -> str:
-    """Strip LoRA tags; keep subject/style words for Flux training captions."""
-    text = _LORA_TAG.sub("", prompt or "")
-    text = _MULTI_COMMA.sub(",", text)
-    return text.strip(" ,\n\t")
-
-
-def make_caption(prompt: str, trigger: str, mode: str) -> str:
-    cleaned = clean_prompt_for_training(prompt)
+def make_caption(prompt: str, trigger: str, mode: str, entry_id: str | None = None) -> str:
     if mode == "trigger_only":
         return trigger
     if mode == "full":
-        # legacy: raw prompt including <lora:...> (not ideal for training)
         return (prompt or "").strip()
     if mode == "trigger":
-        return f"{trigger}, {cleaned}" if cleaned else trigger
-    # default training mode
-    if cleaned.lower().startswith(trigger.lower()):
+        cleaned = normalize_training_caption(prompt, trigger=trigger, entry_id=entry_id)
         return cleaned
-    return f"{trigger}, {cleaned}" if cleaned else trigger
+    # default training mode
+    return normalize_training_caption(prompt, trigger=trigger, entry_id=entry_id)
 
 
 def export_approved(*, min_rating: str = "approve", caption_mode: str = "train") -> dict[str, int]:
@@ -77,7 +64,7 @@ def export_approved(*, min_rating: str = "approve", caption_mode: str = "train")
         shutil.copy2(src, dst_img)
 
         prompt = prompt_by_id.get(entry_id, "")
-        caption = make_caption(prompt, trigger, caption_mode)
+        caption = make_caption(prompt, trigger, caption_mode, entry_id=entry_id)
         dst_img.with_suffix(".txt").write_text(caption + "\n", encoding="utf-8")
         copied += 1
         print(f"[export] {entry_id} -> {dst_img.name}")

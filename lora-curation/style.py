@@ -36,18 +36,24 @@ GENERATION_LORA_TAG = GENERATION_LORA_TAGS
 
 # Dataset v2 — chunky low-poly, empty hands, detail in texture/costume.
 SUBJECT_PREFIX = "a low-poly 3D character asset of"
+
+# Same phrase in every caption + at inference. Do not use "expressive" (invites variation).
+FELINE_EYE_LOCK = (
+    "identical paired amber yellow cat eyes, flat painted oval eyes, "
+    "vertical slit pupils, same eye style on every character"
+)
+
 CHARACTER_BODY = (
     "empty hands, open palms, clear hands visible, chibi proportions, big angular head, "
-    "amber yellow feline cat eyes, expressive slanted cat eyes, chunky low-poly, simple geometric forms, large clean flat facets, "
+    f"{FELINE_EYE_LOCK}, chunky low-poly, simple geometric forms, large clean flat facets, "
     "PS1 game character, flat shaded, crisp silhouette, limited detail"
 )
 SLIME_CHARACTER_BODY = (
     "chibi proportions, chunky low-poly, simple geometric forms, large clean flat facets, "
+    f"{FELINE_EYE_LOCK}, "
     "PS1 game character, flat shaded, crisp silhouette, limited detail"
 )
 SLIME_ENTRY_IDS = frozenset({"green_slime", "red_slime", "yellow_slime", "slime"})
-
-FELINE_EYE_LOCK = ""
 
 PROMPT_FRAMING = (
     "T-pose, orthographic front view, neutral solid light grey background, "

@@ -1,6 +1,32 @@
 # Test `gf_lowpoly` — 12 images
 
-## 1) On the GPU server (preferred first)
+## 1b) All 40 curation prompts (same as dataset v2)
+
+```bash
+cd ~/gpu-image-service
+git pull
+cd train-a5000
+chmod +x server_cycle.sh test_lora/run_dataset_test.sh
+./server_cycle.sh test dataset
+# or:
+cd test_lora && ./run_dataset_test.sh
+```
+
+Result: `test_lora/out_dataset/knight_v2.png`, `orc_v2.png`, … + `manifest.json`
+
+Download:
+
+```bash
+scp -r ubuntu@SERVER:~/gpu-image-service/train-a5000/test_lora/out_dataset F:\fluxGenerationForLora\lora_test_40
+```
+
+Optional:
+
+```bash
+LORA=../output/gf_lowpoly/gf_lowpoly_000001500.safetensors ./run_dataset_test.sh --weight 0.9 --limit 4
+```
+
+## 1) On the GPU server — quick smoke (12 images)
 
 Uses the **already downloaded FLUX** from training + LoRA in `output/` — **Forge not needed**.
 
@@ -44,6 +70,8 @@ Forge must be up with `--api`, LoRA in `models\Lora\gf_lowpoly.safetensors`, Dif
 | File | Role |
 |------|------|
 | `test_prompts.json` | 12 subjects + gen settings |
-| `run_on_server.sh` / `infer_diffusers.py` | server test (diffusers) |
+| `run_dataset_test.sh` / `infer_dataset_prompts.py` | 40 prompts from `lora-curation/prompts.json` |
+| `run_on_server.sh` / `infer_diffusers.py` | 12-prompt smoke test |
 | `test_gf_lowpoly.py` | local Forge API test |
-| `out/` | generated PNGs (gitignored) |
+| `out/` | 12 smoke PNGs (gitignored) |
+| `out_dataset/` | 40 dataset PNGs (gitignored) |

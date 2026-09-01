@@ -25,6 +25,7 @@ do_train() {
 
 do_test() {
   local lora="${LORA:-}"
+  local mode="${2:-smoke}"
   if [[ -z "${lora}" ]]; then
     lora="$(find "${LORA_OUT}" -maxdepth 1 -name '*.safetensors' 2>/dev/null | sort | tail -1)"
   fi
@@ -32,9 +33,14 @@ do_test() {
     echo "No LoRA in ${LORA_OUT}. Run: $0 train" >&2
     exit 1
   fi
-  info "Smoke test: ${lora}"
   cd "${ROOT}/test_lora"
-  LORA="${lora}" ./run_on_server.sh "${@:2}"
+  if [[ "${mode}" == "dataset" || "${mode}" == "all40" ]]; then
+    info "Dataset test (40 prompts): ${lora}"
+    LORA="${lora}" ./run_dataset_test.sh "${@:3}"
+  else
+    info "Smoke test (12 prompts): ${lora}"
+    LORA="${lora}" ./run_on_server.sh "${@:2}"
+  fi
 }
 
 do_round2() {
@@ -72,7 +78,8 @@ case "${cmd}" in
 Usage: ./server_cycle.sh <command>
 
   train     — bootstrap.sh (TRAIN_NAME=${TRAIN_NAME})
-  test      — diffusers smoke test -> test_lora/out/
+  test      — smoke test (12 prompts) -> test_lora/out/
+              test dataset — all 40 prompts -> test_lora/out_dataset/
   round2    — install LoRA in Forge + curation with CURATION_MODE=trained
   all       — train then test
 

@@ -21,10 +21,18 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent
 TRAIN_ROOT = ROOT.parent
+REPO_ROOT = TRAIN_ROOT.parent
+LORA_CURATION = REPO_ROOT / "lora-curation"
 DEFAULT_CFG = ROOT / "test_prompts.json"
 DEFAULT_LORA = TRAIN_ROOT / "output" / "gf_lowpoly" / "gf_lowpoly.safetensors"
 DEFAULT_OUT = ROOT / "out"
 DEFAULT_HF = TRAIN_ROOT / ".hf-cache"
+
+if str(LORA_CURATION) not in sys.path:
+    sys.path.insert(0, str(LORA_CURATION))
+
+from caption_train import default_negative_prompt  # noqa: E402
+from style import FELINE_EYE_LOCK  # noqa: E402
 
 
 def main() -> int:
@@ -59,6 +67,7 @@ def main() -> int:
     guidance = float(cfg.get("distilled_cfg_scale") or 3.5)
     width = int(cfg.get("width") or 512)
     height = int(cfg.get("height") or 512)
+    negative = str(cfg.get("negative_prompt") or "") or default_negative_prompt()
 
     import torch
     from diffusers import FluxPipeline
@@ -83,10 +92,9 @@ def main() -> int:
     args.out.mkdir(parents=True, exist_ok=True)
     manifest = []
     style = (
-        "ningraphix, ps1 game screenshot, extremely low-poly, very few polygons, chunky blocky mesh, large flat facets, minimal geometric detail, PS1 N64 game asset, flat shaded, hard silhouette edges, no smooth subdivision, no high-poly sculpt, "
-        "chibi proportions, big angular head, feline cat eyes, identical paired low-poly cat eyes, "
-        "two matching oval eyes, flat white sclera, same size simple black round pupils, "
-        "symmetrical, no mismatched eyes"
+        "ps1 game screenshot, extremely low-poly, chunky blocky mesh, large flat facets, "
+        "PS1 N64 game asset, flat shaded, hard silhouette edges, chibi proportions, big angular head, "
+        f"{FELINE_EYE_LOCK}"
     )
 
     for i, subject in enumerate(subjects):
@@ -94,14 +102,17 @@ def main() -> int:
         prompt = f"{trigger}, {style}, {subject}"
         print(f"[{i+1}/{len(subjects)}] seed={seed} {subject[:55]}...", flush=True)
         gen = torch.Generator(device="cpu").manual_seed(seed)
-        image = pipe(
+        kwargs = dict(
             prompt=prompt,
             num_inference_steps=steps,
             guidance_scale=guidance,
             width=width,
             height=height,
             generator=gen,
-        ).images[0]
+        )
+        if negative:
+            kwargs["negative_prompt"] = negative
+        image = pipe(**kwargs).images[0]
         name = f"{i+1:02d}_seed{seed}.png"
         path = args.out / name
         image.save(path)
