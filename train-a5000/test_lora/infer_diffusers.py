@@ -4,8 +4,7 @@
 No Forge required. Intended for the rented GPU box right after training:
 
   cd ~/gpu-image-service/train-a5000/test_lora
-  chmod +x run_on_server.sh
-  ./run_on_server.sh
+  ../cycle.sh test slow
 
 Or:
   ../.ai-toolkit/.venv/bin/python infer_diffusers.py
@@ -32,6 +31,7 @@ if str(LORA_CURATION) not in sys.path:
     sys.path.insert(0, str(LORA_CURATION))
 
 from caption_train import default_negative_prompt  # noqa: E402
+from flux_infer_common import load_flux_with_lora  # noqa: E402
 from style import FELINE_EYE_LOCK  # noqa: E402
 
 
@@ -43,7 +43,16 @@ def main() -> int:
     ap.add_argument("--weight", type=float, default=0.85)
     ap.add_argument("--device", default="cuda")
     ap.add_argument("--limit", type=int, default=0)
+    ap.add_argument(
+        "--vram-mode",
+        choices=("sequential", "offload", "fast"),
+        default="sequential",
+        help="sequential=24GB default; offload=slowest; fast=full GPU (may OOM on 4090)",
+    )
+    ap.add_argument("--low-vram", action="store_true", help=argparse.SUPPRESS)  # legacy alias
     args = ap.parse_args()
+    if args.low_vram:
+        args.vram_mode = "offload"
 
     # Prefer training cache on the GPU box
     os.environ.setdefault("HF_HOME", str(DEFAULT_HF))
@@ -70,24 +79,14 @@ def main() -> int:
     negative = str(cfg.get("negative_prompt") or "") or default_negative_prompt()
 
     import torch
-    from diffusers import FluxPipeline
 
-    print("Loading FLUX.1-dev (from HF cache if present)...", flush=True)
-    pipe = FluxPipeline.from_pretrained(
-        "black-forest-labs/FLUX.1-dev",
-        torch_dtype=torch.bfloat16,
+    pipe = load_flux_with_lora(
+        args.lora,
+        weight=args.weight,
+        hf_cache=DEFAULT_HF,
+        vram_mode=args.vram_mode,
+        fuse_lora=(args.vram_mode == "fast"),
     )
-    pipe.enable_model_cpu_offload()
-    print(f"Loading LoRA {args.lora} weight={args.weight}", flush=True)
-    pipe.load_lora_weights(str(args.lora.parent), weight_name=args.lora.name)
-    try:
-        pipe.fuse_lora(lora_scale=args.weight)
-    except Exception:
-        # older diffusers: scale via cross_attention_kwargs / set_adapters
-        try:
-            pipe.set_adapters(["default"], adapter_weights=[args.weight])
-        except Exception as exc:
-            print(f"warn: could not set lora scale ({exc})", flush=True)
 
     args.out.mkdir(parents=True, exist_ok=True)
     manifest = []

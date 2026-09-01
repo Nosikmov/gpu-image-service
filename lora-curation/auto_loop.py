@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Autonomous curation loop: missing images + rejected redo + prompt-file watch.
 
-Run via START_CURATION.bat (starts Forge if needed, then this).
+Run via CURATE.bat (starts Forge if needed, then this).
 """
 
 from __future__ import annotations

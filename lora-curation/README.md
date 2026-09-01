@@ -17,13 +17,13 @@ Trigger word **`gf_lowpoly`**.
 | Sampler / Schedule | Euler / Simple |
 | CFG / Distilled CFG | 1.0 / 3.5 |
 
-**GPU server (4090):** [`SERVER_4090.md`](../SERVER_4090.md) + [`deploy/README.md`](deploy/README.md).
+**GPU server (4090):** см. [`LORA.md`](../LORA.md) и [`deploy/README.md`](deploy/README.md).
 
 Конфиг: [`forge_gen.json`](forge_gen.json). Промпты: [`promts-for-generate.txt`](promts-for-generate.txt) → `prompts.json`.
 
 ## Один файл (рекомендуется)
 
-Дважды кликни **[`START_CURATION.bat`](../START_CURATION.bat)** в корне `gpu-image-service`.
+Дважды кликни **[`CURATE.bat`](../CURATE.bat)** в корне `gpu-image-service`.
 
 Forge поднимается с `webui-user.bat` (Flux fp8 flags), reviewer http://127.0.0.1:8765/, auto-loop: missing + reject redo.
 

@@ -28,6 +28,7 @@ if str(LORA_CURATION) not in sys.path:
     sys.path.insert(0, str(LORA_CURATION))
 
 from caption_train import default_negative_prompt, prompt_for_inference  # noqa: E402
+from flux_infer_common import load_flux_with_lora  # noqa: E402
 
 
 def main() -> int:
@@ -43,7 +44,16 @@ def main() -> int:
     ap.add_argument("--guidance", type=float, default=3.5)
     ap.add_argument("--negative", default="", help="Override negative prompt (default: from prompts.json)")
     ap.add_argument("--no-negative", action="store_true")
+    ap.add_argument(
+        "--vram-mode",
+        choices=("sequential", "offload", "fast"),
+        default="sequential",
+        help="sequential=24GB default; offload=slowest; fast=full GPU (may OOM)",
+    )
+    ap.add_argument("--low-vram", action="store_true", help=argparse.SUPPRESS)
     args = ap.parse_args()
+    if args.low_vram:
+        args.vram_mode = "offload"
 
     os.environ.setdefault("HF_HOME", str(DEFAULT_HF))
     os.environ.setdefault("HF_HUB_CACHE", str(DEFAULT_HF / "hub"))
@@ -68,26 +78,18 @@ def main() -> int:
         negative = args.negative or str(pack.get("negative_prompt") or "") or default_negative_prompt()
 
     import torch
-    from diffusers import FluxPipeline
+
+    pipe = load_flux_with_lora(
+        args.lora,
+        weight=args.weight,
+        hf_cache=DEFAULT_HF,
+        vram_mode=args.vram_mode,
+        fuse_lora=(args.vram_mode == "fast"),
+    )
 
     print(f"Prompts: {args.prompts} ({len(entries)} entries)", flush=True)
     if negative:
         print(f"Negative: {negative[:80]}...", flush=True)
-    print("Loading FLUX.1-dev...", flush=True)
-    pipe = FluxPipeline.from_pretrained(
-        "black-forest-labs/FLUX.1-dev",
-        torch_dtype=torch.bfloat16,
-    )
-    pipe.enable_model_cpu_offload()
-    print(f"Loading LoRA {args.lora} weight={args.weight}", flush=True)
-    pipe.load_lora_weights(str(args.lora.parent), weight_name=args.lora.name)
-    try:
-        pipe.fuse_lora(lora_scale=args.weight)
-    except Exception:
-        try:
-            pipe.set_adapters(["default"], adapter_weights=[args.weight])
-        except Exception as exc:
-            print(f"warn: could not set lora scale ({exc})", flush=True)
 
     args.out.mkdir(parents=True, exist_ok=True)
     manifest: list[dict] = []

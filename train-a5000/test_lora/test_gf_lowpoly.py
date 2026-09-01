@@ -23,8 +23,23 @@ from pathlib import Path
 from typing import Any
 
 ROOT = Path(__file__).resolve().parent
+REPO_ROOT = ROOT.parent.parent
+LORA_CURATION = REPO_ROOT / "lora-curation"
 DEFAULT_CFG = ROOT / "test_prompts.json"
 OUT_DIR = ROOT / "out"
+GEN_CFG = LORA_CURATION / "forge_gen.json"
+
+if str(LORA_CURATION) not in sys.path:
+    sys.path.insert(0, str(LORA_CURATION))
+
+try:
+    from style import FELINE_EYE_LOCK, STYLE_NEGATIVE  # noqa: E402
+except ImportError:
+    FELINE_EYE_LOCK = (
+        "identical paired amber yellow cat eyes, flat painted oval eyes, "
+        "vertical slit pupils, same eye style on every character"
+    )
+    STYLE_NEGATIVE = ""
 
 
 def http_json(method: str, url: str, body: dict | None = None, timeout: float = 300) -> Any:
@@ -54,10 +69,10 @@ def wait_forge(forge: str, max_wait_s: float = 900) -> None:
 
 def build_prompt(subject: str, *, lora: str, weight: float, trigger: str) -> str:
     style = (
-        "ningraphix, ps1 game screenshot, extremely low-poly, very few polygons, chunky blocky mesh, large flat facets, minimal geometric detail, PS1 N64 game asset, flat shaded, hard silhouette edges, no smooth subdivision, no high-poly sculpt, "
-        "chibi proportions, big angular head, feline cat eyes, identical paired low-poly cat eyes, "
-        "two matching oval eyes, flat white sclera, same size simple black round pupils, "
-        "symmetrical, no mismatched eyes"
+        "ps1 game screenshot, extremely low-poly, very few polygons, chunky blocky mesh, "
+        "large flat facets, minimal geometric detail, PS1 N64 game asset, flat shaded, "
+        "hard silhouette edges, no smooth subdivision, no high-poly sculpt, "
+        f"chibi proportions, big angular head, {FELINE_EYE_LOCK}"
     )
     return f"<lora:{lora}:{weight}>, {trigger}, {style}, {subject}"
 
@@ -73,6 +88,7 @@ def main() -> int:
 
     cfg = json.loads(args.config.read_text(encoding="utf-8"))
     forge = str(args.forge).rstrip("/")
+    gen = json.loads(GEN_CFG.read_text(encoding="utf-8")) if GEN_CFG.is_file() else {}
     lora = str(cfg.get("lora") or "gf_lowpoly")
     weight = float(args.weight if args.weight is not None else cfg.get("lora_weight") or 0.85)
     trigger = str(cfg.get("trigger") or "gf_lowpoly")
@@ -83,9 +99,9 @@ def main() -> int:
     wait_forge(forge)
 
     opts = {
-        "sd_model_checkpoint": str(cfg.get("model") or "flux1-dev-Q6_K.gguf"),
+        "sd_model_checkpoint": str(gen.get("model") or cfg.get("model") or "flux1-dev-fp8.safetensors"),
         "forge_unet_storage_dtype": str(
-            cfg.get("unet_storage_dtype") or "Automatic (fp16 LoRA)"
+            gen.get("unet_storage_dtype") or cfg.get("unet_storage_dtype") or "Automatic (fp16 LoRA)"
         ),
     }
     try:
@@ -103,7 +119,7 @@ def main() -> int:
         prompt = build_prompt(subject, lora=lora, weight=weight, trigger=trigger)
         body = {
             "prompt": prompt,
-            "negative_prompt": "",
+            "negative_prompt": str(gen.get("negative_prompt") or STYLE_NEGATIVE or ""),
             "width": int(cfg.get("width") or 512),
             "height": int(cfg.get("height") or 512),
             "steps": int(cfg.get("steps") or 20),

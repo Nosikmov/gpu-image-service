@@ -39,6 +39,7 @@ def stash_images(*, label: str | None = None, dry_run: bool = False) -> Path:
     archive_dir = _ROOT / "archive" / folder
     archive_images = archive_dir / "images"
 
+    IMAGES_DIR.mkdir(parents=True, exist_ok=True)
     images = sorted(
         p for p in IMAGES_DIR.iterdir() if p.is_file() and p.suffix.lower() in _IMAGE_EXTS
     )

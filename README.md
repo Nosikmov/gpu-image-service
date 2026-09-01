@@ -245,8 +245,8 @@ docker compose config
 gpu-image-service/
   app/                 # FastAPI + worker + services
   workflows/           # allowlisted ComfyUI API graphs
-  lora-curation/       # dataset curation (see WORKFLOW.md)
-  train-a5000/         # FLUX LoRA train + server_cycle.sh
+  lora-curation/       # dataset curation (see LORA.md)
+  train-a5000/         # FLUX LoRA train + cycle.sh
   docker/              # ComfyUI Dockerfile
   scripts/             # install/start/stop/deploy
   tests/
@@ -255,20 +255,16 @@ gpu-image-service/
   .env.example
 ```
 
-## Full pipeline (curate → 4090 train → iterate)
+## gf_lowpoly LoRA pipeline
 
-See **[`WORKFLOW.md`](WORKFLOW.md)** — локальная курация, upload датасета, train, test, round 2.
-
-## Train style LoRA on rented GPU (4090 / A5000)
-
-**Full pipeline (curate → train → iterate):** [`WORKFLOW.md`](../WORKFLOW.md)
-
-Short train-only:
+See **[`LORA.md`](LORA.md)** — курация на 4070, train/test на 4090.
 
 ```bash
 cd train-a5000
 export HF_TOKEN=hf_...
-chmod +x bootstrap.sh && ./bootstrap.sh
+chmod +x cycle.sh bootstrap.sh
+./cycle.sh train
+./cycle.sh test forge
 ```
 
 ## Extensibility (not implemented yet)

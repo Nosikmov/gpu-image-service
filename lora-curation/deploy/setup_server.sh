@@ -50,6 +50,10 @@ if [[ "$(id -u)" -eq 0 && -d /root/stable-diffusion-webui-forge && ! -d "${FORGE
 fi
 
 if [[ ! -d "${FORGE}/.git" ]]; then
+  if [[ -d "${FORGE}" && ! -f "${FORGE}/webui.sh" ]]; then
+    info "Removing incomplete Forge directory: ${FORGE}"
+    rm -rf "${FORGE}"
+  fi
   info "Cloning Forge into ${FORGE}..."
   if [[ "$(id -u)" -eq 0 ]]; then
     runuser -u "${FORGE_USER}" -- git clone https://github.com/lllyasviel/stable-diffusion-webui-forge.git "${FORGE}"
