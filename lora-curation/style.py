@@ -8,11 +8,12 @@ import os
 TRIGGER_WORD = "gf_lowpoly"
 
 # CURATION_MODE:
-#   bootstrap (default) — lowpoly_flux + OOTN64_Krea2 while building dataset v1
-#   trained             — only gf_lowpoly.safetensors (round 2+ on server)
-_CURATION_MODE = os.environ.get("CURATION_MODE", "bootstrap").strip().lower()
+#   ningraphix (default) — Flux LoRA ningraphix-000031 for dataset generation
+#   bootstrap            — lowpoly_flux + OOTN64_Krea2 (legacy dual LoRA)
+#   trained              — only gf_lowpoly.safetensors (round 2+ on server)
+_CURATION_MODE = os.environ.get("CURATION_MODE", "ningraphix").strip().lower()
 
-STYLE_LORA_NAME = "OOTN64_Krea2"
+STYLE_LORA_NAME = "ningraphix-000031"
 
 if _CURATION_MODE in ("trained", "round2", "gf_lowpoly"):
     GENERATION_LORA_TAGS = "<lora:gf_lowpoly:0.9>"
@@ -24,12 +25,15 @@ elif _CURATION_MODE in ("lowpoly", "lowpoly_only"):
     GENERATION_PROMPT_PREFIX = (
         f"{GENERATION_LORA_TAGS}, {TRIGGER_WORD}, ps1 game screenshot,"
     )
-else:
-    GENERATION_LORA_TAGS = (
-        f"<lora:lowpoly_flux:0.9> <lora:{STYLE_LORA_NAME}:0.9>"
-    )
+elif _CURATION_MODE in ("bootstrap", "dual"):
+    GENERATION_LORA_TAGS = "<lora:lowpoly_flux:0.9> <lora:OOTN64_Krea2:0.9>"
     GENERATION_PROMPT_PREFIX = (
-        f"{GENERATION_LORA_TAGS}, {TRIGGER_WORD}, {STYLE_LORA_NAME}, ps1 game screenshot,"
+        f"{GENERATION_LORA_TAGS}, {TRIGGER_WORD}, OOTN64_Krea2, ps1 game screenshot,"
+    )
+else:
+    GENERATION_LORA_TAGS = f"<lora:{STYLE_LORA_NAME}:0.9>"
+    GENERATION_PROMPT_PREFIX = (
+        f"{GENERATION_LORA_TAGS}, {TRIGGER_WORD}, ningraphix, ps1 game screenshot,"
     )
 
 GENERATION_LORA_TAG = GENERATION_LORA_TAGS

@@ -1,331 +1,331 @@
 {
-  "version": 2,
+  "version": 3,
   "count": 40,
   "base_count": 40,
   "variants_per_prompt": 1,
-  "source": "promts-for-generate.txt",
+  "source": "GF Lowpoly PS1 — Character Generation Prompts.md",
   "trigger_word_suggestion": "gf_lowpoly",
   "negative_prompt": "high-poly, smooth subdivision, muddy textures, blurry textures, flat untextured plastic, muddy artifacts, broken geometry, extra limbs, weapon, sword, staff, bow, shield, gun, dagger, axe, spear, scythe, holding object, props in hands, cube body, box body, scenery, landscape, environment, sky, clouds, forest, grass, ground, floor, horizon, room, interior, outdoor, dungeon, castle, furniture, platform, gradient background, detailed background, blurry, watermark, text, black dot eyes, solid black eyes, beady black eyes, pitch black eyes, identical round black eyes, black circular dot pupils, void black eyes, round eyes, huge round eyes, anime round eyes, circular eyes, bug eyes",
   "entries": [
     {
       "id": "knight",
-      "title": "Рыцарь (Knight Cat)",
-      "prompt": "<lora:lowpoly_flux:0.9> <lora:OOTN64_Krea2:0.9>,  OOTN64_Krea2, ps1 game screenshot, a low-poly 3D character asset of an anthropomorphic orange cat knight, wearing simple low-poly iron plate armor, blocky shoulder pads, empty hands, open palms, clear hands visible, chibi proportions, big angular head, amber yellow feline cat eyes, expressive slanted cat eyes, chunky low-poly, simple geometric forms, large clean flat facets, PS1 game character, flat shaded, crisp silhouette, limited detail, T-pose, orthographic front view, neutral solid light grey background, no scenery, no environment, no ground, empty background, single character, full body, centered, no scenery",
+      "title": "Knight Cat",
+      "prompt": "<lora:ningraphix-000031:0.9>, gf_lowpoly, anthropomorphic orange cat knight, compact muscular body, large angular feline head, simple dark iron armor, asymmetrical heavy shoulder armor, broad chest plate, thick armored boots, slightly worn metal surfaces, small cloth waist sash, amber yellow painted cat eyes, vertical slit pupils, simplified feline face, very low-poly PS1-era 3D game character, intentionally crude polygonal modeling, low polygon count, large planar polygon faces, hard geometric edges, flat-shaded surfaces, visible polygon faceting, low-resolution hand-painted textures, simple materials, limited color palette, subtle PS1 texture warping, full body, front-facing, T-pose, orthographic camera, centered, isolated character asset, plain neutral light-gray background, no floor, no environment",
       "category": "creature",
       "monster_id": "knight",
-      "variant": "base"
+      "variant": "canonical"
     },
     {
       "id": "mage",
-      "title": "Маг (Mage Cat)",
-      "prompt": "<lora:lowpoly_flux:0.9> <lora:OOTN64_Krea2:0.9>,  OOTN64_Krea2, ps1 game screenshot, a low-poly 3D character asset of an anthropomorphic cat mage, blue wizard hat, low-poly magic robe, empty hands, open palms, clear hands visible, chibi proportions, big angular head, amber yellow feline cat eyes, expressive slanted cat eyes, chunky low-poly, simple geometric forms, large clean flat facets, PS1 game character, flat shaded, crisp silhouette, limited detail, T-pose, orthographic front view, neutral solid light grey background, no scenery, no environment, no ground, empty background, single character, full body, centered, no scenery",
+      "title": "Mage Cat",
+      "prompt": "<lora:ningraphix-000031:0.9>, gf_lowpoly, anthropomorphic cat mage, slim compact body, large angular feline head, tall crooked purple wizard hat, layered dark-purple robe, oversized collar, simple geometric cloth ornaments, small glowing-looking painted symbols on clothing, amber yellow painted cat eyes, vertical slit pupils, simplified feline face, very low-poly PS1-era 3D RPG character, intentionally crude polygonal modeling, low polygon count, large planar faces, hard geometric edges, flat-shaded surfaces, visible polygon faceting, low-resolution hand-painted textures, simple materials, limited palette, subtle PS1 texture warping, full body, front-facing, T-pose, orthographic camera, centered, isolated character asset, plain neutral light-gray background, no floor, no environment",
       "category": "creature",
       "monster_id": "mage",
-      "variant": "base"
+      "variant": "canonical"
     },
     {
-      "id": "archer_ranger",
-      "title": "Следопыт (Archer / Ranger Cat)",
-      "prompt": "<lora:lowpoly_flux:0.9> <lora:OOTN64_Krea2:0.9>,  OOTN64_Krea2, ps1 game screenshot, a low-poly 3D character asset of an anthropomorphic wild cat ranger, simple ragged cloth tunic and wraps, rustic patched outfit, empty hands, open palms, clear hands visible, chibi proportions, big angular head, amber yellow feline cat eyes, expressive slanted cat eyes, chunky low-poly, simple geometric forms, large clean flat facets, PS1 game character, flat shaded, crisp silhouette, limited detail, T-pose, orthographic front view, neutral solid light grey background, no scenery, no environment, no ground, empty background, single character, full body, centered, no scenery",
+      "id": "ranger",
+      "title": "Ranger Cat",
+      "prompt": "<lora:ningraphix-000031:0.9>, gf_lowpoly, anthropomorphic spotted wild cat ranger, compact athletic body, large angular feline head, green hooded cloth tunic, rough leather straps, short cloak, wrapped legs, worn boots, simple geometric fabric patches, amber yellow painted cat eyes, vertical slit pupils, simplified feline face, very low-poly PS1-era 3D game character, intentionally crude polygonal modeling, low polygon count, large planar faces, hard geometric edges, flat-shaded surfaces, visible polygon faceting, low-resolution hand-painted textures, simple materials, limited color palette, subtle PS1 texture warping, empty hands, full body, front-facing, T-pose, orthographic camera, centered, isolated character asset, plain neutral light-gray background, no floor, no environment",
       "category": "creature",
-      "monster_id": "archer_ranger",
-      "variant": "base"
+      "monster_id": "ranger",
+      "variant": "canonical"
     },
     {
       "id": "summoner",
-      "title": "Призыватель (Summoner Cat)",
-      "prompt": "<lora:lowpoly_flux:0.9> <lora:OOTN64_Krea2:0.9>,  OOTN64_Krea2, ps1 game screenshot, a low-poly 3D character asset of an anthropomorphic cat summoner, dark purple mystic cloak, mystical low-poly runes, empty hands, open palms, clear hands visible, chibi proportions, big angular head, amber yellow feline cat eyes, expressive slanted cat eyes, chunky low-poly, simple geometric forms, large clean flat facets, PS1 game character, flat shaded, crisp silhouette, limited detail, T-pose, orthographic front view, neutral solid light grey background, no scenery, no environment, no ground, empty background, single character, full body, centered, no scenery",
+      "title": "Summoner Cat",
+      "prompt": "<lora:ningraphix-000031:0.9>, gf_lowpoly, anthropomorphic cat summoner, slightly hunched compact body, oversized angular feline head, black-purple layered ritual robes, wide geometric sleeves, angular shoulder cloth, simple painted mystical symbols, small cloth talisman strips, amber yellow painted cat eyes, vertical slit pupils, simplified feline face, very low-poly PS1-era 3D RPG character, intentionally crude polygonal modeling, low polygon count, large planar faces, hard geometric edges, flat-shaded surfaces, visible polygon faceting, low-resolution hand-painted textures, simple materials, limited color palette, subtle PS1 texture warping, empty hands, full body, front-facing, T-pose, orthographic camera, centered, isolated character asset, plain neutral light-gray background, no floor, no environment",
       "category": "creature",
       "monster_id": "summoner",
-      "variant": "base"
+      "variant": "canonical"
     },
     {
       "id": "paladin",
-      "title": "Паладин (Paladin Cat)",
-      "prompt": "<lora:lowpoly_flux:0.9> <lora:OOTN64_Krea2:0.9>,  OOTN64_Krea2, ps1 game screenshot, a low-poly 3D character asset of an anthropomorphic cat paladin, shiny gold low-poly plate armor, holy emblem on chest, empty hands, open palms, clear hands visible, chibi proportions, big angular head, amber yellow feline cat eyes, expressive slanted cat eyes, chunky low-poly, simple geometric forms, large clean flat facets, PS1 game character, flat shaded, crisp silhouette, limited detail, T-pose, orthographic front view, neutral solid light grey background, no scenery, no environment, no ground, empty background, single character, full body, centered, no scenery",
+      "title": "Paladin Cat",
+      "prompt": "<lora:ningraphix-000031:0.9>, gf_lowpoly, anthropomorphic cat paladin, broad compact body, large angular feline head, heavy white plate armor with gold trim, oversized geometric pauldrons, angular breastplate, short ceremonial tabard, thick armored boots, simple holy emblem on chest, amber yellow painted cat eyes, vertical slit pupils, simplified feline face, very low-poly PS1-era 3D game character, intentionally crude polygonal modeling, low polygon count, large planar faces, hard edges, flat-shaded surfaces, low-resolution hand-painted textures, simple materials, limited palette, subtle PS1 texture warping, empty hands, full body, front-facing, T-pose, orthographic camera, centered, isolated character asset, plain neutral light-gray background, no floor, no environment",
       "category": "creature",
       "monster_id": "paladin",
-      "variant": "base"
+      "variant": "canonical"
     },
     {
       "id": "necromancer",
-      "title": "Некромант (Necromancer Cat)",
-      "prompt": "<lora:lowpoly_flux:0.9> <lora:OOTN64_Krea2:0.9>,  OOTN64_Krea2, ps1 game screenshot, a low-poly 3D character asset of an anthropomorphic cat necromancer, tattered black robes, skull shoulder piece, empty hands, open palms, clear hands visible, chibi proportions, big angular head, amber yellow feline cat eyes, expressive slanted cat eyes, chunky low-poly, simple geometric forms, large clean flat facets, PS1 game character, flat shaded, crisp silhouette, limited detail, T-pose, orthographic front view, neutral solid light grey background, no scenery, no environment, no ground, empty background, single character, full body, centered, no scenery",
+      "title": "Necromancer Cat",
+      "prompt": "<lora:ningraphix-000031:0.9>, gf_lowpoly, anthropomorphic cat necromancer, hunched compact body, large angular feline head, oversized hooded black robe, torn hem, pale bone ornaments attached to shoulders and belt, simple dark-gray cloth layers, amber yellow painted cat eyes, vertical slit pupils, simplified feline face, very low-poly PS1-era 3D game character, intentionally crude polygonal modeling, low polygon count, large planar faces, hard geometric edges, flat-shaded surfaces, visible polygon faceting, low-resolution hand-painted textures, simple materials, limited palette, subtle PS1 texture warping, empty hands, full body, front-facing, T-pose, orthographic camera, centered, isolated character asset, plain neutral light-gray background, no floor, no environment",
       "category": "creature",
       "monster_id": "necromancer",
-      "variant": "base"
+      "variant": "canonical"
     },
     {
       "id": "druid",
-      "title": "Друид (Druid Cat)",
-      "prompt": "<lora:lowpoly_flux:0.9> <lora:OOTN64_Krea2:0.9>,  OOTN64_Krea2, ps1 game screenshot, a low-poly 3D character asset of an anthropomorphic cat druid, leaf cloak, wooden antler circlet, moss details, empty hands, open palms, clear hands visible, chibi proportions, big angular head, amber yellow feline cat eyes, expressive slanted cat eyes, chunky low-poly, simple geometric forms, large clean flat facets, PS1 game character, flat shaded, crisp silhouette, limited detail, T-pose, orthographic front view, neutral solid light grey background, no scenery, no environment, no ground, empty background, single character, full body, centered, no scenery",
+      "title": "Druid Cat",
+      "prompt": "<lora:ningraphix-000031:0.9>, gf_lowpoly, anthropomorphic forest cat druid, sturdy compact body, oversized angular feline head, dark green leaf mantle, rough wooden shoulder armor, small branch-like antler crown, vine-wrapped waist, moss patches, amber yellow painted cat eyes, vertical slit pupils, simplified feline face, very low-poly PS1-era 3D RPG character, intentionally crude polygonal modeling, low polygon count, large planar faces, hard geometric edges, flat-shaded surfaces, visible polygon faceting, low-resolution hand-painted textures, simple materials, limited color palette, subtle PS1 texture warping, empty hands, full body, front-facing, T-pose, orthographic camera, centered, isolated character asset, plain neutral light-gray background, no floor, no environment",
       "category": "creature",
       "monster_id": "druid",
-      "variant": "base"
+      "variant": "canonical"
     },
     {
       "id": "ninja",
-      "title": "Ниндзя (Ninja Cat)",
-      "prompt": "<lora:lowpoly_flux:0.9> <lora:OOTN64_Krea2:0.9>,  OOTN64_Krea2, ps1 game screenshot, a low-poly 3D character asset of an anthropomorphic Siamese cat ninja, black shinobi outfit, red sash belt, empty hands, open palms, clear hands visible, chibi proportions, big angular head, amber yellow feline cat eyes, expressive slanted cat eyes, chunky low-poly, simple geometric forms, large clean flat facets, PS1 game character, flat shaded, crisp silhouette, limited detail, T-pose, orthographic front view, neutral solid light grey background, no scenery, no environment, no ground, empty background, single character, full body, centered, no scenery",
+      "title": "Ninja Cat",
+      "prompt": "<lora:ningraphix-000031:0.9>, gf_lowpoly, anthropomorphic dark Siamese cat ninja, slim compact body, oversized angular feline head, dark-gray shinobi clothing, layered waist wraps, crimson cloth sash, simple hood, wrapped ankles and wrists, amber yellow painted cat eyes, vertical slit pupils, simplified feline face, very low-poly PS1-era 3D game character, intentionally crude polygonal modeling, low polygon count, large planar faces, hard geometric edges, flat-shaded surfaces, visible polygon faceting, low-resolution hand-painted textures, simple materials, limited color palette, subtle PS1 texture warping, empty hands, full body, front-facing, T-pose, orthographic camera, centered, isolated character asset, plain neutral light-gray background, no floor, no environment",
       "category": "creature",
       "monster_id": "ninja",
-      "variant": "base"
+      "variant": "canonical"
     },
     {
       "id": "samurai",
-      "title": "Самурай (Samurai Cat)",
-      "prompt": "<lora:lowpoly_flux:0.9> <lora:OOTN64_Krea2:0.9>,  OOTN64_Krea2, ps1 game screenshot, a low-poly 3D character asset of an anthropomorphic cat samurai, lacquered low-poly armor plates, kabuto helmet with cat ears cutouts, empty hands, open palms, clear hands visible, chibi proportions, big angular head, amber yellow feline cat eyes, expressive slanted cat eyes, chunky low-poly, simple geometric forms, large clean flat facets, PS1 game character, flat shaded, crisp silhouette, limited detail, T-pose, orthographic front view, neutral solid light grey background, no scenery, no environment, no ground, empty background, single character, full body, centered, no scenery",
+      "title": "Samurai Cat",
+      "prompt": "<lora:ningraphix-000031:0.9>, gf_lowpoly, anthropomorphic cat samurai, broad compact body, oversized angular feline head, dark red and black lacquered armor, exaggerated geometric shoulder plates, layered waist armor, tall kabuto helmet with pronounced feline ears, simple decorative crest, amber yellow painted cat eyes, vertical slit pupils, simplified feline face, very low-poly PS1-era 3D game character, intentionally crude polygonal modeling, low polygon count, large planar faces, hard geometric edges, flat-shaded surfaces, visible polygon faceting, low-resolution hand-painted textures, simple materials, limited color palette, subtle PS1 texture warping, empty hands, full body, front-facing, T-pose, orthographic camera, centered, isolated character asset, plain neutral light-gray background, no floor, no environment",
       "category": "creature",
       "monster_id": "samurai",
-      "variant": "base"
+      "variant": "canonical"
     },
     {
       "id": "bard",
-      "title": "Бард (Bard Cat)",
-      "prompt": "<lora:lowpoly_flux:0.9> <lora:OOTN64_Krea2:0.9>,  OOTN64_Krea2, ps1 game screenshot, a low-poly 3D character asset of an anthropomorphic cat bard, colorful patchwork tunic, feathered cap, empty hands, open palms, clear hands visible, chibi proportions, big angular head, amber yellow feline cat eyes, expressive slanted cat eyes, chunky low-poly, simple geometric forms, large clean flat facets, PS1 game character, flat shaded, crisp silhouette, limited detail, T-pose, orthographic front view, neutral solid light grey background, no scenery, no environment, no ground, empty background, single character, full body, centered, no scenery",
+      "title": "Bard Cat",
+      "prompt": "<lora:ningraphix-000031:0.9>, gf_lowpoly, anthropomorphic orange cat bard, slim compact body, oversized angular feline head, red and cream patchwork clothing, large floppy feathered hat, short cape, striped waist sash, simple decorative cloth shapes, amber yellow painted cat eyes, vertical slit pupils, simplified feline face, very low-poly PS1-era 3D game character, intentionally crude polygonal modeling, low polygon count, large planar faces, hard geometric edges, flat-shaded surfaces, visible polygon faceting, low-resolution hand-painted textures, simple materials, limited color palette, subtle PS1 texture warping, empty hands, full body, front-facing, T-pose, orthographic camera, centered, isolated character asset, plain neutral light-gray background, no floor, no environment",
       "category": "creature",
       "monster_id": "bard",
-      "variant": "base"
+      "variant": "canonical"
     },
     {
       "id": "merchant",
-      "title": "Торговец (Merchant Cat)",
-      "prompt": "<lora:lowpoly_flux:0.9> <lora:OOTN64_Krea2:0.9>,  OOTN64_Krea2, ps1 game screenshot, a low-poly 3D character asset of an anthropomorphic cat merchant, apron over tunic, empty hands, open palms, clear hands visible, chibi proportions, big angular head, amber yellow feline cat eyes, expressive slanted cat eyes, chunky low-poly, simple geometric forms, large clean flat facets, PS1 game character, flat shaded, crisp silhouette, limited detail, T-pose, orthographic front view, neutral solid light grey background, no scenery, no environment, no ground, empty background, single character, full body, centered, no scenery",
+      "title": "Merchant Cat",
+      "prompt": "<lora:ningraphix-000031:0.9>, gf_lowpoly, anthropomorphic cat merchant, round compact body, oversized angular feline head, green patched vest over cream tunic, thick brown belt, large apron pockets, simple cloth cap, chunky boots, worn fabric patches, amber yellow painted cat eyes, vertical slit pupils, simplified feline face, very low-poly PS1-era 3D RPG character, intentionally crude polygonal modeling, low polygon count, large planar faces, hard geometric edges, flat shading, visible polygon faceting, low-resolution hand-painted textures, simple materials, limited color palette, subtle PS1 texture warping, empty hands, full body, front-facing, T-pose, orthographic camera, centered, isolated character asset, plain neutral light-gray background, no floor, no environment",
       "category": "creature",
       "monster_id": "merchant",
-      "variant": "base"
+      "variant": "canonical"
     },
     {
       "id": "alchemist",
-      "title": "Алхимик (Alchemist Cat)",
-      "prompt": "<lora:lowpoly_flux:0.9> <lora:OOTN64_Krea2:0.9>,  OOTN64_Krea2, ps1 game screenshot, a low-poly 3D character asset of an anthropomorphic cat alchemist, small blocky rectangular glasses, stained apron, narrow cat pupils, empty hands, open palms, clear hands visible, chibi proportions, big angular head, amber yellow feline cat eyes, expressive slanted cat eyes, chunky low-poly, simple geometric forms, large clean flat facets, PS1 game character, flat shaded, crisp silhouette, limited detail, T-pose, orthographic front view, neutral solid light grey background, no scenery, no environment, no ground, empty background, single character, full body, centered, no scenery",
+      "title": "Alchemist Cat",
+      "prompt": "<lora:ningraphix-000031:0.9>, gf_lowpoly, anthropomorphic gray cat alchemist, compact slightly hunched body, oversized angular feline head, dark green stained apron, oversized rectangular goggles resting above the eyes, rolled brown sleeves, thick waist belt, geometric cloth patches, amber yellow painted cat eyes, vertical slit pupils, simplified feline face, very low-poly PS1-era 3D game character, intentionally crude polygonal modeling, low polygon count, large planar faces, hard geometric edges, flat-shaded surfaces, visible polygon faceting, low-resolution hand-painted textures, simple materials, limited color palette, subtle PS1 texture warping, empty hands, no bottles or props, full body, front-facing, T-pose, orthographic camera, centered, isolated character asset, plain neutral light-gray background, no floor, no environment",
       "category": "creature",
       "monster_id": "alchemist",
-      "variant": "base"
+      "variant": "canonical"
     },
     {
       "id": "cyberpunk",
-      "title": "Киберпанк (Cyberpunk Cat)",
-      "prompt": "<lora:lowpoly_flux:0.9> <lora:OOTN64_Krea2:0.9>,  OOTN64_Krea2, ps1 game screenshot, a low-poly 3D character asset of an anthropomorphic cyberpunk cat, blocky futuristic jacket, robotic low-poly arm, empty hands, open palms, clear hands visible, chibi proportions, big angular head, amber yellow feline cat eyes, expressive slanted cat eyes, chunky low-poly, simple geometric forms, large clean flat facets, PS1 game character, flat shaded, crisp silhouette, limited detail, T-pose, orthographic front view, neutral solid light grey background, no scenery, no environment, no ground, empty background, single character, full body, centered, no scenery",
+      "title": "Cyberpunk Cat",
+      "prompt": "<lora:ningraphix-000031:0.9>, gf_lowpoly, anthropomorphic cyberpunk cat, slim compact body, large angular feline head, oversized dark futuristic coat, asymmetrical robotic leg armor, blocky mechanical shoulder piece, simple geometric neon-like painted markings, chunky boots, amber yellow painted cat eyes, vertical slit pupils, simplified feline face, very low-poly PS1-era 3D RPG character, intentionally crude polygonal modeling, low polygon count, large planar faces, hard geometric edges, flat-shaded surfaces, visible polygon faceting, low-resolution hand-painted textures, simple materials, limited color palette, subtle PS1 texture warping, empty hands, full body, front-facing, T-pose, orthographic camera, centered, isolated character asset, plain neutral light-gray background, no floor, no environment",
       "category": "creature",
       "monster_id": "cyberpunk",
-      "variant": "base"
+      "variant": "canonical"
     },
     {
       "id": "astronaut",
-      "title": "Астронавт (Astronaut Cat)",
-      "prompt": "<lora:lowpoly_flux:0.9> <lora:OOTN64_Krea2:0.9>,  OOTN64_Krea2, ps1 game screenshot, a low-poly 3D character asset of an anthropomorphic cat astronaut, bulky spherical low-poly space helmet, retro space suit, empty hands, open palms, clear hands visible, chibi proportions, big angular head, amber yellow feline cat eyes, expressive slanted cat eyes, chunky low-poly, simple geometric forms, large clean flat facets, PS1 game character, flat shaded, crisp silhouette, limited detail, T-pose, orthographic front view, neutral solid light grey background, no scenery, no environment, no ground, empty background, single character, full body, centered, no scenery",
+      "title": "Astronaut Cat",
+      "prompt": "<lora:ningraphix-000031:0.9>, gf_lowpoly, anthropomorphic cat astronaut, short chunky body, oversized angular feline head, large faceted retro space helmet with pronounced cat-ear silhouette, orange-white blocky spacesuit, geometric chest panel, thick backpack, segmented boots, simple dark visor framing the feline face, amber yellow painted cat eyes, vertical slit pupils, very low-poly PS1-era 3D RPG character, intentionally crude polygonal modeling, low polygon count, large planar faces, hard geometric edges, flat-shaded surfaces, visible polygon faceting, low-resolution hand-painted textures, simple materials, limited color palette, subtle PS1 texture warping, empty hands, full body, front-facing, T-pose, orthographic camera, centered, isolated character asset, plain neutral light-gray background, no floor, no environment",
       "category": "creature",
       "monster_id": "astronaut",
-      "variant": "base"
+      "variant": "canonical"
     },
     {
       "id": "chef",
-      "title": "Шеф-повар (Chef Cat)",
-      "prompt": "<lora:lowpoly_flux:0.9> <lora:OOTN64_Krea2:0.9>,  OOTN64_Krea2, ps1 game screenshot, a low-poly 3D character asset of an anthropomorphic cat chef, tall blocky chef hat, apron, empty hands, open palms, clear hands visible, chibi proportions, big angular head, amber yellow feline cat eyes, expressive slanted cat eyes, chunky low-poly, simple geometric forms, large clean flat facets, PS1 game character, flat shaded, crisp silhouette, limited detail, T-pose, orthographic front view, neutral solid light grey background, no scenery, no environment, no ground, empty background, single character, full body, centered, no scenery",
+      "title": "Chef Cat",
+      "prompt": "<lora:ningraphix-000031:0.9>, gf_lowpoly, anthropomorphic orange cat chef, short chunky body, oversized angular feline head, oversized white chef hat with geometric folds, cream apron, red neckerchief, dark trousers, thick shoes, simple stained fabric patches, amber yellow painted cat eyes, vertical slit pupils, simplified feline face, very low-poly PS1-era 3D RPG character, intentionally crude polygonal modeling, low polygon count, large planar faces, hard geometric edges, flat-shaded surfaces, visible polygon faceting, low-resolution hand-painted textures, simple materials, limited color palette, subtle PS1 texture warping, empty hands, no kitchen props, full body, front-facing, T-pose, orthographic camera, centered, isolated character asset, plain neutral light-gray background, no floor, no environment",
       "category": "creature",
       "monster_id": "chef",
-      "variant": "base"
+      "variant": "canonical"
     },
     {
       "id": "goblin",
-      "title": "Гоблин (Goblin Cat)",
-      "prompt": "<lora:lowpoly_flux:0.9> <lora:OOTN64_Krea2:0.9>,  OOTN64_Krea2, ps1 game screenshot, a low-poly 3D character asset of a goblin cat hybrid, green skin, pointed ears, ragged leather tunic, empty hands, open palms, clear hands visible, chibi proportions, big angular head, amber yellow feline cat eyes, expressive slanted cat eyes, chunky low-poly, simple geometric forms, large clean flat facets, PS1 game character, flat shaded, crisp silhouette, limited detail, T-pose, orthographic front view, neutral solid light grey background, no scenery, no environment, no ground, empty background, single character, full body, centered, no scenery",
+      "title": "Goblin Cat",
+      "prompt": "<lora:ningraphix-000031:0.9>, gf_lowpoly, goblin cat hybrid, short wiry body, oversized angular feline head, moss-green skin, large pointed ears, crooked small fangs, patched dark leather vest, ragged cloth belt, uneven boots, simple scars painted on skin, amber yellow painted cat eyes, vertical slit pupils, simplified feline-goblin face, very low-poly PS1-era 3D RPG character, intentionally crude polygonal modeling, low polygon count, large planar faces, hard geometric edges, flat shading, visible polygon faceting, low-resolution hand-painted textures, simple materials, limited color palette, subtle PS1 texture warping, empty hands, full body, front-facing, T-pose, orthographic camera, centered, isolated character asset, plain neutral light-gray background, no floor, no environment",
       "category": "creature",
       "monster_id": "goblin",
-      "variant": "base"
+      "variant": "canonical"
     },
     {
       "id": "orc",
-      "title": "Орк (Orc Cat)",
-      "prompt": "<lora:lowpoly_flux:0.9> <lora:OOTN64_Krea2:0.9>,  OOTN64_Krea2, ps1 game screenshot, a low-poly 3D character asset of a massive orc cat hybrid, green fur skin, lower tusks, rough spiked iron armor, empty hands, open palms, clear hands visible, chibi proportions, big angular head, amber yellow feline cat eyes, expressive slanted cat eyes, chunky low-poly, simple geometric forms, large clean flat facets, PS1 game character, flat shaded, crisp silhouette, limited detail, T-pose, orthographic front view, neutral solid light grey background, no scenery, no environment, no ground, empty background, single character, full body, centered, no scenery",
+      "title": "Orc Cat",
+      "prompt": "<lora:ningraphix-000031:0.9>, gf_lowpoly, massive orc cat hybrid, squat extremely muscular body, oversized angular feline head, dark olive-green skin, huge lower tusks, thick jaw and neck, heavy black iron shoulder armor, crude metal chest plates, wide leather waist guard, amber yellow painted cat eyes, vertical slit pupils, simplified feline-orc face, very low-poly PS1-era 3D game character, intentionally crude polygonal modeling, low polygon count, large planar faces, hard geometric edges, flat-shaded surfaces, visible polygon faceting, low-resolution hand-painted textures, simple materials, limited color palette, subtle PS1 texture warping, empty hands, full body, front-facing, T-pose, orthographic camera, centered, isolated character asset, plain neutral light-gray background, no floor, no environment",
       "category": "creature",
       "monster_id": "orc",
-      "variant": "base"
+      "variant": "canonical"
     },
     {
       "id": "dark_orc",
-      "title": "Тёмный Орк (Dark Orc Cat)",
-      "prompt": "<lora:lowpoly_flux:0.9> <lora:OOTN64_Krea2:0.9>,  OOTN64_Krea2, ps1 game screenshot, a low-poly 3D character asset of a massive dark orc cat hybrid, dark grey slate skin, large lower tusks, heavy black low-poly spiked armor, empty hands, open palms, clear hands visible, chibi proportions, big angular head, amber yellow feline cat eyes, expressive slanted cat eyes, chunky low-poly, simple geometric forms, large clean flat facets, PS1 game character, flat shaded, crisp silhouette, limited detail, T-pose, orthographic front view, neutral solid light grey background, no scenery, no environment, no ground, empty background, single character, full body, centered, no scenery",
+      "title": "Dark Orc Cat",
+      "prompt": "<lora:ningraphix-000031:0.9>, gf_lowpoly, massive dark orc cat hybrid, squat extremely heavy body, charcoal-gray skin, oversized angular feline head, enormous curved lower tusks, thick muscular arms, crude black iron armor with large geometric spikes, asymmetrical shoulder plates, dark leather waist armor, amber yellow painted cat eyes, vertical slit pupils, simplified feline-orc face, very low-poly PS1-era 3D game character, intentionally crude polygonal modeling, low polygon count, large planar faces, hard geometric edges, flat-shaded surfaces, visible polygon faceting, low-resolution hand-painted textures, simple materials, limited color palette, subtle PS1 texture warping, empty hands, full body, front-facing, T-pose, orthographic camera, centered, isolated character asset, plain neutral light-gray background, no floor, no environment",
       "category": "creature",
       "monster_id": "dark_orc",
-      "variant": "base"
+      "variant": "canonical"
     },
     {
       "id": "skeleton",
-      "title": "Скелет (Skeleton Cat)",
-      "prompt": "<lora:lowpoly_flux:0.9> <lora:OOTN64_Krea2:0.9>,  OOTN64_Krea2, ps1 game screenshot, a low-poly 3D character asset of a skeleton cat hybrid, skull head with cat ears, bone ribcage, blocky bone limbs, empty hands, open palms, clear hands visible, chibi proportions, big angular head, amber yellow feline cat eyes, expressive slanted cat eyes, chunky low-poly, simple geometric forms, large clean flat facets, PS1 game character, flat shaded, crisp silhouette, limited detail, T-pose, orthographic front view, neutral solid light grey background, no scenery, no environment, no ground, empty background, single character, full body, centered, no scenery",
+      "title": "Skeleton Cat",
+      "prompt": "<lora:ningraphix-000031:0.9>, gf_lowpoly, skeleton cat hybrid, slightly hunched skeletal body, large angular feline skull with long pointed ears, exaggerated blocky jaw, visible ribcage and pelvis, chunky geometric bones, simple broken-bone shapes, glowing-looking painted amber eye sockets with narrow vertical pupils, very low-poly PS1-era 3D game character, intentionally crude polygonal modeling, low polygon count, large planar faces, hard geometric edges, flat-shaded surfaces, visible polygon faceting, low-resolution hand-painted textures, simple materials, limited color palette, subtle PS1 texture warping, no flesh, no clothing, empty hands, full body, front-facing, T-pose, orthographic camera, centered, isolated character asset, plain neutral light-gray background, no floor, no environment",
       "category": "creature",
       "monster_id": "skeleton",
-      "variant": "base"
+      "variant": "canonical"
     },
     {
       "id": "zombie",
-      "title": "Зомби (Zombie Cat)",
-      "prompt": "<lora:lowpoly_flux:0.9> <lora:OOTN64_Krea2:0.9>,  OOTN64_Krea2, ps1 game screenshot, a low-poly 3D character asset of a zombie cat hybrid, pale greenish gray skin, exposed low-poly bone ribs, torn tattered clothes, empty hands, open palms, clear hands visible, chibi proportions, big angular head, amber yellow feline cat eyes, expressive slanted cat eyes, chunky low-poly, simple geometric forms, large clean flat facets, PS1 game character, flat shaded, crisp silhouette, limited detail, T-pose, orthographic front view, neutral solid light grey background, no scenery, no environment, no ground, empty background, single character, full body, centered, no scenery",
+      "title": "Zombie Cat",
+      "prompt": "<lora:ningraphix-000031:0.9>, gf_lowpoly, zombie cat hybrid, short bulky decayed body, oversized angular feline head, desaturated gray-green skin, exposed geometric bones at shoulders and torso, torn brown shirt, hanging cloth strips, damaged trousers, chunky uneven boots, amber yellow painted cat eyes, vertical slit pupils, simplified undead feline face, very low-poly PS1-era 3D game character, intentionally crude polygonal modeling, low polygon count, large planar faces, hard geometric edges, flat-shaded surfaces, visible polygon faceting, low-resolution hand-painted textures, simple materials, limited color palette, subtle PS1 texture warping, empty hands, full body, front-facing, T-pose, orthographic camera, centered, isolated character asset, plain neutral light-gray background, no floor, no environment",
       "category": "creature",
       "monster_id": "zombie",
-      "variant": "base"
+      "variant": "canonical"
     },
     {
       "id": "kobold",
-      "title": "Кобольд (Kobold Cat)",
-      "prompt": "<lora:lowpoly_flux:0.9> <lora:OOTN64_Krea2:0.9>,  OOTN64_Krea2, ps1 game screenshot, a low-poly 3D character asset of a kobold cat hybrid, red reptilian scaled skin, small dragon horns, cat whiskers, long lizard tail, empty hands, open palms, clear hands visible, chibi proportions, big angular head, amber yellow feline cat eyes, expressive slanted cat eyes, chunky low-poly, simple geometric forms, large clean flat facets, PS1 game character, flat shaded, crisp silhouette, limited detail, T-pose, orthographic front view, neutral solid light grey background, no scenery, no environment, no ground, empty background, single character, full body, centered, no scenery",
+      "title": "Kobold Cat",
+      "prompt": "<lora:ningraphix-000031:0.9>, gf_lowpoly, kobold cat hybrid, short wiry compact body, oversized angular feline head, red reptilian scaled skin, small curved dragon horns, long thin lizard tail, simple crude leather loincloth, patched brown straps, uneven boots, amber yellow painted cat eyes, vertical slit pupils, simplified feline-kobold face, very low-poly PS1-era 3D game character, intentionally crude polygonal modeling, low polygon count, large planar faces, hard geometric edges, flat-shaded surfaces, visible polygon faceting, low-resolution hand-painted textures, simple materials, limited color palette, subtle PS1 texture warping, empty hands, full body, front-facing, T-pose, orthographic camera, centered, isolated character asset, plain neutral light-gray background, no floor, no environment",
       "category": "creature",
       "monster_id": "kobold",
-      "variant": "base"
+      "variant": "canonical"
     },
     {
       "id": "werewolf",
-      "title": "Вервольф (Werewolf Cat)",
-      "prompt": "<lora:lowpoly_flux:0.9> <lora:OOTN64_Krea2:0.9>,  OOTN64_Krea2, ps1 game screenshot, a low-poly 3D character asset of a werewolf cat hybrid, dark grey scruffy fur, sharp wolf fangs mixed with cat whiskers, torn trousers, empty hands, open palms, clear hands visible, chibi proportions, big angular head, amber yellow feline cat eyes, expressive slanted cat eyes, chunky low-poly, simple geometric forms, large clean flat facets, PS1 game character, flat shaded, crisp silhouette, limited detail, T-pose, orthographic front view, neutral solid light grey background, no scenery, no environment, no ground, empty background, single character, full body, centered, no scenery",
+      "title": "Werewolf Cat",
+      "prompt": "<lora:ningraphix-000031:0.9>, gf_lowpoly, werewolf cat hybrid, lean muscular compact body, oversized angular feline-wolf head, dark grey scruffy fur patches, sharp wolf fangs with cat whiskers, torn brown trousers, ragged cloth waist wrap, heavy clawed feet, simple scar marks painted on fur, amber yellow painted cat eyes, vertical slit pupils, simplified feline-wolf face, very low-poly PS1-era 3D game character, intentionally crude polygonal modeling, low polygon count, large planar faces, hard geometric edges, flat-shaded surfaces, visible polygon faceting, low-resolution hand-painted textures, simple materials, limited color palette, subtle PS1 texture warping, empty hands, full body, front-facing, T-pose, orthographic camera, centered, isolated character asset, plain neutral light-gray background, no floor, no environment",
       "category": "creature",
       "monster_id": "werewolf",
-      "variant": "base"
+      "variant": "canonical"
     },
     {
       "id": "gnoll",
-      "title": "Гнолл (Gnoll Cat)",
-      "prompt": "<lora:lowpoly_flux:0.9> <lora:OOTN64_Krea2:0.9>,  OOTN64_Krea2, ps1 game screenshot, a low-poly 3D character asset of a hyena cat gnoll hybrid, spotted fur coat, floppy dog-hyena ears mixed with cat ears, crude low-poly leather armor, empty hands, open palms, clear hands visible, chibi proportions, big angular head, amber yellow feline cat eyes, expressive slanted cat eyes, chunky low-poly, simple geometric forms, large clean flat facets, PS1 game character, flat shaded, crisp silhouette, limited detail, T-pose, orthographic front view, neutral solid light grey background, no scenery, no environment, no ground, empty background, single character, full body, centered, no scenery",
+      "title": "Gnoll Cat",
+      "prompt": "<lora:ningraphix-000031:0.9>, gf_lowpoly, hyena cat gnoll hybrid, tall hunched compact body, oversized angular feline-hyena head, spotted tan fur coat, floppy hyena ears mixed with cat ears, crude low-poly leather chest straps, ragged waist cloth, thick uneven boots, simple geometric fur patches, amber yellow painted cat eyes, vertical slit pupils, simplified feline-gnoll face, very low-poly PS1-era 3D RPG character, intentionally crude polygonal modeling, low polygon count, large planar faces, hard geometric edges, flat-shaded surfaces, visible polygon faceting, low-resolution hand-painted textures, simple materials, limited color palette, subtle PS1 texture warping, empty hands, full body, front-facing, T-pose, orthographic camera, centered, isolated character asset, plain neutral light-gray background, no floor, no environment",
       "category": "creature",
       "monster_id": "gnoll",
-      "variant": "base"
+      "variant": "canonical"
     },
     {
       "id": "lizard",
-      "title": "Ящер (Lizard Cat)",
-      "prompt": "<lora:lowpoly_flux:0.9> <lora:OOTN64_Krea2:0.9>,  OOTN64_Krea2, ps1 game screenshot, a low-poly 3D character asset of a lizard cat hybrid, green scaly skin, long thick low-poly lizard tail, wearing simple loincloth, empty hands, open palms, clear hands visible, chibi proportions, big angular head, amber yellow feline cat eyes, expressive slanted cat eyes, chunky low-poly, simple geometric forms, large clean flat facets, PS1 game character, flat shaded, crisp silhouette, limited detail, T-pose, orthographic front view, neutral solid light grey background, no scenery, no environment, no ground, empty background, single character, full body, centered, no scenery",
+      "title": "Lizard Cat",
+      "prompt": "<lora:ningraphix-000031:0.9>, gf_lowpoly, lizard cat hybrid, compact athletic body, oversized angular feline head, green scaly skin, long thick low-poly lizard tail, simple geometric loincloth, crude leather belt, blocky scaled limbs, simple painted scale facets, amber yellow painted cat eyes, vertical slit pupils, simplified feline-lizard face, very low-poly PS1-era 3D game character, intentionally crude polygonal modeling, low polygon count, large planar faces, hard geometric edges, flat-shaded surfaces, visible polygon faceting, low-resolution hand-painted textures, simple materials, limited color palette, subtle PS1 texture warping, empty hands, full body, front-facing, T-pose, orthographic camera, centered, isolated character asset, plain neutral light-gray background, no floor, no environment",
       "category": "creature",
       "monster_id": "lizard",
-      "variant": "base"
+      "variant": "canonical"
     },
     {
       "id": "cyclops",
-      "title": "Циклоп (Cyclops Cat)",
-      "prompt": "<lora:lowpoly_flux:0.9> <lora:OOTN64_Krea2:0.9>,  OOTN64_Krea2, ps1 game screenshot, a low-poly 3D character asset of a cyclops cat hybrid, single large glowing eye in center of forehead, cat ears, small horns, empty hands, open palms, clear hands visible, chibi proportions, big angular head, amber yellow feline cat eyes, expressive slanted cat eyes, chunky low-poly, simple geometric forms, large clean flat facets, PS1 game character, flat shaded, crisp silhouette, limited detail, T-pose, orthographic front view, neutral solid light grey background, no scenery, no environment, no ground, empty background, single character, full body, centered, no scenery",
+      "title": "Cyclops Cat",
+      "prompt": "<lora:ningraphix-000031:0.9>, gf_lowpoly, cyclops cat hybrid, broad compact body, oversized angular feline head, single large painted eye in center of forehead, small curved horns, thick neck, simple brown leather waist guard, crude iron bracers, heavy blocky boots, amber yellow painted cat eyes in normal eye sockets with vertical slit pupils, simplified feline-cyclops face, very low-poly PS1-era 3D RPG character, intentionally crude polygonal modeling, low polygon count, large planar faces, hard geometric edges, flat-shaded surfaces, visible polygon faceting, low-resolution hand-painted textures, simple materials, limited color palette, subtle PS1 texture warping, empty hands, full body, front-facing, T-pose, orthographic camera, centered, isolated character asset, plain neutral light-gray background, no floor, no environment",
       "category": "creature",
       "monster_id": "cyclops",
-      "variant": "base"
+      "variant": "canonical"
     },
     {
       "id": "minotaur",
-      "title": "Минотавр (Minotaur Cat)",
-      "prompt": "<lora:lowpoly_flux:0.9> <lora:OOTN64_Krea2:0.9>,  OOTN64_Krea2, ps1 game screenshot, a low-poly 3D character asset of a minotaur cat hybrid, bull horns, heavy muzzle, thick neck, leather loincloth, empty hands, open palms, clear hands visible, chibi proportions, big angular head, amber yellow feline cat eyes, expressive slanted cat eyes, chunky low-poly, simple geometric forms, large clean flat facets, PS1 game character, flat shaded, crisp silhouette, limited detail, T-pose, orthographic front view, neutral solid light grey background, no scenery, no environment, no ground, empty background, single character, full body, centered, no scenery",
+      "title": "Minotaur Cat",
+      "prompt": "<lora:ningraphix-000031:0.9>, gf_lowpoly, minotaur cat hybrid, squat extremely muscular body, oversized angular feline-bull head, large curved bull horns, heavy blocky muzzle, thick neck, simple leather loincloth, crude iron belt, wide hooved feet, painted fur patches on chest, amber yellow painted cat eyes, vertical slit pupils, simplified feline-minotaur face, very low-poly PS1-era 3D game character, intentionally crude polygonal modeling, low polygon count, large planar faces, hard geometric edges, flat-shaded surfaces, visible polygon faceting, low-resolution hand-painted textures, simple materials, limited color palette, subtle PS1 texture warping, empty hands, full body, front-facing, T-pose, orthographic camera, centered, isolated character asset, plain neutral light-gray background, no floor, no environment",
       "category": "creature",
       "monster_id": "minotaur",
-      "variant": "base"
+      "variant": "canonical"
     },
     {
       "id": "demon",
-      "title": "Демон (Demon Cat)",
-      "prompt": "<lora:lowpoly_flux:0.9> <lora:OOTN64_Krea2:0.9>,  OOTN64_Krea2, ps1 game screenshot, a low-poly 3D character asset of a demon cat hybrid, red skin, curved horns, bat-like low-poly wings, spiked tail, empty hands, open palms, clear hands visible, chibi proportions, big angular head, amber yellow feline cat eyes, expressive slanted cat eyes, chunky low-poly, simple geometric forms, large clean flat facets, PS1 game character, flat shaded, crisp silhouette, limited detail, T-pose, orthographic front view, neutral solid light grey background, no scenery, no environment, no ground, empty background, single character, full body, centered, no scenery",
+      "title": "Demon Cat",
+      "prompt": "<lora:ningraphix-000031:0.9>, gf_lowpoly, demon cat hybrid, compact athletic body, oversized angular feline head, red skin, curved black horns, bat-like low-poly wings folded behind back, spiked geometric tail, simple dark leather waist cloth, crude spiked shoulder pieces, amber yellow painted cat eyes, vertical slit pupils, simplified feline-demon face, very low-poly PS1-era 3D RPG character, intentionally crude polygonal modeling, low polygon count, large planar faces, hard geometric edges, flat-shaded surfaces, visible polygon faceting, low-resolution hand-painted textures, simple materials, limited color palette, subtle PS1 texture warping, empty hands, full body, front-facing, T-pose, orthographic camera, centered, isolated character asset, plain neutral light-gray background, no floor, no environment",
       "category": "creature",
       "monster_id": "demon",
-      "variant": "base"
+      "variant": "canonical"
     },
     {
       "id": "angel",
-      "title": "Ангел (Angel Cat)",
-      "prompt": "<lora:lowpoly_flux:0.9> <lora:OOTN64_Krea2:0.9>,  OOTN64_Krea2, ps1 game screenshot, a low-poly 3D character asset of an anthropomorphic cat angel, white blocky robes, simple polygonal halo, soft feathered low-poly wings, empty hands, open palms, clear hands visible, chibi proportions, big angular head, amber yellow feline cat eyes, expressive slanted cat eyes, chunky low-poly, simple geometric forms, large clean flat facets, PS1 game character, flat shaded, crisp silhouette, limited detail, T-pose, orthographic front view, neutral solid light grey background, no scenery, no environment, no ground, empty background, single character, full body, centered, no scenery",
+      "title": "Angel Cat",
+      "prompt": "<lora:ningraphix-000031:0.9>, gf_lowpoly, anthropomorphic cat angel, compact graceful body, oversized angular feline head, simple white blocky robes, short geometric halo ring above head, soft feathered low-poly wings folded behind back, plain cloth belt, simple sandals, amber yellow painted cat eyes, vertical slit pupils, simplified feline face, very low-poly PS1-era 3D RPG character, intentionally crude polygonal modeling, low polygon count, large planar faces, hard geometric edges, flat-shaded surfaces, visible polygon faceting, low-resolution hand-painted textures, simple materials, limited color palette, subtle PS1 texture warping, empty hands, full body, front-facing, T-pose, orthographic camera, centered, isolated character asset, plain neutral light-gray background, no floor, no environment",
       "category": "creature",
       "monster_id": "angel",
-      "variant": "base"
+      "variant": "canonical"
     },
     {
       "id": "mummy",
-      "title": "Мумия (Mummy Cat)",
-      "prompt": "<lora:lowpoly_flux:0.9> <lora:OOTN64_Krea2:0.9>,  OOTN64_Krea2, ps1 game screenshot, a low-poly 3D character asset of a mummy cat hybrid, wrapped in low-poly linen bandages, ancient sash, empty hands, open palms, clear hands visible, chibi proportions, big angular head, amber yellow feline cat eyes, expressive slanted cat eyes, chunky low-poly, simple geometric forms, large clean flat facets, PS1 game character, flat shaded, crisp silhouette, limited detail, T-pose, orthographic front view, neutral solid light grey background, no scenery, no environment, no ground, empty background, single character, full body, centered, no scenery",
+      "title": "Mummy Cat",
+      "prompt": "<lora:ningraphix-000031:0.9>, gf_lowpoly, mummy cat hybrid, compact hunched body, oversized angular feline head, wrapped in low-poly linen bandages, ancient faded sash, torn cloth strips at limbs, simple geometric bandage folds, painted aged fabric patches, amber yellow painted cat eyes, vertical slit pupils, simplified undead feline face, very low-poly PS1-era 3D game character, intentionally crude polygonal modeling, low polygon count, large planar faces, hard geometric edges, flat-shaded surfaces, visible polygon faceting, low-resolution hand-painted textures, simple materials, limited color palette, subtle PS1 texture warping, empty hands, full body, front-facing, T-pose, orthographic camera, centered, isolated character asset, plain neutral light-gray background, no floor, no environment",
       "category": "creature",
       "monster_id": "mummy",
-      "variant": "base"
+      "variant": "canonical"
     },
     {
       "id": "vampire",
-      "title": "Вампир (Vampire Cat)",
-      "prompt": "<lora:lowpoly_flux:0.9> <lora:OOTN64_Krea2:0.9>,  OOTN64_Krea2, ps1 game screenshot, a low-poly 3D character asset of an anthropomorphic cat vampire, pale fur, fangs, high collar cape, empty hands, open palms, clear hands visible, chibi proportions, big angular head, amber yellow feline cat eyes, expressive slanted cat eyes, chunky low-poly, simple geometric forms, large clean flat facets, PS1 game character, flat shaded, crisp silhouette, limited detail, T-pose, orthographic front view, neutral solid light grey background, no scenery, no environment, no ground, empty background, single character, full body, centered, no scenery",
+      "title": "Vampire Cat",
+      "prompt": "<lora:ningraphix-000031:0.9>, gf_lowpoly, anthropomorphic cat vampire, slim compact body, oversized angular feline head, pale fur, small sharp fangs, high collar dark cape attached to shoulders, simple black tunic, geometric red lining on cape, crude medallion on chest, amber yellow painted cat eyes, vertical slit pupils, simplified feline face, very low-poly PS1-era 3D RPG character, intentionally crude polygonal modeling, low polygon count, large planar faces, hard geometric edges, flat-shaded surfaces, visible polygon faceting, low-resolution hand-painted textures, simple materials, limited color palette, subtle PS1 texture warping, empty hands, full body, front-facing, T-pose, orthographic camera, centered, isolated character asset, plain neutral light-gray background, no floor, no environment",
       "category": "creature",
       "monster_id": "vampire",
-      "variant": "base"
+      "variant": "canonical"
     },
     {
-      "id": "cockroach_insect",
-      "title": "Таракан (Cockroach / Insect Cat)",
-      "prompt": "<lora:lowpoly_flux:0.9> <lora:OOTN64_Krea2:0.9>,  OOTN64_Krea2, ps1 game screenshot, a low-poly 3D character asset of an insect cockroach cat hybrid, brown chitin exoskeleton, segmented blocky insect torso mixed with cat head, cat ears and long insect antennae, 6 thin low-poly legs, empty hands, open palms, clear hands visible, chibi proportions, big angular head, amber yellow feline cat eyes, expressive slanted cat eyes, chunky low-poly, simple geometric forms, large clean flat facets, PS1 game character, flat shaded, crisp silhouette, limited detail, T-pose, orthographic front view, neutral solid light grey background, no scenery, no environment, no ground, empty background, single character, full body, centered, no scenery",
+      "id": "cockroach",
+      "title": "Cockroach Cat",
+      "prompt": "<lora:ningraphix-000031:0.9>, gf_lowpoly, insect cockroach cat hybrid, compact segmented body, oversized angular feline head with cat ears, brown chitin exoskeleton, blocky insect torso mixed with cat face, long thin insect antennae, six extremely thin low-poly legs, no arms, simple geometric chitin plates, amber yellow painted cat eyes, vertical slit pupils, simplified feline-insect face, very low-poly PS1-era 3D game character, intentionally crude polygonal modeling, low polygon count, large planar faces, hard geometric edges, flat-shaded surfaces, visible polygon faceting, low-resolution hand-painted textures, simple materials, limited color palette, subtle PS1 texture warping, full body, front-facing, T-pose, orthographic camera, centered, isolated character asset, plain neutral light-gray background, no floor, no environment",
       "category": "creature",
-      "monster_id": "cockroach_insect",
-      "variant": "base"
+      "monster_id": "cockroach",
+      "variant": "canonical"
     },
     {
       "id": "centaur",
-      "title": "Кентавр (Centaur Cat)",
-      "prompt": "<lora:lowpoly_flux:0.9> <lora:OOTN64_Krea2:0.9>,  OOTN64_Krea2, ps1 game screenshot, a low-poly 3D character asset of a cat-centaur hybrid, upper body is an anthropomorphic cat with feline chest and arms, from the waist down a four-legged low-poly horse body with hooves and a horse tail, no horse head, empty hands, open palms, clear hands visible, chibi proportions, big angular head, amber yellow feline cat eyes, expressive slanted cat eyes, chunky low-poly, simple geometric forms, large clean flat facets, PS1 game character, flat shaded, crisp silhouette, limited detail, T-pose, orthographic front view, neutral solid light grey background, no scenery, no environment, no ground, empty background, single character, full body, centered, no scenery",
+      "title": "Centaur Cat",
+      "prompt": "<lora:ningraphix-000031:0.9>, gf_lowpoly, cat-centaur hybrid, upper body anthropomorphic cat with feline chest and arms, compact torso, oversized angular feline head, from waist down four-legged low-poly horse body with hooves and horse tail, no horse head, simple leather chest straps, crude cloth waist wrap, amber yellow painted cat eyes, vertical slit pupils, simplified feline face, very low-poly PS1-era 3D RPG character, intentionally crude polygonal modeling, low polygon count, large planar faces, hard geometric edges, flat-shaded surfaces, visible polygon faceting, low-resolution hand-painted textures, simple materials, limited color palette, subtle PS1 texture warping, empty hands, full body, front-facing, T-pose, orthographic camera, centered, isolated character asset, plain neutral light-gray background, no floor, no environment",
       "category": "creature",
       "monster_id": "centaur",
-      "variant": "base"
+      "variant": "canonical"
     },
     {
       "id": "green_slime",
-      "title": "Зеленый Слизень (Green Slime Cat)",
-      "prompt": "<lora:lowpoly_flux:0.9> <lora:OOTN64_Krea2:0.9>,  OOTN64_Krea2, ps1 game screenshot, a low-poly 3D character asset of a green slime cat, translucent emerald green jelly gelatin blob body, cute low-poly cat face on front of the round jelly sphere, cat ears silhouette, chibi proportions, chunky low-poly, simple geometric forms, large clean flat facets, PS1 game character, flat shaded, crisp silhouette, limited detail, T-pose, orthographic front view, neutral solid light grey background, no scenery, no environment, no ground, empty background, single character, full body, centered, no scenery",
+      "title": "Green Slime Cat",
+      "prompt": "<lora:ningraphix-000031:0.9>, gf_lowpoly, green slime cat, round compact gelatin blob body, translucent emerald green jelly sphere, cute low-poly cat face on front of blob, simple cat ear silhouettes, minimal geometric slime facets, painted glossy jelly texture, amber yellow painted cat eyes, vertical slit pupils, simplified feline face, very low-poly PS1-era 3D game character, intentionally crude polygonal modeling, low polygon count, large planar faces, hard geometric edges, flat-shaded surfaces, visible polygon faceting, low-resolution hand-painted textures, simple materials, limited color palette, subtle PS1 texture warping, no limbs, no props, full body, front-facing, T-pose, orthographic camera, centered, isolated character asset, plain neutral light-gray background, no floor, no environment",
       "category": "creature",
       "monster_id": "green_slime",
-      "variant": "base"
+      "variant": "canonical"
     },
     {
       "id": "mantis",
-      "title": "Богомол (Mantis Cat)",
-      "prompt": "<lora:lowpoly_flux:0.9> <lora:OOTN64_Krea2:0.9>,  OOTN64_Krea2, ps1 game screenshot, a low-poly 3D character asset of a mantis cat hybrid, insectoid green body, cat ears, long thin stilt legs, scythe blades attached to arms, empty hands, open palms, clear hands visible, chibi proportions, big angular head, amber yellow feline cat eyes, expressive slanted cat eyes, chunky low-poly, simple geometric forms, large clean flat facets, PS1 game character, flat shaded, crisp silhouette, limited detail, T-pose, orthographic front view, neutral solid light grey background, no scenery, no environment, no ground, empty background, single character, full body, centered, no scenery",
+      "title": "Mantis Cat",
+      "prompt": "<lora:ningraphix-000031:0.9>, gf_lowpoly, mantis cat hybrid, tall thin compact body, oversized angular feline head, insectoid green torso, long thin stilt legs, folded scythe blade shapes attached to arms, simple geometric chitin segments, painted green exoskeleton facets, amber yellow painted cat eyes, vertical slit pupils, simplified feline-insect face, very low-poly PS1-era 3D game character, intentionally crude polygonal modeling, low polygon count, large planar faces, hard geometric edges, flat-shaded surfaces, visible polygon faceting, low-resolution hand-painted textures, simple materials, limited color palette, subtle PS1 texture warping, empty hands, full body, front-facing, T-pose, orthographic camera, centered, isolated character asset, plain neutral light-gray background, no floor, no environment",
       "category": "creature",
       "monster_id": "mantis",
-      "variant": "base"
+      "variant": "canonical"
     },
     {
       "id": "wood_spider",
-      "title": "Древесный Паук (Wood-Spider Cat)",
-      "prompt": "<lora:lowpoly_flux:0.9> <lora:OOTN64_Krea2:0.9>,  OOTN64_Krea2, ps1 game screenshot, a low-poly 3D character asset of a wood spider cat hybrid, cat head with ears and whiskers, wooden bark texture, 6 extremely long spindly wooden spider legs, no arms, empty hands, open palms, clear hands visible, chibi proportions, big angular head, amber yellow feline cat eyes, expressive slanted cat eyes, chunky low-poly, simple geometric forms, large clean flat facets, PS1 game character, flat shaded, crisp silhouette, limited detail, T-pose, orthographic front view, neutral solid light grey background, no scenery, no environment, no ground, empty background, single character, full body, centered, no scenery",
+      "title": "Wood Spider Cat",
+      "prompt": "<lora:ningraphix-000031:0.9>, gf_lowpoly, wood spider cat hybrid, compact chibi body, oversized angular feline head with ears and whiskers, wooden bark texture skin, six extremely long spindly wooden spider legs, no arms, simple geometric bark facets, painted wood grain patches, amber yellow painted cat eyes, vertical slit pupils, simplified feline face, very low-poly PS1-era 3D game character, intentionally crude polygonal modeling, low polygon count, large planar faces, hard geometric edges, flat-shaded surfaces, visible polygon faceting, low-resolution hand-painted textures, simple materials, limited color palette, subtle PS1 texture warping, full body, front-facing, T-pose, orthographic camera, centered, isolated character asset, plain neutral light-gray background, no floor, no environment",
       "category": "creature",
       "monster_id": "wood_spider",
-      "variant": "base"
+      "variant": "canonical"
     },
     {
       "id": "dinosaur",
-      "title": "Динозавр (Dinosaur Cat)",
-      "prompt": "<lora:lowpoly_flux:0.9> <lora:OOTN64_Krea2:0.9>,  OOTN64_Krea2, ps1 game screenshot, a low-poly 3D character asset of a dinosaur cat hybrid, green scaled skin, tiny 3-sided low-poly arms, thick heavy tail, cat ears and whiskers, sharp blocky teeth, empty hands, open palms, clear hands visible, chibi proportions, big angular head, amber yellow feline cat eyes, expressive slanted cat eyes, chunky low-poly, simple geometric forms, large clean flat facets, PS1 game character, flat shaded, crisp silhouette, limited detail, T-pose, orthographic front view, neutral solid light grey background, no scenery, no environment, no ground, empty background, single character, full body, centered, no scenery",
+      "title": "Dinosaur Cat",
+      "prompt": "<lora:ningraphix-000031:0.9>, gf_lowpoly, dinosaur cat hybrid, compact sturdy body, oversized angular feline head, green scaled skin, tiny three-sided low-poly arms, thick heavy tail, cat ears and whiskers, sharp blocky teeth, simple geometric scale plates, crude leather waist strap, amber yellow painted cat eyes, vertical slit pupils, simplified feline-dinosaur face, very low-poly PS1-era 3D RPG character, intentionally crude polygonal modeling, low polygon count, large planar faces, hard geometric edges, flat-shaded surfaces, visible polygon faceting, low-resolution hand-painted textures, simple materials, limited color palette, subtle PS1 texture warping, empty hands, full body, front-facing, T-pose, orthographic camera, centered, isolated character asset, plain neutral light-gray background, no floor, no environment",
       "category": "creature",
       "monster_id": "dinosaur",
-      "variant": "base"
+      "variant": "canonical"
     },
     {
       "id": "fire_elemental",
-      "title": "Огненный Элементаль (Fire Elemental Cat)",
-      "prompt": "<lora:lowpoly_flux:0.9> <lora:OOTN64_Krea2:0.9>,  OOTN64_Krea2, ps1 game screenshot, a low-poly 3D character asset of a fire elemental cat, body of bright orange low-poly flame shards, molten core, cat ear silhouettes in fire, empty hands, open palms, clear hands visible, chibi proportions, big angular head, amber yellow feline cat eyes, expressive slanted cat eyes, chunky low-poly, simple geometric forms, large clean flat facets, PS1 game character, flat shaded, crisp silhouette, limited detail, T-pose, orthographic front view, neutral solid light grey background, no scenery, no environment, no ground, empty background, single character, full body, centered, no scenery",
+      "title": "Fire Elemental Cat",
+      "prompt": "<lora:ningraphix-000031:0.9>, gf_lowpoly, fire elemental cat, compact body made of bright orange low-poly flame shards, molten geometric core, cat ear silhouettes formed from flame planes, simple angular fire limbs, painted ember texture facets, glowing-looking amber cat eyes, vertical slit pupils, simplified feline face made of fire planes, very low-poly PS1-era 3D game character, intentionally crude polygonal modeling, low polygon count, large planar faces, hard geometric edges, flat-shaded surfaces, visible polygon faceting, low-resolution hand-painted textures, simple materials, limited color palette, subtle PS1 texture warping, empty hands, full body, front-facing, T-pose, orthographic camera, centered, isolated character asset, plain neutral light-gray background, no floor, no environment",
       "category": "creature",
       "monster_id": "fire_elemental",
-      "variant": "base"
+      "variant": "canonical"
     },
     {
       "id": "mushroom",
-      "title": "Гриб (Mushroom Cat)",
-      "prompt": "<lora:lowpoly_flux:0.9> <lora:OOTN64_Krea2:0.9>,  OOTN64_Krea2, ps1 game screenshot, a low-poly 3D character asset of a mushroom cat hybrid, spotted red cap on head, fungal stem body, cat ears under cap, empty hands, open palms, clear hands visible, chibi proportions, big angular head, amber yellow feline cat eyes, expressive slanted cat eyes, chunky low-poly, simple geometric forms, large clean flat facets, PS1 game character, flat shaded, crisp silhouette, limited detail, T-pose, orthographic front view, neutral solid light grey background, no scenery, no environment, no ground, empty background, single character, full body, centered, no scenery",
+      "title": "Mushroom Cat",
+      "prompt": "<lora:ningraphix-000031:0.9>, gf_lowpoly, mushroom cat hybrid, short chunky body, oversized angular feline head under a spotted red cap mushroom hat, fungal stem torso, simple geometric gill texture under cap, painted cream and red cap facets, small cat ears peeking from cap edge, amber yellow painted cat eyes, vertical slit pupils, simplified feline face, very low-poly PS1-era 3D game character, intentionally crude polygonal modeling, low polygon count, large planar faces, hard geometric edges, flat-shaded surfaces, visible polygon faceting, low-resolution hand-painted textures, simple materials, limited color palette, subtle PS1 texture warping, empty hands, full body, front-facing, T-pose, orthographic camera, centered, isolated character asset, plain neutral light-gray background, no floor, no environment",
       "category": "creature",
       "monster_id": "mushroom",
-      "variant": "base"
+      "variant": "canonical"
     },
     {
       "id": "bee",
-      "title": "Пчела (Bee Cat)",
-      "prompt": "<lora:lowpoly_flux:0.9> <lora:OOTN64_Krea2:0.9>,  OOTN64_Krea2, ps1 game screenshot, a low-poly 3D character asset of a bee cat hybrid, angular blocky bee body, yellow-black striped, flat polygonal bee wings, small stinger, cat face, cat eyes, cat ears, empty hands, open palms, clear hands visible, chibi proportions, big angular head, amber yellow feline cat eyes, expressive slanted cat eyes, chunky low-poly, simple geometric forms, large clean flat facets, PS1 game character, flat shaded, crisp silhouette, limited detail, T-pose, orthographic front view, neutral solid light grey background, no scenery, no environment, no ground, empty background, single character, full body, centered, no scenery",
+      "title": "Bee Cat",
+      "prompt": "<lora:ningraphix-000031:0.9>, gf_lowpoly, bee cat hybrid, compact angular blocky bee body, yellow-black striped geometric torso, flat polygonal bee wings on back, small stinger tail, oversized angular feline cat head with ears and whiskers, simple painted stripe facets, amber yellow painted cat eyes, vertical slit pupils, simplified feline face, very low-poly PS1-era 3D game character, intentionally crude polygonal modeling, low polygon count, large planar faces, hard geometric edges, flat-shaded surfaces, visible polygon faceting, low-resolution hand-painted textures, simple materials, limited color palette, subtle PS1 texture warping, empty hands, full body, front-facing, T-pose, orthographic camera, centered, isolated character asset, plain neutral light-gray background, no floor, no environment",
       "category": "creature",
       "monster_id": "bee",
-      "variant": "base"
+      "variant": "canonical"
     },
     {
       "id": "jellyfish",
-      "title": "Медуза (Jellyfish Cat)",
-      "prompt": "<lora:lowpoly_flux:0.9> <lora:OOTN64_Krea2:0.9>,  OOTN64_Krea2, ps1 game screenshot, a low-poly 3D character asset of a jellyfish cat, head shaped exactly like a cat head with ears and whiskers, dangling jellyfish tentacles hanging downward from under the cat head, translucent body, floating, chibi proportions, big angular cat head, empty hands, open palms, clear hands visible, chibi proportions, big angular head, amber yellow feline cat eyes, expressive slanted cat eyes, chunky low-poly, simple geometric forms, large clean flat facets, PS1 game character, flat shaded, crisp silhouette, limited detail, T-pose, orthographic front view, neutral solid light grey background, no scenery, no environment, no ground, empty background, single character, full body, centered, no scenery",
+      "title": "Jellyfish Cat",
+      "prompt": "<lora:ningraphix-000031:0.9>, gf_lowpoly, jellyfish cat, compact floating body, head shaped exactly like a cat head with ears and whiskers, dangling jellyfish tentacles hanging downward from under the cat head, translucent geometric bell shape, simple painted jelly facets, amber yellow painted cat eyes, vertical slit pupils, simplified feline face, very low-poly PS1-era 3D game character, intentionally crude polygonal modeling, low polygon count, large planar faces, hard geometric edges, flat-shaded surfaces, visible polygon faceting, low-resolution hand-painted textures, simple materials, limited color palette, subtle PS1 texture warping, no props, full body, front-facing, T-pose, orthographic camera, centered, isolated character asset, plain neutral light-gray background, no floor, no environment",
       "category": "creature",
       "monster_id": "jellyfish",
-      "variant": "base"
+      "variant": "canonical"
     }
   ]
 }
