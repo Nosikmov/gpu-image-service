@@ -27,7 +27,7 @@ if command -v apt-get >/dev/null 2>&1; then
   DEBIAN_FRONTEND=noninteractive ${APT} install -y -qq \
     git tmux curl rsync \
     libgl1 libglib2.0-0 libsm6 libxext6 libxrender1 \
-    python3 python3-venv
+    python3 python3-venv python3-pip python3-setuptools python3-dev build-essential
 else
   info "No apt-get — install git, tmux, curl, rsync, python3 manually"
 fi

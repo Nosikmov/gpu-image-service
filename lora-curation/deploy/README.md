@@ -25,4 +25,24 @@ export TRAIN_NAME=gf_lowpoly_v2
 | `forge_user.sh` | helper (sourced, not run directly) |
 | `webui-user.sh` | copied into Forge root |
 
-Models: see `lora-curation/forge_gen.json`.
+### Forge: `pkg_resources` / CLIP build fails (Ubuntu 24.04)
+
+```bash
+sudo apt-get install -y python3-setuptools python3-pip python3-dev build-essential
+# optional but helps Forge:
+sudo apt-get install -y python3.10 python3.10-venv
+
+cd ~/stable-diffusion-webui-forge
+bash ~/gpu-image-service/lora-curation/deploy/bootstrap_forge_venv.sh
+bash ~/gpu-image-service/lora-curation/deploy/start_forge.sh
+```
+
+If still fails, pre-install CLIP manually:
+
+```bash
+cd ~/stable-diffusion-webui-forge
+./venv/bin/pip install "setuptools==69.5.1" wheel
+./venv/bin/pip install --no-build-isolation \
+  git+https://github.com/openai/CLIP.git@d50d76daa670286dd6cacf3bcd80b5e4823fc8e1
+./webui.sh
+```

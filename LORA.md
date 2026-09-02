@@ -81,7 +81,30 @@ export TRAIN_NAME=gf_lowpoly_v2
 ./cycle.sh train
 ```
 
-### 4. Тест на 4090 (fp8)
+### 4. Тест на сервере (3090 / 4090, только inference)
+
+```bash
+git clone https://github.com/Nosikmov/gpu-image-service.git
+cd gpu-image-service
+git lfs install && git lfs pull
+
+cd train-a5000
+chmod +x cycle.sh test_lora/run.sh
+export TRAIN_NAME=gf_lowpoly_v2
+
+./cycle.sh setup-forge
+# sync flux fp8 с ПК: bash lora-curation/deploy/sync_models.sh
+
+./cycle.sh install-loras
+# tmux: bash lora-curation/deploy/start_forge.sh
+
+./cycle.sh test forge --limit 4
+./cycle.sh test forge40
+```
+
+LoRA лежат в `loras/gf_lowpoly_v2/` (Git LFS). Обучение не нужно.
+
+### 4b. Старый вариант — train output на сервере
 
 Первый раз:
 

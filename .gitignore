@@ -28,6 +28,7 @@ htmlcov/
 /comfyui_data/
 *.ckpt
 *.safetensors
+!loras/**/*.safetensors
 *.pt
 *.pth
 *.bin

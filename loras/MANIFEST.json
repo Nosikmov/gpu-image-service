@@ -1,0 +1,12 @@
+{
+  "gf_lowpoly_v2": {
+    "train_name": "gf_lowpoly_v2",
+    "source": "train-a5000/output/gf_lowpoly_v2 on 4090",
+    "recommended_for_test": "gf_lowpoly_v2.safetensors",
+    "also_useful": [
+      "gf_lowpoly_v2_000000750.safetensors",
+      "gf_lowpoly_v2_000001000.safetensors",
+      "gf_lowpoly_v2_000001500.safetensors"
+    ]
+  }
+}
